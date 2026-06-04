@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human History Graph</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <svg id="era-bar"></svg>
+
+  <canvas id="year-grid"></canvas>
+  <div id="cy"></div>
+
+  <aside id="info-panel" hidden>
+    <button id="info-close" aria-label="Close">&times;</button>
+    <h2 id="info-name"></h2>
+    <p id="info-meta"></p>
+    <p id="info-long-desc"></p>
+    <p id="info-why-matters"></p>
+    <section id="info-connections">
+      <h3>Connections</h3>
+      <ul id="info-connections-list"></ul>
+    </section>
+  </aside>
+
+  <div id="bottom-bar">
+    <label for="degree-slider">Min connections: <span id="degree-value">0</span></label>
+    <input type="range" id="degree-slider" min="0" max="10" value="0" step="1">
+    <button id="reset-btn">Reset view</button>
+  </div>
+
+  <div id="tooltip" hidden></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.29.2/cytoscape.min.js"></script>
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>
