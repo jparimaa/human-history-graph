@@ -5,31 +5,8 @@ const LAYOUT_WIDTH  = 4000;
 const LAYOUT_HEIGHT = 4000;
 const LABEL_SCREEN_PX = 14;
 
-const OCCUPATION_COLORS = {
-  'POLITICIAN':         '#C0392B',
-  'RELIGIOUS FIGURE':   '#F39C12',
-  'WRITER':             '#2980B9',
-  'PHILOSOPHER':        '#7B68EE',
-  'PAINTER':            '#E67E22',
-  'PHYSICIST':          '#27AE60',
-  'COMPOSER':           '#E91E63',
-  'MATHEMATICIAN':      '#00BCD4',
-  'NOBLEMAN':           '#795548',
-  'MILITARY PERSONNEL': '#8E44AD',
-  'COMPANION':          '#90A4AE',
-  'EXPLORER':           '#16A085',
-  'INVENTOR':           '#8BC34A',
-  'ASTRONOMER':         '#1565C0',
-  'PHYSICIAN':          '#4CAF50',
-  'CHEMIST':            '#CDDC39',
-  'ARCHITECT':          '#FF7043',
-  'BIOLOGIST':          '#2E7D32',
-  'HISTORIAN':          '#FF8F00',
-  'SOCIAL ACTIVIST':    '#FF5722',
-  'ECONOMIST':          '#00ACC1',
-  'PSYCHOLOGIST':       '#9C27B0',
-  'OTHER':              '#607D8B',
-};
+let occGroupMap = {};
+let groupColorMap = {};
 
 function yearToX(year, width) {
   return LEFT_MARGIN + (year - CANVAS_MIN_YEAR) / (CANVAS_MAX_YEAR - CANVAS_MIN_YEAR) * (width - LEFT_MARGIN * 2);
@@ -40,7 +17,8 @@ function jitter(range) {
 }
 
 function occupationColor(occ) {
-  return OCCUPATION_COLORS[occ] ?? OCCUPATION_COLORS['OTHER'];
+  const group = occGroupMap[occ] ?? 'Other';
+  return groupColorMap[group] ?? groupColorMap['Other'] ?? '#607D8B';
 }
 
 function resolveOverlaps(nodes, padding = 8) {
@@ -153,9 +131,12 @@ function drawYearGrid(canvas, cy) {
   }
 }
 
-function drawEraBar(eras, svgEl) {
-  const w = svgEl.clientWidth;
-  const h = svgEl.clientHeight;
+function drawEraBar(eras, svgEl, cy) {
+  const ROW_H = 20;
+  const LABEL_AREA = 16;
+  const zoom = cy ? cy.zoom() : 1;
+  const panX = cy ? cy.pan().x : 0;
+  const w = svgEl.clientWidth || window.innerWidth;
   svgEl.innerHTML = '';
 
   const ns = 'http://www.w3.org/2000/svg';
@@ -165,22 +146,47 @@ function drawEraBar(eras, svgEl) {
     return e;
   }
 
-  for (const era of eras) {
-    if (era.type === 'era') {
-      const x1 = yearToX(Math.max(era.start_year, CANVAS_MIN_YEAR), w);
-      const x2 = yearToX(Math.min(era.end_year, CANVAS_MAX_YEAR), w);
-      svgEl.appendChild(el('rect', { x: x1, y: 0, width: Math.max(0, x2 - x1), height: h, fill: era.color }));
-      const t = el('text', { x: x1 + 4, y: h / 2 + 4, fill: '#fff', 'font-size': 10, 'font-family': 'sans-serif', 'pointer-events': 'none' });
-      t.textContent = era.label;
-      svgEl.appendChild(t);
-    } else {
-      const x = yearToX(era.year, w);
-      svgEl.appendChild(el('line', { x1: x, y1: 0, x2: x, y2: h, stroke: era.color, 'stroke-width': 1.5 }));
-      const t = el('text', { x: x + 3, y: h - 6, fill: era.color, 'font-size': 9, 'font-family': 'sans-serif', transform: `rotate(-45 ${x + 3} ${h - 6})`, 'pointer-events': 'none' });
-      t.textContent = era.label;
-      svgEl.appendChild(t);
-    }
+  // Assign overlapping era bands to rows via greedy interval scheduling
+  const bands = eras.filter(e => e.type === 'era').sort((a, b) => a.start_year - b.start_year);
+  const trackEnds = [];
+  const trackOf = new Map();
+  for (const era of bands) {
+    let t = trackEnds.findIndex(end => end <= era.start_year);
+    if (t === -1) t = trackEnds.length;
+    trackOf.set(era.id, t);
+    trackEnds[t] = era.end_year;
   }
+
+  const numTracks = trackEnds.length || 1;
+  const totalH = LABEL_AREA + numTracks * ROW_H;
+  svgEl.style.height = totalH + 'px';
+
+  function toScreenX(year) {
+    return yearToX(year, LAYOUT_WIDTH) * zoom + panX;
+  }
+
+  // Era bands
+  for (const era of bands) {
+    const t = trackOf.get(era.id);
+    const x1 = toScreenX(Math.max(era.start_year, CANVAS_MIN_YEAR));
+    const x2 = toScreenX(Math.min(era.end_year, CANVAS_MAX_YEAR));
+    const y = LABEL_AREA + t * ROW_H;
+    svgEl.appendChild(el('rect', { x: x1, y, width: Math.max(0, x2 - x1), height: ROW_H, fill: era.color }));
+    const lbl = el('text', { x: x1 + 4, y: y + ROW_H / 2 + 5, fill: '#fff', 'font-size': 13, 'font-family': 'sans-serif', 'pointer-events': 'none' });
+    lbl.textContent = era.label;
+    svgEl.appendChild(lbl);
+  }
+
+  // Events
+  for (const era of eras.filter(e => e.type === 'event')) {
+    const x = toScreenX(era.year);
+    svgEl.appendChild(el('line', { x1: x, y1: 0, x2: x, y2: totalH, stroke: era.color, 'stroke-width': 1.5 }));
+    const lbl = el('text', { x: x + 3, y: LABEL_AREA - 4, fill: era.color, 'font-size': 12, 'font-family': 'sans-serif', 'pointer-events': 'none' });
+    lbl.textContent = era.label;
+    svgEl.appendChild(lbl);
+  }
+
+  return totalH;
 }
 
 function drawLifespanBars(canvas, cy, selectedNode) {
@@ -250,7 +256,8 @@ function drawLifespanBars(canvas, cy, selectedNode) {
     ctx.fillStyle = isSelected ? '#ffffff' : '#ddddee';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    outlineText(d.name, (drawX1 + drawX2) / 2, midY);
+    const age = (d.death_year && d.birth_year) ? ` (${d.death_year - d.birth_year})` : '';
+    outlineText(d.name + age, (drawX1 + drawX2) / 2, midY);
 
     // Year numbers — left and right ends, only if bar is wide enough
     if (barWidth > 80) {
@@ -314,13 +321,19 @@ function hideInfoPanel() {
 }
 
 async function main() {
-  const [people, descriptionsRaw, relations, eras, regions] = await Promise.all([
+  const [people, descriptionsRaw, relations, eras, regions, occGroups] = await Promise.all([
     fetch('data/people.json').then(r => r.json()),
     fetch('data/descriptions.json').then(r => r.json()).catch(() => []),
     fetch('data/relations.json').then(r => r.json()),
     fetch('data/eras.json').then(r => r.json()),
     fetch('data/regions.json').then(r => r.json()),
+    fetch('data/occupation_groups.json').then(r => r.json()),
   ]);
+
+  occGroupMap = occGroups.occupations;
+  groupColorMap = Object.fromEntries(
+    Object.entries(occGroups.groups).map(([g, v]) => [g, v.color])
+  );
 
   const descriptions = Object.fromEntries(
     descriptionsRaw.map(entry => {
@@ -408,18 +421,29 @@ async function main() {
     }
   }
 
-  function resizeGrid() {
+  const svgEl = document.getElementById('era-bar');
+  let eraBarH = 0;
+
+  function updateLayout() {
+    eraBarH = drawEraBar(eras, svgEl, cy);
+    const bottomOffset = 44 + eraBarH;
+    const h = window.innerHeight - bottomOffset;
     gridCanvas.width  = window.innerWidth;
-    gridCanvas.height = window.innerHeight - 40 - 44;
+    gridCanvas.height = h;
+    gridCanvas.style.height = h + 'px';
+    document.getElementById('info-panel').style.bottom = bottomOffset + 'px';
+    document.getElementById('lifespan-canvas').style.bottom = bottomOffset + 'px';
     drawYearGrid(gridCanvas, cy);
   }
-  resizeGrid();
+
+  updateLayout();
   cy.on('pan zoom', () => {
     drawYearGrid(gridCanvas, cy);
+    drawEraBar(eras, svgEl, cy);
     refreshLifespan();
   });
   window.addEventListener('resize', () => {
-    resizeGrid();
+    updateLayout();
     refreshLifespan();
   });
 
@@ -428,10 +452,6 @@ async function main() {
   }
   syncFontSize();
   cy.on('zoom', syncFontSize);
-
-  const svgEl = document.getElementById('era-bar');
-  drawEraBar(eras, svgEl);
-  window.addEventListener('resize', () => drawEraBar(eras, svgEl));
 
   cy.on('tap', 'node', evt => {
     const node = evt.target;
@@ -478,8 +498,6 @@ async function main() {
     refreshLifespan();
   });
 
-  let minDegreeFilter = 0;
-
   const nodesByHpi = cy.nodes().sort((a, b) => b.data('hpi_score') - a.data('hpi_score'));
 
   function updateNodeVisibility() {
@@ -487,15 +505,9 @@ async function main() {
     const total = nodesByHpi.length;
     const FADE_WINDOW = 8;
     const t = Math.min(1, Math.max(0, (zoom - 0.3) / (2.5 - 0.3)));
-    // Offset start by FADE_WINDOW so top nodes are always at full opacity
     const hpiCutoff = 4 + FADE_WINDOW + t * (total - 4);
 
     nodesByHpi.forEach((node, i) => {
-      if (node.degree() < minDegreeFilter) {
-        node.style('display', 'none');
-        return;
-      }
-
       const zoomOp = Math.min(1, Math.max(0, (hpiCutoff - i) / FADE_WINDOW));
 
       if (zoomOp <= 0) {
@@ -510,19 +522,8 @@ async function main() {
   updateNodeVisibility();
   cy.on('zoom', updateNodeVisibility);
 
-  const slider = document.getElementById('degree-slider');
-  const degreeLabel = document.getElementById('degree-value');
-  slider.addEventListener('input', () => {
-    minDegreeFilter = parseInt(slider.value, 10);
-    degreeLabel.textContent = minDegreeFilter;
-    updateNodeVisibility();
-  });
-
   document.getElementById('reset-btn').addEventListener('click', () => {
     cy.elements().removeClass('dimmed highlighted');
-    minDegreeFilter = 0;
-    slider.value = 0;
-    degreeLabel.textContent = '0';
     cy.fit();
     updateNodeVisibility();
     hideInfoPanel();
