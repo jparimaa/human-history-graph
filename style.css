@@ -176,6 +176,23 @@ body {
   line-height: 1.5;
 }
 
+/* ── Lifespan overlay ────────────────────────────────── */
+
+#lifespan-canvas {
+  position: fixed;
+  bottom: 44px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 6;
+  border-top: 1px solid #3a3a5a;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.5);
+}
+
+#lifespan-canvas[hidden] {
+  display: none;
+}
+
 /* ── Hover tooltip ───────────────────────────────────── */
 
 #tooltip {

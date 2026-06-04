@@ -2,7 +2,7 @@ const CANVAS_MIN_YEAR = 1300;
 const CANVAS_MAX_YEAR = 1600;
 const LEFT_MARGIN = 80;
 const LAYOUT_WIDTH  = 4000;
-const LAYOUT_HEIGHT = 2200;
+const LAYOUT_HEIGHT = 4000;
 const LABEL_SCREEN_PX = 14;
 
 const OCCUPATION_COLORS = {
@@ -71,9 +71,21 @@ function buildElements(people, relations, regions, w, h) {
   const hpiMin = Math.min(...people.map(p => p.hpi_score));
   const hpiMax = Math.max(...people.map(p => p.hpi_score));
 
+  // Compute per-region jitter span: 75% of half the gap to the nearest neighbour band
+  const sortedBands = Object.entries(regions.regions)
+    .map(([id, r]) => ({ id, y: r.y_band }))
+    .sort((a, b) => a.y - b.y);
+  const regionJitter = {};
+  sortedBands.forEach((r, i) => {
+    const prevGap = i > 0 ? r.y - sortedBands[i - 1].y : 0.08;
+    const nextGap = i < sortedBands.length - 1 ? sortedBands[i + 1].y - r.y : 0.08;
+    regionJitter[r.id] = Math.min(prevGap, nextGap) / 2 * h;
+  });
+
   const nodes = people.map(p => {
     const regionId = regions.countries[p.birth_country] ?? 'europe_west';
     const yBand = regions.regions[regionId]?.y_band ?? 0.5;
+    const span = regionJitter[regionId] ?? 80;
     const t = (p.hpi_score - hpiMin) / (hpiMax - hpiMin);
     const size = 20 + t * 60;
     return {
@@ -90,7 +102,7 @@ function buildElements(people, relations, regions, w, h) {
       },
       position: {
         x: yearToX(p.birth_year, w),
-        y: yBand * h + jitter(20),
+        y: yBand * h + jitter(span),
       },
     };
   });
@@ -171,6 +183,96 @@ function drawEraBar(eras, svgEl) {
   }
 }
 
+function drawLifespanBars(canvas, cy, selectedNode) {
+  const ROW_H = 52;
+  const PAD_V = 5;
+
+  const neighbors = selectedNode.connectedEdges().connectedNodes().not(selectedNode);
+  const people = [selectedNode, ...neighbors.toArray()];
+
+  const totalH = PAD_V + people.length * ROW_H + PAD_V;
+  canvas.width = window.innerWidth;
+  canvas.height = totalH;
+  canvas.style.height = totalH + 'px';
+
+  const ctx = canvas.getContext('2d');
+  const w = canvas.width;
+
+  ctx.fillStyle = 'rgba(12, 12, 28, 0.93)';
+  ctx.fillRect(0, 0, w, totalH);
+
+  const zoom = cy.zoom();
+  const pan  = cy.pan();
+
+  people.forEach((node, i) => {
+    const d = node.data();
+    const isSelected = node.id() === selectedNode.id();
+    const rowY = PAD_V + i * ROW_H;
+    const barY = rowY + 4;
+    const barH = ROW_H - 8;
+
+    const x1screen = yearToX(d.birth_year, LAYOUT_WIDTH) * zoom + pan.x;
+    const x2screen = yearToX(d.death_year, LAYOUT_WIDTH) * zoom + pan.x;
+    const drawX1 = Math.max(2, x1screen);
+    const drawX2 = Math.min(w - 2, x2screen);
+
+    if (drawX2 <= drawX1) return;
+
+    const barWidth = drawX2 - drawX1;
+
+    // Bar fill
+    ctx.fillStyle = d.color + (isSelected ? 'ee' : '55');
+    ctx.fillRect(drawX1, barY, barWidth, barH);
+    if (isSelected) {
+      ctx.strokeStyle = d.color;
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(drawX1 + 0.75, barY + 0.75, barWidth - 1.5, barH - 1.5);
+    }
+
+    // Clip subsequent text to bar bounds
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(drawX1 + 2, barY, barWidth - 4, barH);
+    ctx.clip();
+    ctx.lineJoin = 'round';
+
+    function outlineText(text, x, y) {
+      ctx.strokeText(text, x, y);
+      ctx.fillText(text, x, y);
+    }
+
+    const midY = barY + barH / 2;
+
+    // Name — centered in bar
+    ctx.font = isSelected ? 'bold 17px sans-serif' : '15px sans-serif';
+    ctx.strokeStyle = 'rgba(0,0,0,0.85)';
+    ctx.lineWidth = 4;
+    ctx.fillStyle = isSelected ? '#ffffff' : '#ddddee';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    outlineText(d.name, (drawX1 + drawX2) / 2, midY);
+
+    // Year numbers — left and right ends, only if bar is wide enough
+    if (barWidth > 80) {
+      ctx.font = isSelected ? 'bold 17px sans-serif' : '15px sans-serif';
+      ctx.lineWidth = 4;
+      ctx.fillStyle = isSelected ? 'rgba(255,255,255,0.9)' : 'rgba(200,200,220,0.75)';
+      ctx.textBaseline = 'middle';
+
+      if (x1screen >= 2) {
+        ctx.textAlign = 'left';
+        outlineText(d.birth_year, drawX1 + 6, midY);
+      }
+      if (x2screen <= w - 2) {
+        ctx.textAlign = 'right';
+        outlineText(d.death_year, drawX2 - 6, midY);
+      }
+    }
+
+    ctx.restore();
+  });
+}
+
 function showInfoPanel(node, descriptions) {
   const d = node.data();
   const desc = descriptions[d.id] ?? {};
@@ -247,14 +349,15 @@ async function main() {
           'text-halign': 'center',
           'text-outline-color': '#1a1a2e',
           'text-outline-width': 2,
+          'z-index': 'data(hpi_score)',
         },
       },
       {
         selector: 'edge',
         style: {
-          'width': 'mapData(strength, 0, 1, 1, 5)',
+          'width': 'mapData(strength, 0, 1, 1, 12)',
           'line-color': '#888888',
-          'opacity': 'mapData(confidence, 0, 1, 0.2, 1)',
+          'opacity': 'mapData(confidence, 0, 1, 0.1, 1)',
           'curve-style': 'bezier',
           'target-arrow-shape': 'none',
         },
@@ -270,25 +373,55 @@ async function main() {
           'border-color': '#ffffff',
         },
       },
+      {
+        selector: 'edge.hover-highlighted',
+        style: {
+          'line-color': '#ffffff',
+          'width': 3,
+          'opacity': 1,
+        },
+      },
     ],
     userZoomingEnabled: true,
     userPanningEnabled: true,
     boxSelectionEnabled: false,
     autoungrabify: true,
-    wheelSensitivity: 0.2,
+    wheelSensitivity: 0.05,
   });
 
   cy.fit(undefined, 60);
 
   const gridCanvas = document.getElementById('year-grid');
+  const lifespanCanvas = document.getElementById('lifespan-canvas');
+  let currentLifespanNode = null;
+  let hoverLifespanNode = null;
+
+  function activeLifespanNode() { return hoverLifespanNode ?? currentLifespanNode; }
+
+  function refreshLifespan() {
+    const node = activeLifespanNode();
+    if (node) {
+      lifespanCanvas.hidden = false;
+      drawLifespanBars(lifespanCanvas, cy, node);
+    } else {
+      lifespanCanvas.hidden = true;
+    }
+  }
+
   function resizeGrid() {
     gridCanvas.width  = window.innerWidth;
     gridCanvas.height = window.innerHeight - 40 - 44;
     drawYearGrid(gridCanvas, cy);
   }
   resizeGrid();
-  cy.on('pan zoom', () => drawYearGrid(gridCanvas, cy));
-  window.addEventListener('resize', resizeGrid);
+  cy.on('pan zoom', () => {
+    drawYearGrid(gridCanvas, cy);
+    refreshLifespan();
+  });
+  window.addEventListener('resize', () => {
+    resizeGrid();
+    refreshLifespan();
+  });
 
   function syncFontSize() {
     cy.nodes().style('font-size', LABEL_SCREEN_PX / cy.zoom());
@@ -305,21 +438,31 @@ async function main() {
     cy.elements().removeClass('highlighted').addClass('dimmed');
     node.closedNeighborhood().removeClass('dimmed');
     node.addClass('highlighted');
+    updateNodeVisibility();
     showInfoPanel(node, descriptions);
+    currentLifespanNode = node;
+    refreshLifespan();
   });
 
   cy.on('tap', evt => {
     if (evt.target !== cy) return;
     cy.elements().removeClass('dimmed highlighted');
+    updateNodeVisibility();
     hideInfoPanel();
+    currentLifespanNode = null;
+    refreshLifespan();
   });
 
   const tooltip = document.getElementById('tooltip');
 
   cy.on('mouseover', 'node', evt => {
-    const desc = descriptions[evt.target.data('id')] ?? {};
+    const node = evt.target;
+    const desc = descriptions[node.data('id')] ?? {};
     tooltip.textContent = desc.short_description ?? 'No description available.';
     tooltip.hidden = false;
+    node.connectedEdges().addClass('hover-highlighted');
+    hoverLifespanNode = node;
+    refreshLifespan();
   });
 
   cy.on('mousemove', 'node', evt => {
@@ -330,6 +473,9 @@ async function main() {
 
   cy.on('mouseout', 'node', () => {
     tooltip.hidden = true;
+    cy.edges().removeClass('hover-highlighted');
+    hoverLifespanNode = null;
+    refreshLifespan();
   });
 
   let minDegreeFilter = 0;
@@ -339,11 +485,25 @@ async function main() {
   function updateNodeVisibility() {
     const zoom  = cy.zoom();
     const total = nodesByHpi.length;
-    const t = Math.min(1, Math.max(0, (zoom - 0.3) / (1.5 - 0.3)));
-    const hpiCutoff = Math.round(5 + t * (total - 5));
+    const FADE_WINDOW = 8;
+    const t = Math.min(1, Math.max(0, (zoom - 0.3) / (2.5 - 0.3)));
+    // Offset start by FADE_WINDOW so top nodes are always at full opacity
+    const hpiCutoff = 4 + FADE_WINDOW + t * (total - 4);
+
     nodesByHpi.forEach((node, i) => {
-      const show = i < hpiCutoff && node.degree() >= minDegreeFilter;
-      node.style('display', show ? 'element' : 'none');
+      if (node.degree() < minDegreeFilter) {
+        node.style('display', 'none');
+        return;
+      }
+
+      const zoomOp = Math.min(1, Math.max(0, (hpiCutoff - i) / FADE_WINDOW));
+
+      if (zoomOp <= 0) {
+        node.style('display', 'none');
+      } else {
+        // Inline opacity must be set explicitly — it beats class-based opacity (.dimmed)
+        node.style({ display: 'element', opacity: node.hasClass('dimmed') ? 0.08 : zoomOp });
+      }
     });
   }
 
@@ -366,11 +526,16 @@ async function main() {
     cy.fit();
     updateNodeVisibility();
     hideInfoPanel();
+    currentLifespanNode = null;
+    refreshLifespan();
   });
 
   document.getElementById('info-close').addEventListener('click', () => {
     cy.elements().removeClass('dimmed highlighted');
+    updateNodeVisibility();
     hideInfoPanel();
+    currentLifespanNode = null;
+    refreshLifespan();
   });
 }
 
