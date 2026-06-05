@@ -5,6 +5,11 @@ const LAYOUT_WIDTH  = 4000;
 const LAYOUT_HEIGHT = 4000;
 const LABEL_SCREEN_PX = 14;
 
+// Single typeface for all rendered text (HTML chrome, canvas grid/lifespan,
+// SVG era bar, Cytoscape node labels) so nothing falls back to a stray
+// default sans-serif. Mirrors --font-ui in style.css.
+const FONT_STACK = "'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif";
+
 let occGroupMap = {};
 let groupColorMap = {};
 
@@ -43,7 +48,7 @@ function jitter(range) {
 
 function occupationColor(occ) {
   const group = occGroupMap[occ] ?? 'Other';
-  return groupColorMap[group] ?? groupColorMap['Other'] ?? '#607D8B';
+  return groupColorMap[group] ?? groupColorMap['Other'] ?? '#64748B';
 }
 
 function resolveOverlaps(nodes, padding = 8) {
@@ -95,6 +100,7 @@ function buildElements(people, relations, regions, w, h) {
       data: {
         id: p.id,
         name: p.name,
+        display_name: p.display_name ?? p.name,
         birth_year: p.birth_year,
         death_year: p.death_year,
         occupation: p.occupation,
@@ -140,9 +146,9 @@ function drawYearGrid(canvas, cy) {
   const pan  = cy.pan();
 
   ctx.strokeStyle = 'rgba(255,255,255,0.14)';
-  ctx.fillStyle   = 'rgba(255,255,255,0.35)';
+  ctx.fillStyle   = 'rgba(255,255,255,0.5)';
   ctx.lineWidth = 1;
-  ctx.font = '14px sans-serif';
+  ctx.font = `14px ${FONT_STACK}`;
   ctx.textAlign = 'center';
 
   for (let year = CANVAS_MIN_YEAR; year <= CANVAS_MAX_YEAR; year += 10) {
@@ -197,7 +203,7 @@ function drawEraBar(eras, svgEl, cy) {
     const x2 = toScreenX(Math.min(era.end_year, CANVAS_MAX_YEAR));
     const y = LABEL_AREA + t * ROW_H;
     svgEl.appendChild(el('rect', { x: x1, y, width: Math.max(0, x2 - x1), height: ROW_H, fill: era.color }));
-    const lbl = el('text', { x: x1 + 4, y: y + ROW_H / 2 + 5, fill: '#fff', 'font-size': 13, 'font-family': 'sans-serif', 'pointer-events': 'none' });
+    const lbl = el('text', { x: x1 + 4, y: y + ROW_H / 2 + 5, fill: '#fff', 'font-size': 13, 'font-family': FONT_STACK, 'pointer-events': 'none' });
     lbl.textContent = era.label;
     svgEl.appendChild(lbl);
   }
@@ -206,7 +212,7 @@ function drawEraBar(eras, svgEl, cy) {
   for (const era of eras.filter(e => e.type === 'event')) {
     const x = toScreenX(era.year);
     svgEl.appendChild(el('line', { x1: x, y1: 0, x2: x, y2: totalH, stroke: era.color, 'stroke-width': 1.5 }));
-    const lbl = el('text', { x: x + 3, y: LABEL_AREA - 4, fill: era.color, 'font-size': 12, 'font-family': 'sans-serif', 'pointer-events': 'none' });
+    const lbl = el('text', { x: x + 3, y: LABEL_AREA - 4, fill: era.color, 'font-size': 12, 'font-family': FONT_STACK, 'pointer-events': 'none' });
     lbl.textContent = era.label;
     svgEl.appendChild(lbl);
   }
@@ -269,7 +275,7 @@ function drawLifespanBars(canvas, cy, selectedNode) {
     const midY = barY + barH / 2;
 
     // Name — centered in bar
-    ctx.font = '15px sans-serif';
+    ctx.font = `15px ${FONT_STACK}`;
     ctx.strokeStyle = 'rgba(0,0,0,0.85)';
     ctx.lineWidth = 4;
     ctx.fillStyle = '#ffffff';
@@ -280,7 +286,7 @@ function drawLifespanBars(canvas, cy, selectedNode) {
 
     // Year numbers — left and right ends, only if bar is wide enough
     if (barWidth > 80) {
-      ctx.font = '14px sans-serif';
+      ctx.font = `14px ${FONT_STACK}`;
       ctx.lineWidth = 4;
       ctx.fillStyle = 'rgba(255,255,255,0.9)';
       ctx.textBaseline = 'middle';
@@ -374,8 +380,9 @@ async function main() {
           'background-color': 'data(color)',
           'width': 'data(size)',
           'height': 'data(size)',
-          'label': 'data(name)',
+          'label': 'data(display_name)',
           'color': '#ffffff',
+          'font-family': FONT_STACK,
           'font-size': 10,
           'text-valign': 'center',
           'text-halign': 'center',
@@ -387,7 +394,7 @@ async function main() {
       {
         selector: 'edge',
         style: {
-          'width': 'mapData(strength, 0, 1, 1, 12)',
+          'width': 'mapData(strength, 0.5, 0.95, 1, 14)',
           'line-color': ele => relationColor(ele.data('type')),
           'opacity': 'mapData(confidence, 0, 1, 0.1, 1)',
           'curve-style': 'bezier',

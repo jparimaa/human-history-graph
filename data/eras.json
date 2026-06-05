@@ -1,0 +1,16 @@
+[
+  { "id": "late_middle_ages",       "label": "Late Middle Ages",        "type": "era",   "start_year": 1300, "end_year": 1500, "color": "#6D4C4133" },
+  { "id": "hundred_years_war",      "label": "Hundred Years' War",      "type": "era",   "start_year": 1337, "end_year": 1453, "color": "#B7130033" },
+  { "id": "renaissance",            "label": "Renaissance",             "type": "era",   "start_year": 1350, "end_year": 1600, "color": "#F39C1233" },
+  { "id": "ottoman_rise",           "label": "Ottoman Rise",            "type": "era",   "start_year": 1300, "end_year": 1453, "color": "#E74C3C33" },
+  { "id": "ming_dynasty",           "label": "Ming Dynasty",            "type": "era",   "start_year": 1368, "end_year": 1600, "color": "#1565C033" },
+  { "id": "age_of_discovery",       "label": "Age of Discovery",        "type": "era",   "start_year": 1419, "end_year": 1600, "color": "#16A08533" },
+  { "id": "ottoman_golden_age",     "label": "Ottoman Golden Age",      "type": "era",   "start_year": 1453, "end_year": 1566, "color": "#C0392B33" },
+  { "id": "protestant_reformation", "label": "Protestant Reformation",  "type": "era",   "start_year": 1517, "end_year": 1600, "color": "#8E44AD33" },
+
+  { "id": "black_death",            "label": "Black Death",             "type": "event", "year": 1347, "color": "#C0392B" },
+  { "id": "battle_of_agincourt",    "label": "Battle of Agincourt",     "type": "event", "year": 1415, "color": "#2E86C1" },
+  { "id": "fall_of_constantinople", "label": "Fall of Constantinople",  "type": "event", "year": 1453, "color": "#8E44AD" },
+  { "id": "columbus_americas",      "label": "Columbus Reaches Americas","type": "event", "year": 1492, "color": "#16A085" },
+  { "id": "sack_of_rome",           "label": "Sack of Rome",            "type": "event", "year": 1527, "color": "#922B21" }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "source_id": "leonardo_da_vinci",
+    "target_id": "michelangelo",
+    "type": "rival",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Both competed for major commissions in Florence and Rome; their contrasting styles and temperaments made them the defining rivals of Renaissance art."
+  },
+  {
+    "source_id": "lorenzo_de'_medici",
+    "target_id": "leonardo_da_vinci",
+    "type": "patron",
+    "strength": 0.7,
+    "confidence": 0.85,
+    "reason": "Lorenzo de' Medici recognized Leonardo's talent early, included him in his Florentine court, and launched his career by sending him to Milan as part of a diplomatic mission to Ludovico Sforza around 1482."
+  },
+  {
+    "source_id": "leonardo_da_vinci",
+    "target_id": "cesare_borgia",
+    "type": "collaborator",
+    "strength": 0.55,
+    "confidence": 0.85,
+    "reason": "Leonardo served as Cesare Borgia's chief military architect and engineer in 1502-1503, traveling with his forces, mapping territories in central Italy, and designing fortifications."
+  },
+  {
+    "source_id": "leonardo_da_vinci",
+    "target_id": "francis_i_of_france",
+    "type": "patron",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Francis I invited Leonardo to France in 1516, provided him with Chateau du Clos Luce near Amboise and a royal pension, and reportedly held him as he died in 1519 -- the most generous patron of Leonardo's final years."
+  },
+  {
+    "source_id": "lorenzo_de'_medici",
+    "target_id": "michelangelo",
+    "type": "patron",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Lorenzo de' Medici invited the teenage Michelangelo to live in his household around 1489, treating him as a member of the family and exposing him to the leading humanists of Florence -- the formative patronage of his early career."
+  },
+  {
+    "source_id": "donato_bramante",
+    "target_id": "michelangelo",
+    "type": "rival",
+    "strength": 0.6,
+    "confidence": 0.75,
+    "reason": "Bramante reportedly persuaded Julius II to assign Michelangelo the Sistine Chapel ceiling, hoping the unfamiliar fresco medium would embarrass him; Michelangelo later accused Bramante of sabotage and sustained personal enmity."
+  },
+  {
+    "source_id": "pope_julius_ii",
+    "target_id": "michelangelo",
+    "type": "patron",
+    "strength": 0.95,
+    "confidence": 0.99,
+    "reason": "Julius II commissioned the Sistine Chapel ceiling and Michelangelo's own tomb, driving one of the most productive and stormy patron-artist relationships in history -- Michelangelo once fled Rome to escape the pope's demands."
+  },
+  {
+    "source_id": "michelangelo",
+    "target_id": "pope_clement_vii",
+    "type": "patron",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "Clement VII commissioned the Medici Chapel and the Laurentian Library from Michelangelo, two defining works of the High Renaissance; the relationship persisted through the Sack of Rome despite Michelangelo briefly taking up arms against Clement's allies."
+  },
+  {
+    "source_id": "pope_paul_iii",
+    "target_id": "michelangelo",
+    "type": "patron",
+    "strength": 0.85,
+    "confidence": 0.9,
+    "reason": "Paul III commissioned the Last Judgment (1536-1541) and appointed Michelangelo chief architect of St. Peter's Basilica, making him the dominant artistic force in Rome for the final three decades of his career."
+  },
+  {
+    "source_id": "pope_leo_x",
+    "target_id": "martin_luther",
+    "type": "enemy",
+    "strength": 0.95,
+    "confidence": 0.99,
+    "reason": "Pope Leo X issued the bull Exsurge Domine (1520) threatening excommunication and then formally excommunicated Luther in January 1521, making their confrontation the opening act of the Protestant Reformation."
+  },
+  {
+    "source_id": "erasmus",
+    "target_id": "martin_luther",
+    "type": "rival",
+    "strength": 0.85,
+    "confidence": 0.9,
+    "reason": "Initially sympathetic to Luther's criticisms of the Church, Erasmus broke with him over free will: his De libero arbitrio (1524) directly attacked Luther, who responded with De servo arbitrio (1525) in one of the era's defining theological debates."
+  },
+  {
+    "source_id": "martin_luther",
+    "target_id": "charles_v,_holy_roman_emperor",
+    "type": "enemy",
+    "strength": 0.85,
+    "confidence": 0.95,
+    "reason": "Charles V convened the Diet of Worms (1521) where Luther famously refused to recant, then issued the Edict of Worms declaring Luther a heretic and outlaw of the Empire."
+  },
+  {
+    "source_id": "martin_luther",
+    "target_id": "huldrych_zwingli",
+    "type": "rival",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "Both Protestant reformers, Luther and Zwingli clashed irreconcilably at the Marburg Colloquy (1529) over the nature of the Eucharist, splitting the Reformation movement into Lutheran and Reformed branches."
+  }
+]

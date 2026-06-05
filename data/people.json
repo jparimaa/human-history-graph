@@ -1,0 +1,762 @@
+[
+  {
+    "id": "leonardo_da_vinci",
+    "name": "Leonardo da Vinci",
+    "display_name": "Da Vinci",
+    "birth_year": 1452,
+    "death_year": 1519,
+    "occupation": "INVENTOR",
+    "birth_country": "Italy",
+    "hpi_score": 96.801826
+  },
+  {
+    "id": "christopher_columbus",
+    "name": "Christopher Columbus",
+    "display_name": "Columbus",
+    "birth_year": 1451,
+    "death_year": 1506,
+    "occupation": "EXPLORER",
+    "birth_country": "Italy",
+    "hpi_score": 94.907907
+  },
+  {
+    "id": "henry_viii_of_england",
+    "name": "Henry VIII of England",
+    "display_name": "Henry VIII",
+    "birth_year": 1491,
+    "death_year": 1547,
+    "occupation": "NOBLEMAN",
+    "birth_country": "United Kingdom",
+    "hpi_score": 94.649076
+  },
+  {
+    "id": "nicolaus_copernicus",
+    "name": "Nicolaus Copernicus",
+    "display_name": "Copernicus",
+    "birth_year": 1473,
+    "death_year": 1543,
+    "occupation": "ASTRONOMER",
+    "birth_country": "Poland",
+    "hpi_score": 93.78406
+  },
+  {
+    "id": "michelangelo",
+    "name": "Michelangelo",
+    "display_name": "Michelangelo",
+    "birth_year": 1475,
+    "death_year": 1564,
+    "occupation": "PAINTER",
+    "birth_country": "Italy",
+    "hpi_score": 93.544328
+  },
+  {
+    "id": "martin_luther",
+    "name": "Martin Luther",
+    "display_name": "Martin Luther",
+    "birth_year": 1483,
+    "death_year": 1546,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Germany",
+    "hpi_score": 92.768507
+  },
+  {
+    "id": "ferdinand_magellan",
+    "name": "Ferdinand Magellan",
+    "display_name": "Magellan",
+    "birth_year": 1480,
+    "death_year": 1521,
+    "occupation": "EXPLORER",
+    "birth_country": "Portugal",
+    "hpi_score": 92.617648
+  },
+  {
+    "id": "suleiman_the_magnificent",
+    "name": "Suleiman the Magnificent",
+    "display_name": "Suleiman the Magnificent",
+    "birth_year": 1494,
+    "death_year": 1566,
+    "occupation": "POLITICIAN",
+    "birth_country": "Türkiye",
+    "hpi_score": 91.578159
+  },
+  {
+    "id": "vasco_da_gama",
+    "name": "Vasco da Gama",
+    "display_name": "Vasco Da Gama",
+    "birth_year": 1460,
+    "death_year": 1524,
+    "occupation": "EXPLORER",
+    "birth_country": "Portugal",
+    "hpi_score": 91.063575
+  },
+  {
+    "id": "joan_of_arc",
+    "name": "Joan of Arc",
+    "display_name": "Joan of Arc",
+    "birth_year": 1412,
+    "death_year": 1431,
+    "occupation": "MILITARY PERSONNEL",
+    "birth_country": "France",
+    "hpi_score": 91.024858
+  },
+  {
+    "id": "raphael",
+    "name": "Raphael",
+    "display_name": "Raphael",
+    "birth_year": 1483,
+    "death_year": 1520,
+    "occupation": "PAINTER",
+    "birth_country": "Italy",
+    "hpi_score": 90.992706
+  },
+  {
+    "id": "niccolò_machiavelli",
+    "name": "Niccolò Machiavelli",
+    "display_name": "Machiavelli",
+    "birth_year": 1469,
+    "death_year": 1527,
+    "occupation": "PHILOSOPHER",
+    "birth_country": "Italy",
+    "hpi_score": 90.446188
+  },
+  {
+    "id": "albrecht_dürer",
+    "name": "Albrecht Dürer",
+    "display_name": "Dürer",
+    "birth_year": 1471,
+    "death_year": 1528,
+    "occupation": "PAINTER",
+    "birth_country": "Germany",
+    "hpi_score": 89.518004
+  },
+  {
+    "id": "mehmed_the_conqueror",
+    "name": "Mehmed the Conqueror",
+    "display_name": "Mehmed the Conqueror",
+    "birth_year": 1432,
+    "death_year": 1481,
+    "occupation": "POLITICIAN",
+    "birth_country": "Türkiye",
+    "hpi_score": 89.488811
+  },
+  {
+    "id": "erasmus",
+    "name": "Erasmus",
+    "display_name": "Erasmus",
+    "birth_year": 1466,
+    "death_year": 1536,
+    "occupation": "PHILOSOPHER",
+    "birth_country": "Netherlands",
+    "hpi_score": 88.327985
+  },
+  {
+    "id": "richard_iii_of_england",
+    "name": "Richard III of England",
+    "display_name": "Richard III",
+    "birth_year": 1452,
+    "death_year": 1485,
+    "occupation": "POLITICIAN",
+    "birth_country": "United Kingdom",
+    "hpi_score": 88.097385
+  },
+  {
+    "id": "charles_v,_holy_roman_emperor",
+    "name": "Charles V, Holy Roman Emperor",
+    "display_name": "Charles V",
+    "birth_year": 1500,
+    "death_year": 1558,
+    "occupation": "POLITICIAN",
+    "birth_country": "Belgium",
+    "hpi_score": 87.504983
+  },
+  {
+    "id": "sandro_botticelli",
+    "name": "Sandro Botticelli",
+    "display_name": "Botticelli",
+    "birth_year": 1445,
+    "death_year": 1510,
+    "occupation": "PAINTER",
+    "birth_country": "Italy",
+    "hpi_score": 87.241949
+  },
+  {
+    "id": "henry_vi_of_england",
+    "name": "Henry VI of England",
+    "display_name": "Henry VI",
+    "birth_year": 1421,
+    "death_year": 1471,
+    "occupation": "POLITICIAN",
+    "birth_country": "United Kingdom",
+    "hpi_score": 87.028624
+  },
+  {
+    "id": "edward_iv_of_england",
+    "name": "Edward IV of England",
+    "display_name": "Edward IV",
+    "birth_year": 1442,
+    "death_year": 1483,
+    "occupation": "POLITICIAN",
+    "birth_country": "France",
+    "hpi_score": 86.907746
+  },
+  {
+    "id": "nostradamus",
+    "name": "Nostradamus",
+    "display_name": "Nostradamus",
+    "birth_year": 1503,
+    "death_year": 1566,
+    "occupation": "OCCULTIST",
+    "birth_country": "France",
+    "hpi_score": 86.638909
+  },
+  {
+    "id": "amerigo_vespucci",
+    "name": "Amerigo Vespucci",
+    "display_name": "Vespucci",
+    "birth_year": 1454,
+    "death_year": 1512,
+    "occupation": "EXPLORER",
+    "birth_country": "Italy",
+    "hpi_score": 86.552593
+  },
+  {
+    "id": "vlad_the_impaler",
+    "name": "Vlad the Impaler",
+    "display_name": "Vlad the Impaler",
+    "birth_year": 1431,
+    "death_year": 1476,
+    "occupation": "INSPIRATION",
+    "birth_country": "Romania",
+    "hpi_score": 86.370235
+  },
+  {
+    "id": "anne_boleyn",
+    "name": "Anne Boleyn",
+    "display_name": "Anne Boleyn",
+    "birth_year": 1501,
+    "death_year": 1536,
+    "occupation": "COMPANION",
+    "birth_country": "United Kingdom",
+    "hpi_score": 86.361587
+  },
+  {
+    "id": "edward_v_of_england",
+    "name": "Edward V of England",
+    "display_name": "Edward V",
+    "birth_year": 1470,
+    "death_year": 1483,
+    "occupation": "POLITICIAN",
+    "birth_country": "United Kingdom",
+    "hpi_score": 85.878406
+  },
+  {
+    "id": "hernán_cortés",
+    "name": "Hernán Cortés",
+    "display_name": "Hernán Cortés",
+    "birth_year": 1485,
+    "death_year": 1547,
+    "occupation": "EXPLORER",
+    "birth_country": "Spain",
+    "hpi_score": 85.585017
+  },
+  {
+    "id": "guru_nanak",
+    "name": "Guru Nanak",
+    "display_name": "Guru Nanak",
+    "birth_year": 1469,
+    "death_year": 1539,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Pakistan",
+    "hpi_score": 85.460119
+  },
+  {
+    "id": "pope_alexander_vi",
+    "name": "Pope Alexander VI",
+    "display_name": "Alexander VI",
+    "birth_year": 1431,
+    "death_year": 1503,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Spain",
+    "hpi_score": 85.458251
+  },
+  {
+    "id": "john_calvin",
+    "name": "John Calvin",
+    "display_name": "John Calvin",
+    "birth_year": 1509,
+    "death_year": 1564,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "France",
+    "hpi_score": 85.231283
+  },
+  {
+    "id": "selim_i",
+    "name": "Selim I",
+    "display_name": "Selim I",
+    "birth_year": 1470,
+    "death_year": 1520,
+    "occupation": "POLITICIAN",
+    "birth_country": "Türkiye",
+    "hpi_score": 85.132869
+  },
+  {
+    "id": "paracelsus",
+    "name": "Paracelsus",
+    "display_name": "Paracelsus",
+    "birth_year": 1493,
+    "death_year": 1541,
+    "occupation": "PHYSICIAN",
+    "birth_country": "Switzerland",
+    "hpi_score": 85.082927
+  },
+  {
+    "id": "pope_clement_vii",
+    "name": "Pope Clement VII",
+    "display_name": "Clement VII",
+    "birth_year": 1478,
+    "death_year": 1534,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 84.954936
+  },
+  {
+    "id": "hurrem_sultan",
+    "name": "Hurrem Sultan",
+    "display_name": "Hurrem Sultan",
+    "birth_year": 1502,
+    "death_year": 1558,
+    "occupation": "POLITICIAN",
+    "birth_country": "Ukraine",
+    "hpi_score": 84.72704
+  },
+  {
+    "id": "bartolomeu_dias",
+    "name": "Bartolomeu Dias",
+    "display_name": "Bartolomeu Dias",
+    "birth_year": 1450,
+    "death_year": 1500,
+    "occupation": "EXPLORER",
+    "birth_country": "Portugal",
+    "hpi_score": 84.658444
+  },
+  {
+    "id": "titian",
+    "name": "Titian",
+    "display_name": "Titian",
+    "birth_year": 1488,
+    "death_year": 1576,
+    "occupation": "PAINTER",
+    "birth_country": "Italy",
+    "hpi_score": 84.620079
+  },
+  {
+    "id": "pope_julius_ii",
+    "name": "Pope Julius II",
+    "display_name": "Julius II",
+    "birth_year": 1443,
+    "death_year": 1513,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 84.495573
+  },
+  {
+    "id": "pope_gregory_xiii",
+    "name": "Pope Gregory XIII",
+    "display_name": "Gregory XIII",
+    "birth_year": 1502,
+    "death_year": 1585,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 84.420282
+  },
+  {
+    "id": "pope_leo_x",
+    "name": "Pope Leo X",
+    "display_name": "Leo X",
+    "birth_year": 1475,
+    "death_year": 1521,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 84.219664
+  },
+  {
+    "id": "lorenzo_de'_medici",
+    "name": "Lorenzo de' Medici",
+    "display_name": "Lorenzo de' Medici",
+    "birth_year": 1449,
+    "death_year": 1492,
+    "occupation": "POLITICIAN",
+    "birth_country": "Italy",
+    "hpi_score": 84.143389
+  },
+  {
+    "id": "pope_adrian_vi",
+    "name": "Pope Adrian VI",
+    "display_name": "Adrian VI",
+    "birth_year": 1459,
+    "death_year": 1523,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Netherlands",
+    "hpi_score": 83.910693
+  },
+  {
+    "id": "ignatius_of_loyola",
+    "name": "Ignatius of Loyola",
+    "display_name": "Ignatius of Loyola",
+    "birth_year": 1491,
+    "death_year": 1556,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Spain",
+    "hpi_score": 83.894121
+  },
+  {
+    "id": "hieronymus_bosch",
+    "name": "Hieronymus Bosch",
+    "display_name": "Hieronymus Bosch",
+    "birth_year": 1450,
+    "death_year": 1516,
+    "occupation": "PAINTER",
+    "birth_country": "Netherlands",
+    "hpi_score": 83.789025
+  },
+  {
+    "id": "bayezid_ii",
+    "name": "Bayezid II",
+    "display_name": "Bayezid II",
+    "birth_year": 1447,
+    "death_year": 1512,
+    "occupation": "POLITICIAN",
+    "birth_country": "Greece",
+    "hpi_score": 83.643859
+  },
+  {
+    "id": "pope_pius_iii",
+    "name": "Pope Pius III",
+    "display_name": "Pius III",
+    "birth_year": 1439,
+    "death_year": 1503,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 83.272807
+  },
+  {
+    "id": "pope_pius_v",
+    "name": "Pope Pius V",
+    "display_name": "Pius V",
+    "birth_year": 1504,
+    "death_year": 1572,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 83.127219
+  },
+  {
+    "id": "pope_paul_iii",
+    "name": "Pope Paul III",
+    "display_name": "Paul III",
+    "birth_year": 1468,
+    "death_year": 1549,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 83.035453
+  },
+  {
+    "id": "isabella_i_of_castile",
+    "name": "Isabella I of Castile",
+    "display_name": "Isabella I of Castile",
+    "birth_year": 1451,
+    "death_year": 1504,
+    "occupation": "POLITICIAN",
+    "birth_country": "Spain",
+    "hpi_score": 83.018683
+  },
+  {
+    "id": "francis_i_of_france",
+    "name": "Francis I of France",
+    "display_name": "Francis I",
+    "birth_year": 1494,
+    "death_year": 1547,
+    "occupation": "POLITICIAN",
+    "birth_country": "France",
+    "hpi_score": 82.837286
+  },
+  {
+    "id": "maximilian_i,_holy_roman_emperor",
+    "name": "Maximilian I, Holy Roman Emperor",
+    "display_name": "Maximilian I",
+    "birth_year": 1459,
+    "death_year": 1519,
+    "occupation": "POLITICIAN",
+    "birth_country": "Austria",
+    "hpi_score": 82.739974
+  },
+  {
+    "id": "ferdinand_i,_holy_roman_emperor",
+    "name": "Ferdinand I, Holy Roman Emperor",
+    "display_name": "Ferdinand I, Holy Roman Emperor",
+    "birth_year": 1503,
+    "death_year": 1564,
+    "occupation": "POLITICIAN",
+    "birth_country": "Spain",
+    "hpi_score": 82.705526
+  },
+  {
+    "id": "joanna_of_castile",
+    "name": "Joanna of Castile",
+    "display_name": "Joanna of Castile",
+    "birth_year": 1479,
+    "death_year": 1555,
+    "occupation": "POLITICIAN",
+    "birth_country": "Spain",
+    "hpi_score": 82.661795
+  },
+  {
+    "id": "pope_pius_iv",
+    "name": "Pope Pius IV",
+    "display_name": "Pius IV",
+    "birth_year": 1499,
+    "death_year": 1565,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 82.489543
+  },
+  {
+    "id": "girolamo_savonarola",
+    "name": "Girolamo Savonarola",
+    "display_name": "Savonarola",
+    "birth_year": 1452,
+    "death_year": 1498,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 82.356707
+  },
+  {
+    "id": "jacques_cartier",
+    "name": "Jacques Cartier",
+    "display_name": "Jacques Cartier",
+    "birth_year": 1491,
+    "death_year": 1557,
+    "occupation": "EXPLORER",
+    "birth_country": "France",
+    "hpi_score": 82.207035
+  },
+  {
+    "id": "lucrezia_borgia",
+    "name": "Lucrezia Borgia",
+    "display_name": "Lucrezia Borgia",
+    "birth_year": 1480,
+    "death_year": 1519,
+    "occupation": "NOBLEMAN",
+    "birth_country": "Italy",
+    "hpi_score": 82.130916
+  },
+  {
+    "id": "pope_sixtus_iv",
+    "name": "Pope Sixtus IV",
+    "display_name": "Sixtus IV",
+    "birth_year": 1414,
+    "death_year": 1484,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 82.123326
+  },
+  {
+    "id": "pope_innocent_viii",
+    "name": "Pope Innocent VIII",
+    "display_name": "Innocent VIII",
+    "birth_year": 1432,
+    "death_year": 1492,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 82.049327
+  },
+  {
+    "id": "francisco_pizarro",
+    "name": "Francisco Pizarro",
+    "display_name": "Pizarro",
+    "birth_year": 1478,
+    "death_year": 1541,
+    "occupation": "EXPLORER",
+    "birth_country": "Spain",
+    "hpi_score": 82.048662
+  },
+  {
+    "id": "pope_julius_iii",
+    "name": "Pope Julius III",
+    "display_name": "Julius III",
+    "birth_year": 1487,
+    "death_year": 1555,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 81.982958
+  },
+  {
+    "id": "pope_marcellus_ii",
+    "name": "Pope Marcellus II",
+    "display_name": "Marcellus II",
+    "birth_year": 1501,
+    "death_year": 1555,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 81.898079
+  },
+  {
+    "id": "catherine_of_aragon",
+    "name": "Catherine of Aragon",
+    "display_name": "Catherine of Aragon",
+    "birth_year": 1485,
+    "death_year": 1536,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Spain",
+    "hpi_score": 81.804332
+  },
+  {
+    "id": "pope_paul_iv",
+    "name": "Pope Paul IV",
+    "display_name": "Paul IV",
+    "birth_year": 1476,
+    "death_year": 1559,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Italy",
+    "hpi_score": 81.787545
+  },
+  {
+    "id": "françois_rabelais",
+    "name": "François Rabelais",
+    "display_name": "Rabelais",
+    "birth_year": 1494,
+    "death_year": 1553,
+    "occupation": "WRITER",
+    "birth_country": "France",
+    "hpi_score": 81.73332
+  },
+  {
+    "id": "louis_xii_of_france",
+    "name": "Louis XII of France",
+    "display_name": "Louis XII",
+    "birth_year": 1462,
+    "death_year": 1515,
+    "occupation": "POLITICIAN",
+    "birth_country": "France",
+    "hpi_score": 81.697083
+  },
+  {
+    "id": "mimar_sinan",
+    "name": "Mimar Sinan",
+    "display_name": "Mimar Sinan",
+    "birth_year": 1490,
+    "death_year": 1588,
+    "occupation": "ARCHITECT",
+    "birth_country": "Türkiye",
+    "hpi_score": 81.670847
+  },
+  {
+    "id": "hayreddin_barbarossa",
+    "name": "Hayreddin Barbarossa",
+    "display_name": "Hayreddin Barbarossa",
+    "birth_year": 1478,
+    "death_year": 1546,
+    "occupation": "PIRATE",
+    "birth_country": "Greece",
+    "hpi_score": 81.62128
+  },
+  {
+    "id": "babur",
+    "name": "Babur",
+    "display_name": "Babur",
+    "birth_year": 1483,
+    "death_year": 1530,
+    "occupation": "POLITICIAN",
+    "birth_country": "Uzbekistan",
+    "hpi_score": 81.602779
+  },
+  {
+    "id": "francis_xavier",
+    "name": "Francis Xavier",
+    "display_name": "Francis Xavier",
+    "birth_year": 1506,
+    "death_year": 1552,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Spain",
+    "hpi_score": 81.553912
+  },
+  {
+    "id": "thomas_more",
+    "name": "Thomas More",
+    "display_name": "Thomas More",
+    "birth_year": 1478,
+    "death_year": 1535,
+    "occupation": "PHILOSOPHER",
+    "birth_country": "United Kingdom",
+    "hpi_score": 81.522436
+  },
+  {
+    "id": "huldrych_zwingli",
+    "name": "Huldrych Zwingli",
+    "display_name": "Zwingli",
+    "birth_year": 1484,
+    "death_year": 1531,
+    "occupation": "RELIGIOUS FIGURE",
+    "birth_country": "Switzerland",
+    "hpi_score": 81.350864
+  },
+  {
+    "id": "philip_i_of_castile",
+    "name": "Philip I of Castile",
+    "display_name": "Philip I of Castile",
+    "birth_year": 1478,
+    "death_year": 1506,
+    "occupation": "POLITICIAN",
+    "birth_country": "Belgium",
+    "hpi_score": 81.29003
+  },
+  {
+    "id": "donato_bramante",
+    "name": "Donato Bramante",
+    "display_name": "Bramante",
+    "birth_year": 1443,
+    "death_year": 1514,
+    "occupation": "ARCHITECT",
+    "birth_country": "Italy",
+    "hpi_score": 81.196514
+  },
+  {
+    "id": "ferdinand_ii_of_aragon",
+    "name": "Ferdinand II of Aragon",
+    "display_name": "Ferdinand II of Aragon",
+    "birth_year": 1452,
+    "death_year": 1516,
+    "occupation": "POLITICIAN",
+    "birth_country": "Spain",
+    "hpi_score": 80.975851
+  },
+  {
+    "id": "ismail_i",
+    "name": "Ismail I",
+    "display_name": "Ismail I",
+    "birth_year": 1487,
+    "death_year": 1524,
+    "occupation": "WRITER",
+    "birth_country": "Iran",
+    "hpi_score": 80.93284
+  },
+  {
+    "id": "louis_ii_of_hungary",
+    "name": "Louis II of Hungary",
+    "display_name": "Louis II of Hungary",
+    "birth_year": 1506,
+    "death_year": 1526,
+    "occupation": "POLITICIAN",
+    "birth_country": "Hungary",
+    "hpi_score": 80.536883
+  },
+  {
+    "id": "cesare_borgia",
+    "name": "Cesare Borgia",
+    "display_name": "Cesare Borgia",
+    "birth_year": 1475,
+    "death_year": 1507,
+    "occupation": "MILITARY PERSONNEL",
+    "birth_country": "Italy",
+    "hpi_score": 80.492969
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "regions": {
+    "europe_north":   { "label": "N. Europe / British Isles", "y_band": 0.08 },
+    "europe_west":    { "label": "W. / C. Europe",            "y_band": 0.18 },
+    "europe_south":   { "label": "Mediterranean Europe",      "y_band": 0.29 },
+    "middle_east":    { "label": "Middle East",               "y_band": 0.42 },
+    "asia":           { "label": "Asia",                      "y_band": 0.55 },
+    "africa":         { "label": "Sub-Saharan Africa",        "y_band": 0.66 },
+    "americas_north": { "label": "North & Central America",   "y_band": 0.78 },
+    "americas_south": { "label": "South America",             "y_band": 0.90 }
+  },
+  "countries": {
+    "Scotland":          "europe_north",
+    "England":           "europe_north",
+    "Ireland":           "europe_north",
+    "Wales":             "europe_north",
+    "Norway":            "europe_north",
+    "Sweden":            "europe_north",
+    "Denmark":           "europe_north",
+    "United Kingdom":    "europe_north",
+
+    "France":            "europe_west",
+    "Flanders":          "europe_west",
+    "Netherlands":       "europe_west",
+    "Holy Roman Empire": "europe_west",
+    "Germany":           "europe_west",
+    "Switzerland":       "europe_west",
+    "Austria":           "europe_west",
+    "Bohemia":           "europe_west",
+    "Poland":            "europe_west",
+    "Hungary":           "europe_west",
+    "Belgium":           "europe_west",
+    "Ukraine":           "europe_west",
+    "Romania":           "europe_west",
+
+    "Italy":             "europe_south",
+    "Venice":            "europe_south",
+    "Spain":             "europe_south",
+    "Portugal":          "europe_south",
+    "Aragon":            "europe_south",
+    "Castile":           "europe_south",
+    "Byzantine Empire":  "europe_south",
+    "Greece":            "europe_south",
+
+    "Ottoman Empire":    "middle_east",
+    "Türkiye":           "middle_east",
+    "Persia":            "middle_east",
+    "Iran":              "middle_east",
+    "Arabia":            "middle_east",
+    "Egypt":             "middle_east",
+
+    "Mongol Empire":     "asia",
+    "China":             "asia",
+    "Japan":             "asia",
+    "India":             "asia",
+    "Mongolia":          "asia",
+    "Pakistan":          "asia",
+    "Uzbekistan":        "asia",
+
+    "Mali":              "africa",
+    "Ethiopia":          "africa",
+    "Congo":             "africa",
+    "Zimbabwe":          "africa",
+
+    "Aztec Empire":      "americas_north",
+    "Mexico":            "americas_north",
+    "Cuba":              "americas_north",
+    "Caribbean":         "americas_north",
+
+    "Inca Empire":       "americas_south",
+    "Peru":              "americas_south",
+    "Brazil":            "americas_south"
+  }
+}
