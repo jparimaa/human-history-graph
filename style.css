@@ -60,7 +60,8 @@ body {
 }
 
 
-#reset-btn {
+#reset-btn,
+#toggle-era-btn {
   background: #2a2a4a;
   color: #ccccee;
   border: 1px solid #44446a;

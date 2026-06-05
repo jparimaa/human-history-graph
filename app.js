@@ -8,6 +8,31 @@ const LABEL_SCREEN_PX = 14;
 let occGroupMap = {};
 let groupColorMap = {};
 
+// Edge colors by relation type. Grouped into a few color families.
+const RELATION_BLUE  = '#5b9bd5';
+const RELATION_RED   = '#e05a5a';
+const RELATION_GREEN = '#5cc98a';
+const RELATION_WHITE = '#dddde8';
+const RELATION_COLORS = {
+  teacher:       RELATION_BLUE,
+  mentor:        RELATION_BLUE,
+  collaborator:  RELATION_BLUE,
+  predecessor:   RELATION_BLUE,
+  rival:         RELATION_RED,
+  enemy:         RELATION_RED,
+  ally:          RELATION_GREEN,
+  patron:        RELATION_GREEN,
+  friend:        RELATION_GREEN,
+  family:        RELATION_WHITE,
+  spouse:        RELATION_WHITE,
+  romantic:      RELATION_WHITE,
+};
+const RELATION_DEFAULT_COLOR = '#888888';
+
+function relationColor(type) {
+  return RELATION_COLORS[type] ?? RELATION_DEFAULT_COLOR;
+}
+
 function yearToX(year, width) {
   return LEFT_MARGIN + (year - CANVAS_MIN_YEAR) / (CANVAS_MAX_YEAR - CANVAS_MIN_YEAR) * (width - LEFT_MARGIN * 2);
 }
@@ -190,7 +215,7 @@ function drawEraBar(eras, svgEl, cy) {
 }
 
 function drawLifespanBars(canvas, cy, selectedNode) {
-  const ROW_H = 34;
+  const ROW_H = 26;
   const PAD_V = 5;
 
   const neighbors = selectedNode.connectedEdges().connectedNodes().not(selectedNode);
@@ -212,10 +237,9 @@ function drawLifespanBars(canvas, cy, selectedNode) {
 
   people.forEach((node, i) => {
     const d = node.data();
-    const isSelected = node.id() === selectedNode.id();
     const rowY = PAD_V + i * ROW_H;
-    const barY = rowY + 5;
-    const barH = ROW_H - 12;
+    const barY = rowY + 2;
+    const barH = ROW_H - 4;
 
     const x1screen = yearToX(d.birth_year, LAYOUT_WIDTH) * zoom + pan.x;
     const x2screen = yearToX(d.death_year, LAYOUT_WIDTH) * zoom + pan.x;
@@ -227,13 +251,8 @@ function drawLifespanBars(canvas, cy, selectedNode) {
     const barWidth = drawX2 - drawX1;
 
     // Bar fill
-    ctx.fillStyle = d.color + (isSelected ? 'ee' : '55');
+    ctx.fillStyle = d.color + 'ee';
     ctx.fillRect(drawX1, barY, barWidth, barH);
-    if (isSelected) {
-      ctx.strokeStyle = d.color;
-      ctx.lineWidth = 1.5;
-      ctx.strokeRect(drawX1 + 0.75, barY + 0.75, barWidth - 1.5, barH - 1.5);
-    }
 
     // Clip subsequent text to bar bounds
     ctx.save();
@@ -250,10 +269,10 @@ function drawLifespanBars(canvas, cy, selectedNode) {
     const midY = barY + barH / 2;
 
     // Name — centered in bar
-    ctx.font = isSelected ? 'bold 14px sans-serif' : '13px sans-serif';
+    ctx.font = '15px sans-serif';
     ctx.strokeStyle = 'rgba(0,0,0,0.85)';
     ctx.lineWidth = 4;
-    ctx.fillStyle = isSelected ? '#ffffff' : '#ddddee';
+    ctx.fillStyle = '#ffffff';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     const age = (d.death_year && d.birth_year) ? ` (${d.death_year - d.birth_year})` : '';
@@ -261,9 +280,9 @@ function drawLifespanBars(canvas, cy, selectedNode) {
 
     // Year numbers — left and right ends, only if bar is wide enough
     if (barWidth > 80) {
-      ctx.font = isSelected ? 'bold 14px sans-serif' : '13px sans-serif';
+      ctx.font = '14px sans-serif';
       ctx.lineWidth = 4;
-      ctx.fillStyle = isSelected ? 'rgba(255,255,255,0.9)' : 'rgba(200,200,220,0.75)';
+      ctx.fillStyle = 'rgba(255,255,255,0.9)';
       ctx.textBaseline = 'middle';
 
       if (x1screen >= 2) {
@@ -369,7 +388,7 @@ async function main() {
         selector: 'edge',
         style: {
           'width': 'mapData(strength, 0, 1, 1, 12)',
-          'line-color': '#888888',
+          'line-color': ele => relationColor(ele.data('type')),
           'opacity': 'mapData(confidence, 0, 1, 0.1, 1)',
           'curve-style': 'bezier',
           'target-arrow-shape': 'none',
@@ -432,9 +451,17 @@ async function main() {
 
   const svgEl = document.getElementById('era-bar');
   let eraBarH = 0;
+  let eraBarVisible = false;
 
   function updateLayout() {
-    eraBarH = drawEraBar(eras, svgEl, cy);
+    svgEl.hidden = !eraBarVisible;
+    svgEl.style.display = eraBarVisible ? '' : 'none';
+    if (eraBarVisible) {
+      eraBarH = drawEraBar(eras, svgEl, cy);
+    } else {
+      svgEl.innerHTML = '';
+      eraBarH = 0;
+    }
     const bottomOffset = 44 + eraBarH;
     const h = window.innerHeight - bottomOffset;
     gridCanvas.width  = window.innerWidth;
@@ -448,7 +475,16 @@ async function main() {
   updateLayout();
   cy.on('pan zoom', () => {
     drawYearGrid(gridCanvas, cy);
-    drawEraBar(eras, svgEl, cy);
+    if (eraBarVisible) drawEraBar(eras, svgEl, cy);
+    refreshLifespan();
+  });
+
+  const toggleEraBtn = document.getElementById('toggle-era-btn');
+  toggleEraBtn.addEventListener('click', () => {
+    eraBarVisible = !eraBarVisible;
+    toggleEraBtn.textContent = eraBarVisible ? 'Hide timeline' : 'Show timeline';
+    toggleEraBtn.setAttribute('aria-pressed', String(eraBarVisible));
+    updateLayout();
     refreshLifespan();
   });
   window.addEventListener('resize', () => {
