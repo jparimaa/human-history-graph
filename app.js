@@ -190,7 +190,7 @@ function drawEraBar(eras, svgEl, cy) {
 }
 
 function drawLifespanBars(canvas, cy, selectedNode) {
-  const ROW_H = 52;
+  const ROW_H = 34;
   const PAD_V = 5;
 
   const neighbors = selectedNode.connectedEdges().connectedNodes().not(selectedNode);
@@ -214,8 +214,8 @@ function drawLifespanBars(canvas, cy, selectedNode) {
     const d = node.data();
     const isSelected = node.id() === selectedNode.id();
     const rowY = PAD_V + i * ROW_H;
-    const barY = rowY + 4;
-    const barH = ROW_H - 8;
+    const barY = rowY + 5;
+    const barH = ROW_H - 12;
 
     const x1screen = yearToX(d.birth_year, LAYOUT_WIDTH) * zoom + pan.x;
     const x2screen = yearToX(d.death_year, LAYOUT_WIDTH) * zoom + pan.x;
@@ -250,7 +250,7 @@ function drawLifespanBars(canvas, cy, selectedNode) {
     const midY = barY + barH / 2;
 
     // Name — centered in bar
-    ctx.font = isSelected ? 'bold 17px sans-serif' : '15px sans-serif';
+    ctx.font = isSelected ? 'bold 14px sans-serif' : '13px sans-serif';
     ctx.strokeStyle = 'rgba(0,0,0,0.85)';
     ctx.lineWidth = 4;
     ctx.fillStyle = isSelected ? '#ffffff' : '#ddddee';
@@ -261,7 +261,7 @@ function drawLifespanBars(canvas, cy, selectedNode) {
 
     // Year numbers — left and right ends, only if bar is wide enough
     if (barWidth > 80) {
-      ctx.font = isSelected ? 'bold 17px sans-serif' : '15px sans-serif';
+      ctx.font = isSelected ? 'bold 14px sans-serif' : '13px sans-serif';
       ctx.lineWidth = 4;
       ctx.fillStyle = isSelected ? 'rgba(255,255,255,0.9)' : 'rgba(200,200,220,0.75)';
       ctx.textBaseline = 'middle';
@@ -386,23 +386,32 @@ async function main() {
           'border-color': '#ffffff',
         },
       },
-      {
-        selector: 'edge.hover-highlighted',
-        style: {
-          'line-color': '#ffffff',
-          'width': 3,
-          'opacity': 1,
-        },
-      },
     ],
-    userZoomingEnabled: true,
+    userZoomingEnabled: false, // wheel zoom handled manually below
     userPanningEnabled: true,
     boxSelectionEnabled: false,
     autoungrabify: true,
-    wheelSensitivity: 0.05,
   });
 
+  window.cy = cy;
   cy.fit(undefined, 60);
+
+  // Cytoscape's wheelSensitivity option is discouraged (it logs a warning and
+  // zooms inconsistently across devices). Instead we disable built-in zoom and
+  // handle the wheel ourselves: zoom toward the cursor at a gentle rate, with
+  // deltaY normalised to pixels so mice and trackpads behave the same.
+  const ZOOM_SENSITIVITY = 0.0015; // lower = slower zoom
+  cy.container().addEventListener('wheel', evt => {
+    evt.preventDefault();
+    const rect = cy.container().getBoundingClientRect();
+    let dy = evt.deltaY;
+    if (evt.deltaMode === 1) dy *= 16;            // lines -> px
+    else if (evt.deltaMode === 2) dy *= rect.height; // pages -> px
+    cy.zoom({
+      level: cy.zoom() * Math.exp(-dy * ZOOM_SENSITIVITY),
+      renderedPosition: { x: evt.clientX - rect.left, y: evt.clientY - rect.top },
+    });
+  }, { passive: false });
 
   const gridCanvas = document.getElementById('year-grid');
   const lifespanCanvas = document.getElementById('lifespan-canvas');
@@ -458,9 +467,11 @@ async function main() {
     cy.elements().removeClass('highlighted').addClass('dimmed');
     node.closedNeighborhood().removeClass('dimmed');
     node.addClass('highlighted');
+    currentLifespanNode = node;
+    hoverLifespanNode = null;
+    tooltip.hidden = true;
     updateNodeVisibility();
     showInfoPanel(node, descriptions);
-    currentLifespanNode = node;
     refreshLifespan();
   });
 
@@ -475,26 +486,35 @@ async function main() {
 
   const tooltip = document.getElementById('tooltip');
 
+  // While a node is selected, only fully-visible nodes (the selection's
+  // neighbourhood) respond to hover; dimmed nodes stay inert.
+  function hoverBlocked(node) {
+    return currentLifespanNode && Number(node.style('opacity')) < 0.99;
+  }
+
   cy.on('mouseover', 'node', evt => {
     const node = evt.target;
+    if (hoverBlocked(node)) return;
     const desc = descriptions[node.data('id')] ?? {};
     tooltip.textContent = desc.short_description ?? 'No description available.';
     tooltip.hidden = false;
-    node.connectedEdges().addClass('hover-highlighted');
     hoverLifespanNode = node;
+    updateNodeVisibility();
     refreshLifespan();
   });
 
   cy.on('mousemove', 'node', evt => {
+    if (hoverBlocked(evt.target)) return;
     const { clientX, clientY } = evt.originalEvent;
     tooltip.style.left = (clientX + 16) + 'px';
     tooltip.style.top  = (clientY + 16) + 'px';
   });
 
-  cy.on('mouseout', 'node', () => {
+  cy.on('mouseout', 'node', evt => {
+    if (hoverBlocked(evt.target)) return;
     tooltip.hidden = true;
-    cy.edges().removeClass('hover-highlighted');
     hoverLifespanNode = null;
+    updateNodeVisibility();
     refreshLifespan();
   });
 
@@ -507,14 +527,34 @@ async function main() {
     const t = Math.min(1, Math.max(0, (zoom - 0.3) / (2.5 - 0.3)));
     const hpiCutoff = 4 + FADE_WINDOW + t * (total - 4);
 
-    nodesByHpi.forEach((node, i) => {
-      const zoomOp = Math.min(1, Math.max(0, (hpiCutoff - i) / FADE_WINDOW));
+    // The active (hovered or selected) node forces itself and its neighbours
+    // visible regardless of zoom, and is the only node whose edges are drawn.
+    const focusNode = hoverLifespanNode ?? currentLifespanNode;
+    const forcedIds = new Set(
+      focusNode ? focusNode.closedNeighborhood().nodes().map(n => n.id()) : []
+    );
 
-      if (zoomOp <= 0) {
-        node.style('display', 'none');
-      } else {
-        // Inline opacity must be set explicitly — it beats class-based opacity (.dimmed)
-        node.style({ display: 'element', opacity: node.hasClass('dimmed') ? 0.08 : zoomOp });
+    // batch() collapses all style writes into one repaint, which keeps
+    // rendering consistent across browsers.
+    cy.batch(() => {
+      nodesByHpi.forEach((node, i) => {
+        const zoomOp = Math.min(1, Math.max(0, (hpiCutoff - i) / FADE_WINDOW));
+        const op = forcedIds.has(node.id()) ? 1 : (node.hasClass('dimmed') ? 0.08 : zoomOp);
+        node.style({
+          display: 'element',
+          opacity: op,
+          events: op > 0 ? 'yes' : 'no',
+        });
+      });
+
+      // Edges stay hidden until a node is focused; then only that node's
+      // connections appear (pulling in connected people hidden by zoom).
+      cy.edges().style('display', 'none');
+      if (focusNode) {
+        // Shown with base edge style: width from strength, opacity from confidence.
+        // removeClass('dimmed') so a peeked (hovered) node's edges look the same
+        // as a clicked node's, even while a different node is selected.
+        focusNode.connectedEdges().removeClass('dimmed').style('display', 'element');
       }
     });
   }
