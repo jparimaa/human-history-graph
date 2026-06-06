@@ -1,11 +1,11 @@
 {
   "regions": {
-    "americas_africa": { "label": "Americas & Africa",        "y_band": 0.068 },
+    "americas":         { "label": "Americas",                  "y_band": 0.068 },
     "europe_north":     { "label": "N. Europe / British Isles", "y_band": 0.146 },
-    "europe_east":      { "label": "E. / SE. Europe",           "y_band": 0.242 },
-    "europe_west":      { "label": "W. / C. Europe",            "y_band": 0.416 },
-    "europe_south":     { "label": "Mediterranean Europe",      "y_band": 0.662 },
-    "middle_east":      { "label": "Middle East",               "y_band": 0.834 },
+    "europe_east":      { "label": "E. / SE. Europe",           "y_band": 0.266 },
+    "europe_west":      { "label": "W. / C. Europe",            "y_band": 0.484 },
+    "europe_south":     { "label": "Mediterranean Europe",      "y_band": 0.793 },
+    "middle_east":      { "label": "Middle East & Africa",      "y_band": 0.879 },
     "asia":             { "label": "Asia",                      "y_band": 0.923 }
   },
   "countries": {
@@ -91,22 +91,22 @@
     "Australia":         "asia",
     "New Zealand":       "asia",
 
-    "Mali":              "americas_africa",
-    "Ethiopia":          "americas_africa",
-    "Congo":             "americas_africa",
-    "Zimbabwe":          "americas_africa",
-    "South Africa":      "americas_africa",
-    "Aztec Empire":      "americas_africa",
-    "Mexico":            "americas_africa",
-    "Cuba":              "americas_africa",
-    "Caribbean":         "americas_africa",
-    "United States":     "americas_africa",
-    "Canada":            "americas_africa",
-    "Saint Lucia":       "americas_africa",
-    "Inca Empire":       "americas_africa",
-    "Peru":              "americas_africa",
-    "Brazil":            "americas_africa",
-    "Argentina":         "americas_africa",
-    "Venezuela":         "americas_africa"
+    "Mali":              "middle_east",
+    "Ethiopia":          "middle_east",
+    "Congo":             "middle_east",
+    "Zimbabwe":          "middle_east",
+    "South Africa":      "middle_east",
+    "Aztec Empire":      "americas",
+    "Mexico":            "americas",
+    "Cuba":              "americas",
+    "Caribbean":         "americas",
+    "United States":     "americas",
+    "Canada":            "americas",
+    "Saint Lucia":       "americas",
+    "Inca Empire":       "americas",
+    "Peru":              "americas",
+    "Brazil":            "americas",
+    "Argentina":         "americas",
+    "Venezuela":         "americas"
   }
 }

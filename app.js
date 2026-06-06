@@ -7,6 +7,19 @@ const LEFT_MARGIN = 80;
 const LAYOUT_WIDTH  = 20000;
 const LAYOUT_HEIGHT = 4000;
 
+// Vertical layout "breathes" with how crowded a stretch of time is. Region
+// y_bands are treated as offsets from the vertical center (0.5) and scaled by a
+// per-person `spread` in [SPREAD_MIN, 1]: where few people live near a year the
+// bands collapse toward the center line (contemporaries cluster regardless of
+// region); where many do, they fan out to the full-height layout. Europe sits
+// near 0.5 so it barely moves (the spine); Asia/Americas have the largest
+// offsets so they flare out the most. Local density is a Gaussian kernel over
+// birth years (bandwidth SPREAD_KERNEL_YEARS), normalised to its
+// SPREAD_DENSITY_PCT percentile so a few ultra-dense years don't flatten the rest.
+const SPREAD_MIN          = 0.18;
+const SPREAD_KERNEL_YEARS = 60;
+const SPREAD_DENSITY_PCT  = 0.95;
+
 // Candidate spacings (in years) for the vertical grid; drawYearGrid picks the
 // smallest one whose on-screen gap clears the label width at the current zoom.
 const YEAR_STEPS = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000];
@@ -96,6 +109,25 @@ function resolveOverlaps(nodes, padding = 8) {
   }
 }
 
+// Per-person vertical spread factor in [SPREAD_MIN, 1], aligned with `people`.
+// Density is a Gaussian kernel over birth years; normalising to a high
+// percentile (not the max) keeps the 19th-century spike from flattening
+// everything else toward the center line.
+function computeSpreads(people) {
+  const years = people.map(p => p.birth_year);
+  const densities = years.map(y0 => {
+    let sum = 0;
+    for (const y of years) {
+      const d = (y - y0) / SPREAD_KERNEL_YEARS;
+      sum += Math.exp(-0.5 * d * d);
+    }
+    return sum;
+  });
+  const sorted = [...densities].sort((a, b) => a - b);
+  const cap = sorted[Math.floor(SPREAD_DENSITY_PCT * (sorted.length - 1))] || 1;
+  return densities.map(d => SPREAD_MIN + (1 - SPREAD_MIN) * Math.min(1, d / cap));
+}
+
 function buildElements(people, relations, regions, w, h) {
   const hpiMin = Math.min(...people.map(p => p.hpi_score));
   const hpiMax = Math.max(...people.map(p => p.hpi_score));
@@ -120,10 +152,13 @@ function buildElements(people, relations, regions, w, h) {
     };
   });
 
-  const nodes = people.map(p => {
+  const spreads = computeSpreads(people);
+
+  const nodes = people.map((p, i) => {
     const regionId = regions.countries[p.birth_country] ?? 'europe_west';
     const yBand = regions.regions[regionId]?.y_band ?? 0.5;
     const span = regionSpan[regionId] ?? { up: 80, down: 80 };
+    const spread = spreads[i];
     const t = (p.hpi_score - hpiMin) / (hpiMax - hpiMin);
     const size = 20 + t * 60;
     return {
@@ -141,7 +176,7 @@ function buildElements(people, relations, regions, w, h) {
       },
       position: {
         x: yearToX(p.birth_year, w),
-        y: yBand * h + bandOffset(span),
+        y: 0.5 * h + (yBand - 0.5) * h * spread + bandOffset(span) * spread,
       },
     };
   });
@@ -599,12 +634,42 @@ async function main() {
 
   const nodesByHpi = cy.nodes().sort((a, b) => b.data('hpi_score') - a.data('hpi_score'));
 
+  // Visibility is viewport-aware: people are ranked by HPI *within the current
+  // view* (not globally), and we always reveal at least MIN_VISIBLE of them so a
+  // sparse era never shows up empty. Ranking globally meant low-HPI people in a
+  // thin era (e.g. around 1400 BC) never crossed the cutoff, leaving that part
+  // of the timeline blank no matter where you looked.
+  const MIN_VISIBLE = 50;  // floor on how many in-view people to show (or all, if fewer)
+  const FADE_WINDOW = 8;   // nodes just past the cutoff fade out rather than pop
+  const VIEW_MARGIN = 0.3; // grow the "in view" box past the screen so nodes appear before scrolling in
+
   function updateNodeVisibility() {
-    const zoom  = cy.zoom();
-    const total = nodesByHpi.length;
-    const FADE_WINDOW = 8;
+    const zoom = cy.zoom();
+
+    // Viewport in model coords, padded so nodes fade in slightly before they
+    // scroll on-screen (less pop-in while panning).
+    const ext = cy.extent();
+    const mx = (ext.x2 - ext.x1) * VIEW_MARGIN;
+    const my = (ext.y2 - ext.y1) * VIEW_MARGIN;
+    const x1 = ext.x1 - mx, x2 = ext.x2 + mx;
+    const y1 = ext.y1 - my, y2 = ext.y2 + my;
+
+    // In-view nodes, still in HPI order. Their rank within this set drives the
+    // fade, so the most notable people in the current view always win.
+    const rankInView = new Map();
+    let seen = 0;
+    nodesByHpi.forEach(node => {
+      const p = node.position();
+      if (p.x >= x1 && p.x <= x2 && p.y >= y1 && p.y <= y2) {
+        rankInView.set(node.id(), seen++);
+      }
+    });
+
+    // Reveal at least MIN_VISIBLE of the in-view people, growing toward all of
+    // them as you zoom in. When fewer than MIN_VISIBLE are in view, show them all.
     const t = Math.min(1, Math.max(0, (zoom - 0.3) / (2.5 - 0.3)));
-    const hpiCutoff = 4 + FADE_WINDOW + t * (total - 4);
+    const target = Math.max(MIN_VISIBLE, Math.ceil(seen * t));
+    const cutoff = target + FADE_WINDOW;
 
     // The active (hovered or selected) node forces itself and its neighbours
     // visible regardless of zoom, and is the only node whose edges are drawn.
@@ -616,8 +681,12 @@ async function main() {
     // batch() collapses all style writes into one repaint, which keeps
     // rendering consistent across browsers.
     cy.batch(() => {
-      nodesByHpi.forEach((node, i) => {
-        const zoomOp = Math.min(1, Math.max(0, (hpiCutoff - i) / FADE_WINDOW));
+      nodesByHpi.forEach((node) => {
+        const rank = rankInView.get(node.id());
+        // Out-of-view nodes (rank === undefined) get opacity 0.
+        const zoomOp = rank === undefined
+          ? 0
+          : Math.min(1, Math.max(0, (cutoff - rank) / FADE_WINDOW));
         const op = forcedIds.has(node.id()) ? 1 : (node.hasClass('dimmed') ? 0.08 : zoomOp);
         node.style({
           display: 'element',
@@ -638,8 +707,17 @@ async function main() {
     });
   }
 
+  // Visibility now depends on pan as well as zoom (it follows the viewport), but
+  // pan/zoom fire rapidly during a drag, so coalesce updates onto one frame.
+  let visScheduled = false;
+  function scheduleVisibility() {
+    if (visScheduled) return;
+    visScheduled = true;
+    requestAnimationFrame(() => { visScheduled = false; updateNodeVisibility(); });
+  }
+
   updateNodeVisibility();
-  cy.on('zoom', updateNodeVisibility);
+  cy.on('pan zoom', scheduleVisibility);
 
   document.getElementById('reset-btn').addEventListener('click', () => {
     cy.elements().removeClass('dimmed highlighted');
