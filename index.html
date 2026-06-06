@@ -26,9 +26,24 @@
     </section>
   </aside>
 
+  <aside id="filter-panel" hidden>
+    <div id="filter-header">
+      <h2>Filters</h2>
+      <button id="filter-close" aria-label="Close">&times;</button>
+    </div>
+    <label id="filter-show-all-row">
+      <input type="checkbox" id="filter-show-all">
+      <span class="filter-label">Show all (ignore zoom)</span>
+    </label>
+    <p id="filter-subtitle">Occupation groups</p>
+    <button id="filter-toggle-all">Uncheck all</button>
+    <ul id="filter-group-list"></ul>
+  </aside>
+
   <div id="bottom-bar">
     <button id="reset-btn">Reset view</button>
     <button id="toggle-era-btn" aria-pressed="false">Show timeline</button>
+    <button id="toggle-filter-btn" aria-pressed="false">Filters</button>
   </div>
 
   <div id="tooltip" hidden></div>

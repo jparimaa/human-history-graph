@@ -431,6 +431,18 @@ async function main() {
     Object.entries(occGroups.groups).map(([g, v]) => [g, v.color])
   );
 
+  // Occupation-group filter. All groups start enabled; the right-hand panel
+  // toggles which ones are shown. A node passes when its group is active.
+  const allGroups = Object.keys(occGroups.groups);
+  const activeGroups = new Set(allGroups);
+  function nodeGroup(node) {
+    return occGroupMap[node.data('occupation')] ?? 'Other';
+  }
+
+  // When true, every node in an active group is shown at full opacity,
+  // bypassing the zoom-based progressive reveal (the group filter still applies).
+  let showAll = false;
+
   const descriptions = Object.fromEntries(
     descriptionsRaw.map(entry => {
       const [id, data] = Object.entries(entry)[0];
@@ -546,6 +558,7 @@ async function main() {
     gridCanvas.height = h;
     gridCanvas.style.height = h + 'px';
     document.getElementById('info-panel').style.bottom = bottomOffset + 'px';
+    document.getElementById('filter-panel').style.bottom = bottomOffset + 'px';
     document.getElementById('lifespan-canvas').style.bottom = bottomOffset + 'px';
     drawYearGrid(gridCanvas, cy);
   }
@@ -659,6 +672,7 @@ async function main() {
     const rankInView = new Map();
     let seen = 0;
     nodesByHpi.forEach(node => {
+      if (!activeGroups.has(nodeGroup(node))) return;
       const p = node.position();
       if (p.x >= x1 && p.x <= x2 && p.y >= y1 && p.y <= y2) {
         rankInView.set(node.id(), seen++);
@@ -686,8 +700,11 @@ async function main() {
         // Out-of-view nodes (rank === undefined) get opacity 0.
         const zoomOp = rank === undefined
           ? 0
-          : Math.min(1, Math.max(0, (cutoff - rank) / FADE_WINDOW));
-        const op = forcedIds.has(node.id()) ? 1 : (node.hasClass('dimmed') ? 0.08 : zoomOp);
+          : showAll ? 1 : Math.min(1, Math.max(0, (cutoff - rank) / FADE_WINDOW));
+        // A filtered-out group stays hidden regardless of focus or selection.
+        const op = !activeGroups.has(nodeGroup(node))
+          ? 0
+          : forcedIds.has(node.id()) ? 1 : (node.hasClass('dimmed') ? 0.08 : zoomOp);
         node.style({
           display: 'element',
           opacity: op,
@@ -718,6 +735,77 @@ async function main() {
 
   updateNodeVisibility();
   cy.on('pan zoom', scheduleVisibility);
+
+  // ── Filter panel ──────────────────────────────────────
+  const filterPanel = document.getElementById('filter-panel');
+  const filterList = document.getElementById('filter-group-list');
+  const toggleAllBtn = document.getElementById('filter-toggle-all');
+  const toggleFilterBtn = document.getElementById('toggle-filter-btn');
+  const showAllCheckbox = document.getElementById('filter-show-all');
+
+  showAllCheckbox.addEventListener('change', () => {
+    showAll = showAllCheckbox.checked;
+    updateNodeVisibility();
+  });
+
+  // One checkbox row per group, each with its swatch color from the data.
+  const groupCheckboxes = allGroups.map(group => {
+    const li = document.createElement('li');
+    const label = document.createElement('label');
+    label.style.display = 'contents';
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = true;
+    checkbox.value = group;
+
+    const swatch = document.createElement('span');
+    swatch.className = 'filter-swatch';
+    swatch.style.background = groupColorMap[group] ?? '#64748B';
+
+    const text = document.createElement('span');
+    text.className = 'filter-label';
+    text.textContent = group;
+
+    label.append(checkbox, swatch, text);
+    li.appendChild(label);
+    filterList.appendChild(li);
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) activeGroups.add(group);
+      else activeGroups.delete(group);
+      updateToggleAllLabel();
+      updateNodeVisibility();
+    });
+    return checkbox;
+  });
+
+  function updateToggleAllLabel() {
+    const allOn = groupCheckboxes.every(cb => cb.checked);
+    toggleAllBtn.textContent = allOn ? 'Uncheck all' : 'Check all';
+  }
+
+  toggleAllBtn.addEventListener('click', () => {
+    const turnOn = !groupCheckboxes.every(cb => cb.checked);
+    groupCheckboxes.forEach(cb => {
+      cb.checked = turnOn;
+      if (turnOn) activeGroups.add(cb.value);
+      else activeGroups.delete(cb.value);
+    });
+    updateToggleAllLabel();
+    updateNodeVisibility();
+  });
+
+  toggleFilterBtn.addEventListener('click', () => {
+    const show = filterPanel.hidden;
+    filterPanel.hidden = !show;
+    toggleFilterBtn.setAttribute('aria-pressed', String(show));
+  });
+
+  document.getElementById('filter-close').addEventListener('click', () => {
+    filterPanel.hidden = true;
+    toggleFilterBtn.setAttribute('aria-pressed', 'false');
+  });
 
   document.getElementById('reset-btn').addEventListener('click', () => {
     cy.elements().removeClass('dimmed highlighted');
