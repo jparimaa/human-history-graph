@@ -1,10 +1,9 @@
-// Data now spans Hammurabi (~1810 BC) to people born in 1899 AD, with deaths
-// reaching ~1988. The axis is padded to round millennia on both ends.
-const CANVAS_MIN_YEAR = -2000;
+const CANVAS_MIN_YEAR = -3200;
 const CANVAS_MAX_YEAR = 2000;
 const LEFT_MARGIN = 80;
-// Width scaled up with the ~13x larger year span so births don't pile up.
-const LAYOUT_WIDTH  = 20000;
+// Scaled up from 20000 by the same ratio as the year span (4000 -> 5200)
+// so pixels-per-year, and hence node spacing, stays unchanged.
+const LAYOUT_WIDTH  = 26000;
 const LAYOUT_HEIGHT = 4000;
 
 // Vertical layout "breathes" with how crowded a stretch of time is. Region
