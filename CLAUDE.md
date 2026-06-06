@@ -44,10 +44,11 @@ data/
   relations.json    - array of directed edges between people
   eras.json         - era bands and point events for the timeline ruler
   regions.json      - maps country names to y-band regions
+  occupation_groups.json - maps occupations to color groups (see Occupation colors)
 design/
   data_plan.md          - full schema docs, layout formulas, implementation notes
   overview.md           - product vision
-rules/                  - project rules folder
+rules/                  - authoring rules (display_name.md, descriptions.md, connections.md)
 test/
   inspect.mjs           - opt-in Playwright behaviour checks (see Browser testing)
 ```
@@ -57,7 +58,8 @@ test/
 See `design/data_plan.md` for full schemas. Short version:
 
 **people.json** - array of objects:
-`{ id, name, birth_year, death_year, occupation, birth_country, hpi_score }`
+`{ id, name, display_name, birth_year, death_year, occupation, birth_country, hpi_score }`
+`display_name` is the shortened label drawn on the graph (rules in `rules/display_name.md`); `name` is the full name shown in the info panel and edge headers.
 
 **descriptions.json** - array of single-key objects (note: NOT a flat map):
 `[ { "person_id": { short_description, long_description, why_they_matter, personality } } ]`
@@ -80,29 +82,24 @@ Eight regions: `europe_north, europe_west, europe_south, middle_east, asia, afri
 
 ## Layout
 
-- X axis: birth year mapped to LAYOUT_WIDTH=4000 model units, CANVAS_MIN_YEAR=1300, CANVAS_MAX_YEAR=1600
-- Y axis: region y_band * LAYOUT_HEIGHT (2200) + jitter(20px)
-- Node size: diameter = 20 + t*60 where t = normalized rank within displayed set's HPI range
-- Cytoscape preset layout (no force simulation). Nodes are locked (autoungrabify: true)
-- After building elements, resolveOverlaps() pushes nodes apart in Y only to prevent overlap
+(Exact constants and formulas live in app.js; this is the shape of it.)
+
+- X axis: birth year mapped linearly to model X between `CANVAS_MIN_YEAR` and `CANVAS_MAX_YEAR`.
+- Y axis: region `y_band` scaled to the layout height, plus random Y jitter sized from the gap to neighbouring region bands.
+- Node diameter scales with the person's HPI rank across the dataset.
+- Cytoscape `preset` layout (no force simulation). Nodes are locked (`autoungrabify: true`).
+- After building elements, `resolveOverlaps()` pushes overlapping nodes apart in Y only.
 
 ## Key app.js behaviours
 
-- **Zoom-based visibility**: fewer people shown when zoomed out, all shown when zoomed in. Threshold: zoom 0.3 (show 5) to zoom 1.5 (show all), linear. Nodes sorted by hpi_score descending.
-- **Wheel zoom**: Cytoscape's built-in zoom is disabled (`userZoomingEnabled: false`); a custom `wheel` handler on the container zooms toward the cursor at a gentle rate (`ZOOM_SENSITIVITY`), with `deltaY` normalised across `deltaMode` so mice and trackpads match. Avoids the discouraged `wheelSensitivity` option (which logs a console warning).
-- **Labels**: fixed screen size (14px) regardless of zoom, achieved by setting font-size = 14/cy.zoom() on every zoom event
-- **Year grid**: canvas overlay (position: fixed, z-index 2, pointer-events none) drawn on pan/zoom. Uses window.innerWidth and window.innerHeight-84 for dimensions (getBoundingClientRect does not work for fixed canvas).
-- **Click node**: dims all, highlights neighborhood, opens info panel (shows long_description)
-- **Hover node**: shows tooltip with short_description near cursor
-- **Degree slider**: combined with zoom visibility (both filters apply)
+- **Zoom-based visibility**: the number of visible people grows as you zoom in. Nodes are ranked by `hpi_score` and faded in over a window. See `updateNodeVisibility()` for the exact curve.
+- **Wheel zoom**: Cytoscape's built-in zoom is disabled (`userZoomingEnabled: false`); a custom `wheel` handler zooms toward the cursor at a gentle rate (`ZOOM_SENSITIVITY`), with `deltaY` normalised across `deltaMode` so mice and trackpads match. Avoids the discouraged `wheelSensitivity` option (which logs a console warning).
+- **Labels**: node labels use `display_name` and are held at a fixed screen size regardless of zoom by rescaling `font-size` with `cy.zoom()` on every zoom event.
+- **Year grid**: canvas overlay (`position: fixed`, behind the UI, `pointer-events: none`) redrawn on pan/zoom. Its height accounts for the bottom bar and the optional era/timeline bar (`getBoundingClientRect` does not work for a fixed canvas).
+- **Era/timeline bar**: a toggleable SVG ruler; when shown it stays aligned with node X positions during pan/zoom.
+- **Click node**: dims all, highlights the neighbourhood, draws that node's edges, opens the info panel (shows `long_description`).
+- **Hover node**: shows a tooltip with `short_description` near the cursor and peeks the node's edges.
 
 ## Occupation colors
 
-Defined in OCCUPATION_COLORS map in app.js. Unknown occupations fall back to OTHER (#607D8B).
-
-## What is not yet done (v1 scope)
-
-- Data only covers Renaissance era (~1300-1600). The vision covers 500 BCE - 1900 CE.
-- descriptions.json only covers a subset of people in people.json; missing entries show "No description available."
-- relations.json only covers the top ~10 people; most nodes have no edges.
-- No era bar / node x-axis synchronization during pan/zoom (era bar is static).
+Each occupation maps to a broad group via the `occupations` map in `data/occupation_groups.json`, and each group has a color in the `groups` map. Unknown occupations fall back to the `Other` group.

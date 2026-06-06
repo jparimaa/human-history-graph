@@ -1,7 +1,7 @@
 design/
-*.py
 node_modules/
 package.json
 package-lock.json
 test/*.png
 *.csv
+*.txt

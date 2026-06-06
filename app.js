@@ -1,8 +1,15 @@
-const CANVAS_MIN_YEAR = 1300;
-const CANVAS_MAX_YEAR = 1600;
+// Data now spans Hammurabi (~1810 BC) to people born in 1899 AD, with deaths
+// reaching ~1988. The axis is padded to round millennia on both ends.
+const CANVAS_MIN_YEAR = -2000;
+const CANVAS_MAX_YEAR = 2000;
 const LEFT_MARGIN = 80;
-const LAYOUT_WIDTH  = 4000;
+// Width scaled up with the ~13x larger year span so births don't pile up.
+const LAYOUT_WIDTH  = 20000;
 const LAYOUT_HEIGHT = 4000;
+
+// Candidate spacings (in years) for the vertical grid; drawYearGrid picks the
+// smallest one whose on-screen gap clears the label width at the current zoom.
+const YEAR_STEPS = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000];
 const LABEL_SCREEN_PX = 14;
 
 // Single typeface for all rendered text (HTML chrome, canvas grid/lifespan,
@@ -42,8 +49,22 @@ function yearToX(year, width) {
   return LEFT_MARGIN + (year - CANVAS_MIN_YEAR) / (CANVAS_MAX_YEAR - CANVAS_MIN_YEAR) * (width - LEFT_MARGIN * 2);
 }
 
-function jitter(range) {
-  return (Math.random() - 0.5) * 2 * range;
+// Negative years are BC; everything else is shown as a plain number.
+function formatYear(year) {
+  return year < 0 ? `${-year} BC` : String(year);
+}
+
+function niceYearStep(pxPerYear, minPx) {
+  for (const s of YEAR_STEPS) {
+    if (s * pxPerYear >= minPx) return s;
+  }
+  return YEAR_STEPS[YEAR_STEPS.length - 1];
+}
+
+// Random offset in [-up, +down] (y grows downward), used to spread a region's
+// people across its band without a hard top/bottom edge.
+function bandOffset(span) {
+  return Math.random() * (span.up + span.down) - span.up;
 }
 
 function occupationColor(occ) {
@@ -79,21 +100,30 @@ function buildElements(people, relations, regions, w, h) {
   const hpiMin = Math.min(...people.map(p => p.hpi_score));
   const hpiMax = Math.max(...people.map(p => p.hpi_score));
 
-  // Compute per-region jitter span: 75% of half the gap to the nearest neighbour band
+  // Each region fills the space up to the midpoint with each neighbouring band
+  // (so adjacent bands tile with no empty strip between them); BAND_FILL > 1
+  // overshoots that midpoint slightly so neighbouring regions mingle a little
+  // at their boundaries instead of forming a hard seam. The spread is
+  // asymmetric: a band reaches half-way to whichever neighbour it has on each
+  // side, so a large band next to a small one still uses its full share.
+  const BAND_FILL = 1.12;
   const sortedBands = Object.entries(regions.regions)
     .map(([id, r]) => ({ id, y: r.y_band }))
     .sort((a, b) => a.y - b.y);
-  const regionJitter = {};
+  const regionSpan = {};
   sortedBands.forEach((r, i) => {
     const prevGap = i > 0 ? r.y - sortedBands[i - 1].y : 0.08;
     const nextGap = i < sortedBands.length - 1 ? sortedBands[i + 1].y - r.y : 0.08;
-    regionJitter[r.id] = Math.min(prevGap, nextGap) / 2 * h;
+    regionSpan[r.id] = {
+      up:   prevGap / 2 * h * BAND_FILL,
+      down: nextGap / 2 * h * BAND_FILL,
+    };
   });
 
   const nodes = people.map(p => {
     const regionId = regions.countries[p.birth_country] ?? 'europe_west';
     const yBand = regions.regions[regionId]?.y_band ?? 0.5;
-    const span = regionJitter[regionId] ?? 80;
+    const span = regionSpan[regionId] ?? { up: 80, down: 80 };
     const t = (p.hpi_score - hpiMin) / (hpiMax - hpiMin);
     const size = 20 + t * 60;
     return {
@@ -111,7 +141,7 @@ function buildElements(people, relations, regions, w, h) {
       },
       position: {
         x: yearToX(p.birth_year, w),
-        y: yBand * h + jitter(span),
+        y: yBand * h + bandOffset(span),
       },
     };
   });
@@ -151,14 +181,20 @@ function drawYearGrid(canvas, cy) {
   ctx.font = `14px ${FONT_STACK}`;
   ctx.textAlign = 'center';
 
-  for (let year = CANVAS_MIN_YEAR; year <= CANVAS_MAX_YEAR; year += 10) {
+  // Tick spacing adapts to zoom: pick the smallest "nice" step whose on-screen
+  // gap leaves room for a year label, then align the first tick to that step.
+  const pxPerYear = (LAYOUT_WIDTH - LEFT_MARGIN * 2) / (CANVAS_MAX_YEAR - CANVAS_MIN_YEAR) * zoom;
+  const step = niceYearStep(pxPerYear, 70);
+  const start = Math.ceil(CANVAS_MIN_YEAR / step) * step;
+
+  for (let year = start; year <= CANVAS_MAX_YEAR; year += step) {
     const screenX = yearToX(year, LAYOUT_WIDTH) * zoom + pan.x;
     if (screenX < 0 || screenX > w) continue;
     ctx.beginPath();
     ctx.moveTo(screenX, 0);
     ctx.lineTo(screenX, h);
     ctx.stroke();
-    ctx.fillText(year, screenX, h - 6);
+    ctx.fillText(formatYear(year), screenX, h - 6);
   }
 }
 
@@ -293,11 +329,11 @@ function drawLifespanBars(canvas, cy, selectedNode) {
 
       if (x1screen >= 2) {
         ctx.textAlign = 'left';
-        outlineText(d.birth_year, drawX1 + 6, midY);
+        outlineText(formatYear(d.birth_year), drawX1 + 6, midY);
       }
       if (x2screen <= w - 2) {
         ctx.textAlign = 'right';
-        outlineText(d.death_year, drawX2 - 6, midY);
+        outlineText(formatYear(d.death_year), drawX2 - 6, midY);
       }
     }
 
@@ -311,7 +347,7 @@ function showInfoPanel(node, descriptions) {
 
   document.getElementById('info-name').textContent = d.name;
   document.getElementById('info-meta').textContent =
-    `${d.birth_year}–${d.death_year} · ${d.occupation} · ${d.birth_country}`;
+    `${formatYear(d.birth_year)}–${formatYear(d.death_year)} · ${d.occupation} · ${d.birth_country}`;
   document.getElementById('info-long-desc').textContent = desc.long_description ?? 'No description available.';
 
   const whyEl = document.getElementById('info-why-matters');
