@@ -2,10 +2,12 @@
 
 - State who they were and why they are known.
 - Written for quick tooltip reading.
+- Avoid saying the birth country (e.g. "German" or "Austrian-born").
 
 ## long_description
 
-- 2-4 short paragraphs.
+- 1-4 short paragraphs.
+- If there is not much to tell, better to keep it short.
 - Explain who they were, what they did, and their historical context.
 - Focus on the most important achievements and relationships.
 - Written for a general audience.
@@ -20,7 +22,8 @@
 
 ## personality
 
-- 1-3 sentences.
+- 0-3 sentences.
+- It is acceptable to leave this empty if there is no credible assumption.
 - Describe widely accepted personality traits, working style, or reputation.
 - Avoid speculation and psychological diagnosis.
 - Use historical accounts when possible.

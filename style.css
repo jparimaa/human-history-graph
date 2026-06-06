@@ -105,7 +105,7 @@ body {
   top: 0;
   left: 0;
   bottom: 44px;
-  width: 380px;
+  width: 570px;
   background: color-mix(in srgb, var(--surface) 80%, transparent);
   backdrop-filter: blur(6px);
   border-right: 1px solid var(--border);

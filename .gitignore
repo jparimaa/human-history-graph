@@ -5,3 +5,4 @@ package-lock.json
 test/*.png
 *.csv
 *.txt
+*.pyc
