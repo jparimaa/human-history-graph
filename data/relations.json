@@ -192,9 +192,6 @@
     "reason": "Mahavira and Buddha were contemporaries in northeastern India who founded competing religious movements; Buddhist texts record debates between their followers, and the two traditions developed in direct rivalry."
   },
   {
-    "source_id": "gautama_buddha"
-  },
-  {
     "source_id": "robert_hooke",
     "target_id": "isaac_newton",
     "type": "rival",
@@ -924,7 +921,7 @@
   },
   {
     "source_id": "marie_curie",
-    "target_id": "irene_joliot-curie",
+    "target_id": "irène_joliot-curie",
     "type": "family",
     "strength": 0.9,
     "confidence": 0.99,

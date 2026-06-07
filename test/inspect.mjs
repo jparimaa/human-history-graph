@@ -4,7 +4,7 @@
 import { chromium } from 'playwright';
 
 const URL = process.env.URL ?? 'http://localhost:8000';
-const ROW_H = 34, PAD_V = 5; // must match drawLifespanBars
+const ROW_H = 26, PAD_V = 5; // must match drawLifespanBars
 const approx = (a, b, eps = 0.01) => Math.abs(a - b) <= eps;
 const checks = [];
 const check = (name, cond, detail = '') => { checks.push({ name, cond, detail }); };
