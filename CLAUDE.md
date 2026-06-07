@@ -1,6 +1,6 @@
 # Human History Graph
 
-Interactive browser-based graph of historical figures. People are nodes positioned by birth year (x-axis) and geographic region (y-axis). Edges show relationships (rivalry, influence, patronage, etc.). Built with Cytoscape.js, no backend, no build tools.
+Interactive browser-based graph of historical figures, spanning antiquity to ~1900. People are nodes positioned by birth year (x-axis) and geographic region (y-axis). Edges show relationships (rivalry, influence, patronage, etc.). Built with Cytoscape.js, no backend, no build tools.
 
 ## Python scripts
 
@@ -43,23 +43,22 @@ index.html          - single page shell
 app.js              - all application logic (ES module)
 style.css           - dark theme layout
 data/
-  people.json       - array of person objects (~80 people, Renaissance era)
+  people.json       - array of person objects (~1070 people, ~1800 BC to 1900)
   descriptions.json - array of { "id": { short, long, why, personality } }
   relations.json    - array of directed edges between people
+  completed_relations.json - array of person ids whose relations have been authored (progress tracker for scripts/skills)
   eras.json         - era bands and point events for the timeline ruler
   regions.json      - maps country names to y-band regions
   occupation_groups.json - maps occupations to color groups (see Occupation colors)
-design/
-  data_plan.md          - full schema docs, layout formulas, implementation notes
-  overview.md           - product vision
-rules/                  - authoring rules (display_name.md, descriptions.md, connections.md)
+rules/                  - authoring rules (display_name.md, descriptions.md, relations.md, eras.md)
+scripts/                - Python data helpers (add/check relations, find missing data, csv->json)
 test/
   inspect.mjs           - opt-in Playwright behaviour checks (see Browser testing)
 ```
 
 ## Data schemas
 
-See `design/data_plan.md` for full schemas. Short version:
+Short version of the data schemas:
 
 **people.json** - array of objects:
 `{ id, name, display_name, birth_year, death_year, occupation, birth_country, hpi_score }`
@@ -73,7 +72,7 @@ See `design/data_plan.md` for full schemas. Short version:
 
 Valid relation types: `teacher, student, rival, collaborator, patron, family, influence, ally, spouse, romantic, friend, enemy, mentor, successor, predecessor`
 
-**eras.json** - array of era bands and point events, years 1300-1600:
+**eras.json** - array of era bands and point events, spanning ~3150 BC to 1900:
 `{ id, label, type: "era"|"event", start_year+end_year OR year, color }`
 
 **regions.json** - keyed object with regions and country map:
@@ -89,20 +88,24 @@ Eight regions: `europe_north, europe_west, europe_south, middle_east, asia, afri
 (Exact constants and formulas live in app.js; this is the shape of it.)
 
 - X axis: birth year mapped linearly to model X between `CANVAS_MIN_YEAR` and `CANVAS_MAX_YEAR`.
-- Y axis: region `y_band` scaled to the layout height, plus random Y jitter sized from the gap to neighbouring region bands.
-- Node diameter scales with the person's HPI rank across the dataset.
+- Y axis: region `y_band` scaled to the layout height, plus random Y jitter sized from the gap to neighbouring region bands. Region bands also "breathe" with local density: in sparse stretches of time they collapse toward the center line, in crowded ones they fan out to full height (`computeSpreads()`, `SPREAD_*` constants).
+- Node diameter scales with the person's `hpi_score` (min-max normalised across the dataset), not rank.
 - Cytoscape `preset` layout (no force simulation). Nodes are locked (`autoungrabify: true`).
 - After building elements, `resolveOverlaps()` pushes overlapping nodes apart in Y only.
 
 ## Key app.js behaviours
 
-- **Zoom-based visibility**: the number of visible people grows as you zoom in. Nodes are ranked by `hpi_score` and faded in over a window. See `updateNodeVisibility()` for the exact curve.
+- **Zoom-based visibility**: the number of visible people grows as you zoom in. Ranking is viewport-aware: in-view nodes are ranked by `hpi_score` and faded in over a window, with a floor (`MIN_VISIBLE`) so a sparse era never shows up empty. The occupation-group filter and the "show all" toggle also gate visibility. Coalesced onto one animation frame since it follows pan as well as zoom. See `updateNodeVisibility()`.
 - **Wheel zoom**: Cytoscape's built-in zoom is disabled (`userZoomingEnabled: false`); a custom `wheel` handler zooms toward the cursor at a gentle rate (`ZOOM_SENSITIVITY`), with `deltaY` normalised across `deltaMode` so mice and trackpads match. Avoids the discouraged `wheelSensitivity` option (which logs a console warning).
 - **Labels**: node labels use `display_name` and are held at a fixed screen size regardless of zoom by rescaling `font-size` with `cy.zoom()` on every zoom event.
 - **Year grid**: canvas overlay (`position: fixed`, behind the UI, `pointer-events: none`) redrawn on pan/zoom. Its height accounts for the bottom bar and the optional era/timeline bar (`getBoundingClientRect` does not work for a fixed canvas).
 - **Era/timeline bar**: a toggleable SVG ruler; when shown it stays aligned with node X positions during pan/zoom.
-- **Click node**: dims all, highlights the neighbourhood, draws that node's edges, opens the info panel (shows `long_description`).
-- **Hover node**: shows a tooltip with `short_description` near the cursor and peeks the node's edges.
+- **Click node**: dims all, highlights the neighbourhood, draws that node's edges, opens the info panel (shows `long_description` and the connection list), and shows the lifespan bar. `clearSelection()` is the single teardown used by the background tap, the reset button, and the info-panel close.
+- **Hover node**: shows a tooltip with `short_description` near the cursor, peeks the node's edges, and shows the lifespan bar (hover takes precedence over the current selection via `focusNode()`).
+- **Lifespan bar**: bottom canvas drawing birth-to-death bars for the focused node and its connected neighbours, aligned to the year axis (`drawLifespanBars()`).
+- **Filter panel**: per-group checkboxes (with swatches) toggle which occupation groups are shown, plus check/uncheck-all and a "show all people" override that bypasses the zoom-based reveal.
+- **About panel**: dataset attribution (Pantheon).
+- **Reset button**: `resetView()` returns to the default framing (centred on year 1500 at a fixed zoom) and clears any selection.
 
 ## Occupation colors
 
