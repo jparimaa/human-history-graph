@@ -102,5 +102,664 @@
     "strength": 0.75,
     "confidence": 0.9,
     "reason": "Both Protestant reformers, Luther and Zwingli clashed irreconcilably at the Marburg Colloquy (1529) over the nature of the Eucharist, splitting the Reformation movement into Lutheran and Reformed branches."
+  },
+  {
+    "source_id": "khadija_bint_khuwaylid",
+    "target_id": "muhammad",
+    "type": "spouse",
+    "strength": 1.0,
+    "confidence": 1.0,
+    "reason": "Khadija was Muhammad's first and most beloved wife; she was the first to accept Islam, supported him financially and emotionally through his prophethood, and remained his only wife until her death in 619."
+  },
+  {
+    "source_id": "muhammad",
+    "target_id": "aisha",
+    "type": "spouse",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Aisha was one of Muhammad's wives and became a central authority in early Islam; she transmitted thousands of hadith and played a major political role after Muhammad's death."
+  },
+  {
+    "source_id": "muhammad",
+    "target_id": "abu_bakr",
+    "type": "ally",
+    "strength": 1.0,
+    "confidence": 1.0,
+    "reason": "Abu Bakr was Muhammad's closest companion, accompanied him on the Hijra to Medina, served as his trusted advisor throughout his prophethood, and was chosen as the first Caliph to succeed him."
+  },
+  {
+    "source_id": "muhammad",
+    "target_id": "umar",
+    "type": "ally",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Umar ibn al-Khattab converted from an opponent to one of Muhammad's most powerful companions; his conversion was a turning point for early Islam and he later became the second Caliph, greatly expanding the Islamic state."
+  },
+  {
+    "source_id": "muhammad",
+    "target_id": "uthman",
+    "type": "ally",
+    "strength": 0.85,
+    "confidence": 1.0,
+    "reason": "Uthman ibn Affan was an early convert to Islam and son-in-law of Muhammad (marrying two of his daughters), serving as a close companion; he became the third Caliph and oversaw the compilation of the Quran."
+  },
+  {
+    "source_id": "muhammad",
+    "target_id": "ali",
+    "type": "family",
+    "strength": 1.0,
+    "confidence": 1.0,
+    "reason": "Ali ibn Abi Talib was Muhammad's cousin, raised in his household, and married his daughter Fatimah; Muhammad famously declared Ali his successor at Ghadir Khumm, making this relationship the central fault line of Sunni-Shia division."
+  },
+  {
+    "source_id": "muhammad",
+    "target_id": "fatimah",
+    "type": "family",
+    "strength": 1.0,
+    "confidence": 1.0,
+    "reason": "Fatimah was Muhammad's daughter and is revered in Islam as one of the four greatest women; Muhammad is recorded as saying 'Fatimah is a part of me' and she became the matriarch of his lineage through Ali."
+  },
+  {
+    "source_id": "muhammad",
+    "target_id": "bilal_ibn_rabah",
+    "type": "friend",
+    "strength": 0.85,
+    "confidence": 0.95,
+    "reason": "Muhammad personally chose to free Bilal from slavery and appointed him the first muezzin of Islam; their close personal bond is well-documented and Bilal's grief at Muhammad's death, which left him unable to call the adhan, exemplifies the depth of their friendship."
+  },
+  {
+    "source_id": "muhammad",
+    "target_id": "hasan_ibn_ali",
+    "type": "family",
+    "strength": 0.9,
+    "confidence": 1.0,
+    "reason": "Hasan was Muhammad's beloved grandson through Fatimah and Ali; Muhammad is recorded saying 'Hasan and Husayn are the masters of the youth of Paradise' and often carried him during prayers."
+  },
+  {
+    "source_id": "muhammad",
+    "target_id": "husayn_ibn_ali",
+    "type": "family",
+    "strength": 0.9,
+    "confidence": 1.0,
+    "reason": "Husayn was Muhammad's grandson through Fatimah and Ali, deeply loved by Muhammad who called him a master of the youth of Paradise; Husayn's later martyrdom at Karbala, in defense of Muhammad's legacy, became the defining event of Shia Islam."
+  },
+  {
+    "source_id": "mahavira",
+    "target_id": "gautama_buddha",
+    "type": "rival",
+    "strength": 0.7,
+    "confidence": 0.7,
+    "reason": "Mahavira and Buddha were contemporaries in northeastern India who founded competing religious movements; Buddhist texts record debates between their followers, and the two traditions developed in direct rivalry."
+  },
+  {
+    "source_id": "gautama_buddha"
+  },
+  {
+    "source_id": "robert_hooke",
+    "target_id": "isaac_newton",
+    "type": "rival",
+    "strength": 0.85,
+    "confidence": 0.9,
+    "reason": "Hooke and Newton had a bitter rivalry over credit for the inverse square law of gravitation and repeatedly clashed over priority in optics and other scientific work."
+  },
+  {
+    "source_id": "isaac_newton",
+    "target_id": "gottfried_wilhelm_leibniz",
+    "type": "rival",
+    "strength": 0.9,
+    "confidence": 0.95,
+    "reason": "Newton and Leibniz engaged in one of history's most acrimonious scientific disputes over who first invented calculus, dividing European mathematicians for decades."
+  },
+  {
+    "source_id": "isaac_newton",
+    "target_id": "edmond_halley",
+    "type": "collaborator",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Halley personally persuaded Newton to write the Principia Mathematica and paid its entire publication cost out of his own pocket, making the work possible."
+  },
+  {
+    "source_id": "john_locke",
+    "target_id": "isaac_newton",
+    "type": "friend",
+    "strength": 0.7,
+    "confidence": 0.85,
+    "reason": "Locke and Newton maintained a close personal friendship with extensive correspondence on theology, natural philosophy, and biblical interpretation."
+  },
+  {
+    "source_id": "genghis_khan",
+    "target_id": "jochi",
+    "type": "family",
+    "strength": 0.85,
+    "confidence": 0.85,
+    "reason": "Jochi was Genghis Khan's eldest son (with disputed paternity) and was given command of the westernmost Mongol territories, a succession decision that shaped the empire's expansion."
+  },
+  {
+    "source_id": "genghis_khan",
+    "target_id": "ögedei_khan",
+    "type": "predecessor",
+    "strength": 0.95,
+    "confidence": 0.95,
+    "reason": "Genghis Khan personally designated Ögedei as his successor, and Ögedei succeeded him as Great Khan of the Mongol Empire in 1229."
+  },
+  {
+    "source_id": "julius_caesar",
+    "target_id": "cleopatra",
+    "type": "romantic",
+    "strength": 0.95,
+    "confidence": 0.95,
+    "reason": "Caesar and Cleopatra had a documented romantic and political alliance; he restored her to the Egyptian throne, she bore him a son (Caesarion), and she lived in Rome until his assassination."
+  },
+  {
+    "source_id": "mark_antony",
+    "target_id": "cleopatra",
+    "type": "romantic",
+    "strength": 0.95,
+    "confidence": 0.95,
+    "reason": "Antony and Cleopatra formed a famous romantic and military alliance; they lived together, had three children, and jointly fought Octavian until their joint suicide in 30 BC."
+  },
+  {
+    "source_id": "cleopatra",
+    "target_id": "augustus",
+    "type": "enemy",
+    "strength": 0.9,
+    "confidence": 0.95,
+    "reason": "Cleopatra and Octavian (Augustus) were bitter enemies; he defeated her forces at the Battle of Actium and she committed suicide rather than be displayed in his Roman triumph."
+  },
+  {
+    "source_id": "herod_the_great",
+    "target_id": "cleopatra",
+    "type": "enemy",
+    "strength": 0.75,
+    "confidence": 0.8,
+    "reason": "Cleopatra coveted Herod's territories, persuaded Antony to grant her portions of his kingdom, and according to Josephus attempted to have Herod killed, making them bitter political enemies."
+  },
+  {
+    "source_id": "leo_tolstoy",
+    "target_id": "mahatma_gandhi",
+    "type": "mentor",
+    "strength": 0.7,
+    "confidence": 0.9,
+    "reason": "Tolstoy corresponded with Gandhi in 1909-1910 and his philosophy of non-violent resistance directly shaped Gandhi's approach to civil disobedience."
+  },
+  {
+    "source_id": "romain_rolland",
+    "target_id": "mahatma_gandhi",
+    "type": "friend",
+    "strength": 0.6,
+    "confidence": 0.85,
+    "reason": "Rolland wrote the first major Western biography of Gandhi in 1924 and hosted Gandhi at his home in Switzerland in 1931, forming a documented personal friendship."
+  },
+  {
+    "source_id": "rabindranath_tagore",
+    "target_id": "mahatma_gandhi",
+    "type": "friend",
+    "strength": 0.75,
+    "confidence": 0.95,
+    "reason": "Tagore gave Gandhi the honorific 'Mahatma' and the two maintained a lifelong correspondence and personal friendship, exchanging public debates on nationalism and non-cooperation."
+  },
+  {
+    "source_id": "mahatma_gandhi",
+    "target_id": "vallabhbhai_patel",
+    "type": "ally",
+    "strength": 0.9,
+    "confidence": 0.98,
+    "reason": "Patel was Gandhi's closest political lieutenant and chief organizer in the Indian National Congress, leading mass civil disobedience campaigns under Gandhi's direction."
+  },
+  {
+    "source_id": "mahatma_gandhi",
+    "target_id": "muhammad_ali_jinnah",
+    "type": "rival",
+    "strength": 0.9,
+    "confidence": 0.98,
+    "reason": "Gandhi and Jinnah led opposing visions for India's independence, culminating in the failed 1944 Gandhi-Jinnah talks and the partition of India into two states."
+  },
+  {
+    "source_id": "mahatma_gandhi",
+    "target_id": "b._r._ambedkar",
+    "type": "rival",
+    "strength": 0.85,
+    "confidence": 0.97,
+    "reason": "Gandhi and Ambedkar clashed over the political representation of untouchables, with Gandhi's hunger strike forcing the 1932 Poona Pact that shaped Dalit representation in independent India."
+  },
+  {
+    "source_id": "saint_anne",
+    "target_id": "mary,_mother_of_jesus",
+    "type": "family",
+    "strength": 1.0,
+    "confidence": 0.8,
+    "reason": "Anne is the traditional mother of Mary, making their relationship foundational to the Gospel narrative."
+  },
+  {
+    "source_id": "elizabeth_(biblical_figure)",
+    "target_id": "mary,_mother_of_jesus",
+    "type": "family",
+    "strength": 0.85,
+    "confidence": 0.85,
+    "reason": "Elizabeth was Mary's older cousin; their meeting during Mary's pregnancy (the Visitation) is a central Gospel episode celebrated in Christian tradition."
+  },
+  {
+    "source_id": "saint_joseph",
+    "target_id": "mary,_mother_of_jesus",
+    "type": "spouse",
+    "strength": 1.0,
+    "confidence": 0.9,
+    "reason": "Joseph and Mary were husband and wife, forming the Holy Family central to Christian tradition."
+  },
+  {
+    "source_id": "mary,_mother_of_jesus",
+    "target_id": "jesus",
+    "type": "family",
+    "strength": 1.0,
+    "confidence": 0.95,
+    "reason": "Mary was the mother of Jesus, present at key moments of his life including his birth, ministry, crucifixion, and resurrection appearances."
+  },
+  {
+    "source_id": "mary,_mother_of_jesus",
+    "target_id": "james,_brother_of_jesus",
+    "type": "family",
+    "strength": 0.9,
+    "confidence": 0.85,
+    "reason": "James was a son of Mary and became a leader of the Jerusalem church, making Mary's maternal relationship to him historically significant."
+  },
+  {
+    "source_id": "mary,_mother_of_jesus",
+    "target_id": "john_the_apostle",
+    "type": "friend",
+    "strength": 0.7,
+    "confidence": 0.75,
+    "reason": "At the crucifixion Jesus entrusted Mary to John's care, and tradition holds that John took Mary into his home and cared for her until her death."
+  },
+  {
+    "source_id": "joseph_haydn",
+    "target_id": "ludwig_van_beethoven",
+    "type": "teacher",
+    "strength": 0.85,
+    "confidence": 0.97,
+    "reason": "Beethoven studied counterpoint and composition under Haydn in Vienna from 1792 to 1794, though the relationship was reportedly strained."
+  },
+  {
+    "source_id": "antonio_salieri",
+    "target_id": "ludwig_van_beethoven",
+    "type": "teacher",
+    "strength": 0.65,
+    "confidence": 0.88,
+    "reason": "Salieri gave Beethoven lessons in Italian vocal composition in Vienna, a relationship Beethoven acknowledged with gratitude."
+  },
+  {
+    "source_id": "johann_wolfgang_von_goethe",
+    "target_id": "ludwig_van_beethoven",
+    "type": "friend",
+    "strength": 0.65,
+    "confidence": 0.9,
+    "reason": "Goethe and Beethoven met at the Teplitz spa in 1812 and maintained a correspondence; Beethoven set several of Goethe's texts to music, including the Egmont overture."
+  },
+  {
+    "source_id": "andrea_del_verrocchio",
+    "target_id": "leonardo_da_vinci",
+    "type": "teacher",
+    "strength": 0.95,
+    "confidence": 0.99,
+    "reason": "Leonardo apprenticed in Verrocchio's Florentine workshop from around 1466, receiving his foundational training in painting, sculpture, and engineering."
+  },
+  {
+    "source_id": "leonardo_da_vinci",
+    "target_id": "niccolò_machiavelli",
+    "type": "collaborator",
+    "strength": 0.7,
+    "confidence": 0.88,
+    "reason": "Machiavelli commissioned Leonardo for the Arno River diversion project in 1503 and they worked together on Florentine military engineering schemes."
+  },
+  {
+    "source_id": "plato",
+    "target_id": "aristotle",
+    "type": "teacher",
+    "strength": 1.0,
+    "confidence": 0.99,
+    "reason": "Aristotle studied at Plato's Academy in Athens for approximately twenty years, beginning around 367 BC, making this one of the most consequential teacher-student relationships in intellectual history."
+  },
+  {
+    "source_id": "aristotle",
+    "target_id": "alexander_the_great",
+    "type": "teacher",
+    "strength": 1.0,
+    "confidence": 0.99,
+    "reason": "Aristotle was commissioned by Philip II to tutor the young Alexander in Macedon from 343 to 335 BC, shaping the conqueror's intellectual foundations."
+  },
+  {
+    "source_id": "aristotle",
+    "target_id": "theophrastus",
+    "type": "teacher",
+    "strength": 0.9,
+    "confidence": 0.97,
+    "reason": "Theophrastus was Aristotle's most eminent student and Aristotle's chosen successor as head of the Lyceum."
+  },
+  {
+    "source_id": "kublai_khan",
+    "target_id": "marco_polo",
+    "type": "patron",
+    "strength": 0.95,
+    "confidence": 0.97,
+    "reason": "Marco Polo served at Kublai Khan's court for approximately seventeen years, undertaking diplomatic missions across the Mongol Empire on the Khan's behalf."
+  },
+  {
+    "source_id": "henry_viii_of_england",
+    "target_id": "elizabeth_i_of_england",
+    "type": "family",
+    "strength": 0.9,
+    "confidence": 1.0,
+    "reason": "Henry VIII was Elizabeth's father; his execution of her mother Anne Boleyn and repeated changes to her legitimacy defined the political circumstances of her early life."
+  },
+  {
+    "source_id": "anne_boleyn",
+    "target_id": "elizabeth_i_of_england",
+    "type": "family",
+    "strength": 0.9,
+    "confidence": 1.0,
+    "reason": "Anne Boleyn was Elizabeth's mother; her execution by Henry VIII when Elizabeth was two shaped Elizabeth's identity and political vulnerability throughout her early life."
+  },
+  {
+    "source_id": "mary_i_of_england",
+    "target_id": "elizabeth_i_of_england",
+    "type": "rival",
+    "strength": 0.9,
+    "confidence": 1.0,
+    "reason": "Mary I imprisoned Elizabeth in the Tower of London on suspicion of Protestant conspiracy; as half-sisters and rival claimants they were in constant political opposition until Mary's death gave Elizabeth the throne."
+  },
+  {
+    "source_id": "philip_ii_of_spain",
+    "target_id": "elizabeth_i_of_england",
+    "type": "enemy",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Philip II launched the Spanish Armada in 1588 to overthrow Elizabeth and restore Catholic rule in England, making their conflict one of the defining geopolitical confrontations of the era."
+  },
+  {
+    "source_id": "elizabeth_i_of_england",
+    "target_id": "mary,_queen_of_scots",
+    "type": "rival",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Elizabeth and Mary were cousin queens whose decades-long rivalry over dynastic legitimacy ended when Elizabeth authorized Mary's execution in 1587 after nineteen years of captivity."
+  },
+  {
+    "source_id": "elizabeth_i_of_england",
+    "target_id": "francis_drake",
+    "type": "patron",
+    "strength": 0.85,
+    "confidence": 1.0,
+    "reason": "Elizabeth secretly backed Drake's privateering voyages against Spanish shipping and knighted him aboard the Golden Hind in 1581, making him her principal naval instrument."
+  },
+  {
+    "source_id": "john_dee",
+    "target_id": "elizabeth_i_of_england",
+    "type": "ally",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "John Dee served as Elizabeth's court astrologer and scientific advisor, selecting her coronation date and advising on navigation and imperial expansion throughout her reign."
+  },
+  {
+    "source_id": "elizabeth_i_of_england",
+    "target_id": "james_vi_and_i",
+    "type": "predecessor",
+    "strength": 0.9,
+    "confidence": 1.0,
+    "reason": "Elizabeth I directly preceded James VI of Scotland as monarch of England; at her death in 1603 she left the throne to him, uniting the English and Scottish crowns."
+  },
+  {
+    "source_id": "socrates",
+    "target_id": "plato",
+    "type": "teacher",
+    "strength": 1.0,
+    "confidence": 1.0,
+    "reason": "Socrates was Plato's teacher and primary philosophical influence; Plato was present at Socrates's trial and recorded his thought in dialogues that became the foundation of Western philosophy."
+  },
+  {
+    "source_id": "plato",
+    "target_id": "diogenes",
+    "type": "rival",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "Diogenes openly ridiculed Plato's philosophical definitions and idealism; his plucking a chicken to mock Plato's definition of man is a documented historical anecdote illustrating their philosophical opposition."
+  },
+  {
+    "source_id": "philip_ii_of_macedon",
+    "target_id": "alexander_the_great",
+    "type": "family",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Philip II was Alexander's father; he built the Macedonian army and empire that Alexander inherited, and personally arranged his education under Aristotle."
+  },
+  {
+    "source_id": "darius_iii",
+    "target_id": "alexander_the_great",
+    "type": "enemy",
+    "strength": 1.0,
+    "confidence": 1.0,
+    "reason": "Darius III commanded the Persian Empire against Alexander at the battles of Granicus, Issus, and Gaugamela; his defeat ended the Achaemenid Empire and defined Alexander's conquests."
+  },
+  {
+    "source_id": "ptolemy_i_soter",
+    "target_id": "alexander_the_great",
+    "type": "friend",
+    "strength": 0.9,
+    "confidence": 0.95,
+    "reason": "Ptolemy was one of Alexander's closest companions and generals throughout his campaigns; he wrote a firsthand history of the conquest and claimed Alexander's body for Egypt after his death."
+  },
+  {
+    "source_id": "demosthenes",
+    "target_id": "alexander_the_great",
+    "type": "enemy",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Demosthenes was Alexander's most prominent Athenian opponent, rallying Greek resistance against Macedonian expansion; after Alexander's death he briefly celebrated before fleeing Macedonian retribution."
+  },
+  {
+    "source_id": "jesus",
+    "target_id": "saint_peter",
+    "type": "teacher",
+    "strength": 1.0,
+    "confidence": 1.0,
+    "reason": "Jesus chose Simon and renamed him Peter ('the Rock'), designating him the leader of the apostles and the foundation of his church."
+  },
+  {
+    "source_id": "andrew_the_apostle",
+    "target_id": "saint_peter",
+    "type": "family",
+    "strength": 0.85,
+    "confidence": 1.0,
+    "reason": "Andrew was Peter's brother; he introduced Peter to Jesus, beginning Peter's career as an apostle."
+  },
+  {
+    "source_id": "saint_peter",
+    "target_id": "paul_the_apostle",
+    "type": "ally",
+    "strength": 0.85,
+    "confidence": 0.95,
+    "reason": "Peter and Paul were the two pillars of early Christianity; they worked jointly on the mission to the Gentiles at the Jerusalem Council despite a public confrontation at Antioch over Torah observance."
+  },
+  {
+    "source_id": "saint_peter",
+    "target_id": "mark_the_evangelist",
+    "type": "mentor",
+    "strength": 0.8,
+    "confidence": 0.85,
+    "reason": "Early Christian tradition (attested by Papias) holds that Mark's gospel was based directly on Peter's preaching, making Peter the primary source and spiritual guide for the text."
+  },
+  {
+    "source_id": "saint_peter",
+    "target_id": "pope_linus",
+    "type": "predecessor",
+    "strength": 0.85,
+    "confidence": 0.85,
+    "reason": "Peter is recognized by Catholic tradition as the first Bishop of Rome; Linus succeeded him directly, establishing the papal succession."
+  },
+  {
+    "source_id": "homer",
+    "target_id": "hesiod",
+    "type": "rival",
+    "strength": 0.6,
+    "confidence": 0.6,
+    "reason": "Homer and Hesiod were the two founding voices of ancient Greek literature and are paired in the ancient 'Contest of Homer and Hesiod' tradition as rival poets competing for supremacy."
+  },
+  {
+    "source_id": "joseph_haydn",
+    "target_id": "wolfgang_amadeus_mozart",
+    "type": "friend",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Haydn and Mozart shared a deep mutual admiration; Haydn declared Mozart the greatest composer he knew, and Mozart dedicated his six 'Haydn Quartets' to him in tribute."
+  },
+  {
+    "source_id": "antonio_salieri",
+    "target_id": "wolfgang_amadeus_mozart",
+    "type": "rival",
+    "strength": 0.85,
+    "confidence": 0.9,
+    "reason": "Salieri and Mozart were the leading composers competing for imperial patronage in Vienna; their professional rivalry is well-documented, even if the later legend of poisoning is fictional."
+  },
+  {
+    "source_id": "joseph_ii,_holy_roman_emperor",
+    "target_id": "wolfgang_amadeus_mozart",
+    "type": "patron",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "Joseph II commissioned Mozart's 'The Abduction from the Seraglio' and later appointed him as Imperial Chamber Composer, providing the court support that defined Mozart's Vienna years."
+  },
+  {
+    "source_id": "joséphine_de_beauharnais",
+    "target_id": "napoleon",
+    "type": "spouse",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Josephine was Napoleon's first wife and Empress of the French; Napoleon divorced her in 1809 when she failed to produce an heir, calling it the great sacrifice of his life."
+  },
+  {
+    "source_id": "napoleon",
+    "target_id": "marie_louise,_duchess_of_parma",
+    "type": "spouse",
+    "strength": 0.85,
+    "confidence": 1.0,
+    "reason": "Marie Louise was Napoleon's second wife and Empress; she bore him his only legitimate heir, Napoleon II, and was central to his dynastic ambitions."
+  },
+  {
+    "source_id": "pope_pius_vii",
+    "target_id": "napoleon",
+    "type": "rival",
+    "strength": 0.9,
+    "confidence": 1.0,
+    "reason": "Pius VII crowned Napoleon Emperor in 1804 but the alliance broke down when Napoleon annexed the Papal States; Napoleon imprisoned Pius VII for six years until his abdication."
+  },
+  {
+    "source_id": "napoleon",
+    "target_id": "alexander_i_of_russia",
+    "type": "rival",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Napoleon and Alexander I were allies after Tilsit (1807) and partners in the Continental System, but Napoleon's catastrophic invasion of Russia in 1812 ended the alliance and broke his empire."
+  },
+  {
+    "source_id": "george_iii_of_the_united_kingdom",
+    "target_id": "napoleon",
+    "type": "enemy",
+    "strength": 0.9,
+    "confidence": 1.0,
+    "reason": "George III's Britain was Napoleon's most persistent and ultimately decisive enemy; Britain financed every coalition against France and its naval blockade and subsidies were central to Napoleon's downfall."
+  },
+  {
+    "source_id": "napoleon",
+    "target_id": "napoleon_ii",
+    "type": "family",
+    "strength": 0.9,
+    "confidence": 1.0,
+    "reason": "Napoleon II was Napoleon's only legitimate son; Napoleon's last exile on Saint Helena was marked by hope for his son's succession, and he died having never seen him after 1814."
+  },
+  {
+    "source_id": "galileo_galilei",
+    "target_id": "pope_urban_viii",
+    "type": "rival",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Urban VIII was Galileo's personal friend before becoming Pope, but ordered his trial by the Inquisition in 1633 after Galileo's 'Dialogue' appeared to mock him; Galileo was forced to recant heliocentrism."
+  },
+  {
+    "source_id": "galileo_galilei",
+    "target_id": "johannes_kepler",
+    "type": "collaborator",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Galileo and Kepler corresponded and mutually supported each other's Copernican work; Kepler publicly endorsed Galileo's telescopic discoveries when most of Europe was skeptical."
+  },
+  {
+    "source_id": "galileo_galilei",
+    "target_id": "evangelista_torricelli",
+    "type": "teacher",
+    "strength": 0.85,
+    "confidence": 0.95,
+    "reason": "Torricelli served as Galileo's secretary and student in his final years at Arcetri and succeeded him as mathematician to the Tuscan court, directly inheriting and extending his work on dynamics."
+  },
+  {
+    "source_id": "klara_hitler",
+    "target_id": "adolf_hitler",
+    "type": "family",
+    "strength": 0.9,
+    "confidence": 1.0,
+    "reason": "Klara Hitler was Adolf's mother; her death from cancer in 1907 deeply affected him, and his family background in lower-middle-class Austria shaped his early development."
+  },
+  {
+    "source_id": "benito_mussolini",
+    "target_id": "adolf_hitler",
+    "type": "ally",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Mussolini and Hitler formed the Rome-Berlin Axis in 1936 and were the two central leaders of European fascism; Hitler modeled aspects of his movement on Mussolini's earlier rise to power."
+  },
+  {
+    "source_id": "adolf_hitler",
+    "target_id": "joseph_goebbels",
+    "type": "ally",
+    "strength": 0.95,
+    "confidence": 1.0,
+    "reason": "Goebbels was Hitler's Reich Minister of Propaganda and most loyal inner-circle ally; he orchestrated the Nazi media apparatus and chose to die alongside Hitler in the Berlin bunker in 1945."
+  },
+  {
+    "source_id": "joseph_stalin",
+    "target_id": "adolf_hitler",
+    "type": "rival",
+    "strength": 1.0,
+    "confidence": 1.0,
+    "reason": "Stalin and Hitler signed the Molotov-Ribbentrop Pact in 1939, then fought history's largest land war after Germany invaded the Soviet Union in 1941, resulting in over 27 million Soviet deaths."
+  },
+  {
+    "source_id": "winston_churchill",
+    "target_id": "adolf_hitler",
+    "type": "enemy",
+    "strength": 1.0,
+    "confidence": 1.0,
+    "reason": "Churchill was Hitler's most determined adversary, refusing any negotiated peace and rallying Britain and its allies against Nazi Germany from 1940 until Germany's unconditional surrender."
+  },
+  {
+    "source_id": "paul_von_hindenburg",
+    "target_id": "adolf_hitler",
+    "type": "predecessor",
+    "strength": 0.85,
+    "confidence": 1.0,
+    "reason": "Hindenburg, as German President, appointed Hitler as Chancellor in January 1933; after Hindenburg's death in 1934, Hitler merged the offices of Chancellor and President to become Fuhrer."
+  },
+  {
+    "source_id": "isabella_i_of_castile",
+    "target_id": "christopher_columbus",
+    "type": "patron",
+    "strength": 1.0,
+    "confidence": 1.0,
+    "reason": "Isabella I funded Columbus's 1492 voyage after years of refusals; her direct patronage made possible the European discovery of the Americas, defining the course of world history."
+  },
+  {
+    "source_id": "pope_alexander_vi",
+    "target_id": "christopher_columbus",
+    "type": "ally",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Alexander VI received Columbus in Rome after his first voyage and issued the Inter caetera bull in 1493, granting Spain sovereignty over the newly discovered lands and legitimizing Columbus's enterprise."
   }
 ]
