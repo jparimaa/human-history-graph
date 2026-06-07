@@ -40,10 +40,30 @@
     <ul id="filter-group-list"></ul>
   </aside>
 
+  <aside id="about-panel" hidden>
+    <div id="about-header">
+      <h2>About</h2>
+      <button id="about-close" aria-label="Close">&times;</button>
+    </div>
+    <p>An interactive graph of historical figures. People are positioned by birth year (x-axis) and geographic region (y-axis). Node size reflects historical prominence according to HPI score by Pantheon dataset.</p>
+    <section class="about-section">
+      <h3>Data source</h3>
+      <p>People, birth and death years, and node sizes come from the <a href="https://pantheon.world/data/datasets" target="_blank" rel="noopener">Pantheon dataset</a>. Small modifications have been made when using the data.</p>
+      <p class="about-citation">Yu, A. Z., et al. (2016). Pantheon 1.0, a manually verified dataset of globally famous biographies. <em>Scientific Data</em> 2:150075. doi: 10.1038/sdata.2015.75</p>
+      <p class="about-license">Pantheon by Datawheel is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+    </section>
+    <section class="about-section">
+      <h3>AI-generated content</h3>
+      <p>Display names, descriptions, connections between people and timelines are mostly AI-generated (Claude Code by Anthropic).</p>
+      <p>There are likely historical errors and many historical claims are debatable.</p>
+    </section>
+  </aside>
+
   <div id="bottom-bar">
     <button id="reset-btn">Reset view</button>
     <button id="toggle-era-btn" aria-pressed="false">Show timeline</button>
     <button id="toggle-filter-btn" aria-pressed="false">Filters</button>
+    <button id="toggle-about-btn" aria-pressed="false">About</button>
   </div>
 
   <div id="tooltip" hidden></div>

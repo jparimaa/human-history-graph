@@ -806,6 +806,21 @@ async function main() {
     toggleFilterBtn.setAttribute('aria-pressed', 'false');
   });
 
+  // ── About panel ───────────────────────────────────────
+  const aboutPanel = document.getElementById('about-panel');
+  const toggleAboutBtn = document.getElementById('toggle-about-btn');
+
+  toggleAboutBtn.addEventListener('click', () => {
+    const show = aboutPanel.hidden;
+    aboutPanel.hidden = !show;
+    toggleAboutBtn.setAttribute('aria-pressed', String(show));
+  });
+
+  document.getElementById('about-close').addEventListener('click', () => {
+    aboutPanel.hidden = true;
+    toggleAboutBtn.setAttribute('aria-pressed', 'false');
+  });
+
   document.getElementById('reset-btn').addEventListener('click', () => {
     cy.elements().removeClass('dimmed highlighted');
     cy.fit();

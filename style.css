@@ -81,7 +81,8 @@ body {
 
 #reset-btn,
 #toggle-era-btn,
-#toggle-filter-btn {
+#toggle-filter-btn,
+#toggle-about-btn {
   background: var(--surface-alt);
   color: var(--text-secondary);
   border: 1px solid var(--border-strong);
@@ -94,7 +95,8 @@ body {
 
 #reset-btn:hover,
 #toggle-era-btn:hover,
-#toggle-filter-btn:hover {
+#toggle-filter-btn:hover,
+#toggle-about-btn:hover {
   background: var(--surface-hover);
 }
 
@@ -327,6 +329,97 @@ body {
 #filter-group-list .filter-label {
   font-size: 15px;
   color: var(--text-secondary);
+}
+
+/* ── About panel ─────────────────────────────────────── */
+
+#about-panel {
+  position: fixed;
+  bottom: 44px;
+  right: 0;
+  width: 380px;
+  max-height: calc(100vh - 44px);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  backdrop-filter: blur(6px);
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 10;
+}
+
+#about-panel[hidden] {
+  display: none;
+}
+
+#about-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#about-header h2 {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+#about-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+#about-close:hover {
+  color: var(--text-strong);
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-section h3 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+}
+
+#about-panel p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.about-citation {
+  font-size: 13px !important;
+  color: var(--text-muted) !important;
+  font-style: italic;
+}
+
+.about-license {
+  font-size: 13px !important;
+  color: var(--text-muted) !important;
+}
+
+#about-panel a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+#about-panel a:hover {
+  color: var(--text-strong);
 }
 
 /* ── Lifespan overlay ────────────────────────────────── */

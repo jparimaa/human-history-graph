@@ -3802,7 +3802,7 @@
   {
     "id": "prince_henry_the_navigator",
     "name": "Prince Henry the Navigator",
-    "display_name": "Prince Henry the Navigator",
+    "display_name": "Henry the Navigator",
     "birth_year": 1394,
     "death_year": 1460,
     "occupation": "EXPLORER",
@@ -6502,7 +6502,7 @@
   {
     "id": "thomas_jefferson",
     "name": "Thomas Jefferson",
-    "display_name": "Jefferson",
+    "display_name": "Thomas Jefferson",
     "birth_year": 1743,
     "death_year": 1826,
     "occupation": "POLITICIAN",
@@ -7062,7 +7062,7 @@
   {
     "id": "martin_van_buren",
     "name": "Martin Van Buren",
-    "display_name": "Van Buren",
+    "display_name": "Martin Van Buren",
     "birth_year": 1782,
     "death_year": 1862,
     "occupation": "POLITICIAN",
@@ -7452,7 +7452,7 @@
   {
     "id": "edgar_allan_poe",
     "name": "Edgar Allan Poe",
-    "display_name": "Poe",
+    "display_name": "Edgar Allan Poe",
     "birth_year": 1809,
     "death_year": 1849,
     "occupation": "WRITER",
@@ -7462,7 +7462,7 @@
   {
     "id": "abraham_lincoln",
     "name": "Abraham Lincoln",
-    "display_name": "Lincoln",
+    "display_name": "Abraham Lincoln",
     "birth_year": 1809,
     "death_year": 1865,
     "occupation": "POLITICIAN",
@@ -7832,7 +7832,7 @@
   {
     "id": "ulysses_s._grant",
     "name": "Ulysses S. Grant",
-    "display_name": "Grant",
+    "display_name": "Ulysses S. Grant",
     "birth_year": 1822,
     "death_year": 1885,
     "occupation": "POLITICIAN",
@@ -9252,7 +9252,7 @@
   {
     "id": "mahatma_gandhi",
     "name": "Mahatma Gandhi",
-    "display_name": "Mahatma Gandhi",
+    "display_name": "Gandhi",
     "birth_year": 1869,
     "death_year": 1948,
     "occupation": "SOCIAL ACTIVIST",
