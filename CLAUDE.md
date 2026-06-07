@@ -2,6 +2,10 @@
 
 Interactive browser-based graph of historical figures. People are nodes positioned by birth year (x-axis) and geographic region (y-axis). Edges show relationships (rivalry, influence, patronage, etc.). Built with Cytoscape.js, no backend, no build tools.
 
+## Python scripts
+
+All data files use UTF-8. Always open them with `encoding="utf-8"`. On Windows the default cp1252 codec will crash on non-ASCII characters in names.
+
 ## Running locally
 
 ```
