@@ -564,6 +564,31 @@ async function main() {
     });
   }, { passive: false });
 
+  // Pinch-to-zoom: track two touch points and zoom toward their midpoint.
+  let pinchDist = null;
+  const container = cy.container();
+  container.addEventListener('touchstart', evt => {
+    if (evt.touches.length === 2) {
+      const t = evt.touches;
+      pinchDist = Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+    }
+  }, { passive: true });
+  container.addEventListener('touchmove', evt => {
+    if (evt.touches.length === 2 && pinchDist !== null) {
+      evt.preventDefault();
+      const t = evt.touches;
+      const newDist = Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+      const rect = container.getBoundingClientRect();
+      const midX = (t[0].clientX + t[1].clientX) / 2 - rect.left;
+      const midY = (t[0].clientY + t[1].clientY) / 2 - rect.top;
+      cy.zoom({ level: cy.zoom() * (newDist / pinchDist), renderedPosition: { x: midX, y: midY } });
+      pinchDist = newDist;
+    }
+  }, { passive: false });
+  container.addEventListener('touchend', evt => {
+    if (evt.touches.length < 2) pinchDist = null;
+  }, { passive: true });
+
   const gridCanvas = document.getElementById('year-grid');
   const lifespanCanvas = document.getElementById('lifespan-canvas');
   let selectedNode = null;

@@ -197,6 +197,19 @@ body {
   line-height: 1.5;
 }
 
+@media (max-width: 800px) {
+  #info-panel {
+    width: 399px;
+  }
+}
+
+@media (max-width: 500px) {
+  #info-panel {
+    width: 85vw;
+    padding: 14px;
+  }
+}
+
 /* ── Filter panel ────────────────────────────────────── */
 
 #filter-panel {
