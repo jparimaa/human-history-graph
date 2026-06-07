@@ -1344,7 +1344,7 @@
     "name": "Matthias the Apostle",
     "display_name": "Matthias the Apostle",
     "birth_year": 1,
-    "death_year": null,
+    "death_year": 80,
     "occupation": "RELIGIOUS FIGURE",
     "birth_country": "Israel",
     "hpi_score": 84.105509
@@ -1938,16 +1938,6 @@
     "occupation": "RELIGIOUS FIGURE",
     "birth_country": "Libya",
     "hpi_score": 81.194805
-  },
-  {
-    "id": "rebecca",
-    "name": "Rebecca",
-    "display_name": "Rebecca",
-    "birth_year": 259,
-    "death_year": null,
-    "occupation": "RELIGIOUS FIGURE",
-    "birth_country": "",
-    "hpi_score": 81.029015
   },
   {
     "id": "eusebius",
@@ -8514,7 +8504,7 @@
     "name": "Jack the Ripper",
     "display_name": "Jack the Ripper",
     "birth_year": 1850,
-    "death_year": null,
+    "death_year": 1900,
     "occupation": "EXTREMIST",
     "birth_country": "",
     "hpi_score": 87.136732

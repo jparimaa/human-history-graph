@@ -184,7 +184,7 @@ function buildElements(people, relations, regions, w, h) {
 
   const nodeIds = new Set(people.map(p => p.id));
   const edges = relations
-    .filter(r => nodeIds.has(r.source_id) && nodeIds.has(r.target_id))
+    .filter(r => r.source_id && r.target_id && nodeIds.has(r.source_id) && nodeIds.has(r.target_id))
     .map(r => ({
       data: {
         id: `${r.source_id}__${r.target_id}`,
