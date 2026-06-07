@@ -617,9 +617,9 @@
   },
   {
     "diogenes": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Ancient Greek philosopher who founded Cynicism by rejecting all social convention, famously living in a jar and telling Alexander the Great to get out of his sunlight.",
+      "long_description": "Diogenes of Sinope was the most famous practitioner of Cynicism, a philosophy that rejected wealth, status, and social convention in favor of living purely according to nature and virtue. He backed this up in practice: he reportedly lived in a large clay jar in Athens, owned almost nothing, and reduced his physical needs to the barest minimum as a demonstration of how little a person actually requires.\n\nHe was notorious for outrageous public behavior designed to mock Athenian pretensions: urinating in public, making crude jokes at the expense of respected figures, and using sharp wit to deflate anyone who took themselves seriously. When Alexander the Great visited him and offered to grant any wish, Diogenes reportedly replied: 'Stand a little out of my sunlight.'\n\nCalled 'the Dog' (kyon in Greek, which gives us the word 'cynic'), he was a student of Antisthenes and influenced the Stoics who came after him. None of his writings survive; we know him almost entirely through anecdotes, some certainly invented, but collectively creating one of the most vivid personalities in ancient thought.",
+      "why_they_matter": "Diogenes created the archetype of the philosophical provocateur, someone who uses extreme behavior and piercing irony to expose the gap between society's professed values and actual practice. His influence on Stoicism was direct and substantial, and through Stoicism his ideas fed into centuries of Western ethical thought.\n\nThe stories about him have been quoted and argued over ever since antiquity, and he remains a touchstone in discussions of materialism, authenticity, freedom from convention, and what it means to actually live by one's stated beliefs.",
       "personality": ""
     }
   },
@@ -1161,9 +1161,9 @@
   },
   {
     "matthew_the_apostle": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "One of the twelve apostles of Jesus, a former tax collector whose name is traditionally attached to the first Gospel of the New Testament.",
+      "long_description": "Matthew was one of the twelve apostles gathered by Jesus of Nazareth. The Gospels identify him as a tax collector, or publican, working for the Roman authorities in Galilee before being called to follow Jesus, a conversion that was notable because tax collectors were widely despised in Jewish society as collaborators with Roman occupation.\n\nThe Gospel of Matthew, the first book of the New Testament as traditionally ordered, has borne his name since at least the 2nd century. Modern biblical scholarship generally holds that the gospel was composed after Matthew's death by someone drawing on earlier sources including the Gospel of Mark, but the traditional attribution has made Matthew's name synonymous with this text for nearly two millennia.\n\nVery little is known of Matthew's life after Jesus's death. Tradition holds that he preached in various regions and died as a martyr, but the accounts are late and contradictory.",
+      "why_they_matter": "Through the Gospel attributed to him, Matthew's name is attached to one of the most influential texts in Western history. The Sermon on the Mount, the Beatitudes, the Lord's Prayer, and the Great Commission all appear in Matthew's Gospel, and these passages have shaped Christian ethics, liturgy, and theology for two thousand years.\n\nThe gospel's emphasis on Jesus as the fulfillment of Jewish scripture also made it a critical text in the complex early relationship between Christianity and Judaism.",
       "personality": ""
     }
   },
@@ -2681,9 +2681,9 @@
   },
   {
     "thomas_aquinas": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Medieval philosopher and theologian who fused Christian doctrine with Aristotelian logic, producing a synthesis that defined Catholic thought for centuries.",
+      "long_description": "Thomas Aquinas was a Dominican friar who became the most influential philosopher-theologian of the medieval Christian world. Working in the 13th century, he undertook the ambitious project of reconciling Aristotle's recently recovered works with Catholic Christianity, arguing that reason and faith were not enemies but complementary paths to truth.\n\nHis major works include the Summa Contra Gentiles, written as an argument for Christianity aimed at non-Christians, and the vast Summa Theologica, which systematically addressed virtually every question in Christian theology and ethics. He died before finishing it, but what exists runs to millions of words.\n\nAquinas was a prolific thinker who touched on metaphysics, ethics, political theory, and natural law, always working through careful logical argument. His famous Five Ways, five proofs for the existence of God, remain discussed in philosophy courses today.",
+      "why_they_matter": "Aquinas essentially set the intellectual framework for Catholic theology that still holds today. His synthesis of Aristotle and Christianity, called Thomism, was declared the official philosophy of the Catholic Church and remains deeply embedded in Catholic education, seminary training, and official doctrine.\n\nBeyond religion, his natural law theory influenced Western political and legal thinking, particularly around rights, just war, and the foundations of moral reasoning, feeding into thinkers from Hugo Grotius to modern constitutional theory.",
       "personality": ""
     }
   },
@@ -4057,9 +4057,9 @@
   },
   {
     "lady_jane_grey": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "The 'Nine Days' Queen' of England, a Protestant noblewoman executed at 16 after a failed bid to prevent Mary I from taking the throne.",
+      "long_description": "Lady Jane Grey was a young noblewoman thrust into one of history's most dramatic successions. As the great-granddaughter of Henry VII, she had a legitimate claim to the English throne, and when Edward VI died in 1553, Protestant factions arranged for her to be proclaimed queen rather than the Catholic Mary Tudor.\n\nHer reign lasted just nine days. Mary quickly rallied support, Jane was arrested, and after a brief trial she was imprisoned in the Tower of London. She was executed in February 1554, aged sixteen or seventeen, along with her husband Guildford Dudley.\n\nBeyond the politics, Jane was by all accounts exceptionally well-educated for her time, fluent in Latin, Greek, and several modern languages. She corresponded with leading Protestant reformers and remained deeply committed to her faith right to the end.",
+      "why_they_matter": "Jane became one of the most potent martyrdom symbols in Protestant England. Her story was told and retold as proof that reformers faced genuine mortal danger under Catholic rule, helping to harden confessional identities during the Reformation.\n\nBeyond religion, her brief reign made her a lasting emblem of what happens to people caught between rival power factions, a figure used in art and literature for centuries to explore themes of innocence, ambition, and political sacrifice.",
       "personality": ""
     }
   },
@@ -4137,9 +4137,9 @@
   },
   {
     "giordano_bruno": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Philosopher and former friar who proposed an infinite universe with countless worlds, and was burned at the stake by the Inquisition for his unorthodox ideas.",
+      "long_description": "Giordano Bruno was a Dominican friar who left his order and spent years wandering Europe, lecturing and writing on philosophy, memory, and cosmology. Drawing on Copernicus's heliocentric model, he went further than almost anyone of his time, arguing that the universe is infinite, that stars are suns like our own, and that countless other worlds might exist, possibly inhabited.\n\nThese ideas put him on a collision course with church authorities, as did his unorthodox theology and his rejection of various Catholic doctrines. After years of roaming Geneva, Paris, London, and various Italian cities, he returned to Italy and was arrested by the Inquisition in 1592. After an eight-year trial he refused to recant, and was burned alive in Rome in 1600.\n\nExactly which of his beliefs led to the death sentence remains somewhat unclear, since the Inquisition's records were partly suppressed, but his cosmological ideas, his theology, and his general defiance all played roles.",
+      "why_they_matter": "Bruno's execution made him one of the most potent symbols of the conflict between free inquiry and religious authority, a role he has played in cultural memory ever since. His vision of an infinite universe full of other worlds anticipates ideas that would not be scientifically established for centuries.\n\nHis case also illustrates how dangerous speculative cosmology was in the late 16th century, just before the scientific revolution truly gathered momentum, and it has made him a recurring figure in debates about intellectual freedom and the cost of holding heterodox views.",
       "personality": ""
     }
   },
@@ -4633,9 +4633,9 @@
   },
   {
     "charles_ii_of_england": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "The 'Merry Monarch' who restored the English monarchy in 1660 after the Interregnum, presiding over a court famous for its wit and libertinism while navigating constant tension with Parliament.",
+      "long_description": "Charles II spent eleven years in exile after his father Charles I was executed in the English Civil War. When the Commonwealth collapsed following Oliver Cromwell's death, Parliament invited him back in 1660 in what became the Restoration, one of the more dramatic political reversals in English history.\n\nHis reign was a deliberate rejection of Puritan austerity. Theaters reopened, court life became lavish, and Charles himself was famously witty, charming, and prolific in his love affairs, acknowledging at least twelve illegitimate children by various mistresses. His reign survived major crises including the Great Plague of 1665 and the Great Fire of London in 1666.\n\nUnder the surface, he walked a constant tightrope with Parliament over religion and royal power. He was personally sympathetic to Catholicism and converted on his deathbed, but publicly navigated the demands of a Protestant establishment. He chartered the Royal Society in 1660, which quickly became the center of the new experimental science.",
+      "why_they_matter": "The Restoration settlement Charles accepted established key constitutional limits on royal power, advancing England's long transition from absolute to parliamentary monarchy. The principles embedded in that settlement fed directly into the Glorious Revolution of 1688 and, eventually, modern constitutional government.\n\nThe Royal Society he founded became the most important scientific institution in Europe during the Scientific Revolution, supporting figures including Isaac Newton and Robert Hooke and setting the model for organized scientific inquiry.",
       "personality": ""
     }
   },
@@ -4817,9 +4817,9 @@
   },
   {
     "anne,_queen_of_great_britain": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "The last Stuart monarch, who presided over the Acts of Union that created Great Britain in 1707, but left no surviving heirs, ending her dynasty.",
+      "long_description": "Queen Anne came to the throne in 1702 as the last Stuart ruler of England, Scotland, and Ireland. Her reign's defining political achievement was the Acts of Union in 1707, which merged England and Scotland into the Kingdom of Great Britain, a union that still defines the political structure of the modern state.\n\nHer personal life was dominated by grief. She had 17 pregnancies but not a single child survived her; her last surviving son died in 1700 before she even became queen. Her health was poor for much of her reign, and she was often physically incapacitated.\n\nPolitically, her reign was shaped by the War of the Spanish Succession, prosecuted brilliantly by her general the Duke of Marlborough, and by sharp factional conflict between Whigs and Tories. Her intense friendship with Sarah Churchill, the Duke of Marlborough's wife, defined her early reign before collapsing in bitterness. She died in 1714, and under the Act of Settlement, the throne passed to George I of Hanover rather than to any Catholic Stuart claimant.",
+      "why_they_matter": "The creation of Great Britain under Anne's reign was a watershed in British and world history, uniting two kingdoms that had shared a monarch for a century but remained legally separate. The United Kingdom as it exists today descends directly from that 1707 union.\n\nThe Hanoverian succession she was required to arrange also cemented the Protestant constitutional settlement, confirming Parliament's authority to determine the royal line, which remains a foundational principle of British governance.",
       "personality": ""
     }
   },
@@ -5105,9 +5105,9 @@
   },
   {
     "joseph_haydn": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "The 'Father of the Symphony' and 'Father of the String Quartet,' who developed both forms into mature genres and was Mozart's friend and Beethoven's teacher.",
+      "long_description": "Joseph Haydn spent most of his working life as court composer to the Esterhazy family in Hungary, an arrangement that gave him security, musicians to work with, and relative isolation from the musical mainstream. He made the best of it: working systematically over decades, he developed the symphony and the string quartet from loose collections of dances into sophisticated, emotionally rich art forms.\n\nHe wrote 104 symphonies, 68 string quartets, and an enormous amount of other music. His late London symphonies, written for his triumphant visits to England in the 1790s, remain among the most performed orchestral works from the period.\n\nHe was warm, modest, and genuinely beloved by musicians and audiences alike. His friendship with Mozart was a mutual admiration between peers, and his teaching of the young Beethoven, though the relationship was occasionally tense, placed him at the hinge between the Classical and Romantic eras.",
+      "why_they_matter": "Haydn essentially invented the musical forms that dominated Western classical music for the next century. The symphony and the string quartet as we understand them, with their multi-movement structure, their interplay between themes, their balance of formal logic and expressive depth, were largely his creation.\n\nWithout Haydn there is no clear path to Mozart's late symphonies, Beethoven's everything, or the whole subsequent tradition of orchestral and chamber music. He set the structural and aesthetic template that composers worked within and against for generations.",
       "personality": ""
     }
   },
@@ -5121,9 +5121,9 @@
   },
   {
     "james_watt": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Engineer and inventor whose improvements to the steam engine made it practical for industrial use, helping launch the Industrial Revolution.",
+      "long_description": "James Watt was a Scottish instrument maker and engineer who became fascinated with steam engine technology while repairing a model of the Newcomen engine at the University of Glasgow in the 1760s. The Newcomen engine worked, but it was terribly inefficient, wasting most of its fuel by heating and cooling the same cylinder repeatedly.\n\nWatt's key invention, developed around 1765, was the separate condenser. By moving the condensing step to a separate chamber, the main cylinder could stay hot throughout the cycle, dramatically reducing fuel consumption. He patented this in 1769 and went on to develop many further improvements, including the rotary motion conversion that made steam engines useful for driving machinery rather than just pumping water.\n\nIn partnership with manufacturer Matthew Boulton from 1775 onward, Watt commercialized the engine successfully across British industry. The unit of power, the watt, is named in his honor, as is the concept of horsepower, which he invented as a marketing tool to help customers understand how his engines compared to the horses they would replace.",
+      "why_they_matter": "Watt's steam engine improvements were one of the central enabling technologies of the Industrial Revolution. Efficient steam power made it practical to mechanize textile production, iron smelting, mining, and eventually railways and shipping, transforming Britain and then the world from agrarian to industrial economies in a matter of generations.\n\nHis work also established the pattern of the professional engineer as a systematic scientific problem-solver, someone who applies careful measurement and theoretical understanding to practical challenges, rather than just a craftsman working by intuition.",
       "personality": ""
     }
   },
@@ -5641,9 +5641,9 @@
   },
   {
     "martin_van_buren": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "The 8th US President and a founding architect of the Democratic Party, known for his political cunning and for governing through the Panic of 1837.",
+      "long_description": "Martin Van Buren rose to the presidency not through military heroics or family connections but through pure political craft. A New York lawyer and machine politician, he built one of the first modern electoral organizations in American history before serving as Senator, Governor, Secretary of State, and Vice President on his way to the White House in 1836.\n\nHis presidency was almost immediately buried by the Panic of 1837, a severe economic depression triggered partly by credit contraction and land speculation. Van Buren's response was to push for an independent treasury that would keep government funds out of private banks, a controversial stance that cost him re-election in 1840 but proved durable policy.\n\nLater in life he broke with the Democrats over the expansion of slavery and ran for president in 1848 on the Free Soil ticket, a rare act of principle for a man better known for maneuvering.",
+      "why_they_matter": "Van Buren is one of the key figures behind the modern American two-party system. He argued, against the prevailing wisdom of his day, that organized political parties were healthy democratic institutions rather than corrupt factions, and he built the machinery to prove it. The practices he pioneered, party discipline, coalition-building, organized campaigns, became the template for every major party that followed.\n\nHis independent treasury idea also had lasting impact, shaping how the US government managed public money until the Federal Reserve era.",
       "personality": ""
     }
   },
@@ -6009,9 +6009,9 @@
   },
   {
     "pope_leo_xiii": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Pope from 1878 to 1903 whose encyclical Rerum Novarum founded Catholic social teaching and provided a framework for labor rights between capitalism and socialism.",
+      "long_description": "Leo XIII became Pope in 1878 at age 67 and served for 25 years, dying in 1903 as the oldest pope in recorded history. He inherited a Church that had just lost the Papal States to unified Italy and was struggling to engage with an industrializing, secularizing world.\n\nHis greatest achievement was the 1891 encyclical Rerum Novarum, which addressed the desperate conditions of industrial workers head-on. It rejected both unchecked capitalism and socialism, instead arguing for just wages, the right of workers to organize, and the duty of the state to protect the poor. No previous pope had engaged this directly with the social questions of industrial society.\n\nHe also opened the Vatican Archives to scholars, championed the study of Thomas Aquinas, worked to improve the Church's diplomatic relations with modern states, and tried, with mixed results, to engage with biblical scholarship and science. As a political operator and diplomat, he was among the most capable holders of the office in the modern era.",
+      "why_they_matter": "Rerum Novarum launched what became an entire tradition of Catholic social teaching that shaped Christian Democratic politics throughout the 20th century, influencing labor law, welfare policy, and political parties across Europe and Latin America. The document's framing of a third way between unbridled capitalism and socialist collectivism gave millions of Catholics a coherent political identity.\n\nLeo's papacy also began the long, unfinished project of reconciling the Catholic Church with modern pluralism, democratic institutions, and secular scholarship, a project that would be taken much further by the Second Vatican Council sixty years later.",
       "personality": ""
     }
   },
@@ -6089,9 +6089,9 @@
   },
   {
     "otto_von_bismarck": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "The 'Iron Chancellor' who unified the German states into the German Empire through a calculated strategy of wars and diplomacy, then dominated European politics for two decades.",
+      "long_description": "Otto von Bismarck was a Prussian statesman who became the dominant political figure in Europe in the second half of the 19th century. As Minister President of Prussia and later Chancellor of the German Empire, he engineered the unification of the German states through three carefully managed wars against Denmark, Austria, and France between 1864 and 1871, creating a new great power almost overnight.\n\nHis approach was the definition of Realpolitik: he had no fixed ideology beyond Prussian power and German national interest, and he was willing to form any alliance, break any promise, or reverse any position to achieve his goals. He described his method as 'blood and iron,' meaning military force and industrial strength.\n\nOnce Germany was unified, Bismarck spent twenty years managing the complex balance of power he had created, building alliances designed to keep France isolated and prevent a two-front war against Germany. He was forced out of office by Kaiser Wilhelm II in 1890, and the alliances he had so carefully maintained quickly unraveled.",
+      "why_they_matter": "Bismarck created modern Germany and reshaped the European order that held, in altered form, until 1914. The unified Germany he built was the most powerful state on the continent, and its rise fundamentally changed the balance of power that had existed since Napoleon.\n\nHe also introduced state social insurance (accident, health, old-age), not from progressive conviction but to undercut socialist movements, creating the model that eventually evolved into the welfare state. His legacy, both the unified Germany and the diplomatic system he built, shaped the conditions that led directly to both World Wars.",
       "personality": ""
     }
   },
@@ -6329,9 +6329,9 @@
   },
   {
     "jules_verne": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Pioneering science fiction author whose novels of submarine travel, hot air balloon voyages, and lunar journeys shaped how generations imagined technological adventure.",
+      "long_description": "Jules Verne was a prolific writer who, working with his publisher Pierre-Jules Hetzel from the 1860s onward, produced the 'Extraordinary Voyages' series, a collection of adventure novels that systematically imagined travel through every environment: under the sea, around the world, to the center of the earth, and to the moon.\n\nHis best-known works include Twenty Thousand Leagues Under the Sea (1870), with its brilliant and obsessive Captain Nemo commanding the submarine Nautilus; Around the World in Eighty Days (1872), a comic adventure that captured the Victorian fascination with global travel and timetables; and Journey to the Center of the Earth (1864). He wrote more than sixty novels in the series over his lifetime.\n\nVerne was technically minded and took pains to make his speculative technology plausible. He consulted scientific literature and tried to extrapolate from real principles, giving his work a credibility that distinguished it from pure fantasy.",
+      "why_they_matter": "Verne is one of the founders of science fiction as a genre. His novels established the core idea of fiction that takes real science and plausible technology seriously, extrapolates them, and uses adventure to explore their implications, a template that shaped H.G. Wells, and through them the entire 20th-century tradition of SF.\n\nHis influence on actual technology is also documented: submarine pioneers, early aviators, and even space program engineers have cited his work as formative inspiration. He is one of the most translated authors in history.",
       "personality": ""
     }
   },
@@ -6449,9 +6449,9 @@
   },
   {
     "alfred_nobel": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Inventor of dynamite who left his fortune to establish the Nobel Prizes, the world's most prestigious awards in science, literature, and peace.",
+      "long_description": "Alfred Nobel was a prolific inventor and entrepreneur who built a global business empire on explosive chemistry. His 1867 invention of dynamite, achieved by stabilizing volatile nitroglycerin with an absorbent material, made controlled blasting practical for the first time and transformed mining, tunneling, and construction worldwide. He went on to hold over 350 patents.\n\nDespite his wealth, Nobel was a complicated and often lonely figure who never married and spent much of his life moving between European cities managing his far-flung business interests. He was genuinely troubled by the military uses of his inventions, though he continued profiting from them.\n\nIn his final will, signed in 1895, he left almost his entire estate to fund annual prizes in physics, chemistry, physiology or medicine, literature, and peace. The prizes were first awarded in 1901, and a prize in economics was added in his name in 1968.",
+      "why_they_matter": "The Nobel Prizes reshaped how humanity recognizes achievement. By creating internationally awarded, politically neutral prizes with substantial monetary value, Nobel gave science and literature a global stage that had not existed before. Winning a Nobel became the highest mark of distinction in those fields, influencing careers, funding, and public understanding of what matters.\n\nHis dynamite also had an enormous and ambiguous impact on the modern world, enabling the great engineering projects of the industrial age while also fueling the destructive warfare of the 20th century.",
       "personality": ""
     }
   },
@@ -6577,9 +6577,9 @@
   },
   {
     "claude_monet": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Founder of Impressionism whose series paintings of water lilies, haystacks, and Rouen Cathedral changed how artists thought about light, color, and time.",
+      "long_description": "Claude Monet was the central figure of Impressionism, the movement that broke with academic painting's polished finish and fixed rules in favor of capturing the fleeting quality of light and atmosphere. He helped organize the first Impressionist exhibition in 1874, the show that gave the movement its name (from critics mocking his painting 'Impression, Sunrise').\n\nMonet's great innovation was painting the same subject over and over under different light conditions, in different seasons, at different times of day, producing series like the Haystacks, Poplars, and Rouen Cathedral sequences. What he was really painting, he explained, was the light itself rather than the object.\n\nIn his later decades, Monet created his famous garden at Giverny and spent years painting its water lily pond in ever-larger canvases. He continued working even as his eyesight failed from cataracts. The resulting Water Lilies series, some panels several meters wide, became some of the most celebrated paintings in existence.",
+      "why_they_matter": "Monet's influence on Western art is hard to overstate. Impressionism opened the door to the idea that a painting could capture a subjective experience rather than an objective scene, which made almost every modernist art movement that followed possible.\n\nHis series paintings also introduced a new way of thinking about time and perception in art. And the Water Lilies remain among the most visited and beloved works in the world, installed permanently in the Orangerie in Paris in a setting Monet designed himself.",
       "personality": ""
     }
   },
@@ -7049,9 +7049,9 @@
   },
   {
     "wilhelm_ii,_german_emperor": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "The last German Emperor and King of Prussia, whose aggressive foreign policy and dismissal of Bismarck's restraining diplomacy contributed to the conditions that produced World War I.",
+      "long_description": "Wilhelm II came to the German throne in 1888 and almost immediately began dismantling the careful diplomatic system Bismarck had built. He dismissed Bismarck in 1890 and pursued a more assertive, erratic foreign policy that alarmed Britain and France and pushed Russia toward alliance with Germany's enemies.\n\nBoastful, impulsive, and prone to inflammatory public statements, Wilhelm embodied the aggressive nationalism of Wilhelmine Germany while lacking the strategic judgment to channel it effectively. He oversaw Germany's naval build-up, which drove Britain into the opposing alliance, and he repeatedly stumbled into diplomatic crises without resolving them, building tension across Europe for two decades before the war.\n\nWhen World War I broke out in 1914, his actual role was less decisive than his rhetoric had suggested. He was often excluded from key military decisions and spent the war moving between his generals without exercising clear command. He abdicated in November 1918 and went into exile in the Netherlands, where he spent the rest of his life.",
+      "why_they_matter": "Wilhelm's reign was central to the story of how Europe stumbled into World War I. His dismissal of Bismarck, his naval rivalry with Britain, and his support for Austria-Hungary in the July Crisis of 1914 all contributed materially to the war's outbreak. His personal style, combining bellicose rhetoric with strategic timidity, shaped how contemporaries and historians understood German militarism.\n\nHis abdication also ended the Hohenzollern dynasty and the German monarchy, setting Germany on the path through the Weimar Republic to the conditions that produced the Nazi seizure of power.",
       "personality": ""
     }
   },
@@ -7545,9 +7545,9 @@
   },
   {
     "winston_churchill": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Prime Minister who led Britain through World War II, renowned as much for his speeches and writings as for his stubborn refusal to negotiate with Nazi Germany.",
+      "long_description": "Winston Churchill had one of the longest and most turbulent political careers in British history. He served in the army, worked as a war correspondent, and was elected to Parliament before the age of thirty, then cycled through decades of high office, controversy, and spectacular failures before becoming Prime Minister in May 1940, just as Nazi Germany began its assault on Western Europe.\n\nThe timing turned out to be everything. Churchill's unshakeable public resolve during the darkest months of the war, the Dunkirk evacuation, the Blitz, years of fighting without a major ally on the continent, gave Britain the will to keep going. His wartime speeches, 'We shall fight on the beaches,' 'Their finest hour,' became some of the most quoted passages in the English language.\n\nHe was also a prolific writer and won the Nobel Prize in Literature in 1953, primarily for his six-volume history of the Second World War. His record outside the war years was far more mixed: he held deeply imperialist views, and his decisions contributed to the 1943 Bengal famine and other colonial disasters.",
+      "why_they_matter": "Churchill's wartime leadership is widely credited with keeping Britain in the fight during the period when a Nazi-dominated Europe seemed entirely possible. His refusal to negotiate with Hitler in 1940, a decision not obvious or inevitable at the time, shaped the entire course of the war.\n\nBeyond the war, he coined the phrase 'Iron Curtain,' helped define the postwar Western alliance, and became the archetype of wartime leadership that politicians invoke to this day. His legacy is inseparable from the 20th century's defining conflict.",
       "personality": ""
     }
   },
@@ -7865,9 +7865,9 @@
   },
   {
     "benito_mussolini": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Founder of Italian Fascism and dictator of Italy from 1922 to 1943, who allied with Nazi Germany and led Italy into catastrophic defeat in World War II.",
+      "long_description": "Benito Mussolini was a former socialist journalist who invented fascism as an ideology after World War I, blending nationalism, violence, and anti-communism into a movement that swept him to power in Italy in 1922. Through intimidation, political maneuvering, and the threat of his Blackshirt paramilitaries, he became Prime Minister and then dismantled democratic institutions to rule as 'Il Duce' (the leader).\n\nHis early years in power brought genuine improvements in public order and infrastructure, and he was widely admired internationally in the late 1920s. But his ambitions grew: he invaded Ethiopia in 1935, intervened in the Spanish Civil War alongside Hitler, and in 1940 brought Italy into World War II as a German ally, hoping to share in what he expected to be a quick German victory.\n\nIt was a catastrophic miscalculation. Italy's military was poorly equipped and badly led, and successive disasters in Greece, Africa, and Sicily led to his deposition by his own Grand Council in 1943. He was rescued by German commandos, installed as a puppet ruler in northern Italy, captured by Italian partisans in April 1945, and shot. His body was hung upside down in Milan.",
+      "why_they_matter": "Mussolini invented fascism as a working political system, and his success in Italy inspired imitations across Europe and beyond, including in Nazi Germany, where Hitler openly admired and initially modeled himself on Mussolini. The fascist playbook, paramilitaries, propaganda, the cult of the leader, corporate state control, became the template that dozens of movements followed.\n\nHis alliance with Hitler helped make World War II's European theater what it was, and his defeat helped establish the postwar consensus that fascism and extreme nationalism were too dangerous to allow back into mainstream politics.",
       "personality": ""
     }
   },
@@ -8281,9 +8281,9 @@
   },
   {
     "mao_zedong": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Founding leader of the People's Republic of China, whose revolutionary ideology and radical campaigns transformed the country while causing tens of millions of deaths.",
+      "long_description": "Mao Zedong led the Chinese Communist Party through decades of guerrilla warfare, civil war, and revolution before proclaiming the People's Republic of China in 1949. Adapting Marxist-Leninist theory to agrarian China, he built a peasant-based revolutionary movement that eventually defeated the Nationalist government and ended a century of foreign domination.\n\nOnce in power, he launched a series of mass campaigns that reshaped Chinese society, and killed enormous numbers of people. The Great Leap Forward (1958-1962), a forced industrialization and collectivization drive, caused a famine that killed between 15 and 55 million people. The Cultural Revolution (1966-1976), intended to purge ideological enemies and reassert his personal authority, destroyed institutions, persecuted intellectuals, and upended Chinese society for a decade.\n\nMao also achieved genuine successes: unifying China, establishing public health and literacy programs, and building a state that forced itself onto the world stage. But his legacy is inseparable from the catastrophic human cost of his methods.",
+      "why_they_matter": "Mao remade one of the world's most populous countries in a generation and established a Communist state that still exists, having adapted his revolutionary legacy in complex ways. His ideology, Maoism, influenced revolutionary movements across Asia, Africa, and Latin America during the Cold War.\n\nHis campaigns produced some of the largest man-made famines and political persecutions in history, making him one of the most consequential and most devastating political leaders of the 20th century.",
       "personality": ""
     }
   },
@@ -8409,9 +8409,9 @@
   },
   {
     "joseph_goebbels": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Nazi Germany's Minister of Propaganda, who used total control of mass media to sustain the Third Reich and helped organize the persecution of Jews.",
+      "long_description": "Joseph Goebbels was one of Adolf Hitler's closest lieutenants and one of the most effective propagandists in modern history. As Reich Minister of Propaganda from 1933 to 1945, he controlled newspapers, radio, film, art, and theater across Germany, coordinating every public message to serve the Nazi state.\n\nA gifted orator who had earned a doctorate in literature, Goebbels combined genuine rhetorical talent with a ruthless willingness to lie, manipulate, and dehumanize. He orchestrated major campaigns against Jews and other targeted groups, played a key role in the 1938 Kristallnacht pogrom, and kept German public morale from collapsing even as the war turned disastrous.\n\nIn the final days of the Third Reich, Goebbels was one of the handful of senior Nazis who stayed with Hitler in Berlin. He killed himself on May 1, 1945, the day after Hitler's suicide, having already arranged the killing of his six children.",
+      "why_they_matter": "Goebbels demonstrated how thoroughly a modern state could harness mass media to reshape public perception, suppress dissent, and sustain popular support for atrocity. His techniques, controlling all information channels, targeting emotional rather than rational responses, and repeating false claims until they passed as true, became a reference for how propaganda works and how dangerous it can be.\n\nHis career is studied today in political science, media studies, and history as a case study in information control, and his methods remain a touchstone in debates about disinformation, authoritarian communication, and the vulnerability of mass audiences.",
       "personality": ""
     }
   },
