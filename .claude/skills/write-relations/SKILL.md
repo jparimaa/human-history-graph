@@ -10,11 +10,7 @@ Write relations for the next `$1` people who are missing them in `data/relations
 
 First, read @rules/relations.md for the rules each relation must follow. These rules are mandatory.
 
-## Setup
-
-Execute: chcp 65001
-
-So that there is proper UTF-8 support.
+`data/relations.json` and `data/people.json` are both large (1000+ people) -- don't load either one in full. Work through the python helper scripts in `scripts/` instead so context stays manageable. The scripts handle UTF-8 output themselves.
 
 ## Loop, `$1` times
 

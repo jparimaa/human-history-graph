@@ -1,5 +1,10 @@
 import json
 import sys
+from pathlib import Path
+
+sys.stdout.reconfigure(encoding="utf-8")
+
+RELATIONS_PATH = Path(__file__).resolve().parent.parent / "data" / "relations.json"
 
 if len(sys.argv) != 3:
     print("Usage: python check_relation.py <source_id> <target_id>")
@@ -8,7 +13,7 @@ if len(sys.argv) != 3:
 source_id = sys.argv[1]
 target_id = sys.argv[2]
 
-with open("data/relations.json", encoding="utf-8") as f:
+with open(RELATIONS_PATH, encoding="utf-8") as f:
     relations = json.load(f)
 
 for r in relations:

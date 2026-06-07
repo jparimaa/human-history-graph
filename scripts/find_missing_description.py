@@ -1,5 +1,8 @@
 import json
+import sys
 from pathlib import Path
+
+sys.stdout.reconfigure(encoding="utf-8")
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 REQUIRED_FIELDS = ["short_description", "long_description", "why_they_matter"]

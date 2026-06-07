@@ -1,5 +1,10 @@
 import json
 import sys
+from pathlib import Path
+
+sys.stdout.reconfigure(encoding="utf-8")
+
+RELATIONS_PATH = Path(__file__).resolve().parent.parent / "data" / "relations.json"
 
 VALID_TYPES = {
     "teacher", "mentor", "collaborator", "rival", "ally", "enemy",
@@ -26,7 +31,7 @@ if rel["type"] not in VALID_TYPES:
     print(f"Invalid type '{rel['type']}'. Valid types: {', '.join(sorted(VALID_TYPES))}")
     sys.exit(1)
 
-with open("data/relations.json", encoding="utf-8") as f:
+with open(RELATIONS_PATH, encoding="utf-8") as f:
     relations = json.load(f)
 
 for r in relations:
@@ -37,7 +42,7 @@ for r in relations:
 
 relations.append(rel)
 
-with open("data/relations.json", "w", encoding="utf-8") as f:
+with open(RELATIONS_PATH, "w", encoding="utf-8") as f:
     json.dump(relations, f, indent=2, ensure_ascii=False)
 
 print(f"Added: {rel['source_id']} -> {rel['target_id']} ({rel['type']})")

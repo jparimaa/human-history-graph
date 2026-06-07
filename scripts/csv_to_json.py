@@ -2,6 +2,8 @@ import csv
 import json
 import sys
 
+sys.stdout.reconfigure(encoding="utf-8")
+
 
 def csv_to_json(input_path: str, output_path: str) -> None:
     records = []

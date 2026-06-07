@@ -1,6 +1,10 @@
 import json
 import sys
+from pathlib import Path
+
 sys.stdout.reconfigure(encoding="utf-8")
+
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 if len(sys.argv) != 2:
     print("Usage: python find_overlaps.py <person_id>")
@@ -8,10 +12,10 @@ if len(sys.argv) != 2:
 
 target_id = sys.argv[1]
 
-with open("data/people.json", encoding="utf-8") as f:
+with open(DATA_DIR / "people.json", encoding="utf-8") as f:
     people = json.load(f)
 
-with open("data/relations.json", encoding="utf-8") as f:
+with open(DATA_DIR / "relations.json", encoding="utf-8") as f:
     relations = json.load(f)
 
 by_id = {p["id"]: p for p in people}

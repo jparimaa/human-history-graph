@@ -24,7 +24,17 @@ Repeat the following exactly `$1` times, stopping early if the dataset turns out
    - `long_description`
    - `why_they_matter`
    - `personality` -- always pass `""`. It's intentionally being left out of the dataset for now, regardless of how strong a personality blurb you could write.
-4. Write a small throwaway `.py` script that imports `scripts/desc_lib` and calls `update_description(person_id, short_description, long_description, why_they_matter)` with this person's text, then run it with `python`. The helper rewrites `descriptions.json` in place, preserving its exact formatting (the leading `[  ` and lack of trailing newline) so the diff only ever shows the entries that actually changed. Delete the throwaway script once it has run successfully.
+4. Write the four fields to a temp file `scripts/new_description_<id>.json`:
+   ```json
+   {
+     "id": "...",
+     "short_description": "...",
+     "long_description": "...",
+     "why_they_matter": "...",
+     "personality": ""
+   }
+   ```
+   Then run `python scripts/add_description.py scripts/new_description_<id>.json`. It rewrites `descriptions.json` in place for that one person, preserving the file's exact formatting (the leading `[  ` and lack of trailing newline) so the diff only ever shows the entry that actually changed. If it succeeds, delete the temp file; if it fails, report the error and skip that person.
 5. Tell the user in the console that you finished writing the description for that person (name and id), then move on to the next iteration.
 
 ## Notes
