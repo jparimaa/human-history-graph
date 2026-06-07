@@ -6,6 +6,10 @@ const LEFT_MARGIN = 80;
 const LAYOUT_WIDTH  = 26000;
 const LAYOUT_HEIGHT = 4000;
 
+// Height of the fixed bottom bar (matches its CSS height); the year grid,
+// info/filter panels, and lifespan bar all sit above it.
+const BOTTOM_BAR_H = 44;
+
 // Vertical layout "breathes" with how crowded a stretch of time is. Region
 // y_bands are treated as offsets from the vertical center (0.5) and scaled by a
 // per-person `spread` in [SPREAD_MIN, 1]: where few people live near a year the
@@ -28,9 +32,6 @@ const LABEL_SCREEN_PX = 14;
 // SVG era bar, Cytoscape node labels) so nothing falls back to a stray
 // default sans-serif. Mirrors --font-ui in style.css.
 const FONT_STACK = "'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif";
-
-let occGroupMap = {};
-let groupColorMap = {};
 
 // Edge colors by relation type. Grouped into a few color families.
 const RELATION_BLUE  = '#5b9bd5';
@@ -79,11 +80,9 @@ function bandOffset(span) {
   return Math.random() * (span.up + span.down) - span.up;
 }
 
-function occupationColor(occ) {
-  const group = occGroupMap[occ] ?? 'Other';
-  return groupColorMap[group] ?? groupColorMap['Other'] ?? '#64748B';
-}
-
+// Push overlapping nodes apart in Y only (X encodes birth year and is fixed).
+// O(n^2) per iteration, up to 300 iterations; fine for the current dataset but
+// worth revisiting if `people` grows into the thousands.
 function resolveOverlaps(nodes, padding = 8) {
   for (let iter = 0; iter < 300; iter++) {
     let moved = false;
@@ -111,7 +110,7 @@ function resolveOverlaps(nodes, padding = 8) {
 // Per-person vertical spread factor in [SPREAD_MIN, 1], aligned with `people`.
 // Density is a Gaussian kernel over birth years; normalising to a high
 // percentile (not the max) keeps the 19th-century spike from flattening
-// everything else toward the center line.
+// everything else toward the center line. Cost is O(n^2) in the number of people.
 function computeSpreads(people) {
   const years = people.map(p => p.birth_year);
   const densities = years.map(y0 => {
@@ -127,9 +126,10 @@ function computeSpreads(people) {
   return densities.map(d => SPREAD_MIN + (1 - SPREAD_MIN) * Math.min(1, d / cap));
 }
 
-function buildElements(people, relations, regions, w, h) {
+function buildElements(people, relations, regions, w, h, colorForOccupation) {
   const hpiMin = Math.min(...people.map(p => p.hpi_score));
   const hpiMax = Math.max(...people.map(p => p.hpi_score));
+  const hpiSpan = hpiMax - hpiMin || 1; // avoid divide-by-zero if all HPIs equal
 
   // Each region fills the space up to the midpoint with each neighbouring band
   // (so adjacent bands tile with no empty strip between them); BAND_FILL > 1
@@ -158,7 +158,7 @@ function buildElements(people, relations, regions, w, h) {
     const yBand = regions.regions[regionId]?.y_band ?? 0.5;
     const span = regionSpan[regionId] ?? { up: 80, down: 80 };
     const spread = spreads[i];
-    const t = (p.hpi_score - hpiMin) / (hpiMax - hpiMin);
+    const t = (p.hpi_score - hpiMin) / hpiSpan;
     const size = 20 + t * 60;
     return {
       data: {
@@ -170,7 +170,7 @@ function buildElements(people, relations, regions, w, h) {
         occupation: p.occupation,
         birth_country: p.birth_country,
         hpi_score: p.hpi_score,
-        color: occupationColor(p.occupation),
+        color: colorForOccupation(p.occupation),
         size,
       },
       position: {
@@ -232,13 +232,35 @@ function drawYearGrid(canvas, cy) {
   }
 }
 
-function drawEraBar(eras, svgEl, cy) {
+// The era-bar track assignment and height never change (the `eras` data is
+// static), so compute them once here and reuse the result for every pan/zoom
+// redraw, which only needs to reposition x coordinates.
+function prepareEraLayout(eras) {
   const ROW_H = 20;
   const LABEL_AREA = 16;
+
+  // Assign overlapping era bands to rows via greedy interval scheduling
+  const sorted = eras.filter(e => e.type === 'era').sort((a, b) => a.start_year - b.start_year);
+  const trackEnds = [];
+  const bands = sorted.map(era => {
+    let t = trackEnds.findIndex(end => end <= era.start_year);
+    if (t === -1) t = trackEnds.length;
+    trackEnds[t] = era.end_year;
+    return { era, track: t };
+  });
+
+  const numTracks = trackEnds.length || 1;
+  const totalH = LABEL_AREA + numTracks * ROW_H;
+  const events = eras.filter(e => e.type === 'event');
+  return { bands, events, totalH, ROW_H, LABEL_AREA };
+}
+
+function drawEraBar(layout, svgEl, cy) {
+  const { bands, events, totalH, ROW_H, LABEL_AREA } = layout;
   const zoom = cy ? cy.zoom() : 1;
   const panX = cy ? cy.pan().x : 0;
-  const w = svgEl.clientWidth || window.innerWidth;
   svgEl.innerHTML = '';
+  svgEl.style.height = totalH + 'px';
 
   const ns = 'http://www.w3.org/2000/svg';
   function el(tag, attrs) {
@@ -247,31 +269,15 @@ function drawEraBar(eras, svgEl, cy) {
     return e;
   }
 
-  // Assign overlapping era bands to rows via greedy interval scheduling
-  const bands = eras.filter(e => e.type === 'era').sort((a, b) => a.start_year - b.start_year);
-  const trackEnds = [];
-  const trackOf = new Map();
-  for (const era of bands) {
-    let t = trackEnds.findIndex(end => end <= era.start_year);
-    if (t === -1) t = trackEnds.length;
-    trackOf.set(era.id, t);
-    trackEnds[t] = era.end_year;
-  }
-
-  const numTracks = trackEnds.length || 1;
-  const totalH = LABEL_AREA + numTracks * ROW_H;
-  svgEl.style.height = totalH + 'px';
-
   function toScreenX(year) {
     return yearToX(year, LAYOUT_WIDTH) * zoom + panX;
   }
 
   // Era bands
-  for (const era of bands) {
-    const t = trackOf.get(era.id);
+  for (const { era, track } of bands) {
     const x1 = toScreenX(Math.max(era.start_year, CANVAS_MIN_YEAR));
     const x2 = toScreenX(Math.min(era.end_year, CANVAS_MAX_YEAR));
-    const y = LABEL_AREA + t * ROW_H;
+    const y = LABEL_AREA + track * ROW_H;
     svgEl.appendChild(el('rect', { x: x1, y, width: Math.max(0, x2 - x1), height: ROW_H, fill: era.color }));
     const lbl = el('text', { x: x1 + 4, y: y + ROW_H / 2 + 5, fill: '#fff', 'font-size': 13, 'font-family': FONT_STACK, 'pointer-events': 'none' });
     lbl.textContent = era.label;
@@ -279,7 +285,7 @@ function drawEraBar(eras, svgEl, cy) {
   }
 
   // Events
-  for (const era of eras.filter(e => e.type === 'event')) {
+  for (const era of events) {
     const x = toScreenX(era.year);
     svgEl.appendChild(el('line', { x1: x, y1: 0, x2: x, y2: totalH, stroke: era.color, 'stroke-width': 1.5 }));
     const lbl = el('text', { x: x + 3, y: LABEL_AREA - 4, fill: era.color, 'font-size': 12, 'font-family': FONT_STACK, 'pointer-events': 'none' });
@@ -415,45 +421,10 @@ function hideInfoPanel() {
   document.getElementById('info-panel').hidden = true;
 }
 
-async function main() {
-  const [people, descriptionsRaw, relations, eras, regions, occGroups] = await Promise.all([
-    fetch('data/people.json').then(r => r.json()),
-    fetch('data/descriptions.json').then(r => r.json()).catch(() => []),
-    fetch('data/relations.json').then(r => r.json()),
-    fetch('data/eras.json').then(r => r.json()),
-    fetch('data/regions.json').then(r => r.json()),
-    fetch('data/occupation_groups.json').then(r => r.json()),
-  ]);
-
-  occGroupMap = occGroups.occupations;
-  groupColorMap = Object.fromEntries(
-    Object.entries(occGroups.groups).map(([g, v]) => [g, v.color])
-  );
-
-  // Occupation-group filter. All groups start enabled; the right-hand panel
-  // toggles which ones are shown. A node passes when its group is active.
-  const allGroups = Object.keys(occGroups.groups);
-  const activeGroups = new Set(allGroups);
-  function nodeGroup(node) {
-    return occGroupMap[node.data('occupation')] ?? 'Other';
-  }
-
-  // When true, every node in an active group is shown at full opacity,
-  // bypassing the zoom-based progressive reveal (the group filter still applies).
-  let showAll = false;
-
-  const descriptions = Object.fromEntries(
-    descriptionsRaw.map(entry => {
-      const [id, data] = Object.entries(entry)[0];
-      return [id, data];
-    })
-  );
-
-  const cyEl = document.getElementById('cy');
-
-  const cy = cytoscape({
+function createCytoscape(cyEl, elements) {
+  return cytoscape({
     container: cyEl,
-    elements: buildElements(people, relations, regions, LAYOUT_WIDTH, LAYOUT_HEIGHT),
+    elements,
     layout: { name: 'preset' },
     style: [
       {
@@ -500,9 +471,81 @@ async function main() {
     boxSelectionEnabled: false,
     autoungrabify: true,
   });
+}
+
+// Wire a toggle button + close button to show/hide a panel, keeping the
+// toggle's aria-pressed state in sync.
+function wireTogglePanel(panel, toggleBtn, closeBtn) {
+  toggleBtn.addEventListener('click', () => {
+    const show = panel.hidden;
+    panel.hidden = !show;
+    toggleBtn.setAttribute('aria-pressed', String(show));
+  });
+  closeBtn.addEventListener('click', () => {
+    panel.hidden = true;
+    toggleBtn.setAttribute('aria-pressed', 'false');
+  });
+}
+
+async function main() {
+  const [people, descriptionsRaw, relations, eras, regions, occGroups] = await Promise.all([
+    fetch('data/people.json').then(r => r.json()),
+    fetch('data/descriptions.json').then(r => r.json()).catch(() => []),
+    fetch('data/relations.json').then(r => r.json()),
+    fetch('data/eras.json').then(r => r.json()),
+    fetch('data/regions.json').then(r => r.json()),
+    fetch('data/occupation_groups.json').then(r => r.json()),
+  ]);
+
+  const occGroupMap = occGroups.occupations;
+  const groupColorMap = Object.fromEntries(
+    Object.entries(occGroups.groups).map(([g, v]) => [g, v.color])
+  );
+  const colorForOccupation = occ => {
+    const group = occGroupMap[occ] ?? 'Other';
+    return groupColorMap[group] ?? groupColorMap['Other'] ?? '#64748B';
+  };
+
+  // Occupation-group filter. All groups start enabled; the right-hand panel
+  // toggles which ones are shown. A node passes when its group is active.
+  const allGroups = Object.keys(occGroups.groups);
+  const activeGroups = new Set(allGroups);
+  function nodeGroup(node) {
+    return occGroupMap[node.data('occupation')] ?? 'Other';
+  }
+
+  // When true, every node in an active group is shown at full opacity,
+  // bypassing the zoom-based progressive reveal (the group filter still applies).
+  let showAll = false;
+
+  const descriptions = Object.fromEntries(
+    descriptionsRaw.map(entry => {
+      const [id, data] = Object.entries(entry)[0];
+      return [id, data];
+    })
+  );
+
+  const cyEl = document.getElementById('cy');
+  const cy = createCytoscape(
+    cyEl,
+    buildElements(people, relations, regions, LAYOUT_WIDTH, LAYOUT_HEIGHT, colorForOccupation)
+  );
 
   window.cy = cy;
-  cy.fit(undefined, 60);
+
+  function resetView() {
+    const zoom = 0.50;
+    const x1500 = yearToX(1500, LAYOUT_WIDTH);
+    cy.viewport({
+      zoom,
+      pan: {
+        x: cy.width()  / 2 - x1500 * zoom,
+        y: cy.height() / 2 - (LAYOUT_HEIGHT / 2) * zoom,
+      },
+    });
+  }
+
+  resetView();
 
   // Cytoscape's wheelSensitivity option is discouraged (it logs a warning and
   // zooms inconsistently across devices). Instead we disable built-in zoom and
@@ -523,13 +566,15 @@ async function main() {
 
   const gridCanvas = document.getElementById('year-grid');
   const lifespanCanvas = document.getElementById('lifespan-canvas');
-  let currentLifespanNode = null;
-  let hoverLifespanNode = null;
+  let selectedNode = null;
+  let hoveredNode = null;
 
-  function activeLifespanNode() { return hoverLifespanNode ?? currentLifespanNode; }
+  // Hover takes precedence over selection for what the lifespan bar, edges, and
+  // forced visibility focus on.
+  function focusNode() { return hoveredNode ?? selectedNode; }
 
   function refreshLifespan() {
-    const node = activeLifespanNode();
+    const node = focusNode();
     if (node) {
       lifespanCanvas.hidden = false;
       drawLifespanBars(lifespanCanvas, cy, node);
@@ -538,20 +583,33 @@ async function main() {
     }
   }
 
+  // Single teardown for "no node selected": clears highlight/dim classes, drops
+  // the focus, hides edges/info, and refreshes the lifespan bar. Order matters:
+  // null the focus before updateNodeVisibility so it hides the old node's edges.
+  function clearSelection() {
+    cy.elements().removeClass('dimmed highlighted');
+    selectedNode = null;
+    hoveredNode = null;
+    updateNodeVisibility();
+    hideInfoPanel();
+    refreshLifespan();
+  }
+
   const svgEl = document.getElementById('era-bar');
+  const eraLayout = prepareEraLayout(eras);
   let eraBarH = 0;
   let eraBarVisible = false;
 
   function updateLayout() {
-    svgEl.hidden = !eraBarVisible;
+    // #era-bar (an inline SVG) has no [hidden] CSS rule, so toggle display directly.
     svgEl.style.display = eraBarVisible ? '' : 'none';
     if (eraBarVisible) {
-      eraBarH = drawEraBar(eras, svgEl, cy);
+      eraBarH = drawEraBar(eraLayout, svgEl, cy);
     } else {
       svgEl.innerHTML = '';
       eraBarH = 0;
     }
-    const bottomOffset = 44 + eraBarH;
+    const bottomOffset = BOTTOM_BAR_H + eraBarH;
     const h = window.innerHeight - bottomOffset;
     gridCanvas.width  = window.innerWidth;
     gridCanvas.height = h;
@@ -565,7 +623,7 @@ async function main() {
   updateLayout();
   cy.on('pan zoom', () => {
     drawYearGrid(gridCanvas, cy);
-    if (eraBarVisible) drawEraBar(eras, svgEl, cy);
+    if (eraBarVisible) drawEraBar(eraLayout, svgEl, cy);
     refreshLifespan();
   });
 
@@ -593,8 +651,8 @@ async function main() {
     cy.elements().removeClass('highlighted').addClass('dimmed');
     node.closedNeighborhood().removeClass('dimmed');
     node.addClass('highlighted');
-    currentLifespanNode = node;
-    hoverLifespanNode = null;
+    selectedNode = node;
+    hoveredNode = null;
     tooltip.hidden = true;
     updateNodeVisibility();
     showInfoPanel(node, descriptions);
@@ -603,11 +661,7 @@ async function main() {
 
   cy.on('tap', evt => {
     if (evt.target !== cy) return;
-    cy.elements().removeClass('dimmed highlighted');
-    updateNodeVisibility();
-    hideInfoPanel();
-    currentLifespanNode = null;
-    refreshLifespan();
+    clearSelection();
   });
 
   const tooltip = document.getElementById('tooltip');
@@ -615,7 +669,7 @@ async function main() {
   // While a node is selected, only fully-visible nodes (the selection's
   // neighbourhood) respond to hover; dimmed nodes stay inert.
   function hoverBlocked(node) {
-    return currentLifespanNode && Number(node.style('opacity')) < 0.99;
+    return selectedNode && Number(node.style('opacity')) < 0.99;
   }
 
   cy.on('mouseover', 'node', evt => {
@@ -624,7 +678,7 @@ async function main() {
     const desc = descriptions[node.data('id')] ?? {};
     tooltip.textContent = desc.short_description ?? 'No description available.';
     tooltip.hidden = false;
-    hoverLifespanNode = node;
+    hoveredNode = node;
     updateNodeVisibility();
     refreshLifespan();
   });
@@ -639,7 +693,7 @@ async function main() {
   cy.on('mouseout', 'node', evt => {
     if (hoverBlocked(evt.target)) return;
     tooltip.hidden = true;
-    hoverLifespanNode = null;
+    hoveredNode = null;
     updateNodeVisibility();
     refreshLifespan();
   });
@@ -686,9 +740,9 @@ async function main() {
 
     // The active (hovered or selected) node forces itself and its neighbours
     // visible regardless of zoom, and is the only node whose edges are drawn.
-    const focusNode = hoverLifespanNode ?? currentLifespanNode;
+    const focus = focusNode();
     const forcedIds = new Set(
-      focusNode ? focusNode.closedNeighborhood().nodes().map(n => n.id()) : []
+      focus ? focus.closedNeighborhood().nodes().map(n => n.id()) : []
     );
 
     // batch() collapses all style writes into one repaint, which keeps
@@ -700,10 +754,14 @@ async function main() {
         const zoomOp = rank === undefined
           ? 0
           : showAll ? 1 : Math.min(1, Math.max(0, (cutoff - rank) / FADE_WINDOW));
+        // Dimmed (non-neighbourhood) nodes show faintly, but only while in view;
+        // out-of-view dimmed nodes stay culled so a selection doesn't render and
+        // keep interactive the entire dataset.
+        const dimmedOp = node.hasClass('dimmed') ? (rank === undefined ? 0 : 0.08) : zoomOp;
         // A filtered-out group stays hidden regardless of focus or selection.
         const op = !activeGroups.has(nodeGroup(node))
           ? 0
-          : forcedIds.has(node.id()) ? 1 : (node.hasClass('dimmed') ? 0.08 : zoomOp);
+          : forcedIds.has(node.id()) ? 1 : dimmedOp;
         node.style({
           display: 'element',
           opacity: op,
@@ -714,11 +772,11 @@ async function main() {
       // Edges stay hidden until a node is focused; then only that node's
       // connections appear (pulling in connected people hidden by zoom).
       cy.edges().style('display', 'none');
-      if (focusNode) {
+      if (focus) {
         // Shown with base edge style: width from strength, opacity from confidence.
         // removeClass('dimmed') so a peeked (hovered) node's edges look the same
         // as a clicked node's, even while a different node is selected.
-        focusNode.connectedEdges().removeClass('dimmed').style('display', 'element');
+        focus.connectedEdges().removeClass('dimmed').style('display', 'element');
       }
     });
   }
@@ -795,47 +853,22 @@ async function main() {
     updateNodeVisibility();
   });
 
-  toggleFilterBtn.addEventListener('click', () => {
-    const show = filterPanel.hidden;
-    filterPanel.hidden = !show;
-    toggleFilterBtn.setAttribute('aria-pressed', String(show));
-  });
-
-  document.getElementById('filter-close').addEventListener('click', () => {
-    filterPanel.hidden = true;
-    toggleFilterBtn.setAttribute('aria-pressed', 'false');
-  });
+  wireTogglePanel(filterPanel, toggleFilterBtn, document.getElementById('filter-close'));
 
   // ── About panel ───────────────────────────────────────
-  const aboutPanel = document.getElementById('about-panel');
-  const toggleAboutBtn = document.getElementById('toggle-about-btn');
-
-  toggleAboutBtn.addEventListener('click', () => {
-    const show = aboutPanel.hidden;
-    aboutPanel.hidden = !show;
-    toggleAboutBtn.setAttribute('aria-pressed', String(show));
-  });
-
-  document.getElementById('about-close').addEventListener('click', () => {
-    aboutPanel.hidden = true;
-    toggleAboutBtn.setAttribute('aria-pressed', 'false');
-  });
+  wireTogglePanel(
+    document.getElementById('about-panel'),
+    document.getElementById('toggle-about-btn'),
+    document.getElementById('about-close')
+  );
 
   document.getElementById('reset-btn').addEventListener('click', () => {
-    cy.elements().removeClass('dimmed highlighted');
-    cy.fit();
-    updateNodeVisibility();
-    hideInfoPanel();
-    currentLifespanNode = null;
-    refreshLifespan();
+    resetView();
+    clearSelection();
   });
 
   document.getElementById('info-close').addEventListener('click', () => {
-    cy.elements().removeClass('dimmed highlighted');
-    updateNodeVisibility();
-    hideInfoPanel();
-    currentLifespanNode = null;
-    refreshLifespan();
+    clearSelection();
   });
 }
 
