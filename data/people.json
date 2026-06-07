@@ -90,16 +90,6 @@
     "hpi_score": 93.255134
   },
   {
-    "id": "moses_in_islam",
-    "name": "Moses in Islam",
-    "display_name": "Moses in Islam",
-    "birth_year": -1392,
-    "death_year": -1272,
-    "occupation": "RELIGIOUS FIGURE",
-    "birth_country": "Egypt",
-    "hpi_score": 82.061794
-  },
-  {
     "id": "tutankhamun",
     "name": "Tutankhamun",
     "display_name": "Tutankhamun",
@@ -312,7 +302,7 @@
   {
     "id": "thales_of_miletus",
     "name": "Thales of Miletus",
-    "display_name": "Thales of Miletus",
+    "display_name": "Thales",
     "birth_year": -623,
     "death_year": -546,
     "occupation": "PHILOSOPHER",
@@ -372,7 +362,7 @@
   {
     "id": "lucius_tarquinius_superbus",
     "name": "Lucius Tarquinius Superbus",
-    "display_name": "Lucius Tarquinius Superbus",
+    "display_name": "Tarquinius Superbus",
     "birth_year": -600,
     "death_year": -495,
     "occupation": "POLITICIAN",
@@ -442,7 +432,7 @@
   {
     "id": "gautama_buddha",
     "name": "Gautama Buddha",
-    "display_name": "Gautama Buddha",
+    "display_name": "Buddha",
     "birth_year": -566,
     "death_year": -452,
     "occupation": "PHILOSOPHER",
@@ -562,7 +552,7 @@
   {
     "id": "artaxerxes_i_of_persia",
     "name": "Artaxerxes I of Persia",
-    "display_name": "Artaxerxes I of Persia",
+    "display_name": "Artaxerxes I",
     "birth_year": -500,
     "death_year": -424,
     "occupation": "POLITICIAN",
@@ -752,7 +742,7 @@
   {
     "id": "artaxerxes_ii_of_persia",
     "name": "Artaxerxes II of Persia",
-    "display_name": "Artaxerxes II of Persia",
+    "display_name": "Artaxerxes II",
     "birth_year": -436,
     "death_year": -358,
     "occupation": "POLITICIAN",
@@ -982,7 +972,7 @@
   {
     "id": "mithridates_vi_of_pontus",
     "name": "Mithridates VI of Pontus",
-    "display_name": "Mithridates VI of Pontus",
+    "display_name": "Mithridates VI",
     "birth_year": -132,
     "death_year": -63,
     "occupation": "POLITICIAN",
@@ -992,7 +982,7 @@
   {
     "id": "marcus_licinius_crassus",
     "name": "Marcus Licinius Crassus",
-    "display_name": "Marcus Licinius Crassus",
+    "display_name": "Crassus",
     "birth_year": -115,
     "death_year": -53,
     "occupation": "POLITICIAN",
@@ -1112,7 +1102,7 @@
   {
     "id": "marcus_aemilius_lepidus_(triumvir)",
     "name": "Marcus Aemilius Lepidus",
-    "display_name": "Marcus Aemilius Lepidus",
+    "display_name": "Lepidus",
     "birth_year": -89,
     "death_year": -13,
     "occupation": "POLITICIAN",
@@ -1572,7 +1562,7 @@
   {
     "id": "pope_clement_i",
     "name": "Pope Clement I",
-    "display_name": "Pope Clement I",
+    "display_name": "Clement I",
     "birth_year": 40,
     "death_year": 99,
     "occupation": "RELIGIOUS FIGURE",
@@ -2032,7 +2022,7 @@
   {
     "id": "pope_sylvester_i",
     "name": "Pope Sylvester I",
-    "display_name": "Pope Sylvester I",
+    "display_name": "Sylvester I",
     "birth_year": 300,
     "death_year": 335,
     "occupation": "RELIGIOUS FIGURE",
@@ -2092,7 +2082,7 @@
   {
     "id": "pope_siricius",
     "name": "Pope Siricius",
-    "display_name": "Pope Siricius",
+    "display_name": "Siricius",
     "birth_year": 334,
     "death_year": 399,
     "occupation": "RELIGIOUS FIGURE",
@@ -2182,7 +2172,7 @@
   {
     "id": "pope_leo_i",
     "name": "Pope Leo I",
-    "display_name": "Pope Leo I",
+    "display_name": "Leo I",
     "birth_year": 390,
     "death_year": 461,
     "occupation": "RELIGIOUS FIGURE",
@@ -2192,7 +2182,7 @@
   {
     "id": "flavius_aetius",
     "name": "Flavius Aetius",
-    "display_name": "Flavius Aetius",
+    "display_name": "Aetius",
     "birth_year": 390,
     "death_year": 454,
     "occupation": "MILITARY PERSONNEL",
@@ -2322,7 +2312,7 @@
   {
     "id": "pope_gregory_i",
     "name": "Pope Gregory I",
-    "display_name": "Pope Gregory I",
+    "display_name": "Gregory I",
     "birth_year": 540,
     "death_year": 604,
     "occupation": "RELIGIOUS FIGURE",
@@ -2332,7 +2322,7 @@
   {
     "id": "khadija_bint_khuwaylid",
     "name": "Khadija bint Khuwaylid",
-    "display_name": "Khadija bint Khuwaylid",
+    "display_name": "Khadija",
     "birth_year": 556,
     "death_year": 619,
     "occupation": "COMPANION",
@@ -2522,7 +2512,7 @@
   {
     "id": "pope_adrian_i",
     "name": "Pope Adrian I",
-    "display_name": "Pope Adrian I",
+    "display_name": "Adrian I",
     "birth_year": 700,
     "death_year": 795,
     "occupation": "RELIGIOUS FIGURE",
@@ -2612,7 +2602,7 @@
   {
     "id": "muhammad_ibn_musa_al-khwarizmi",
     "name": "Muhammad ibn Musa al-Khwarizmi",
-    "display_name": "Muhammad ibn Musa al-Khwarizmi",
+    "display_name": "al-Khwarizmi",
     "birth_year": 780,
     "death_year": 850,
     "occupation": "MATHEMATICIAN",
@@ -2622,7 +2612,7 @@
   {
     "id": "æthelwulf,_king_of_wessex",
     "name": "Æthelwulf, King of Wessex",
-    "display_name": "Æthelwulf, King of Wessex",
+    "display_name": "Æthelwulf",
     "birth_year": 795,
     "death_year": 858,
     "occupation": "POLITICIAN",
@@ -2632,7 +2622,7 @@
   {
     "id": "ecgberht,_king_of_wessex",
     "name": "Ecgberht, King of Wessex",
-    "display_name": "Ecgberht, King of Wessex",
+    "display_name": "Ecgberht",
     "birth_year": 800,
     "death_year": 839,
     "occupation": "POLITICIAN",
@@ -2652,7 +2642,7 @@
   {
     "id": "muhammad_al-bukhari",
     "name": "Muhammad al-Bukhari",
-    "display_name": "Muhammad al-Bukhari",
+    "display_name": "al-Bukhari",
     "birth_year": 810,
     "death_year": 870,
     "occupation": "RELIGIOUS FIGURE",
@@ -2662,7 +2652,7 @@
   {
     "id": "pope_formosus",
     "name": "Pope Formosus",
-    "display_name": "Pope Formosus",
+    "display_name": "Formosus",
     "birth_year": 816,
     "death_year": 896,
     "occupation": "RELIGIOUS FIGURE",
@@ -2712,7 +2702,7 @@
   {
     "id": "otto_i,_holy_roman_emperor",
     "name": "Otto I, Holy Roman Emperor",
-    "display_name": "Otto I, Holy Roman Emperor",
+    "display_name": "Otto I",
     "birth_year": 912,
     "death_year": 973,
     "occupation": "POLITICIAN",
@@ -2752,7 +2742,7 @@
   {
     "id": "otto_ii,_holy_roman_emperor",
     "name": "Otto II, Holy Roman Emperor",
-    "display_name": "Otto II, Holy Roman Emperor",
+    "display_name": "Otto II",
     "birth_year": 955,
     "death_year": 983,
     "occupation": "POLITICIAN",
@@ -2822,7 +2812,7 @@
   {
     "id": "stephen_i_of_hungary",
     "name": "Stephen I of Hungary",
-    "display_name": "Stephen I of Hungary",
+    "display_name": "Stephen I",
     "birth_year": 975,
     "death_year": 1038,
     "occupation": "POLITICIAN",
@@ -2852,7 +2842,7 @@
   {
     "id": "olaf_ii_of_norway",
     "name": "Olaf II of Norway",
-    "display_name": "Olaf II of Norway",
+    "display_name": "Olaf II",
     "birth_year": 993,
     "death_year": 1030,
     "occupation": "POLITICIAN",
@@ -2872,7 +2862,7 @@
   {
     "id": "pope_damasus_ii",
     "name": "Pope Damasus II",
-    "display_name": "Pope Damasus II",
+    "display_name": "Damasus II",
     "birth_year": 1000,
     "death_year": 1048,
     "occupation": "RELIGIOUS FIGURE",
@@ -2882,7 +2872,7 @@
   {
     "id": "pope_benedict_ix",
     "name": "Pope Benedict IX",
-    "display_name": "Pope Benedict IX",
+    "display_name": "Benedict IX",
     "birth_year": 1012,
     "death_year": 1055,
     "occupation": "RELIGIOUS FIGURE",
@@ -2912,7 +2902,7 @@
   {
     "id": "pope_gregory_vii",
     "name": "Pope Gregory VII",
-    "display_name": "Pope Gregory VII",
+    "display_name": "Gregory VII",
     "birth_year": 1020,
     "death_year": 1085,
     "occupation": "RELIGIOUS FIGURE",
@@ -2942,7 +2932,7 @@
   {
     "id": "pope_urban_ii",
     "name": "Pope Urban II",
-    "display_name": "Pope Urban II",
+    "display_name": "Urban II",
     "birth_year": 1042,
     "death_year": 1099,
     "occupation": "RELIGIOUS FIGURE",
@@ -2962,7 +2952,7 @@
   {
     "id": "henry_iv,_holy_roman_emperor",
     "name": "Henry IV, Holy Roman Emperor",
-    "display_name": "Henry IV, Holy Roman Emperor",
+    "display_name": "Henry IV",
     "birth_year": 1050,
     "death_year": 1106,
     "occupation": "POLITICIAN",
@@ -3012,7 +3002,7 @@
   {
     "id": "pope_gregory_viii",
     "name": "Pope Gregory VIII",
-    "display_name": "Pope Gregory VIII",
+    "display_name": "Gregory VIII",
     "birth_year": 1100,
     "death_year": 1187,
     "occupation": "RELIGIOUS FIGURE",
@@ -3032,7 +3022,7 @@
   {
     "id": "pope_celestine_iii",
     "name": "Pope Celestine III",
-    "display_name": "Pope Celestine III",
+    "display_name": "Celestine III",
     "birth_year": 1106,
     "death_year": 1198,
     "occupation": "RELIGIOUS FIGURE",
@@ -3042,7 +3032,7 @@
   {
     "id": "frederick_i,_holy_roman_emperor",
     "name": "Frederick I, Holy Roman Emperor",
-    "display_name": "Frederick I, Holy Roman Emperor",
+    "display_name": "Frederick I",
     "birth_year": 1122,
     "death_year": 1190,
     "occupation": "POLITICIAN",
@@ -3112,7 +3102,7 @@
   {
     "id": "richard_i_of_england",
     "name": "Richard I of England",
-    "display_name": "Richard I of England",
+    "display_name": "Richard I",
     "birth_year": 1157,
     "death_year": 1199,
     "occupation": "POLITICIAN",
@@ -3122,7 +3112,7 @@
   {
     "id": "pope_innocent_iii",
     "name": "Pope Innocent III",
-    "display_name": "Pope Innocent III",
+    "display_name": "Innocent III",
     "birth_year": 1160,
     "death_year": 1216,
     "occupation": "RELIGIOUS FIGURE",
@@ -3132,7 +3122,7 @@
   {
     "id": "pope_gregory_ix",
     "name": "Pope Gregory IX",
-    "display_name": "Pope Gregory IX",
+    "display_name": "Gregory IX",
     "birth_year": 1160,
     "death_year": 1241,
     "occupation": "RELIGIOUS FIGURE",
@@ -3142,7 +3132,7 @@
   {
     "id": "baldwin_iv_of_jerusalem",
     "name": "Baldwin IV of Jerusalem",
-    "display_name": "Baldwin IV of Jerusalem",
+    "display_name": "Baldwin IV",
     "birth_year": 1161,
     "death_year": 1185,
     "occupation": "POLITICIAN",
@@ -3182,7 +3172,7 @@
   {
     "id": "john,_king_of_england",
     "name": "John, King of England",
-    "display_name": "John, King of England",
+    "display_name": "King John",
     "birth_year": 1166,
     "death_year": 1216,
     "occupation": "POLITICIAN",
@@ -3232,7 +3222,7 @@
   {
     "id": "pope_clement_iv",
     "name": "Pope Clement IV",
-    "display_name": "Pope Clement IV",
+    "display_name": "Clement IV",
     "birth_year": 1190,
     "death_year": 1268,
     "occupation": "RELIGIOUS FIGURE",
@@ -3242,7 +3232,7 @@
   {
     "id": "frederick_ii,_holy_roman_emperor",
     "name": "Frederick II, Holy Roman Emperor",
-    "display_name": "Frederick II, Holy Roman Emperor",
+    "display_name": "Frederick II",
     "birth_year": 1194,
     "death_year": 1250,
     "occupation": "POLITICIAN",
@@ -3262,7 +3252,7 @@
   {
     "id": "pope_urban_iii",
     "name": "Pope Urban III",
-    "display_name": "Pope Urban III",
+    "display_name": "Urban III",
     "birth_year": 1120,
     "death_year": 1187,
     "occupation": "RELIGIOUS FIGURE",
@@ -3322,7 +3312,7 @@
   {
     "id": "pope_gregory_x",
     "name": "Pope Gregory X",
-    "display_name": "Pope Gregory X",
+    "display_name": "Gregory X",
     "birth_year": 1210,
     "death_year": 1276,
     "occupation": "RELIGIOUS FIGURE",
@@ -3332,7 +3322,7 @@
   {
     "id": "louis_ix_of_france",
     "name": "Louis IX of France",
-    "display_name": "Louis IX of France",
+    "display_name": "Louis IX",
     "birth_year": 1214,
     "death_year": 1270,
     "occupation": "POLITICIAN",
@@ -3362,7 +3352,7 @@
   {
     "id": "rudolf_i_of_germany",
     "name": "Rudolf I of Germany",
-    "display_name": "Rudolf I of Germany",
+    "display_name": "Rudolf I",
     "birth_year": 1218,
     "death_year": 1291,
     "occupation": "POLITICIAN",
@@ -3372,7 +3362,7 @@
   {
     "id": "thomas_aquinas",
     "name": "Thomas Aquinas",
-    "display_name": "Thomas Aquinas",
+    "display_name": "Aquinas",
     "birth_year": 1225,
     "death_year": 1274,
     "occupation": "PHILOSOPHER",
@@ -3392,7 +3382,7 @@
   {
     "id": "pope_boniface_viii",
     "name": "Pope Boniface VIII",
-    "display_name": "Pope Boniface VIII",
+    "display_name": "Boniface VIII",
     "birth_year": 1235,
     "death_year": 1303,
     "occupation": "RELIGIOUS FIGURE",
@@ -3402,7 +3392,7 @@
   {
     "id": "pope_benedict_xi",
     "name": "Pope Benedict XI",
-    "display_name": "Pope Benedict XI",
+    "display_name": "Benedict XI",
     "birth_year": 1240,
     "death_year": 1304,
     "occupation": "RELIGIOUS FIGURE",
@@ -3412,7 +3402,7 @@
   {
     "id": "pope_john_xxii",
     "name": "Pope John XXII",
-    "display_name": "Pope John XXII",
+    "display_name": "John XXII",
     "birth_year": 1244,
     "death_year": 1334,
     "occupation": "RELIGIOUS FIGURE",
@@ -3442,7 +3432,7 @@
   {
     "id": "pope_clement_v",
     "name": "Pope Clement V",
-    "display_name": "Pope Clement V",
+    "display_name": "Clement V",
     "birth_year": 1264,
     "death_year": 1314,
     "occupation": "RELIGIOUS FIGURE",
@@ -3452,7 +3442,7 @@
   {
     "id": "dante_alighieri",
     "name": "Dante Alighieri",
-    "display_name": "Dante Alighieri",
+    "display_name": "Dante",
     "birth_year": 1265,
     "death_year": 1321,
     "occupation": "WRITER",
@@ -3502,7 +3492,7 @@
   {
     "id": "pope_benedict_xii",
     "name": "Pope Benedict XII",
-    "display_name": "Pope Benedict XII",
+    "display_name": "Benedict XII",
     "birth_year": 1280,
     "death_year": 1342,
     "occupation": "RELIGIOUS FIGURE",
@@ -3512,7 +3502,7 @@
   {
     "id": "pope_innocent_vi",
     "name": "Pope Innocent VI",
-    "display_name": "Pope Innocent VI",
+    "display_name": "Innocent VI",
     "birth_year": 1282,
     "death_year": 1362,
     "occupation": "RELIGIOUS FIGURE",
@@ -3532,7 +3522,7 @@
   {
     "id": "pope_clement_vi",
     "name": "Pope Clement VI",
-    "display_name": "Pope Clement VI",
+    "display_name": "Clement VI",
     "birth_year": 1291,
     "death_year": 1352,
     "occupation": "RELIGIOUS FIGURE",
@@ -3562,7 +3552,7 @@
   {
     "id": "pope_urban_v",
     "name": "Pope Urban V",
-    "display_name": "Pope Urban V",
+    "display_name": "Urban V",
     "birth_year": 1310,
     "death_year": 1370,
     "occupation": "RELIGIOUS FIGURE",
@@ -3572,7 +3562,7 @@
   {
     "id": "giovanni_boccaccio",
     "name": "Giovanni Boccaccio",
-    "display_name": "Giovanni Boccaccio",
+    "display_name": "Boccaccio",
     "birth_year": 1313,
     "death_year": 1375,
     "occupation": "WRITER",
@@ -3582,7 +3572,7 @@
   {
     "id": "charles_iv,_holy_roman_emperor",
     "name": "Charles IV, Holy Roman Emperor",
-    "display_name": "Charles IV, Holy Roman Emperor",
+    "display_name": "Charles IV",
     "birth_year": 1316,
     "death_year": 1378,
     "occupation": "POLITICIAN",
@@ -3632,7 +3622,7 @@
   {
     "id": "pope_gregory_xii",
     "name": "Pope Gregory XII",
-    "display_name": "Pope Gregory XII",
+    "display_name": "Gregory XII",
     "birth_year": 1335,
     "death_year": 1417,
     "occupation": "RELIGIOUS FIGURE",
@@ -3652,7 +3642,7 @@
   {
     "id": "pope_innocent_vii",
     "name": "Pope Innocent VII",
-    "display_name": "Pope Innocent VII",
+    "display_name": "Innocent VII",
     "birth_year": 1339,
     "death_year": 1406,
     "occupation": "RELIGIOUS FIGURE",
@@ -3672,7 +3662,7 @@
   {
     "id": "pope_boniface_ix",
     "name": "Pope Boniface IX",
-    "display_name": "Pope Boniface IX",
+    "display_name": "Boniface IX",
     "birth_year": 1350,
     "death_year": 1404,
     "occupation": "RELIGIOUS FIGURE",
@@ -3682,7 +3672,7 @@
   {
     "id": "margaret_i_of_denmark",
     "name": "Margaret I of Denmark",
-    "display_name": "Margaret I of Denmark",
+    "display_name": "Margaret I",
     "birth_year": 1353,
     "death_year": 1412,
     "occupation": "POLITICIAN",
@@ -3712,7 +3702,7 @@
   {
     "id": "wenceslaus_iv_of_bohemia",
     "name": "Wenceslaus IV of Bohemia",
-    "display_name": "Wenceslaus IV of Bohemia",
+    "display_name": "Wenceslaus IV",
     "birth_year": 1361,
     "death_year": 1419,
     "occupation": "POLITICIAN",
@@ -3722,7 +3712,7 @@
   {
     "id": "sigismund,_holy_roman_emperor",
     "name": "Sigismund, Holy Roman Emperor",
-    "display_name": "Sigismund, Holy Roman Emperor",
+    "display_name": "Sigismund",
     "birth_year": 1368,
     "death_year": 1437,
     "occupation": "POLITICIAN",
@@ -3742,7 +3732,7 @@
   {
     "id": "pope_gregory_xi",
     "name": "Pope Gregory XI",
-    "display_name": "Pope Gregory XI",
+    "display_name": "Gregory XI",
     "birth_year": 1370,
     "death_year": 1378,
     "occupation": "RELIGIOUS FIGURE",
@@ -3752,7 +3742,7 @@
   {
     "id": "pope_callixtus_iii",
     "name": "Pope Callixtus III",
-    "display_name": "Pope Callixtus III",
+    "display_name": "Callixtus III",
     "birth_year": 1379,
     "death_year": 1458,
     "occupation": "RELIGIOUS FIGURE",
@@ -3762,7 +3752,7 @@
   {
     "id": "pope_eugene_iv",
     "name": "Pope Eugene IV",
-    "display_name": "Pope Eugene IV",
+    "display_name": "Eugene IV",
     "birth_year": 1383,
     "death_year": 1447,
     "occupation": "RELIGIOUS FIGURE",
@@ -3802,7 +3792,7 @@
   {
     "id": "johannes_gutenberg",
     "name": "Johannes Gutenberg",
-    "display_name": "Johannes Gutenberg",
+    "display_name": "Gutenberg",
     "birth_year": 1394,
     "death_year": 1468,
     "occupation": "INVENTOR",
@@ -3822,7 +3812,7 @@
   {
     "id": "jan_van_eyck",
     "name": "Jan van Eyck",
-    "display_name": "Jan van Eyck",
+    "display_name": "Van Eyck",
     "birth_year": 1395,
     "death_year": 1441,
     "occupation": "PAINTER",
@@ -3842,7 +3832,7 @@
   {
     "id": "pope_nicholas_v",
     "name": "Pope Nicholas V",
-    "display_name": "Pope Nicholas V",
+    "display_name": "Nicholas V",
     "birth_year": 1397,
     "death_year": 1455,
     "occupation": "RELIGIOUS FIGURE",
@@ -3892,7 +3882,7 @@
   {
     "id": "charles_vii_of_france",
     "name": "Charles VII of France",
-    "display_name": "Charles VII of France",
+    "display_name": "Charles VII",
     "birth_year": 1403,
     "death_year": 1461,
     "occupation": "POLITICIAN",
@@ -3912,7 +3902,7 @@
   {
     "id": "constantine_xi_palaiologos",
     "name": "Constantine XI Palaiologos",
-    "display_name": "Constantine XI Palaiologos",
+    "display_name": "Constantine XI",
     "birth_year": 1404,
     "death_year": 1453,
     "occupation": "POLITICIAN",
@@ -3932,7 +3922,7 @@
   {
     "id": "pope_pius_ii",
     "name": "Pope Pius II",
-    "display_name": "Pope Pius II",
+    "display_name": "Pius II",
     "birth_year": 1405,
     "death_year": 1464,
     "occupation": "RELIGIOUS FIGURE",
@@ -4022,7 +4012,7 @@
   {
     "id": "andrea_del_verrocchio",
     "name": "Andrea del Verrocchio",
-    "display_name": "Andrea del Verrocchio",
+    "display_name": "Verrocchio",
     "birth_year": 1435,
     "death_year": 1488,
     "occupation": "PAINTER",
@@ -4122,7 +4112,7 @@
   {
     "id": "hieronymus_bosch",
     "name": "Hieronymus Bosch",
-    "display_name": "Hieronymus Bosch",
+    "display_name": "Bosch",
     "birth_year": 1450,
     "death_year": 1516,
     "occupation": "PAINTER",
@@ -4142,7 +4132,7 @@
   {
     "id": "isabella_i_of_castile",
     "name": "Isabella I of Castile",
-    "display_name": "Isabella I of Castile",
+    "display_name": "Isabella I",
     "birth_year": 1451,
     "death_year": 1504,
     "occupation": "POLITICIAN",
@@ -4222,7 +4212,7 @@
   {
     "id": "vasco_da_gama",
     "name": "Vasco da Gama",
-    "display_name": "Vasco Da Gama",
+    "display_name": "Vasco da Gama",
     "birth_year": 1460,
     "death_year": 1524,
     "occupation": "EXPLORER",
@@ -4312,7 +4302,7 @@
   {
     "id": "charles_viii_of_france",
     "name": "Charles VIII of France",
-    "display_name": "Charles VIII of France",
+    "display_name": "Charles VIII",
     "birth_year": 1470,
     "death_year": 1498,
     "occupation": "POLITICIAN",
@@ -4502,7 +4492,7 @@
   {
     "id": "hernán_cortés",
     "name": "Hernán Cortés",
-    "display_name": "Hernán Cortés",
+    "display_name": "Cortés",
     "birth_year": 1485,
     "death_year": 1547,
     "occupation": "EXPLORER",
@@ -4712,7 +4702,7 @@
   {
     "id": "ferdinand_i,_holy_roman_emperor",
     "name": "Ferdinand I, Holy Roman Emperor",
-    "display_name": "Ferdinand I, Holy Roman Emperor",
+    "display_name": "Ferdinand I",
     "birth_year": 1503,
     "death_year": 1564,
     "occupation": "POLITICIAN",
@@ -4742,7 +4732,7 @@
   {
     "id": "louis_ii_of_hungary",
     "name": "Louis II of Hungary",
-    "display_name": "Louis II of Hungary",
+    "display_name": "Louis II",
     "birth_year": 1506,
     "death_year": 1526,
     "occupation": "POLITICIAN",
@@ -4752,7 +4742,7 @@
   {
     "id": "andrea_palladio",
     "name": "Andrea Palladio",
-    "display_name": "Andrea Palladio",
+    "display_name": "Palladio",
     "birth_year": 1508,
     "death_year": 1580,
     "occupation": "ARCHITECT",
@@ -4772,7 +4762,7 @@
   {
     "id": "giorgio_vasari",
     "name": "Giorgio Vasari",
-    "display_name": "Giorgio Vasari",
+    "display_name": "Vasari",
     "birth_year": 1511,
     "death_year": 1574,
     "occupation": "WRITER",
@@ -4782,7 +4772,7 @@
   {
     "id": "james_v_of_scotland",
     "name": "James V of Scotland",
-    "display_name": "James V of Scotland",
+    "display_name": "James V",
     "birth_year": 1512,
     "death_year": 1542,
     "occupation": "POLITICIAN",
@@ -4792,7 +4782,7 @@
   {
     "id": "gerardus_mercator",
     "name": "Gerardus Mercator",
-    "display_name": "Gerardus Mercator",
+    "display_name": "Mercator",
     "birth_year": 1512,
     "death_year": 1594,
     "occupation": "GEOGRAPHER",
@@ -4802,7 +4792,7 @@
   {
     "id": "andreas_vesalius",
     "name": "Andreas Vesalius",
-    "display_name": "Andreas Vesalius",
+    "display_name": "Vesalius",
     "birth_year": 1514,
     "death_year": 1564,
     "occupation": "PHYSICIAN",
@@ -4832,7 +4822,7 @@
   {
     "id": "mary_i_of_england",
     "name": "Mary I of England",
-    "display_name": "Mary I of England",
+    "display_name": "Mary I",
     "birth_year": 1516,
     "death_year": 1558,
     "occupation": "POLITICIAN",
@@ -4862,7 +4852,7 @@
   {
     "id": "henry_ii_of_france",
     "name": "Henry II of France",
-    "display_name": "Henry II of France",
+    "display_name": "Henry II",
     "birth_year": 1519,
     "death_year": 1559,
     "occupation": "POLITICIAN",
@@ -4872,7 +4862,7 @@
   {
     "id": "pope_innocent_ix",
     "name": "Pope Innocent IX",
-    "display_name": "Pope Innocent IX",
+    "display_name": "Innocent IX",
     "birth_year": 1519,
     "death_year": 1591,
     "occupation": "RELIGIOUS FIGURE",
@@ -4882,7 +4872,7 @@
   {
     "id": "giovanni_pierluigi_da_palestrina",
     "name": "Giovanni Pierluigi da Palestrina",
-    "display_name": "Giovanni Pierluigi da Palestrina",
+    "display_name": "Palestrina",
     "birth_year": 1520,
     "death_year": 1594,
     "occupation": "COMPOSER",
@@ -4892,7 +4882,7 @@
   {
     "id": "pope_sixtus_v",
     "name": "Pope Sixtus V",
-    "display_name": "Pope Sixtus V",
+    "display_name": "Sixtus V",
     "birth_year": 1520,
     "death_year": 1590,
     "occupation": "RELIGIOUS FIGURE",
@@ -4902,7 +4892,7 @@
   {
     "id": "pope_urban_vii",
     "name": "Pope Urban VII",
-    "display_name": "Pope Urban VII",
+    "display_name": "Urban VII",
     "birth_year": 1521,
     "death_year": 1590,
     "occupation": "RELIGIOUS FIGURE",
@@ -4932,7 +4922,7 @@
   {
     "id": "pieter_bruegel_the_elder",
     "name": "Pieter Bruegel the Elder",
-    "display_name": "Pieter Bruegel the Elder",
+    "display_name": "Bruegel the Elder",
     "birth_year": 1525,
     "death_year": 1569,
     "occupation": "PAINTER",
@@ -4952,7 +4942,7 @@
   {
     "id": "giuseppe_arcimboldo",
     "name": "Giuseppe Arcimboldo",
-    "display_name": "Giuseppe Arcimboldo",
+    "display_name": "Arcimboldo",
     "birth_year": 1526,
     "death_year": 1593,
     "occupation": "PAINTER",
@@ -4972,7 +4962,7 @@
   {
     "id": "maximilian_ii,_holy_roman_emperor",
     "name": "Maximilian II, Holy Roman Emperor",
-    "display_name": "Maximilian II, Holy Roman Emperor",
+    "display_name": "Maximilian II",
     "birth_year": 1527,
     "death_year": 1576,
     "occupation": "POLITICIAN",
@@ -4992,7 +4982,7 @@
   {
     "id": "paolo_veronese",
     "name": "Paolo Veronese",
-    "display_name": "Paolo Veronese",
+    "display_name": "Veronese",
     "birth_year": 1528,
     "death_year": 1588,
     "occupation": "PAINTER",
@@ -5012,7 +5002,7 @@
   {
     "id": "elizabeth_i_of_england",
     "name": "Elizabeth I of England",
-    "display_name": "Elizabeth I of England",
+    "display_name": "Elizabeth I",
     "birth_year": 1533,
     "death_year": 1603,
     "occupation": "POLITICIAN",
@@ -5022,7 +5012,7 @@
   {
     "id": "michel_de_montaigne",
     "name": "Michel de Montaigne",
-    "display_name": "Michel de Montaigne",
+    "display_name": "Montaigne",
     "birth_year": 1533,
     "death_year": 1592,
     "occupation": "PHILOSOPHER",
@@ -5042,7 +5032,7 @@
   {
     "id": "pope_leo_xi",
     "name": "Pope Leo XI",
-    "display_name": "Pope Leo XI",
+    "display_name": "Leo XI",
     "birth_year": 1535,
     "death_year": 1605,
     "occupation": "RELIGIOUS FIGURE",
@@ -5052,7 +5042,7 @@
   {
     "id": "pope_gregory_xiv",
     "name": "Pope Gregory XIV",
-    "display_name": "Pope Gregory XIV",
+    "display_name": "Gregory XIV",
     "birth_year": 1535,
     "death_year": 1591,
     "occupation": "RELIGIOUS FIGURE",
@@ -5062,7 +5052,7 @@
   {
     "id": "pope_clement_viii",
     "name": "Pope Clement VIII",
-    "display_name": "Pope Clement VIII",
+    "display_name": "Clement VIII",
     "birth_year": 1536,
     "death_year": 1605,
     "occupation": "RELIGIOUS FIGURE",
@@ -5082,7 +5072,7 @@
   {
     "id": "edward_vi_of_england",
     "name": "Edward VI of England",
-    "display_name": "Edward VI of England",
+    "display_name": "Edward VI",
     "birth_year": 1537,
     "death_year": 1553,
     "occupation": "POLITICIAN",
@@ -5182,7 +5172,7 @@
   {
     "id": "miguel_de_cervantes",
     "name": "Miguel de Cervantes",
-    "display_name": "Miguel de Cervantes",
+    "display_name": "Cervantes",
     "birth_year": 1547,
     "death_year": 1616,
     "occupation": "WRITER",
@@ -5202,7 +5192,7 @@
   {
     "id": "charles_ix_of_france",
     "name": "Charles IX of France",
-    "display_name": "Charles IX of France",
+    "display_name": "Charles IX",
     "birth_year": 1550,
     "death_year": 1574,
     "occupation": "POLITICIAN",
@@ -5212,7 +5202,7 @@
   {
     "id": "henry_iii_of_france",
     "name": "Henry III of France",
-    "display_name": "Henry III of France",
+    "display_name": "Henry III",
     "birth_year": 1551,
     "death_year": 1589,
     "occupation": "POLITICIAN",
@@ -5222,7 +5212,7 @@
   {
     "id": "pope_paul_v",
     "name": "Pope Paul V",
-    "display_name": "Pope Paul V",
+    "display_name": "Paul V",
     "birth_year": 1552,
     "death_year": 1621,
     "occupation": "RELIGIOUS FIGURE",
@@ -5232,7 +5222,7 @@
   {
     "id": "rudolf_ii,_holy_roman_emperor",
     "name": "Rudolf II, Holy Roman Emperor",
-    "display_name": "Rudolf II, Holy Roman Emperor",
+    "display_name": "Rudolf II",
     "birth_year": 1552,
     "death_year": 1612,
     "occupation": "POLITICIAN",
@@ -5242,7 +5232,7 @@
   {
     "id": "henry_iv_of_france",
     "name": "Henry IV of France",
-    "display_name": "Henry IV of France",
+    "display_name": "Henry IV",
     "birth_year": 1553,
     "death_year": 1610,
     "occupation": "POLITICIAN",
@@ -5252,7 +5242,7 @@
   {
     "id": "pope_gregory_xv",
     "name": "Pope Gregory XV",
-    "display_name": "Pope Gregory XV",
+    "display_name": "Gregory XV",
     "birth_year": 1554,
     "death_year": 1623,
     "occupation": "RELIGIOUS FIGURE",
@@ -5292,7 +5282,7 @@
   {
     "id": "galileo_galilei",
     "name": "Galileo Galilei",
-    "display_name": "Galileo Galilei",
+    "display_name": "Galileo",
     "birth_year": 1564,
     "death_year": 1642,
     "occupation": "ASTRONOMER",
@@ -5302,7 +5292,7 @@
   {
     "id": "william_shakespeare",
     "name": "William Shakespeare",
-    "display_name": "William Shakespeare",
+    "display_name": "Shakespeare",
     "birth_year": 1564,
     "death_year": 1616,
     "occupation": "WRITER",
@@ -5332,7 +5322,7 @@
   {
     "id": "claudio_monteverdi",
     "name": "Claudio Monteverdi",
-    "display_name": "Claudio Monteverdi",
+    "display_name": "Monteverdi",
     "birth_year": 1567,
     "death_year": 1643,
     "occupation": "COMPOSER",
@@ -5342,7 +5332,7 @@
   {
     "id": "pope_urban_viii",
     "name": "Pope Urban VIII",
-    "display_name": "Pope Urban VIII",
+    "display_name": "Urban VIII",
     "birth_year": 1568,
     "death_year": 1644,
     "occupation": "RELIGIOUS FIGURE",
@@ -5352,7 +5342,7 @@
   {
     "id": "johannes_kepler",
     "name": "Johannes Kepler",
-    "display_name": "Johannes Kepler",
+    "display_name": "Kepler",
     "birth_year": 1571,
     "death_year": 1630,
     "occupation": "ASTRONOMER",
@@ -5372,7 +5362,7 @@
   {
     "id": "pope_innocent_x",
     "name": "Pope Innocent X",
-    "display_name": "Pope Innocent X",
+    "display_name": "Innocent X",
     "birth_year": 1574,
     "death_year": 1655,
     "occupation": "RELIGIOUS FIGURE",
@@ -5392,7 +5382,7 @@
   {
     "id": "peter_paul_rubens",
     "name": "Peter Paul Rubens",
-    "display_name": "Peter Paul Rubens",
+    "display_name": "Rubens",
     "birth_year": 1577,
     "death_year": 1640,
     "occupation": "PAINTER",
@@ -5402,7 +5392,7 @@
   {
     "id": "hugo_grotius",
     "name": "Hugo Grotius",
-    "display_name": "Hugo Grotius",
+    "display_name": "Grotius",
     "birth_year": 1583,
     "death_year": 1645,
     "occupation": "LAWYER",
@@ -5432,7 +5422,7 @@
   {
     "id": "thomas_hobbes",
     "name": "Thomas Hobbes",
-    "display_name": "Thomas Hobbes",
+    "display_name": "Hobbes",
     "birth_year": 1588,
     "death_year": 1679,
     "occupation": "PHILOSOPHER",
@@ -5462,7 +5452,7 @@
   {
     "id": "pope_clement_x",
     "name": "Pope Clement X",
-    "display_name": "Pope Clement X",
+    "display_name": "Clement X",
     "birth_year": 1590,
     "death_year": 1676,
     "occupation": "RELIGIOUS FIGURE",
@@ -5482,7 +5472,7 @@
   {
     "id": "john_amos_comenius",
     "name": "John Amos Comenius",
-    "display_name": "John Amos Comenius",
+    "display_name": "Comenius",
     "birth_year": 1592,
     "death_year": 1670,
     "occupation": "PHILOSOPHER",
@@ -5502,7 +5492,7 @@
   {
     "id": "gustavus_adolphus_of_sweden",
     "name": "Gustavus Adolphus of Sweden",
-    "display_name": "Gustavus Adolphus of Sweden",
+    "display_name": "Gustavus Adolphus",
     "birth_year": 1594,
     "death_year": 1632,
     "occupation": "POLITICIAN",
@@ -5512,7 +5502,7 @@
   {
     "id": "nicolas_poussin",
     "name": "Nicolas Poussin",
-    "display_name": "Nicolas Poussin",
+    "display_name": "Poussin",
     "birth_year": 1594,
     "death_year": 1665,
     "occupation": "PAINTER",
@@ -5532,7 +5522,7 @@
   {
     "id": "rené_descartes",
     "name": "René Descartes",
-    "display_name": "René Descartes",
+    "display_name": "Descartes",
     "birth_year": 1596,
     "death_year": 1650,
     "occupation": "PHILOSOPHER",
@@ -5542,7 +5532,7 @@
   {
     "id": "gian_lorenzo_bernini",
     "name": "Gian Lorenzo Bernini",
-    "display_name": "Gian Lorenzo Bernini",
+    "display_name": "Bernini",
     "birth_year": 1598,
     "death_year": 1680,
     "occupation": "ARCHITECT",
@@ -5552,7 +5542,7 @@
   {
     "id": "diego_velázquez",
     "name": "Diego Velázquez",
-    "display_name": "Diego Velázquez",
+    "display_name": "Velázquez",
     "birth_year": 1599,
     "death_year": 1660,
     "occupation": "PAINTER",
@@ -5562,7 +5552,7 @@
   {
     "id": "pope_alexander_vii",
     "name": "Pope Alexander VII",
-    "display_name": "Pope Alexander VII",
+    "display_name": "Alexander VII",
     "birth_year": 1599,
     "death_year": 1667,
     "occupation": "RELIGIOUS FIGURE",
@@ -5572,7 +5562,7 @@
   {
     "id": "oliver_cromwell",
     "name": "Oliver Cromwell",
-    "display_name": "Oliver Cromwell",
+    "display_name": "Cromwell",
     "birth_year": 1599,
     "death_year": 1658,
     "occupation": "POLITICIAN",
@@ -5582,7 +5572,7 @@
   {
     "id": "anthony_van_dyck",
     "name": "Anthony van Dyck",
-    "display_name": "Anthony van Dyck",
+    "display_name": "Van Dyck",
     "birth_year": 1599,
     "death_year": 1641,
     "occupation": "PAINTER",
@@ -5592,7 +5582,7 @@
   {
     "id": "charles_i_of_england",
     "name": "Charles I of England",
-    "display_name": "Charles I of England",
+    "display_name": "Charles I",
     "birth_year": 1600,
     "death_year": 1649,
     "occupation": "POLITICIAN",
@@ -5602,7 +5592,7 @@
   {
     "id": "pope_clement_ix",
     "name": "Pope Clement IX",
-    "display_name": "Pope Clement IX",
+    "display_name": "Clement IX",
     "birth_year": 1600,
     "death_year": 1669,
     "occupation": "RELIGIOUS FIGURE",
@@ -5612,7 +5602,7 @@
   {
     "id": "louis_xiii_of_france",
     "name": "Louis XIII of France",
-    "display_name": "Louis XIII of France",
+    "display_name": "Louis XIII",
     "birth_year": 1601,
     "death_year": 1643,
     "occupation": "POLITICIAN",
@@ -5622,7 +5612,7 @@
   {
     "id": "pierre_de_fermat",
     "name": "Pierre de Fermat",
-    "display_name": "Pierre de Fermat",
+    "display_name": "Fermat",
     "birth_year": 1601,
     "death_year": 1665,
     "occupation": "MATHEMATICIAN",
@@ -5672,7 +5662,7 @@
   {
     "id": "evangelista_torricelli",
     "name": "Evangelista Torricelli",
-    "display_name": "Evangelista Torricelli",
+    "display_name": "Torricelli",
     "birth_year": 1608,
     "death_year": 1647,
     "occupation": "PHYSICIST",
@@ -5682,7 +5672,7 @@
   {
     "id": "pope_alexander_viii",
     "name": "Pope Alexander VIII",
-    "display_name": "Pope Alexander VIII",
+    "display_name": "Alexander VIII",
     "birth_year": 1610,
     "death_year": 1691,
     "occupation": "RELIGIOUS FIGURE",
@@ -5692,7 +5682,7 @@
   {
     "id": "pope_innocent_xi",
     "name": "Pope Innocent XI",
-    "display_name": "Pope Innocent XI",
+    "display_name": "Innocent XI",
     "birth_year": 1611,
     "death_year": 1689,
     "occupation": "RELIGIOUS FIGURE",
@@ -5712,7 +5702,7 @@
   {
     "id": "ibrahim_of_the_ottoman_empire",
     "name": "Ibrahim of the Ottoman Empire",
-    "display_name": "Ibrahim of the Ottoman Empire",
+    "display_name": "Ibrahim I",
     "birth_year": 1615,
     "death_year": 1648,
     "occupation": "POLITICIAN",
@@ -5722,7 +5712,7 @@
   {
     "id": "pope_innocent_xii",
     "name": "Pope Innocent XII",
-    "display_name": "Pope Innocent XII",
+    "display_name": "Innocent XII",
     "birth_year": 1615,
     "death_year": 1700,
     "occupation": "RELIGIOUS FIGURE",
@@ -5732,7 +5722,7 @@
   {
     "id": "jean_de_la_fontaine",
     "name": "Jean de La Fontaine",
-    "display_name": "Jean de La Fontaine",
+    "display_name": "La Fontaine",
     "birth_year": 1621,
     "death_year": 1695,
     "occupation": "WRITER",
@@ -5752,7 +5742,7 @@
   {
     "id": "blaise_pascal",
     "name": "Blaise Pascal",
-    "display_name": "Blaise Pascal",
+    "display_name": "Pascal",
     "birth_year": 1623,
     "death_year": 1662,
     "occupation": "MATHEMATICIAN",
@@ -5772,7 +5762,7 @@
   {
     "id": "robert_boyle",
     "name": "Robert Boyle",
-    "display_name": "Robert Boyle",
+    "display_name": "Boyle",
     "birth_year": 1627,
     "death_year": 1691,
     "occupation": "CHEMIST",
@@ -5782,7 +5772,7 @@
   {
     "id": "charles_perrault",
     "name": "Charles Perrault",
-    "display_name": "Charles Perrault",
+    "display_name": "Perrault",
     "birth_year": 1628,
     "death_year": 1703,
     "occupation": "WRITER",
@@ -5792,7 +5782,7 @@
   {
     "id": "christiaan_huygens",
     "name": "Christiaan Huygens",
-    "display_name": "Christiaan Huygens",
+    "display_name": "Huygens",
     "birth_year": 1629,
     "death_year": 1695,
     "occupation": "PHYSICIST",
@@ -5812,7 +5802,7 @@
   {
     "id": "charles_ii_of_england",
     "name": "Charles II of England",
-    "display_name": "Charles II of England",
+    "display_name": "Charles II",
     "birth_year": 1630,
     "death_year": 1685,
     "occupation": "POLITICIAN",
@@ -5822,7 +5812,7 @@
   {
     "id": "baruch_spinoza",
     "name": "Baruch Spinoza",
-    "display_name": "Baruch Spinoza",
+    "display_name": "Spinoza",
     "birth_year": 1632,
     "death_year": 1677,
     "occupation": "PHILOSOPHER",
@@ -5832,7 +5822,7 @@
   {
     "id": "john_locke",
     "name": "John Locke",
-    "display_name": "John Locke",
+    "display_name": "Locke",
     "birth_year": 1632,
     "death_year": 1704,
     "occupation": "PHILOSOPHER",
@@ -5842,7 +5832,7 @@
   {
     "id": "johannes_vermeer",
     "name": "Johannes Vermeer",
-    "display_name": "Johannes Vermeer",
+    "display_name": "Vermeer",
     "birth_year": 1632,
     "death_year": 1675,
     "occupation": "PAINTER",
@@ -5852,7 +5842,7 @@
   {
     "id": "antonie_van_leeuwenhoek",
     "name": "Antonie van Leeuwenhoek",
-    "display_name": "Antonie van Leeuwenhoek",
+    "display_name": "Van Leeuwenhoek",
     "birth_year": 1632,
     "death_year": 1723,
     "occupation": "BIOLOGIST",
@@ -5862,7 +5852,7 @@
   {
     "id": "jean-baptiste_lully",
     "name": "Jean-Baptiste Lully",
-    "display_name": "Jean-Baptiste Lully",
+    "display_name": "Lully",
     "birth_year": 1632,
     "death_year": 1687,
     "occupation": "COMPOSER",
@@ -5872,7 +5862,7 @@
   {
     "id": "james_ii_of_england",
     "name": "James II of England",
-    "display_name": "James II of England",
+    "display_name": "James II",
     "birth_year": 1633,
     "death_year": 1701,
     "occupation": "POLITICIAN",
@@ -5882,7 +5872,7 @@
   {
     "id": "robert_hooke",
     "name": "Robert Hooke",
-    "display_name": "Robert Hooke",
+    "display_name": "Hooke",
     "birth_year": 1635,
     "death_year": 1703,
     "occupation": "PHYSICIST",
@@ -5892,7 +5882,7 @@
   {
     "id": "louis_xiv_of_france",
     "name": "Louis XIV of France",
-    "display_name": "Louis XIV of France",
+    "display_name": "Louis XIV",
     "birth_year": 1638,
     "death_year": 1715,
     "occupation": "POLITICIAN",
@@ -5912,7 +5902,7 @@
   {
     "id": "isaac_newton",
     "name": "Isaac Newton",
-    "display_name": "Isaac Newton",
+    "display_name": "Newton",
     "birth_year": 1643,
     "death_year": 1726,
     "occupation": "PHYSICIST",
@@ -5932,7 +5922,7 @@
   {
     "id": "antonio_stradivari",
     "name": "Antonio Stradivari",
-    "display_name": "Antonio Stradivari",
+    "display_name": "Stradivari",
     "birth_year": 1644,
     "death_year": 1737,
     "occupation": "DESIGNER",
@@ -5942,7 +5932,7 @@
   {
     "id": "gottfried_wilhelm_leibniz",
     "name": "Gottfried Wilhelm Leibniz",
-    "display_name": "Gottfried Wilhelm Leibniz",
+    "display_name": "Leibniz",
     "birth_year": 1646,
     "death_year": 1716,
     "occupation": "MATHEMATICIAN",
@@ -5952,7 +5942,7 @@
   {
     "id": "pope_clement_xi",
     "name": "Pope Clement XI",
-    "display_name": "Pope Clement XI",
+    "display_name": "Clement XI",
     "birth_year": 1649,
     "death_year": 1721,
     "occupation": "RELIGIOUS FIGURE",
@@ -5962,7 +5952,7 @@
   {
     "id": "william_iii_of_england",
     "name": "William III of England",
-    "display_name": "William III of England",
+    "display_name": "William III",
     "birth_year": 1650,
     "death_year": 1702,
     "occupation": "POLITICIAN",
@@ -5972,7 +5962,7 @@
   {
     "id": "pope_clement_xii",
     "name": "Pope Clement XII",
-    "display_name": "Pope Clement XII",
+    "display_name": "Clement XII",
     "birth_year": 1652,
     "death_year": 1740,
     "occupation": "RELIGIOUS FIGURE",
@@ -5992,7 +5982,7 @@
   {
     "id": "pope_innocent_xiii",
     "name": "Pope Innocent XIII",
-    "display_name": "Pope Innocent XIII",
+    "display_name": "Innocent XIII",
     "birth_year": 1655,
     "death_year": 1724,
     "occupation": "RELIGIOUS FIGURE",
@@ -6002,7 +5992,7 @@
   {
     "id": "edmond_halley",
     "name": "Edmond Halley",
-    "display_name": "Edmond Halley",
+    "display_name": "Halley",
     "birth_year": 1656,
     "death_year": 1742,
     "occupation": "ASTRONOMER",
@@ -6012,7 +6002,7 @@
   {
     "id": "daniel_defoe",
     "name": "Daniel Defoe",
-    "display_name": "Daniel Defoe",
+    "display_name": "Defoe",
     "birth_year": 1660,
     "death_year": 1731,
     "occupation": "WRITER",
@@ -6022,7 +6012,7 @@
   {
     "id": "mary_ii_of_england",
     "name": "Mary II of England",
-    "display_name": "Mary II of England",
+    "display_name": "Mary II",
     "birth_year": 1662,
     "death_year": 1694,
     "occupation": "POLITICIAN",
@@ -6042,7 +6032,7 @@
   {
     "id": "anne,_queen_of_great_britain",
     "name": "Anne, Queen of Great Britain",
-    "display_name": "Anne, Queen of Great Britain",
+    "display_name": "Queen Anne",
     "birth_year": 1665,
     "death_year": 1714,
     "occupation": "POLITICIAN",
@@ -6052,7 +6042,7 @@
   {
     "id": "jonathan_swift",
     "name": "Jonathan Swift",
-    "display_name": "Jonathan Swift",
+    "display_name": "Swift",
     "birth_year": 1667,
     "death_year": 1745,
     "occupation": "WRITER",
@@ -6072,7 +6062,7 @@
   {
     "id": "pope_benedict_xiv",
     "name": "Pope Benedict XIV",
-    "display_name": "Pope Benedict XIV",
+    "display_name": "Benedict XIV",
     "birth_year": 1675,
     "death_year": 1758,
     "occupation": "RELIGIOUS FIGURE",
@@ -6082,7 +6072,7 @@
   {
     "id": "antonio_vivaldi",
     "name": "Antonio Vivaldi",
-    "display_name": "Antonio Vivaldi",
+    "display_name": "Vivaldi",
     "birth_year": 1678,
     "death_year": 1741,
     "occupation": "COMPOSER",
@@ -6092,7 +6082,7 @@
   {
     "id": "catherine_i_of_russia",
     "name": "Catherine I of Russia",
-    "display_name": "Catherine I of Russia",
+    "display_name": "Catherine I",
     "birth_year": 1684,
     "death_year": 1727,
     "occupation": "POLITICIAN",
@@ -6102,7 +6092,7 @@
   {
     "id": "johann_sebastian_bach",
     "name": "Johann Sebastian Bach",
-    "display_name": "Johann Sebastian Bach",
+    "display_name": "Bach",
     "birth_year": 1685,
     "death_year": 1750,
     "occupation": "COMPOSER",
@@ -6112,7 +6102,7 @@
   {
     "id": "george_frideric_handel",
     "name": "George Frideric Handel",
-    "display_name": "George Frideric Handel",
+    "display_name": "Handel",
     "birth_year": 1685,
     "death_year": 1759,
     "occupation": "COMPOSER",
@@ -6122,7 +6112,7 @@
   {
     "id": "charles_vi,_holy_roman_emperor",
     "name": "Charles VI, Holy Roman Emperor",
-    "display_name": "Charles VI, Holy Roman Emperor",
+    "display_name": "Charles VI",
     "birth_year": 1685,
     "death_year": 1740,
     "occupation": "POLITICIAN",
@@ -6152,7 +6142,7 @@
   {
     "id": "pope_clement_xiii",
     "name": "Pope Clement XIII",
-    "display_name": "Pope Clement XIII",
+    "display_name": "Clement XIII",
     "birth_year": 1693,
     "death_year": 1769,
     "occupation": "RELIGIOUS FIGURE",
@@ -6182,7 +6172,7 @@
   {
     "id": "anders_celsius",
     "name": "Anders Celsius",
-    "display_name": "Anders Celsius",
+    "display_name": "Celsius",
     "birth_year": 1701,
     "death_year": 1744,
     "occupation": "ASTRONOMER",
@@ -6192,7 +6182,7 @@
   {
     "id": "pope_clement_xiv",
     "name": "Pope Clement XIV",
-    "display_name": "Pope Clement XIV",
+    "display_name": "Clement XIV",
     "birth_year": 1705,
     "death_year": 1774,
     "occupation": "RELIGIOUS FIGURE",
@@ -6212,7 +6202,7 @@
   {
     "id": "carl_linnaeus",
     "name": "Carl Linnaeus",
-    "display_name": "Carl Linnaeus",
+    "display_name": "Linnaeus",
     "birth_year": 1707,
     "death_year": 1778,
     "occupation": "BIOLOGIST",
@@ -6222,7 +6212,7 @@
   {
     "id": "leonhard_euler",
     "name": "Leonhard Euler",
-    "display_name": "Leonhard Euler",
+    "display_name": "Euler",
     "birth_year": 1707,
     "death_year": 1783,
     "occupation": "MATHEMATICIAN",
@@ -6232,7 +6222,7 @@
   {
     "id": "francis_i,_holy_roman_emperor",
     "name": "Francis I, Holy Roman Emperor",
-    "display_name": "Francis I, Holy Roman Emperor",
+    "display_name": "Francis I (HRE)",
     "birth_year": 1708,
     "death_year": 1765,
     "occupation": "POLITICIAN",
@@ -6242,7 +6232,7 @@
   {
     "id": "louis_xv_of_france",
     "name": "Louis XV of France",
-    "display_name": "Louis XV of France",
+    "display_name": "Louis XV",
     "birth_year": 1710,
     "death_year": 1774,
     "occupation": "POLITICIAN",
@@ -6252,7 +6242,7 @@
   {
     "id": "david_hume",
     "name": "David Hume",
-    "display_name": "David Hume",
+    "display_name": "Hume",
     "birth_year": 1711,
     "death_year": 1776,
     "occupation": "PHILOSOPHER",
@@ -6262,7 +6252,7 @@
   {
     "id": "jean-jacques_rousseau",
     "name": "Jean-Jacques Rousseau",
-    "display_name": "Jean-Jacques Rousseau",
+    "display_name": "Rousseau",
     "birth_year": 1712,
     "death_year": 1778,
     "occupation": "PHILOSOPHER",
@@ -6282,7 +6272,7 @@
   {
     "id": "denis_diderot",
     "name": "Denis Diderot",
-    "display_name": "Denis Diderot",
+    "display_name": "Diderot",
     "birth_year": 1713,
     "death_year": 1784,
     "occupation": "WRITER",
@@ -6292,7 +6282,7 @@
   {
     "id": "christoph_willibald_gluck",
     "name": "Christoph Willibald Gluck",
-    "display_name": "Christoph Willibald Gluck",
+    "display_name": "Gluck",
     "birth_year": 1714,
     "death_year": 1787,
     "occupation": "COMPOSER",
@@ -6312,7 +6302,7 @@
   {
     "id": "pope_pius_vi",
     "name": "Pope Pius VI",
-    "display_name": "Pope Pius VI",
+    "display_name": "Pius VI",
     "birth_year": 1717,
     "death_year": 1799,
     "occupation": "RELIGIOUS FIGURE",
@@ -6322,7 +6312,7 @@
   {
     "id": "jean_le_rond_d'alembert",
     "name": "Jean le Rond d'Alembert",
-    "display_name": "Jean le Rond d'Alembert",
+    "display_name": "d'Alembert",
     "birth_year": 1717,
     "death_year": 1783,
     "occupation": "MATHEMATICIAN",
@@ -6352,7 +6342,7 @@
   {
     "id": "immanuel_kant",
     "name": "Immanuel Kant",
-    "display_name": "Immanuel Kant",
+    "display_name": "Kant",
     "birth_year": 1724,
     "death_year": 1804,
     "occupation": "PHILOSOPHER",
@@ -6362,7 +6352,7 @@
   {
     "id": "giacomo_casanova",
     "name": "Giacomo Casanova",
-    "display_name": "Giacomo Casanova",
+    "display_name": "Casanova",
     "birth_year": 1725,
     "death_year": 1798,
     "occupation": "WRITER",
@@ -6382,7 +6372,7 @@
   {
     "id": "peter_iii_of_russia",
     "name": "Peter III of Russia",
-    "display_name": "Peter III of Russia",
+    "display_name": "Peter III",
     "birth_year": 1728,
     "death_year": 1762,
     "occupation": "POLITICIAN",
@@ -6402,7 +6392,7 @@
   {
     "id": "joseph_haydn",
     "name": "Joseph Haydn",
-    "display_name": "Joseph Haydn",
+    "display_name": "Haydn",
     "birth_year": 1732,
     "death_year": 1809,
     "occupation": "COMPOSER",
@@ -6432,7 +6422,7 @@
   {
     "id": "joseph-louis_lagrange",
     "name": "Joseph-Louis Lagrange",
-    "display_name": "Joseph-Louis Lagrange",
+    "display_name": "Lagrange",
     "birth_year": 1736,
     "death_year": 1813,
     "occupation": "MATHEMATICIAN",
@@ -6442,7 +6432,7 @@
   {
     "id": "charles-augustin_de_coulomb",
     "name": "Charles-Augustin de Coulomb",
-    "display_name": "Charles-Augustin de Coulomb",
+    "display_name": "Coulomb",
     "birth_year": 1736,
     "death_year": 1806,
     "occupation": "PHYSICIST",
@@ -6452,7 +6442,7 @@
   {
     "id": "luigi_galvani",
     "name": "Luigi Galvani",
-    "display_name": "Luigi Galvani",
+    "display_name": "Galvani",
     "birth_year": 1737,
     "death_year": 1798,
     "occupation": "PHYSICIST",
@@ -6462,7 +6452,7 @@
   {
     "id": "george_iii_of_the_united_kingdom",
     "name": "George III of the United Kingdom",
-    "display_name": "George III of the United Kingdom",
+    "display_name": "George III",
     "birth_year": 1738,
     "death_year": 1820,
     "occupation": "POLITICIAN",
@@ -6472,7 +6462,7 @@
   {
     "id": "william_herschel",
     "name": "William Herschel",
-    "display_name": "William Herschel",
+    "display_name": "Herschel",
     "birth_year": 1738,
     "death_year": 1822,
     "occupation": "ASTRONOMER",
@@ -6492,7 +6482,7 @@
   {
     "id": "joseph_ii,_holy_roman_emperor",
     "name": "Joseph II, Holy Roman Emperor",
-    "display_name": "Joseph II, Holy Roman Emperor",
+    "display_name": "Joseph II",
     "birth_year": 1741,
     "death_year": 1790,
     "occupation": "POLITICIAN",
@@ -6502,7 +6492,7 @@
   {
     "id": "pope_pius_vii",
     "name": "Pope Pius VII",
-    "display_name": "Pope Pius VII",
+    "display_name": "Pius VII",
     "birth_year": 1742,
     "death_year": 1823,
     "occupation": "RELIGIOUS FIGURE",
@@ -6512,7 +6502,7 @@
   {
     "id": "thomas_jefferson",
     "name": "Thomas Jefferson",
-    "display_name": "Thomas Jefferson",
+    "display_name": "Jefferson",
     "birth_year": 1743,
     "death_year": 1826,
     "occupation": "POLITICIAN",
@@ -6522,7 +6512,7 @@
   {
     "id": "antoine_lavoisier",
     "name": "Antoine Lavoisier",
-    "display_name": "Antoine Lavoisier",
+    "display_name": "Lavoisier",
     "birth_year": 1743,
     "death_year": 1794,
     "occupation": "CHEMIST",
@@ -6532,7 +6522,7 @@
   {
     "id": "jean-baptiste_lamarck",
     "name": "Jean-Baptiste Lamarck",
-    "display_name": "Jean-Baptiste Lamarck",
+    "display_name": "Lamarck",
     "birth_year": 1744,
     "death_year": 1829,
     "occupation": "BIOLOGIST",
@@ -6542,7 +6532,7 @@
   {
     "id": "alessandro_volta",
     "name": "Alessandro Volta",
-    "display_name": "Alessandro Volta",
+    "display_name": "Volta",
     "birth_year": 1745,
     "death_year": 1827,
     "occupation": "PHYSICIST",
@@ -6552,7 +6542,7 @@
   {
     "id": "francisco_goya",
     "name": "Francisco Goya",
-    "display_name": "Francisco Goya",
+    "display_name": "Goya",
     "birth_year": 1746,
     "death_year": 1828,
     "occupation": "PAINTER",
@@ -6562,7 +6552,7 @@
   {
     "id": "johann_heinrich_pestalozzi",
     "name": "Johann Heinrich Pestalozzi",
-    "display_name": "Johann Heinrich Pestalozzi",
+    "display_name": "Pestalozzi",
     "birth_year": 1746,
     "death_year": 1827,
     "occupation": "SOCIAL ACTIVIST",
@@ -6572,7 +6562,7 @@
   {
     "id": "leopold_ii,_holy_roman_emperor",
     "name": "Leopold II, Holy Roman Emperor",
-    "display_name": "Leopold II, Holy Roman Emperor",
+    "display_name": "Leopold II",
     "birth_year": 1747,
     "death_year": 1792,
     "occupation": "POLITICIAN",
@@ -6592,7 +6582,7 @@
   {
     "id": "johann_wolfgang_von_goethe",
     "name": "Johann Wolfgang von Goethe",
-    "display_name": "Johann Wolfgang von Goethe",
+    "display_name": "Goethe",
     "birth_year": 1749,
     "death_year": 1832,
     "occupation": "WRITER",
@@ -6602,7 +6592,7 @@
   {
     "id": "pierre-simon_laplace",
     "name": "Pierre-Simon Laplace",
-    "display_name": "Pierre-Simon Laplace",
+    "display_name": "Laplace",
     "birth_year": 1749,
     "death_year": 1827,
     "occupation": "MATHEMATICIAN",
@@ -6612,7 +6602,7 @@
   {
     "id": "edward_jenner",
     "name": "Edward Jenner",
-    "display_name": "Edward Jenner",
+    "display_name": "Jenner",
     "birth_year": 1749,
     "death_year": 1823,
     "occupation": "PHYSICIAN",
@@ -6622,7 +6612,7 @@
   {
     "id": "antonio_salieri",
     "name": "Antonio Salieri",
-    "display_name": "Antonio Salieri",
+    "display_name": "Salieri",
     "birth_year": 1750,
     "death_year": 1825,
     "occupation": "COMPOSER",
@@ -6632,7 +6622,7 @@
   {
     "id": "louis_xvi_of_france",
     "name": "Louis XVI of France",
-    "display_name": "Louis XVI of France",
+    "display_name": "Louis XVI",
     "birth_year": 1754,
     "death_year": 1793,
     "occupation": "POLITICIAN",
@@ -6652,7 +6642,7 @@
   {
     "id": "louis_xviii_of_france",
     "name": "Louis XVIII of France",
-    "display_name": "Louis XVIII of France",
+    "display_name": "Louis XVIII",
     "birth_year": 1755,
     "death_year": 1824,
     "occupation": "POLITICIAN",
@@ -6662,7 +6652,7 @@
   {
     "id": "wolfgang_amadeus_mozart",
     "name": "Wolfgang Amadeus Mozart",
-    "display_name": "Wolfgang Amadeus Mozart",
+    "display_name": "Mozart",
     "birth_year": 1756,
     "death_year": 1791,
     "occupation": "COMPOSER",
@@ -6672,7 +6662,7 @@
   {
     "id": "charles_x_of_france",
     "name": "Charles X of France",
-    "display_name": "Charles X of France",
+    "display_name": "Charles X",
     "birth_year": 1757,
     "death_year": 1836,
     "occupation": "POLITICIAN",
@@ -6682,7 +6672,7 @@
   {
     "id": "gilbert_du_motier,_marquis_de_lafayette",
     "name": "Gilbert du Motier, Marquis de Lafayette",
-    "display_name": "Gilbert du Motier, Marquis de Lafayette",
+    "display_name": "Lafayette",
     "birth_year": 1757,
     "death_year": 1834,
     "occupation": "MILITARY PERSONNEL",
@@ -6692,7 +6682,7 @@
   {
     "id": "maximilien_robespierre",
     "name": "Maximilien Robespierre",
-    "display_name": "Maximilien Robespierre",
+    "display_name": "Robespierre",
     "birth_year": 1758,
     "death_year": 1794,
     "occupation": "POLITICIAN",
@@ -6702,7 +6692,7 @@
   {
     "id": "heinrich_wilhelm_matthias_olbers",
     "name": "Heinrich Wilhelm Matthias Olbers",
-    "display_name": "Heinrich Wilhelm Matthias Olbers",
+    "display_name": "Olbers",
     "birth_year": 1758,
     "death_year": 1840,
     "occupation": "ASTRONOMER",
@@ -6712,7 +6702,7 @@
   {
     "id": "friedrich_schiller",
     "name": "Friedrich Schiller",
-    "display_name": "Friedrich Schiller",
+    "display_name": "Schiller",
     "birth_year": 1759,
     "death_year": 1805,
     "occupation": "WRITER",
@@ -6732,7 +6722,7 @@
   {
     "id": "pope_leo_xii",
     "name": "Pope Leo XII",
-    "display_name": "Pope Leo XII",
+    "display_name": "Leo XII",
     "birth_year": 1760,
     "death_year": 1829,
     "occupation": "RELIGIOUS FIGURE",
@@ -6742,7 +6732,7 @@
   {
     "id": "pope_pius_viii",
     "name": "Pope Pius VIII",
-    "display_name": "Pope Pius VIII",
+    "display_name": "Pius VIII",
     "birth_year": 1761,
     "death_year": 1830,
     "occupation": "RELIGIOUS FIGURE",
@@ -6752,7 +6742,7 @@
   {
     "id": "george_iv_of_the_united_kingdom",
     "name": "George IV of the United Kingdom",
-    "display_name": "George IV of the United Kingdom",
+    "display_name": "George IV",
     "birth_year": 1762,
     "death_year": 1830,
     "occupation": "POLITICIAN",
@@ -6762,7 +6752,7 @@
   {
     "id": "johann_gottlieb_fichte",
     "name": "Johann Gottlieb Fichte",
-    "display_name": "Johann Gottlieb Fichte",
+    "display_name": "Fichte",
     "birth_year": 1762,
     "death_year": 1814,
     "occupation": "PHILOSOPHER",
@@ -6772,7 +6762,7 @@
   {
     "id": "joséphine_de_beauharnais",
     "name": "Joséphine de Beauharnais",
-    "display_name": "Joséphine de Beauharnais",
+    "display_name": "Joséphine",
     "birth_year": 1763,
     "death_year": 1814,
     "occupation": "COMPANION",
@@ -6782,7 +6772,7 @@
   {
     "id": "charles_xiv_john_of_sweden",
     "name": "Charles XIV John of Sweden",
-    "display_name": "Charles XIV John of Sweden",
+    "display_name": "Charles XIV John",
     "birth_year": 1763,
     "death_year": 1844,
     "occupation": "MILITARY PERSONNEL",
@@ -6792,7 +6782,7 @@
   {
     "id": "william_iv_of_the_united_kingdom",
     "name": "William IV of the United Kingdom",
-    "display_name": "William IV of the United Kingdom",
+    "display_name": "William IV",
     "birth_year": 1765,
     "death_year": 1837,
     "occupation": "POLITICIAN",
@@ -6802,7 +6792,7 @@
   {
     "id": "pope_gregory_xvi",
     "name": "Pope Gregory XVI",
-    "display_name": "Pope Gregory XVI",
+    "display_name": "Gregory XVI",
     "birth_year": 1765,
     "death_year": 1846,
     "occupation": "RELIGIOUS FIGURE",
@@ -6812,7 +6802,7 @@
   {
     "id": "john_dalton",
     "name": "John Dalton",
-    "display_name": "John Dalton",
+    "display_name": "Dalton",
     "birth_year": 1766,
     "death_year": 1844,
     "occupation": "CHEMIST",
@@ -6822,7 +6812,7 @@
   {
     "id": "thomas_robert_malthus",
     "name": "Thomas Robert Malthus",
-    "display_name": "Thomas Robert Malthus",
+    "display_name": "Malthus",
     "birth_year": 1766,
     "death_year": 1834,
     "occupation": "ECONOMIST",
@@ -6842,7 +6832,7 @@
   {
     "id": "francis_ii,_holy_roman_emperor",
     "name": "Francis II, Holy Roman Emperor",
-    "display_name": "Francis II, Holy Roman Emperor",
+    "display_name": "Francis II",
     "birth_year": 1768,
     "death_year": 1835,
     "occupation": "POLITICIAN",
@@ -6852,7 +6842,7 @@
   {
     "id": "joseph_fourier",
     "name": "Joseph Fourier",
-    "display_name": "Joseph Fourier",
+    "display_name": "Fourier",
     "birth_year": 1768,
     "death_year": 1830,
     "occupation": "MATHEMATICIAN",
@@ -6872,7 +6862,7 @@
   {
     "id": "alexander_von_humboldt",
     "name": "Alexander von Humboldt",
-    "display_name": "Alexander von Humboldt",
+    "display_name": "Humboldt",
     "birth_year": 1769,
     "death_year": 1859,
     "occupation": "GEOGRAPHER",
@@ -6892,7 +6882,7 @@
   {
     "id": "ludwig_van_beethoven",
     "name": "Ludwig van Beethoven",
-    "display_name": "Ludwig van Beethoven",
+    "display_name": "Beethoven",
     "birth_year": 1770,
     "death_year": 1827,
     "occupation": "COMPOSER",
@@ -6902,7 +6892,7 @@
   {
     "id": "georg_wilhelm_friedrich_hegel",
     "name": "Georg Wilhelm Friedrich Hegel",
-    "display_name": "Georg Wilhelm Friedrich Hegel",
+    "display_name": "Hegel",
     "birth_year": 1770,
     "death_year": 1831,
     "occupation": "PHILOSOPHER",
@@ -6912,7 +6902,7 @@
   {
     "id": "david_ricardo",
     "name": "David Ricardo",
-    "display_name": "David Ricardo",
+    "display_name": "Ricardo",
     "birth_year": 1772,
     "death_year": 1823,
     "occupation": "ECONOMIST",
@@ -6932,7 +6922,7 @@
   {
     "id": "klemens_von_metternich",
     "name": "Klemens von Metternich",
-    "display_name": "Klemens von Metternich",
+    "display_name": "Metternich",
     "birth_year": 1773,
     "death_year": 1859,
     "occupation": "POLITICIAN",
@@ -6952,7 +6942,7 @@
   {
     "id": "andré-marie_ampère",
     "name": "André-Marie Ampère",
-    "display_name": "André-Marie Ampère",
+    "display_name": "Ampère",
     "birth_year": 1775,
     "death_year": 1836,
     "occupation": "PHYSICIST",
@@ -6962,7 +6952,7 @@
   {
     "id": "jane_austen",
     "name": "Jane Austen",
-    "display_name": "Jane Austen",
+    "display_name": "Austen",
     "birth_year": 1775,
     "death_year": 1817,
     "occupation": "WRITER",
@@ -6972,7 +6962,7 @@
   {
     "id": "friedrich_wilhelm_joseph_schelling",
     "name": "Friedrich Wilhelm Joseph Schelling",
-    "display_name": "Friedrich Wilhelm Joseph Schelling",
+    "display_name": "Schelling",
     "birth_year": 1775,
     "death_year": 1854,
     "occupation": "PHILOSOPHER",
@@ -6992,7 +6982,7 @@
   {
     "id": "amedeo_avogadro",
     "name": "Amedeo Avogadro",
-    "display_name": "Amedeo Avogadro",
+    "display_name": "Avogadro",
     "birth_year": 1776,
     "death_year": 1856,
     "occupation": "CHEMIST",
@@ -7002,7 +6992,7 @@
   {
     "id": "carl_friedrich_gauss",
     "name": "Carl Friedrich Gauss",
-    "display_name": "Carl Friedrich Gauss",
+    "display_name": "Gauss",
     "birth_year": 1777,
     "death_year": 1855,
     "occupation": "MATHEMATICIAN",
@@ -7012,7 +7002,7 @@
   {
     "id": "hans_christian_ørsted",
     "name": "Hans Christian Ørsted",
-    "display_name": "Hans Christian Ørsted",
+    "display_name": "Ørsted",
     "birth_year": 1777,
     "death_year": 1851,
     "occupation": "PHYSICIST",
@@ -7022,7 +7012,7 @@
   {
     "id": "alexander_i_of_russia",
     "name": "Alexander I of Russia",
-    "display_name": "Alexander I of Russia",
+    "display_name": "Alexander I",
     "birth_year": 1777,
     "death_year": 1825,
     "occupation": "POLITICIAN",
@@ -7032,7 +7022,7 @@
   {
     "id": "joseph_louis_gay-lussac",
     "name": "Joseph Louis Gay-Lussac",
-    "display_name": "Joseph Louis Gay-Lussac",
+    "display_name": "Gay-Lussac",
     "birth_year": 1778,
     "death_year": 1850,
     "occupation": "CHEMIST",
@@ -7052,7 +7042,7 @@
   {
     "id": "jöns_jacob_berzelius",
     "name": "Jöns Jacob Berzelius",
-    "display_name": "Jöns Jacob Berzelius",
+    "display_name": "Berzelius",
     "birth_year": 1779,
     "death_year": 1848,
     "occupation": "CHEMIST",
@@ -7062,7 +7052,7 @@
   {
     "id": "jean-auguste-dominique_ingres",
     "name": "Jean-Auguste-Dominique Ingres",
-    "display_name": "Jean-Auguste-Dominique Ingres",
+    "display_name": "Ingres",
     "birth_year": 1780,
     "death_year": 1867,
     "occupation": "PAINTER",
@@ -7072,7 +7062,7 @@
   {
     "id": "martin_van_buren",
     "name": "Martin Van Buren",
-    "display_name": "Martin Van Buren",
+    "display_name": "Van Buren",
     "birth_year": 1782,
     "death_year": 1862,
     "occupation": "POLITICIAN",
@@ -7082,7 +7072,7 @@
   {
     "id": "niccolò_paganini",
     "name": "Niccolò Paganini",
-    "display_name": "Niccolò Paganini",
+    "display_name": "Paganini",
     "birth_year": 1782,
     "death_year": 1840,
     "occupation": "MUSICIAN",
@@ -7102,7 +7092,7 @@
   {
     "id": "simón_bolívar",
     "name": "Simón Bolívar",
-    "display_name": "Simón Bolívar",
+    "display_name": "Bolívar",
     "birth_year": 1783,
     "death_year": 1830,
     "occupation": "POLITICIAN",
@@ -7112,7 +7102,7 @@
   {
     "id": "louis_xvii_of_france",
     "name": "Louis XVII of France",
-    "display_name": "Louis XVII of France",
+    "display_name": "Louis XVII",
     "birth_year": 1785,
     "death_year": 1795,
     "occupation": "POLITICIAN",
@@ -7122,7 +7112,7 @@
   {
     "id": "arthur_schopenhauer",
     "name": "Arthur Schopenhauer",
-    "display_name": "Arthur Schopenhauer",
+    "display_name": "Schopenhauer",
     "birth_year": 1788,
     "death_year": 1860,
     "occupation": "PHILOSOPHER",
@@ -7142,7 +7132,7 @@
   {
     "id": "georg_ohm",
     "name": "Georg Ohm",
-    "display_name": "Georg Ohm",
+    "display_name": "Ohm",
     "birth_year": 1789,
     "death_year": 1854,
     "occupation": "PHYSICIST",
@@ -7152,7 +7142,7 @@
   {
     "id": "jean-françois_champollion",
     "name": "Jean-François Champollion",
-    "display_name": "Jean-François Champollion",
+    "display_name": "Champollion",
     "birth_year": 1790,
     "death_year": 1832,
     "occupation": "ARCHAEOLOGIST",
@@ -7162,7 +7152,7 @@
   {
     "id": "michael_faraday",
     "name": "Michael Faraday",
-    "display_name": "Michael Faraday",
+    "display_name": "Faraday",
     "birth_year": 1791,
     "death_year": 1867,
     "occupation": "PHYSICIST",
@@ -7182,7 +7172,7 @@
   {
     "id": "charles_babbage",
     "name": "Charles Babbage",
-    "display_name": "Charles Babbage",
+    "display_name": "Babbage",
     "birth_year": 1791,
     "death_year": 1871,
     "occupation": "INVENTOR",
@@ -7192,7 +7182,7 @@
   {
     "id": "samuel_morse",
     "name": "Samuel Morse",
-    "display_name": "Samuel Morse",
+    "display_name": "Morse",
     "birth_year": 1791,
     "death_year": 1872,
     "occupation": "INVENTOR",
@@ -7202,7 +7192,7 @@
   {
     "id": "pope_pius_ix",
     "name": "Pope Pius IX",
-    "display_name": "Pope Pius IX",
+    "display_name": "Pius IX",
     "birth_year": 1792,
     "death_year": 1878,
     "occupation": "RELIGIOUS FIGURE",
@@ -7212,7 +7202,7 @@
   {
     "id": "gioachino_rossini",
     "name": "Gioachino Rossini",
-    "display_name": "Gioachino Rossini",
+    "display_name": "Rossini",
     "birth_year": 1792,
     "death_year": 1868,
     "occupation": "COMPOSER",
@@ -7242,7 +7232,7 @@
   {
     "id": "nicholas_i_of_russia",
     "name": "Nicholas I of Russia",
-    "display_name": "Nicholas I of Russia",
+    "display_name": "Nicholas I",
     "birth_year": 1796,
     "death_year": 1855,
     "occupation": "POLITICIAN",
@@ -7252,7 +7242,7 @@
   {
     "id": "franz_schubert",
     "name": "Franz Schubert",
-    "display_name": "Franz Schubert",
+    "display_name": "Schubert",
     "birth_year": 1797,
     "death_year": 1828,
     "occupation": "COMPOSER",
@@ -7262,7 +7252,7 @@
   {
     "id": "william_i,_german_emperor",
     "name": "William I, German Emperor",
-    "display_name": "William I, German Emperor",
+    "display_name": "William I",
     "birth_year": 1797,
     "death_year": 1888,
     "occupation": "POLITICIAN",
@@ -7272,7 +7262,7 @@
   {
     "id": "heinrich_heine",
     "name": "Heinrich Heine",
-    "display_name": "Heinrich Heine",
+    "display_name": "Heine",
     "birth_year": 1797,
     "death_year": 1856,
     "occupation": "WRITER",
@@ -7282,7 +7272,7 @@
   {
     "id": "gaetano_donizetti",
     "name": "Gaetano Donizetti",
-    "display_name": "Gaetano Donizetti",
+    "display_name": "Donizetti",
     "birth_year": 1797,
     "death_year": 1848,
     "occupation": "COMPOSER",
@@ -7292,7 +7282,7 @@
   {
     "id": "auguste_comte",
     "name": "Auguste Comte",
-    "display_name": "Auguste Comte",
+    "display_name": "Comte",
     "birth_year": 1798,
     "death_year": 1857,
     "occupation": "PHILOSOPHER",
@@ -7302,7 +7292,7 @@
   {
     "id": "eugène_delacroix",
     "name": "Eugène Delacroix",
-    "display_name": "Eugène Delacroix",
+    "display_name": "Delacroix",
     "birth_year": 1798,
     "death_year": 1863,
     "occupation": "PAINTER",
@@ -7312,7 +7302,7 @@
   {
     "id": "honoré_de_balzac",
     "name": "Honoré de Balzac",
-    "display_name": "Honoré de Balzac",
+    "display_name": "Balzac",
     "birth_year": 1799,
     "death_year": 1850,
     "occupation": "WRITER",
@@ -7322,7 +7312,7 @@
   {
     "id": "alexander_pushkin",
     "name": "Alexander Pushkin",
-    "display_name": "Alexander Pushkin",
+    "display_name": "Pushkin",
     "birth_year": 1799,
     "death_year": 1837,
     "occupation": "WRITER",
@@ -7362,7 +7352,7 @@
   {
     "id": "hector_berlioz",
     "name": "Hector Berlioz",
-    "display_name": "Hector Berlioz",
+    "display_name": "Berlioz",
     "birth_year": 1803,
     "death_year": 1869,
     "occupation": "COMPOSER",
@@ -7382,7 +7372,7 @@
   {
     "id": "ludwig_feuerbach",
     "name": "Ludwig Feuerbach",
-    "display_name": "Ludwig Feuerbach",
+    "display_name": "Feuerbach",
     "birth_year": 1804,
     "death_year": 1872,
     "occupation": "PHILOSOPHER",
@@ -7392,7 +7382,7 @@
   {
     "id": "hans_christian_andersen",
     "name": "Hans Christian Andersen",
-    "display_name": "Hans Christian Andersen",
+    "display_name": "Andersen",
     "birth_year": 1805,
     "death_year": 1875,
     "occupation": "WRITER",
@@ -7412,7 +7402,7 @@
   {
     "id": "peter_gustav_lejeune_dirichlet",
     "name": "Peter Gustav Lejeune Dirichlet",
-    "display_name": "Peter Gustav Lejeune Dirichlet",
+    "display_name": "Dirichlet",
     "birth_year": 1805,
     "death_year": 1859,
     "occupation": "MATHEMATICIAN",
@@ -7432,7 +7422,7 @@
   {
     "id": "giuseppe_garibaldi",
     "name": "Giuseppe Garibaldi",
-    "display_name": "Giuseppe Garibaldi",
+    "display_name": "Garibaldi",
     "birth_year": 1807,
     "death_year": 1882,
     "occupation": "POLITICIAN",
@@ -7452,7 +7442,7 @@
   {
     "id": "charles_darwin",
     "name": "Charles Darwin",
-    "display_name": "Charles Darwin",
+    "display_name": "Darwin",
     "birth_year": 1809,
     "death_year": 1882,
     "occupation": "BIOLOGIST",
@@ -7462,7 +7452,7 @@
   {
     "id": "edgar_allan_poe",
     "name": "Edgar Allan Poe",
-    "display_name": "Edgar Allan Poe",
+    "display_name": "Poe",
     "birth_year": 1809,
     "death_year": 1849,
     "occupation": "WRITER",
@@ -7472,7 +7462,7 @@
   {
     "id": "abraham_lincoln",
     "name": "Abraham Lincoln",
-    "display_name": "Abraham Lincoln",
+    "display_name": "Lincoln",
     "birth_year": 1809,
     "death_year": 1865,
     "occupation": "POLITICIAN",
@@ -7482,7 +7472,7 @@
   {
     "id": "felix_mendelssohn",
     "name": "Felix Mendelssohn",
-    "display_name": "Felix Mendelssohn",
+    "display_name": "Mendelssohn",
     "birth_year": 1809,
     "death_year": 1847,
     "occupation": "COMPOSER",
@@ -7492,7 +7482,7 @@
   {
     "id": "nikolai_gogol",
     "name": "Nikolai Gogol",
-    "display_name": "Nikolai Gogol",
+    "display_name": "Gogol",
     "birth_year": 1809,
     "death_year": 1852,
     "occupation": "WRITER",
@@ -7502,7 +7492,7 @@
   {
     "id": "william_ewart_gladstone",
     "name": "William Ewart Gladstone",
-    "display_name": "William Ewart Gladstone",
+    "display_name": "Gladstone",
     "birth_year": 1809,
     "death_year": 1898,
     "occupation": "POLITICIAN",
@@ -7512,7 +7502,7 @@
   {
     "id": "louis_braille",
     "name": "Louis Braille",
-    "display_name": "Louis Braille",
+    "display_name": "Braille",
     "birth_year": 1809,
     "death_year": 1852,
     "occupation": "INVENTOR",
@@ -7522,7 +7512,7 @@
   {
     "id": "frédéric_chopin",
     "name": "Frédéric Chopin",
-    "display_name": "Frédéric Chopin",
+    "display_name": "Chopin",
     "birth_year": 1810,
     "death_year": 1849,
     "occupation": "COMPOSER",
@@ -7532,7 +7522,7 @@
   {
     "id": "pope_leo_xiii",
     "name": "Pope Leo XIII",
-    "display_name": "Pope Leo XIII",
+    "display_name": "Leo XIII",
     "birth_year": 1810,
     "death_year": 1903,
     "occupation": "RELIGIOUS FIGURE",
@@ -7552,7 +7542,7 @@
   {
     "id": "franz_liszt",
     "name": "Franz Liszt",
-    "display_name": "Franz Liszt",
+    "display_name": "Liszt",
     "birth_year": 1811,
     "death_year": 1886,
     "occupation": "MUSICIAN",
@@ -7572,7 +7562,7 @@
   {
     "id": "évariste_galois",
     "name": "Évariste Galois",
-    "display_name": "Évariste Galois",
+    "display_name": "Galois",
     "birth_year": 1811,
     "death_year": 1832,
     "occupation": "MATHEMATICIAN",
@@ -7582,7 +7572,7 @@
   {
     "id": "charles_dickens",
     "name": "Charles Dickens",
-    "display_name": "Charles Dickens",
+    "display_name": "Dickens",
     "birth_year": 1812,
     "death_year": 1870,
     "occupation": "WRITER",
@@ -7592,7 +7582,7 @@
   {
     "id": "giuseppe_verdi",
     "name": "Giuseppe Verdi",
-    "display_name": "Giuseppe Verdi",
+    "display_name": "Verdi",
     "birth_year": 1813,
     "death_year": 1901,
     "occupation": "COMPOSER",
@@ -7602,7 +7592,7 @@
   {
     "id": "richard_wagner",
     "name": "Richard Wagner",
-    "display_name": "Richard Wagner",
+    "display_name": "Wagner",
     "birth_year": 1813,
     "death_year": 1883,
     "occupation": "COMPOSER",
@@ -7612,7 +7602,7 @@
   {
     "id": "søren_kierkegaard",
     "name": "Søren Kierkegaard",
-    "display_name": "Søren Kierkegaard",
+    "display_name": "Kierkegaard",
     "birth_year": 1813,
     "death_year": 1855,
     "occupation": "PHILOSOPHER",
@@ -7622,7 +7612,7 @@
   {
     "id": "mikhail_bakunin",
     "name": "Mikhail Bakunin",
-    "display_name": "Mikhail Bakunin",
+    "display_name": "Bakunin",
     "birth_year": 1814,
     "death_year": 1876,
     "occupation": "PHILOSOPHER",
@@ -7632,7 +7622,7 @@
   {
     "id": "otto_von_bismarck",
     "name": "Otto von Bismarck",
-    "display_name": "Otto von Bismarck",
+    "display_name": "Bismarck",
     "birth_year": 1815,
     "death_year": 1898,
     "occupation": "POLITICIAN",
@@ -7662,7 +7652,7 @@
   {
     "id": "theodor_mommsen",
     "name": "Theodor Mommsen",
-    "display_name": "Theodor Mommsen",
+    "display_name": "Mommsen",
     "birth_year": 1817,
     "death_year": 1903,
     "occupation": "ARCHAEOLOGIST",
@@ -7672,7 +7662,7 @@
   {
     "id": "karl_marx",
     "name": "Karl Marx",
-    "display_name": "Karl Marx",
+    "display_name": "Marx",
     "birth_year": 1818,
     "death_year": 1883,
     "occupation": "ECONOMIST",
@@ -7682,7 +7672,7 @@
   {
     "id": "james_prescott_joule",
     "name": "James Prescott Joule",
-    "display_name": "James Prescott Joule",
+    "display_name": "Joule",
     "birth_year": 1818,
     "death_year": 1889,
     "occupation": "PHYSICIST",
@@ -7692,7 +7682,7 @@
   {
     "id": "christian_ix_of_denmark",
     "name": "Christian IX of Denmark",
-    "display_name": "Christian IX of Denmark",
+    "display_name": "Christian IX",
     "birth_year": 1818,
     "death_year": 1906,
     "occupation": "POLITICIAN",
@@ -7702,7 +7692,7 @@
   {
     "id": "alexander_ii_of_russia",
     "name": "Alexander II of Russia",
-    "display_name": "Alexander II of Russia",
+    "display_name": "Alexander II",
     "birth_year": 1818,
     "death_year": 1881,
     "occupation": "POLITICIAN",
@@ -7732,7 +7722,7 @@
   {
     "id": "jacques_offenbach",
     "name": "Jacques Offenbach",
-    "display_name": "Jacques Offenbach",
+    "display_name": "Offenbach",
     "birth_year": 1819,
     "death_year": 1880,
     "occupation": "COMPOSER",
@@ -7742,7 +7732,7 @@
   {
     "id": "gustave_courbet",
     "name": "Gustave Courbet",
-    "display_name": "Gustave Courbet",
+    "display_name": "Courbet",
     "birth_year": 1819,
     "death_year": 1877,
     "occupation": "PAINTER",
@@ -7762,7 +7752,7 @@
   {
     "id": "friedrich_engels",
     "name": "Friedrich Engels",
-    "display_name": "Friedrich Engels",
+    "display_name": "Engels",
     "birth_year": 1820,
     "death_year": 1895,
     "occupation": "PHILOSOPHER",
@@ -7782,7 +7772,7 @@
   {
     "id": "victor_emmanuel_ii_of_italy",
     "name": "Victor Emmanuel II of Italy",
-    "display_name": "Victor Emmanuel II of Italy",
+    "display_name": "Victor Emmanuel II",
     "birth_year": 1820,
     "death_year": 1878,
     "occupation": "POLITICIAN",
@@ -7802,7 +7792,7 @@
   {
     "id": "fyodor_dostoevsky",
     "name": "Fyodor Dostoevsky",
-    "display_name": "Fyodor Dostoevsky",
+    "display_name": "Dostoevsky",
     "birth_year": 1821,
     "death_year": 1881,
     "occupation": "WRITER",
@@ -7812,7 +7802,7 @@
   {
     "id": "charles_baudelaire",
     "name": "Charles Baudelaire",
-    "display_name": "Charles Baudelaire",
+    "display_name": "Baudelaire",
     "birth_year": 1821,
     "death_year": 1867,
     "occupation": "WRITER",
@@ -7822,7 +7812,7 @@
   {
     "id": "gustave_flaubert",
     "name": "Gustave Flaubert",
-    "display_name": "Gustave Flaubert",
+    "display_name": "Flaubert",
     "birth_year": 1821,
     "death_year": 1880,
     "occupation": "WRITER",
@@ -7832,7 +7822,7 @@
   {
     "id": "louis_pasteur",
     "name": "Louis Pasteur",
-    "display_name": "Louis Pasteur",
+    "display_name": "Pasteur",
     "birth_year": 1822,
     "death_year": 1895,
     "occupation": "CHEMIST",
@@ -7842,7 +7832,7 @@
   {
     "id": "ulysses_s._grant",
     "name": "Ulysses S. Grant",
-    "display_name": "Ulysses S. Grant",
+    "display_name": "Grant",
     "birth_year": 1822,
     "death_year": 1885,
     "occupation": "POLITICIAN",
@@ -7852,7 +7842,7 @@
   {
     "id": "gregor_mendel",
     "name": "Gregor Mendel",
-    "display_name": "Gregor Mendel",
+    "display_name": "Mendel",
     "birth_year": 1822,
     "death_year": 1884,
     "occupation": "BIOLOGIST",
@@ -7862,7 +7852,7 @@
   {
     "id": "william_thomson,_1st_baron_kelvin",
     "name": "William Thomson, 1st Baron Kelvin",
-    "display_name": "William Thomson, 1st Baron Kelvin",
+    "display_name": "Lord Kelvin",
     "birth_year": 1824,
     "death_year": 1907,
     "occupation": "PHYSICIST",
@@ -7872,7 +7862,7 @@
   {
     "id": "bedřich_smetana",
     "name": "Bedřich Smetana",
-    "display_name": "Bedřich Smetana",
+    "display_name": "Smetana",
     "birth_year": 1824,
     "death_year": 1884,
     "occupation": "COMPOSER",
@@ -7902,7 +7892,7 @@
   {
     "id": "bernhard_riemann",
     "name": "Bernhard Riemann",
-    "display_name": "Bernhard Riemann",
+    "display_name": "Riemann",
     "birth_year": 1826,
     "death_year": 1866,
     "occupation": "MATHEMATICIAN",
@@ -7912,7 +7902,7 @@
   {
     "id": "joseph_lister",
     "name": "Joseph Lister",
-    "display_name": "Joseph Lister",
+    "display_name": "Lister",
     "birth_year": 1827,
     "death_year": 1912,
     "occupation": "PHYSICIAN",
@@ -7922,7 +7912,7 @@
   {
     "id": "leo_tolstoy",
     "name": "Leo Tolstoy",
-    "display_name": "Leo Tolstoy",
+    "display_name": "Tolstoy",
     "birth_year": 1828,
     "death_year": 1910,
     "occupation": "WRITER",
@@ -7942,7 +7932,7 @@
   {
     "id": "henrik_ibsen",
     "name": "Henrik Ibsen",
-    "display_name": "Henrik Ibsen",
+    "display_name": "Ibsen",
     "birth_year": 1828,
     "death_year": 1906,
     "occupation": "WRITER",
@@ -7952,7 +7942,7 @@
   {
     "id": "henry_dunant",
     "name": "Henry Dunant",
-    "display_name": "Henry Dunant",
+    "display_name": "Dunant",
     "birth_year": 1828,
     "death_year": 1910,
     "occupation": "SOCIAL ACTIVIST",
@@ -7962,7 +7952,7 @@
   {
     "id": "oscar_ii_of_sweden",
     "name": "Oscar II of Sweden",
-    "display_name": "Oscar II of Sweden",
+    "display_name": "Oscar II",
     "birth_year": 1829,
     "death_year": 1907,
     "occupation": "POLITICIAN",
@@ -7972,7 +7962,7 @@
   {
     "id": "franz_joseph_i_of_austria",
     "name": "Franz Joseph I of Austria",
-    "display_name": "Franz Joseph I of Austria",
+    "display_name": "Franz Joseph I",
     "birth_year": 1830,
     "death_year": 1916,
     "occupation": "POLITICIAN",
@@ -7982,7 +7972,7 @@
   {
     "id": "emily_dickinson",
     "name": "Emily Dickinson",
-    "display_name": "Emily Dickinson",
+    "display_name": "Dickinson",
     "birth_year": 1830,
     "death_year": 1886,
     "occupation": "WRITER",
@@ -7992,7 +7982,7 @@
   {
     "id": "james_clerk_maxwell",
     "name": "James Clerk Maxwell",
-    "display_name": "James Clerk Maxwell",
+    "display_name": "Maxwell",
     "birth_year": 1831,
     "death_year": 1879,
     "occupation": "PHYSICIST",
@@ -8012,7 +8002,7 @@
   {
     "id": "édouard_manet",
     "name": "Édouard Manet",
-    "display_name": "Édouard Manet",
+    "display_name": "Manet",
     "birth_year": 1832,
     "death_year": 1883,
     "occupation": "PAINTER",
@@ -8022,7 +8012,7 @@
   {
     "id": "gustave_eiffel",
     "name": "Gustave Eiffel",
-    "display_name": "Gustave Eiffel",
+    "display_name": "Eiffel",
     "birth_year": 1832,
     "death_year": 1923,
     "occupation": "ENGINEER",
@@ -8042,7 +8032,7 @@
   {
     "id": "louisa_may_alcott",
     "name": "Louisa May Alcott",
-    "display_name": "Louisa May Alcott",
+    "display_name": "Alcott",
     "birth_year": 1832,
     "death_year": 1888,
     "occupation": "WRITER",
@@ -8052,7 +8042,7 @@
   {
     "id": "bjørnstjerne_bjørnson",
     "name": "Bjørnstjerne Bjørnson",
-    "display_name": "Bjørnstjerne Bjørnson",
+    "display_name": "Bjørnson",
     "birth_year": 1832,
     "death_year": 1910,
     "occupation": "WRITER",
@@ -8062,7 +8052,7 @@
   {
     "id": "wilhelm_wundt",
     "name": "Wilhelm Wundt",
-    "display_name": "Wilhelm Wundt",
+    "display_name": "Wundt",
     "birth_year": 1832,
     "death_year": 1920,
     "occupation": "PSYCHOLOGIST",
@@ -8082,7 +8072,7 @@
   {
     "id": "alfred_nobel",
     "name": "Alfred Nobel",
-    "display_name": "Alfred Nobel",
+    "display_name": "Nobel",
     "birth_year": 1833,
     "death_year": 1896,
     "occupation": "CHEMIST",
@@ -8092,7 +8082,7 @@
   {
     "id": "johannes_brahms",
     "name": "Johannes Brahms",
-    "display_name": "Johannes Brahms",
+    "display_name": "Brahms",
     "birth_year": 1833,
     "death_year": 1897,
     "occupation": "COMPOSER",
@@ -8102,7 +8092,7 @@
   {
     "id": "dmitri_mendeleev",
     "name": "Dmitri Mendeleev",
-    "display_name": "Dmitri Mendeleev",
+    "display_name": "Mendeleev",
     "birth_year": 1834,
     "death_year": 1907,
     "occupation": "CHEMIST",
@@ -8112,7 +8102,7 @@
   {
     "id": "edgar_degas",
     "name": "Edgar Degas",
-    "display_name": "Edgar Degas",
+    "display_name": "Degas",
     "birth_year": 1834,
     "death_year": 1917,
     "occupation": "PAINTER",
@@ -8122,7 +8112,7 @@
   {
     "id": "pope_pius_x",
     "name": "Pope Pius X",
-    "display_name": "Pope Pius X",
+    "display_name": "Pius X",
     "birth_year": 1835,
     "death_year": 1914,
     "occupation": "RELIGIOUS FIGURE",
@@ -8152,7 +8142,7 @@
   {
     "id": "camille_saint-saëns",
     "name": "Camille Saint-Saëns",
-    "display_name": "Camille Saint-Saëns",
+    "display_name": "Saint-Saëns",
     "birth_year": 1835,
     "death_year": 1921,
     "occupation": "COMPOSER",
@@ -8192,7 +8182,7 @@
   {
     "id": "georges_bizet",
     "name": "Georges Bizet",
-    "display_name": "Georges Bizet",
+    "display_name": "Bizet",
     "birth_year": 1838,
     "death_year": 1875,
     "occupation": "COMPOSER",
@@ -8202,7 +8192,7 @@
   {
     "id": "paul_cézanne",
     "name": "Paul Cézanne",
-    "display_name": "Paul Cézanne",
+    "display_name": "Cézanne",
     "birth_year": 1839,
     "death_year": 1906,
     "occupation": "PAINTER",
@@ -8212,7 +8202,7 @@
   {
     "id": "john_d._rockefeller",
     "name": "John D. Rockefeller",
-    "display_name": "John D. Rockefeller",
+    "display_name": "Rockefeller",
     "birth_year": 1839,
     "death_year": 1937,
     "occupation": "BUSINESSPERSON",
@@ -8232,7 +8222,7 @@
   {
     "id": "pyotr_ilyich_tchaikovsky",
     "name": "Pyotr Ilyich Tchaikovsky",
-    "display_name": "Pyotr Ilyich Tchaikovsky",
+    "display_name": "Tchaikovsky",
     "birth_year": 1840,
     "death_year": 1893,
     "occupation": "COMPOSER",
@@ -8242,7 +8232,7 @@
   {
     "id": "claude_monet",
     "name": "Claude Monet",
-    "display_name": "Claude Monet",
+    "display_name": "Monet",
     "birth_year": 1840,
     "death_year": 1926,
     "occupation": "PAINTER",
@@ -8262,7 +8252,7 @@
   {
     "id": "émile_zola",
     "name": "Émile Zola",
-    "display_name": "Émile Zola",
+    "display_name": "Zola",
     "birth_year": 1840,
     "death_year": 1902,
     "occupation": "WRITER",
@@ -8272,7 +8262,7 @@
   {
     "id": "auguste_rodin",
     "name": "Auguste Rodin",
-    "display_name": "Auguste Rodin",
+    "display_name": "Rodin",
     "birth_year": 1840,
     "death_year": 1917,
     "occupation": "SCULPTOR",
@@ -8292,7 +8282,7 @@
   {
     "id": "pierre-auguste_renoir",
     "name": "Pierre-Auguste Renoir",
-    "display_name": "Pierre-Auguste Renoir",
+    "display_name": "Renoir",
     "birth_year": 1841,
     "death_year": 1919,
     "occupation": "PAINTER",
@@ -8302,7 +8292,7 @@
   {
     "id": "antonín_dvořák",
     "name": "Antonín Dvořák",
-    "display_name": "Antonín Dvořák",
+    "display_name": "Dvořák",
     "birth_year": 1841,
     "death_year": 1904,
     "occupation": "COMPOSER",
@@ -8312,7 +8302,7 @@
   {
     "id": "john_william_strutt,_3rd_baron_rayleigh",
     "name": "John William Strutt, 3rd Baron Rayleigh",
-    "display_name": "John William Strutt, 3rd Baron Rayleigh",
+    "display_name": "Lord Rayleigh",
     "birth_year": 1842,
     "death_year": 1919,
     "occupation": "PHYSICIST",
@@ -8332,7 +8322,7 @@
   {
     "id": "william_mckinley",
     "name": "William McKinley",
-    "display_name": "William McKinley",
+    "display_name": "McKinley",
     "birth_year": 1843,
     "death_year": 1901,
     "occupation": "POLITICIAN",
@@ -8342,7 +8332,7 @@
   {
     "id": "edvard_grieg",
     "name": "Edvard Grieg",
-    "display_name": "Edvard Grieg",
+    "display_name": "Grieg",
     "birth_year": 1843,
     "death_year": 1907,
     "occupation": "COMPOSER",
@@ -8352,7 +8342,7 @@
   {
     "id": "robert_koch",
     "name": "Robert Koch",
-    "display_name": "Robert Koch",
+    "display_name": "Koch",
     "birth_year": 1843,
     "death_year": 1910,
     "occupation": "PHYSICIAN",
@@ -8362,7 +8352,7 @@
   {
     "id": "friedrich_nietzsche",
     "name": "Friedrich Nietzsche",
-    "display_name": "Friedrich Nietzsche",
+    "display_name": "Nietzsche",
     "birth_year": 1844,
     "death_year": 1900,
     "occupation": "PHILOSOPHER",
@@ -8372,7 +8362,7 @@
   {
     "id": "karl_benz",
     "name": "Karl Benz",
-    "display_name": "Karl Benz",
+    "display_name": "Benz",
     "birth_year": 1844,
     "death_year": 1929,
     "occupation": "INVENTOR",
@@ -8402,7 +8392,7 @@
   {
     "id": "nikolai_rimsky-korsakov",
     "name": "Nikolai Rimsky-Korsakov",
-    "display_name": "Nikolai Rimsky-Korsakov",
+    "display_name": "Rimsky-Korsakov",
     "birth_year": 1844,
     "death_year": 1908,
     "occupation": "COMPOSER",
@@ -8412,7 +8402,7 @@
   {
     "id": "paul_verlaine",
     "name": "Paul Verlaine",
-    "display_name": "Paul Verlaine",
+    "display_name": "Verlaine",
     "birth_year": 1844,
     "death_year": 1896,
     "occupation": "WRITER",
@@ -8422,7 +8412,7 @@
   {
     "id": "wilhelm_röntgen",
     "name": "Wilhelm Röntgen",
-    "display_name": "Wilhelm Röntgen",
+    "display_name": "Röntgen",
     "birth_year": 1845,
     "death_year": 1923,
     "occupation": "PHYSICIST",
@@ -8432,7 +8422,7 @@
   {
     "id": "alexander_iii_of_russia",
     "name": "Alexander III of Russia",
-    "display_name": "Alexander III of Russia",
+    "display_name": "Alexander III",
     "birth_year": 1845,
     "death_year": 1894,
     "occupation": "POLITICIAN",
@@ -8442,7 +8432,7 @@
   {
     "id": "ludwig_ii_of_bavaria",
     "name": "Ludwig II of Bavaria",
-    "display_name": "Ludwig II of Bavaria",
+    "display_name": "Ludwig II",
     "birth_year": 1845,
     "death_year": 1886,
     "occupation": "POLITICIAN",
@@ -8452,7 +8442,7 @@
   {
     "id": "thomas_edison",
     "name": "Thomas Edison",
-    "display_name": "Thomas Edison",
+    "display_name": "Edison",
     "birth_year": 1847,
     "death_year": 1931,
     "occupation": "INVENTOR",
@@ -8472,7 +8462,7 @@
   {
     "id": "paul_von_hindenburg",
     "name": "Paul von Hindenburg",
-    "display_name": "Paul von Hindenburg",
+    "display_name": "Hindenburg",
     "birth_year": 1847,
     "death_year": 1934,
     "occupation": "POLITICIAN",
@@ -8482,7 +8472,7 @@
   {
     "id": "paul_gauguin",
     "name": "Paul Gauguin",
-    "display_name": "Paul Gauguin",
+    "display_name": "Gauguin",
     "birth_year": 1848,
     "death_year": 1903,
     "occupation": "PAINTER",
@@ -8502,7 +8492,7 @@
   {
     "id": "ivan_pavlov",
     "name": "Ivan Pavlov",
-    "display_name": "Ivan Pavlov",
+    "display_name": "Pavlov",
     "birth_year": 1849,
     "death_year": 1936,
     "occupation": "BIOLOGIST",
@@ -8512,7 +8502,7 @@
   {
     "id": "august_strindberg",
     "name": "August Strindberg",
-    "display_name": "August Strindberg",
+    "display_name": "Strindberg",
     "birth_year": 1849,
     "death_year": 1912,
     "occupation": "WRITER",
@@ -8532,7 +8522,7 @@
   {
     "id": "guy_de_maupassant",
     "name": "Guy de Maupassant",
-    "display_name": "Guy de Maupassant",
+    "display_name": "Maupassant",
     "birth_year": 1850,
     "death_year": 1893,
     "occupation": "WRITER",
@@ -8542,7 +8532,7 @@
   {
     "id": "antoni_gaudí",
     "name": "Antoni Gaudí",
-    "display_name": "Antoni Gaudí",
+    "display_name": "Gaudí",
     "birth_year": 1852,
     "death_year": 1926,
     "occupation": "ARCHITECT",
@@ -8552,7 +8542,7 @@
   {
     "id": "albert_a._michelson",
     "name": "Albert A. Michelson",
-    "display_name": "Albert A. Michelson",
+    "display_name": "Michelson",
     "birth_year": 1852,
     "death_year": 1931,
     "occupation": "PHYSICIST",
@@ -8562,7 +8552,7 @@
   {
     "id": "henri_becquerel",
     "name": "Henri Becquerel",
-    "display_name": "Henri Becquerel",
+    "display_name": "Becquerel",
     "birth_year": 1852,
     "death_year": 1908,
     "occupation": "PHYSICIST",
@@ -8582,7 +8572,7 @@
   {
     "id": "jacobus_henricus_van_'t_hoff",
     "name": "Jacobus Henricus van 't Hoff",
-    "display_name": "Jacobus Henricus van 't Hoff",
+    "display_name": "Van 't Hoff",
     "birth_year": 1852,
     "death_year": 1911,
     "occupation": "CHEMIST",
@@ -8602,7 +8592,7 @@
   {
     "id": "vincent_van_gogh",
     "name": "Vincent van Gogh",
-    "display_name": "Vincent van Gogh",
+    "display_name": "Van Gogh",
     "birth_year": 1853,
     "death_year": 1890,
     "occupation": "PAINTER",
@@ -8612,7 +8602,7 @@
   {
     "id": "cecil_rhodes",
     "name": "Cecil Rhodes",
-    "display_name": "Cecil Rhodes",
+    "display_name": "Rhodes",
     "birth_year": 1853,
     "death_year": 1902,
     "occupation": "BUSINESSPERSON",
@@ -8622,7 +8612,7 @@
   {
     "id": "hendrik_lorentz",
     "name": "Hendrik Lorentz",
-    "display_name": "Hendrik Lorentz",
+    "display_name": "Lorentz",
     "birth_year": 1853,
     "death_year": 1928,
     "occupation": "PHYSICIST",
@@ -8632,7 +8622,7 @@
   {
     "id": "pope_benedict_xv",
     "name": "Pope Benedict XV",
-    "display_name": "Pope Benedict XV",
+    "display_name": "Benedict XV",
     "birth_year": 1854,
     "death_year": 1922,
     "occupation": "RELIGIOUS FIGURE",
@@ -8642,7 +8632,7 @@
   {
     "id": "oscar_wilde",
     "name": "Oscar Wilde",
-    "display_name": "Oscar Wilde",
+    "display_name": "Wilde",
     "birth_year": 1854,
     "death_year": 1900,
     "occupation": "WRITER",
@@ -8652,7 +8642,7 @@
   {
     "id": "arthur_rimbaud",
     "name": "Arthur Rimbaud",
-    "display_name": "Arthur Rimbaud",
+    "display_name": "Rimbaud",
     "birth_year": 1854,
     "death_year": 1891,
     "occupation": "WRITER",
@@ -8662,7 +8652,7 @@
   {
     "id": "henri_poincaré",
     "name": "Henri Poincaré",
-    "display_name": "Henri Poincaré",
+    "display_name": "Poincaré",
     "birth_year": 1854,
     "death_year": 1912,
     "occupation": "MATHEMATICIAN",
@@ -8672,7 +8662,7 @@
   {
     "id": "nikola_tesla",
     "name": "Nikola Tesla",
-    "display_name": "Nikola Tesla",
+    "display_name": "Tesla",
     "birth_year": 1856,
     "death_year": 1943,
     "occupation": "INVENTOR",
@@ -8682,7 +8672,7 @@
   {
     "id": "sigmund_freud",
     "name": "Sigmund Freud",
-    "display_name": "Sigmund Freud",
+    "display_name": "Freud",
     "birth_year": 1856,
     "death_year": 1939,
     "occupation": "PSYCHOLOGIST",
@@ -8712,7 +8702,7 @@
   {
     "id": "philippe_pétain",
     "name": "Philippe Pétain",
-    "display_name": "Philippe Pétain",
+    "display_name": "Pétain",
     "birth_year": 1856,
     "death_year": 1951,
     "occupation": "POLITICIAN",
@@ -8722,7 +8712,7 @@
   {
     "id": "pope_pius_xi",
     "name": "Pope Pius XI",
-    "display_name": "Pope Pius XI",
+    "display_name": "Pius XI",
     "birth_year": 1857,
     "death_year": 1939,
     "occupation": "RELIGIOUS FIGURE",
@@ -8732,7 +8722,7 @@
   {
     "id": "heinrich_hertz",
     "name": "Heinrich Hertz",
-    "display_name": "Heinrich Hertz",
+    "display_name": "Hertz",
     "birth_year": 1857,
     "death_year": 1894,
     "occupation": "PHYSICIST",
@@ -8742,7 +8732,7 @@
   {
     "id": "ferdinand_de_saussure",
     "name": "Ferdinand de Saussure",
-    "display_name": "Ferdinand de Saussure",
+    "display_name": "Saussure",
     "birth_year": 1857,
     "death_year": 1913,
     "occupation": "LINGUIST",
@@ -8762,7 +8752,7 @@
   {
     "id": "robert_baden-powell,_1st_baron_baden-powell",
     "name": "Robert Baden-Powell, 1st Baron Baden-Powell",
-    "display_name": "Robert Baden-Powell, 1st Baron Baden-Powell",
+    "display_name": "Baden-Powell",
     "birth_year": 1857,
     "death_year": 1941,
     "occupation": "MILITARY PERSONNEL",
@@ -8772,7 +8762,7 @@
   {
     "id": "giacomo_puccini",
     "name": "Giacomo Puccini",
-    "display_name": "Giacomo Puccini",
+    "display_name": "Puccini",
     "birth_year": 1858,
     "death_year": 1924,
     "occupation": "COMPOSER",
@@ -8782,7 +8772,7 @@
   {
     "id": "max_planck",
     "name": "Max Planck",
-    "display_name": "Max Planck",
+    "display_name": "Planck",
     "birth_year": 1858,
     "death_year": 1947,
     "occupation": "PHYSICIST",
@@ -8792,7 +8782,7 @@
   {
     "id": "émile_durkheim",
     "name": "Émile Durkheim",
-    "display_name": "Émile Durkheim",
+    "display_name": "Durkheim",
     "birth_year": 1858,
     "death_year": 1917,
     "occupation": "SOCIOLOGIST",
@@ -8812,7 +8802,7 @@
   {
     "id": "rudolf,_crown_prince_of_austria",
     "name": "Rudolf, Crown Prince of Austria",
-    "display_name": "Rudolf, Crown Prince of Austria",
+    "display_name": "Crown Prince Rudolf",
     "birth_year": 1858,
     "death_year": 1889,
     "occupation": "NOBLEMAN",
@@ -8832,7 +8822,7 @@
   {
     "id": "wilhelm_ii,_german_emperor",
     "name": "Wilhelm II, German Emperor",
-    "display_name": "Wilhelm II, German Emperor",
+    "display_name": "Wilhelm II",
     "birth_year": 1859,
     "death_year": 1941,
     "occupation": "POLITICIAN",
@@ -8862,7 +8852,7 @@
   {
     "id": "henri_bergson",
     "name": "Henri Bergson",
-    "display_name": "Henri Bergson",
+    "display_name": "Bergson",
     "birth_year": 1859,
     "death_year": 1941,
     "occupation": "PHILOSOPHER",
@@ -8872,7 +8862,7 @@
   {
     "id": "l._l._zamenhof",
     "name": "L. L. Zamenhof",
-    "display_name": "L. L. Zamenhof",
+    "display_name": "Zamenhof",
     "birth_year": 1859,
     "death_year": 1917,
     "occupation": "PHYSICIAN",
@@ -8882,7 +8872,7 @@
   {
     "id": "knut_hamsun",
     "name": "Knut Hamsun",
-    "display_name": "Knut Hamsun",
+    "display_name": "Hamsun",
     "birth_year": 1859,
     "death_year": 1952,
     "occupation": "WRITER",
@@ -8892,7 +8882,7 @@
   {
     "id": "edmund_husserl",
     "name": "Edmund Husserl",
-    "display_name": "Edmund Husserl",
+    "display_name": "Husserl",
     "birth_year": 1859,
     "death_year": 1938,
     "occupation": "PHILOSOPHER",
@@ -8902,7 +8892,7 @@
   {
     "id": "svante_arrhenius",
     "name": "Svante Arrhenius",
-    "display_name": "Svante Arrhenius",
+    "display_name": "Arrhenius",
     "birth_year": 1859,
     "death_year": 1927,
     "occupation": "CHEMIST",
@@ -8912,7 +8902,7 @@
   {
     "id": "gustav_mahler",
     "name": "Gustav Mahler",
-    "display_name": "Gustav Mahler",
+    "display_name": "Mahler",
     "birth_year": 1860,
     "death_year": 1911,
     "occupation": "COMPOSER",
@@ -8922,7 +8912,7 @@
   {
     "id": "anton_chekhov",
     "name": "Anton Chekhov",
-    "display_name": "Anton Chekhov",
+    "display_name": "Chekhov",
     "birth_year": 1860,
     "death_year": 1904,
     "occupation": "WRITER",
@@ -8932,7 +8922,7 @@
   {
     "id": "alphonse_mucha",
     "name": "Alphonse Mucha",
-    "display_name": "Alphonse Mucha",
+    "display_name": "Mucha",
     "birth_year": 1860,
     "death_year": 1939,
     "occupation": "PAINTER",
@@ -8952,7 +8942,7 @@
   {
     "id": "theodor_herzl",
     "name": "Theodor Herzl",
-    "display_name": "Theodor Herzl",
+    "display_name": "Herzl",
     "birth_year": 1860,
     "death_year": 1904,
     "occupation": "WRITER",
@@ -8962,7 +8952,7 @@
   {
     "id": "rabindranath_tagore",
     "name": "Rabindranath Tagore",
-    "display_name": "Rabindranath Tagore",
+    "display_name": "Tagore",
     "birth_year": 1861,
     "death_year": 1941,
     "occupation": "WRITER",
@@ -8982,7 +8972,7 @@
   {
     "id": "fridtjof_nansen",
     "name": "Fridtjof Nansen",
-    "display_name": "Fridtjof Nansen",
+    "display_name": "Nansen",
     "birth_year": 1861,
     "death_year": 1930,
     "occupation": "EXPLORER",
@@ -9002,7 +8992,7 @@
   {
     "id": "gustav_klimt",
     "name": "Gustav Klimt",
-    "display_name": "Gustav Klimt",
+    "display_name": "Klimt",
     "birth_year": 1862,
     "death_year": 1918,
     "occupation": "PAINTER",
@@ -9012,7 +9002,7 @@
   {
     "id": "claude_debussy",
     "name": "Claude Debussy",
-    "display_name": "Claude Debussy",
+    "display_name": "Debussy",
     "birth_year": 1862,
     "death_year": 1918,
     "occupation": "COMPOSER",
@@ -9022,7 +9012,7 @@
   {
     "id": "maurice_maeterlinck",
     "name": "Maurice Maeterlinck",
-    "display_name": "Maurice Maeterlinck",
+    "display_name": "Maeterlinck",
     "birth_year": 1862,
     "death_year": 1949,
     "occupation": "WRITER",
@@ -9032,7 +9022,7 @@
   {
     "id": "david_hilbert",
     "name": "David Hilbert",
-    "display_name": "David Hilbert",
+    "display_name": "Hilbert",
     "birth_year": 1862,
     "death_year": 1943,
     "occupation": "MATHEMATICIAN",
@@ -9042,7 +9032,7 @@
   {
     "id": "edvard_munch",
     "name": "Edvard Munch",
-    "display_name": "Edvard Munch",
+    "display_name": "Munch",
     "birth_year": 1863,
     "death_year": 1944,
     "occupation": "PAINTER",
@@ -9062,7 +9052,7 @@
   {
     "id": "archduke_franz_ferdinand_of_austria",
     "name": "Archduke Franz Ferdinand of Austria",
-    "display_name": "Archduke Franz Ferdinand of Austria",
+    "display_name": "Franz Ferdinand",
     "birth_year": 1863,
     "death_year": 1914,
     "occupation": "NOBLEMAN",
@@ -9082,7 +9072,7 @@
   {
     "id": "henry_ford",
     "name": "Henry Ford",
-    "display_name": "Henry Ford",
+    "display_name": "Ford",
     "birth_year": 1863,
     "death_year": 1947,
     "occupation": "INVENTOR",
@@ -9112,7 +9102,7 @@
   {
     "id": "henri_de_toulouse-lautrec",
     "name": "Henri de Toulouse-Lautrec",
-    "display_name": "Henri de Toulouse-Lautrec",
+    "display_name": "Toulouse-Lautrec",
     "birth_year": 1864,
     "death_year": 1901,
     "occupation": "PAINTER",
@@ -9132,7 +9122,7 @@
   {
     "id": "jean_sibelius",
     "name": "Jean Sibelius",
-    "display_name": "Jean Sibelius",
+    "display_name": "Sibelius",
     "birth_year": 1865,
     "death_year": 1957,
     "occupation": "COMPOSER",
@@ -9142,7 +9132,7 @@
   {
     "id": "pieter_zeeman",
     "name": "Pieter Zeeman",
-    "display_name": "Pieter Zeeman",
+    "display_name": "Zeeman",
     "birth_year": 1865,
     "death_year": 1943,
     "occupation": "PHYSICIST",
@@ -9162,7 +9152,7 @@
   {
     "id": "wassily_kandinsky",
     "name": "Wassily Kandinsky",
-    "display_name": "Wassily Kandinsky",
+    "display_name": "Kandinsky",
     "birth_year": 1866,
     "death_year": 1944,
     "occupation": "PAINTER",
@@ -9222,7 +9212,7 @@
   {
     "id": "carl_gustaf_emil_mannerheim",
     "name": "Carl Gustaf Emil Mannerheim",
-    "display_name": "Carl Gustaf Emil Mannerheim",
+    "display_name": "Mannerheim",
     "birth_year": 1867,
     "death_year": 1951,
     "occupation": "POLITICIAN",
@@ -9232,7 +9222,7 @@
   {
     "id": "nicholas_ii_of_russia",
     "name": "Nicholas II of Russia",
-    "display_name": "Nicholas II of Russia",
+    "display_name": "Nicholas II",
     "birth_year": 1868,
     "death_year": 1918,
     "occupation": "POLITICIAN",
@@ -9242,7 +9232,7 @@
   {
     "id": "maxim_gorky",
     "name": "Maxim Gorky",
-    "display_name": "Maxim Gorky",
+    "display_name": "Gorky",
     "birth_year": 1868,
     "death_year": 1936,
     "occupation": "WRITER",
@@ -9252,7 +9242,7 @@
   {
     "id": "robert_falcon_scott",
     "name": "Robert Falcon Scott",
-    "display_name": "Robert Falcon Scott",
+    "display_name": "Captain Scott",
     "birth_year": 1868,
     "death_year": 1912,
     "occupation": "EXPLORER",
@@ -9272,7 +9262,7 @@
   {
     "id": "henri_matisse",
     "name": "Henri Matisse",
-    "display_name": "Henri Matisse",
+    "display_name": "Matisse",
     "birth_year": 1869,
     "death_year": 1954,
     "occupation": "PAINTER",
@@ -9282,7 +9272,7 @@
   {
     "id": "grigori_rasputin",
     "name": "Grigori Rasputin",
-    "display_name": "Grigori Rasputin",
+    "display_name": "Rasputin",
     "birth_year": 1869,
     "death_year": 1916,
     "occupation": "OCCULTIST",
@@ -9292,7 +9282,7 @@
   {
     "id": "charles_thomson_rees_wilson",
     "name": "Charles Thomson Rees Wilson",
-    "display_name": "Charles Thomson Rees Wilson",
+    "display_name": "C. T. R. Wilson",
     "birth_year": 1869,
     "death_year": 1959,
     "occupation": "PHYSICIST",
@@ -9302,7 +9292,7 @@
   {
     "id": "andré_gide",
     "name": "André Gide",
-    "display_name": "André Gide",
+    "display_name": "Gide",
     "birth_year": 1869,
     "death_year": 1951,
     "occupation": "WRITER",
@@ -9312,7 +9302,7 @@
   {
     "id": "victor_emmanuel_iii_of_italy",
     "name": "Victor Emmanuel III of Italy",
-    "display_name": "Victor Emmanuel III of Italy",
+    "display_name": "Victor Emmanuel III",
     "birth_year": 1869,
     "death_year": 1947,
     "occupation": "POLITICIAN",
@@ -9322,7 +9312,7 @@
   {
     "id": "vladimir_lenin",
     "name": "Vladimir Lenin",
-    "display_name": "Vladimir Lenin",
+    "display_name": "Lenin",
     "birth_year": 1870,
     "death_year": 1924,
     "occupation": "POLITICIAN",
@@ -9332,7 +9322,7 @@
   {
     "id": "maria_montessori",
     "name": "Maria Montessori",
-    "display_name": "Maria Montessori",
+    "display_name": "Montessori",
     "birth_year": 1870,
     "death_year": 1952,
     "occupation": "PHILOSOPHER",
@@ -9352,7 +9342,7 @@
   {
     "id": "christian_x_of_denmark",
     "name": "Christian X of Denmark",
-    "display_name": "Christian X of Denmark",
+    "display_name": "Christian X",
     "birth_year": 1870,
     "death_year": 1947,
     "occupation": "POLITICIAN",
@@ -9372,7 +9362,7 @@
   {
     "id": "marcel_proust",
     "name": "Marcel Proust",
-    "display_name": "Marcel Proust",
+    "display_name": "Proust",
     "birth_year": 1871,
     "death_year": 1922,
     "occupation": "WRITER",
@@ -9382,7 +9372,7 @@
   {
     "id": "ernest_rutherford",
     "name": "Ernest Rutherford",
-    "display_name": "Ernest Rutherford",
+    "display_name": "Rutherford",
     "birth_year": 1871,
     "death_year": 1937,
     "occupation": "PHYSICIST",
@@ -9392,7 +9382,7 @@
   {
     "id": "roald_amundsen",
     "name": "Roald Amundsen",
-    "display_name": "Roald Amundsen",
+    "display_name": "Amundsen",
     "birth_year": 1872,
     "death_year": 1928,
     "occupation": "EXPLORER",
@@ -9402,7 +9392,7 @@
   {
     "id": "piet_mondrian",
     "name": "Piet Mondrian",
-    "display_name": "Piet Mondrian",
+    "display_name": "Mondrian",
     "birth_year": 1872,
     "death_year": 1944,
     "occupation": "PAINTER",
@@ -9412,7 +9402,7 @@
   {
     "id": "haakon_vii_of_norway",
     "name": "Haakon VII of Norway",
-    "display_name": "Haakon VII of Norway",
+    "display_name": "Haakon VII",
     "birth_year": 1872,
     "death_year": 1957,
     "occupation": "POLITICIAN",
@@ -9442,7 +9432,7 @@
   {
     "id": "sergei_rachmaninoff",
     "name": "Sergei Rachmaninoff",
-    "display_name": "Sergei Rachmaninoff",
+    "display_name": "Rachmaninoff",
     "birth_year": 1873,
     "death_year": 1943,
     "occupation": "COMPOSER",
@@ -9452,7 +9442,7 @@
   {
     "id": "winston_churchill",
     "name": "Winston Churchill",
-    "display_name": "Winston Churchill",
+    "display_name": "Churchill",
     "birth_year": 1874,
     "death_year": 1965,
     "occupation": "POLITICIAN",
@@ -9462,7 +9452,7 @@
   {
     "id": "guglielmo_marconi",
     "name": "Guglielmo Marconi",
-    "display_name": "Guglielmo Marconi",
+    "display_name": "Marconi",
     "birth_year": 1874,
     "death_year": 1937,
     "occupation": "INVENTOR",
@@ -9482,7 +9472,7 @@
   {
     "id": "w._somerset_maugham",
     "name": "W. Somerset Maugham",
-    "display_name": "W. Somerset Maugham",
+    "display_name": "Maugham",
     "birth_year": 1874,
     "death_year": 1965,
     "occupation": "WRITER",
@@ -9492,7 +9482,7 @@
   {
     "id": "carl_jung",
     "name": "Carl Jung",
-    "display_name": "Carl Jung",
+    "display_name": "Jung",
     "birth_year": 1875,
     "death_year": 1961,
     "occupation": "PSYCHOLOGIST",
@@ -9512,7 +9502,7 @@
   {
     "id": "maurice_ravel",
     "name": "Maurice Ravel",
-    "display_name": "Maurice Ravel",
+    "display_name": "Ravel",
     "birth_year": 1875,
     "death_year": 1937,
     "occupation": "COMPOSER",
@@ -9522,7 +9512,7 @@
   {
     "id": "aleister_crowley",
     "name": "Aleister Crowley",
-    "display_name": "Aleister Crowley",
+    "display_name": "Crowley",
     "birth_year": 1875,
     "death_year": 1947,
     "occupation": "OCCULTIST",
@@ -9552,7 +9542,7 @@
   {
     "id": "rainer_maria_rilke",
     "name": "Rainer Maria Rilke",
-    "display_name": "Rainer Maria Rilke",
+    "display_name": "Rilke",
     "birth_year": 1875,
     "death_year": 1926,
     "occupation": "WRITER",
@@ -9562,7 +9552,7 @@
   {
     "id": "albert_schweitzer",
     "name": "Albert Schweitzer",
-    "display_name": "Albert Schweitzer",
+    "display_name": "Schweitzer",
     "birth_year": 1875,
     "death_year": 1965,
     "occupation": "PHYSICIAN",
@@ -9572,7 +9562,7 @@
   {
     "id": "pope_pius_xii",
     "name": "Pope Pius XII",
-    "display_name": "Pope Pius XII",
+    "display_name": "Pius XII",
     "birth_year": 1876,
     "death_year": 1958,
     "occupation": "RELIGIOUS FIGURE",
@@ -9582,7 +9572,7 @@
   {
     "id": "muhammad_ali_jinnah",
     "name": "Muhammad Ali Jinnah",
-    "display_name": "Muhammad Ali Jinnah",
+    "display_name": "Jinnah",
     "birth_year": 1876,
     "death_year": 1948,
     "occupation": "POLITICIAN",
@@ -9602,7 +9592,7 @@
   {
     "id": "konrad_adenauer",
     "name": "Konrad Adenauer",
-    "display_name": "Konrad Adenauer",
+    "display_name": "Adenauer",
     "birth_year": 1876,
     "death_year": 1967,
     "occupation": "POLITICIAN",
@@ -9622,7 +9612,7 @@
   {
     "id": "hermann_hesse",
     "name": "Hermann Hesse",
-    "display_name": "Hermann Hesse",
+    "display_name": "Hesse",
     "birth_year": 1877,
     "death_year": 1962,
     "occupation": "WRITER",
@@ -9632,7 +9622,7 @@
   {
     "id": "muhammad_iqbal",
     "name": "Muhammad Iqbal",
-    "display_name": "Muhammad Iqbal",
+    "display_name": "Iqbal",
     "birth_year": 1877,
     "death_year": 1938,
     "occupation": "WRITER",
@@ -9642,7 +9632,7 @@
   {
     "id": "lise_meitner",
     "name": "Lise Meitner",
-    "display_name": "Lise Meitner",
+    "display_name": "Meitner",
     "birth_year": 1878,
     "death_year": 1968,
     "occupation": "PHYSICIST",
@@ -9652,7 +9642,7 @@
   {
     "id": "albert_einstein",
     "name": "Albert Einstein",
-    "display_name": "Albert Einstein",
+    "display_name": "Einstein",
     "birth_year": 1879,
     "death_year": 1955,
     "occupation": "PHYSICIST",
@@ -9662,7 +9652,7 @@
   {
     "id": "joseph_stalin",
     "name": "Joseph Stalin",
-    "display_name": "Joseph Stalin",
+    "display_name": "Stalin",
     "birth_year": 1879,
     "death_year": 1953,
     "occupation": "POLITICIAN",
@@ -9672,7 +9662,7 @@
   {
     "id": "leon_trotsky",
     "name": "Leon Trotsky",
-    "display_name": "Leon Trotsky",
+    "display_name": "Trotsky",
     "birth_year": 1879,
     "death_year": 1940,
     "occupation": "POLITICIAN",
@@ -9682,7 +9672,7 @@
   {
     "id": "owen_willans_richardson",
     "name": "Owen Willans Richardson",
-    "display_name": "Owen Willans Richardson",
+    "display_name": "Owen Richardson",
     "birth_year": 1879,
     "death_year": 1959,
     "occupation": "PHYSICIST",
@@ -9692,7 +9682,7 @@
   {
     "id": "paul_klee",
     "name": "Paul Klee",
-    "display_name": "Paul Klee",
+    "display_name": "Klee",
     "birth_year": 1879,
     "death_year": 1940,
     "occupation": "PAINTER",
@@ -9722,7 +9712,7 @@
   {
     "id": "pablo_picasso",
     "name": "Pablo Picasso",
-    "display_name": "Pablo Picasso",
+    "display_name": "Picasso",
     "birth_year": 1881,
     "death_year": 1973,
     "occupation": "PAINTER",
@@ -9732,7 +9722,7 @@
   {
     "id": "mustafa_kemal_atatürk",
     "name": "Mustafa Kemal Atatürk",
-    "display_name": "Mustafa Kemal Atatürk",
+    "display_name": "Atatürk",
     "birth_year": 1881,
     "death_year": 1938,
     "occupation": "POLITICIAN",
@@ -9742,7 +9732,7 @@
   {
     "id": "pope_john_xxiii",
     "name": "Pope John XXIII",
-    "display_name": "Pope John XXIII",
+    "display_name": "John XXIII",
     "birth_year": 1881,
     "death_year": 1963,
     "occupation": "RELIGIOUS FIGURE",
@@ -9752,7 +9742,7 @@
   {
     "id": "alexander_fleming",
     "name": "Alexander Fleming",
-    "display_name": "Alexander Fleming",
+    "display_name": "Fleming",
     "birth_year": 1881,
     "death_year": 1955,
     "occupation": "BIOLOGIST",
@@ -9762,7 +9752,7 @@
   {
     "id": "stefan_zweig",
     "name": "Stefan Zweig",
-    "display_name": "Stefan Zweig",
+    "display_name": "Zweig",
     "birth_year": 1881,
     "death_year": 1942,
     "occupation": "WRITER",
@@ -9772,7 +9762,7 @@
   {
     "id": "béla_bartók",
     "name": "Béla Bartók",
-    "display_name": "Béla Bartók",
+    "display_name": "Bartók",
     "birth_year": 1881,
     "death_year": 1945,
     "occupation": "COMPOSER",
@@ -9782,7 +9772,7 @@
   {
     "id": "james_joyce",
     "name": "James Joyce",
-    "display_name": "James Joyce",
+    "display_name": "Joyce",
     "birth_year": 1882,
     "death_year": 1941,
     "occupation": "WRITER",
@@ -9792,7 +9782,7 @@
   {
     "id": "igor_stravinsky",
     "name": "Igor Stravinsky",
-    "display_name": "Igor Stravinsky",
+    "display_name": "Stravinsky",
     "birth_year": 1882,
     "death_year": 1971,
     "occupation": "COMPOSER",
@@ -9802,7 +9792,7 @@
   {
     "id": "franklin_d._roosevelt",
     "name": "Franklin D. Roosevelt",
-    "display_name": "Franklin D. Roosevelt",
+    "display_name": "Franklin Roosevelt",
     "birth_year": 1882,
     "death_year": 1945,
     "occupation": "POLITICIAN",
@@ -9812,7 +9802,7 @@
   {
     "id": "virginia_woolf",
     "name": "Virginia Woolf",
-    "display_name": "Virginia Woolf",
+    "display_name": "Woolf",
     "birth_year": 1882,
     "death_year": 1941,
     "occupation": "WRITER",
@@ -9822,7 +9812,7 @@
   {
     "id": "gustaf_vi_adolf_of_sweden",
     "name": "Gustaf VI Adolf of Sweden",
-    "display_name": "Gustaf VI Adolf of Sweden",
+    "display_name": "Gustaf VI Adolf",
     "birth_year": 1882,
     "death_year": 1973,
     "occupation": "POLITICIAN",
@@ -9832,7 +9822,7 @@
   {
     "id": "wilhelm_keitel",
     "name": "Wilhelm Keitel",
-    "display_name": "Wilhelm Keitel",
+    "display_name": "Keitel",
     "birth_year": 1882,
     "death_year": 1946,
     "occupation": "MILITARY PERSONNEL",
@@ -9842,7 +9832,7 @@
   {
     "id": "franz_kafka",
     "name": "Franz Kafka",
-    "display_name": "Franz Kafka",
+    "display_name": "Kafka",
     "birth_year": 1883,
     "death_year": 1924,
     "occupation": "WRITER",
@@ -9852,7 +9842,7 @@
   {
     "id": "benito_mussolini",
     "name": "Benito Mussolini",
-    "display_name": "Benito Mussolini",
+    "display_name": "Mussolini",
     "birth_year": 1883,
     "death_year": 1945,
     "occupation": "POLITICIAN",
@@ -9862,7 +9852,7 @@
   {
     "id": "khalil_gibran",
     "name": "Khalil Gibran",
-    "display_name": "Khalil Gibran",
+    "display_name": "Gibran",
     "birth_year": 1883,
     "death_year": 1931,
     "occupation": "WRITER",
@@ -9882,7 +9872,7 @@
   {
     "id": "john_maynard_keynes",
     "name": "John Maynard Keynes",
-    "display_name": "John Maynard Keynes",
+    "display_name": "Keynes",
     "birth_year": 1883,
     "death_year": 1946,
     "occupation": "ECONOMIST",
@@ -9892,7 +9882,7 @@
   {
     "id": "karl_jaspers",
     "name": "Karl Jaspers",
-    "display_name": "Karl Jaspers",
+    "display_name": "Jaspers",
     "birth_year": 1883,
     "death_year": 1969,
     "occupation": "PHILOSOPHER",
@@ -9912,7 +9902,7 @@
   {
     "id": "harry_s._truman",
     "name": "Harry S. Truman",
-    "display_name": "Harry S. Truman",
+    "display_name": "Truman",
     "birth_year": 1884,
     "death_year": 1972,
     "occupation": "POLITICIAN",
@@ -9922,7 +9912,7 @@
   {
     "id": "amedeo_modigliani",
     "name": "Amedeo Modigliani",
-    "display_name": "Amedeo Modigliani",
+    "display_name": "Modigliani",
     "birth_year": 1884,
     "death_year": 1920,
     "occupation": "PAINTER",
@@ -9932,7 +9922,7 @@
   {
     "id": "niels_bohr",
     "name": "Niels Bohr",
-    "display_name": "Niels Bohr",
+    "display_name": "Bohr",
     "birth_year": 1885,
     "death_year": 1962,
     "occupation": "PHYSICIST",
@@ -9972,7 +9962,7 @@
   {
     "id": "ludwig_mies_van_der_rohe",
     "name": "Ludwig Mies van der Rohe",
-    "display_name": "Ludwig Mies van der Rohe",
+    "display_name": "Mies van der Rohe",
     "birth_year": 1886,
     "death_year": 1969,
     "occupation": "ARCHITECT",
@@ -9982,7 +9972,7 @@
   {
     "id": "david_ben-gurion",
     "name": "David Ben-Gurion",
-    "display_name": "David Ben-Gurion",
+    "display_name": "Ben-Gurion",
     "birth_year": 1886,
     "death_year": 1973,
     "occupation": "POLITICIAN",
@@ -10012,7 +10002,7 @@
   {
     "id": "erwin_schrödinger",
     "name": "Erwin Schrödinger",
-    "display_name": "Erwin Schrödinger",
+    "display_name": "Schrödinger",
     "birth_year": 1887,
     "death_year": 1961,
     "occupation": "PHYSICIST",
@@ -10022,7 +10012,7 @@
   {
     "id": "bernard_montgomery",
     "name": "Bernard Montgomery",
-    "display_name": "Bernard Montgomery",
+    "display_name": "Montgomery",
     "birth_year": 1887,
     "death_year": 1976,
     "occupation": "MILITARY PERSONNEL",
@@ -10032,7 +10022,7 @@
   {
     "id": "marc_chagall",
     "name": "Marc Chagall",
-    "display_name": "Marc Chagall",
+    "display_name": "Chagall",
     "birth_year": 1887,
     "death_year": 1985,
     "occupation": "PAINTER",
@@ -10052,7 +10042,7 @@
   {
     "id": "erich_von_manstein",
     "name": "Erich von Manstein",
-    "display_name": "Erich von Manstein",
+    "display_name": "Manstein",
     "birth_year": 1887,
     "death_year": 1973,
     "occupation": "MILITARY PERSONNEL",
@@ -10072,7 +10062,7 @@
   {
     "id": "heinz_guderian",
     "name": "Heinz Guderian",
-    "display_name": "Heinz Guderian",
+    "display_name": "Guderian",
     "birth_year": 1888,
     "death_year": 1954,
     "occupation": "MILITARY PERSONNEL",
@@ -10092,7 +10082,7 @@
   {
     "id": "adolf_hitler",
     "name": "Adolf Hitler",
-    "display_name": "Adolf Hitler",
+    "display_name": "Hitler",
     "birth_year": 1889,
     "death_year": 1945,
     "occupation": "POLITICIAN",
@@ -10102,7 +10092,7 @@
   {
     "id": "charlie_chaplin",
     "name": "Charlie Chaplin",
-    "display_name": "Charlie Chaplin",
+    "display_name": "Chaplin",
     "birth_year": 1889,
     "death_year": 1977,
     "occupation": "ACTOR",
@@ -10112,7 +10102,7 @@
   {
     "id": "martin_heidegger",
     "name": "Martin Heidegger",
-    "display_name": "Martin Heidegger",
+    "display_name": "Heidegger",
     "birth_year": 1889,
     "death_year": 1976,
     "occupation": "PHILOSOPHER",
@@ -10122,7 +10112,7 @@
   {
     "id": "ludwig_wittgenstein",
     "name": "Ludwig Wittgenstein",
-    "display_name": "Ludwig Wittgenstein",
+    "display_name": "Wittgenstein",
     "birth_year": 1889,
     "death_year": 1951,
     "occupation": "PHILOSOPHER",
@@ -10132,7 +10122,7 @@
   {
     "id": "antónio_de_oliveira_salazar",
     "name": "António de Oliveira Salazar",
-    "display_name": "António de Oliveira Salazar",
+    "display_name": "Salazar",
     "birth_year": 1889,
     "death_year": 1970,
     "occupation": "POLITICIAN",
@@ -10142,7 +10132,7 @@
   {
     "id": "jean_cocteau",
     "name": "Jean Cocteau",
-    "display_name": "Jean Cocteau",
+    "display_name": "Cocteau",
     "birth_year": 1889,
     "death_year": 1963,
     "occupation": "WRITER",
@@ -10162,7 +10152,7 @@
   {
     "id": "charles_de_gaulle",
     "name": "Charles de Gaulle",
-    "display_name": "Charles de Gaulle",
+    "display_name": "De Gaulle",
     "birth_year": 1890,
     "death_year": 1970,
     "occupation": "MILITARY PERSONNEL",
@@ -10192,7 +10182,7 @@
   {
     "id": "dwight_d._eisenhower",
     "name": "Dwight D. Eisenhower",
-    "display_name": "Dwight D. Eisenhower",
+    "display_name": "Eisenhower",
     "birth_year": 1890,
     "death_year": 1969,
     "occupation": "POLITICIAN",
@@ -10212,7 +10202,7 @@
   {
     "id": "vyacheslav_molotov",
     "name": "Vyacheslav Molotov",
-    "display_name": "Vyacheslav Molotov",
+    "display_name": "Molotov",
     "birth_year": 1890,
     "death_year": 1986,
     "occupation": "POLITICIAN",
@@ -10222,7 +10212,7 @@
   {
     "id": "friedrich_paulus",
     "name": "Friedrich Paulus",
-    "display_name": "Friedrich Paulus",
+    "display_name": "Paulus",
     "birth_year": 1890,
     "death_year": 1957,
     "occupation": "MILITARY PERSONNEL",
@@ -10232,7 +10222,7 @@
   {
     "id": "boris_pasternak",
     "name": "Boris Pasternak",
-    "display_name": "Boris Pasternak",
+    "display_name": "Pasternak",
     "birth_year": 1890,
     "death_year": 1960,
     "occupation": "WRITER",
@@ -10242,7 +10232,7 @@
   {
     "id": "karl_dönitz",
     "name": "Karl Dönitz",
-    "display_name": "Karl Dönitz",
+    "display_name": "Dönitz",
     "birth_year": 1891,
     "death_year": 1980,
     "occupation": "MILITARY PERSONNEL",
@@ -10252,7 +10242,7 @@
   {
     "id": "erwin_rommel",
     "name": "Erwin Rommel",
-    "display_name": "Erwin Rommel",
+    "display_name": "Rommel",
     "birth_year": 1891,
     "death_year": 1944,
     "occupation": "MILITARY PERSONNEL",
@@ -10262,7 +10252,7 @@
   {
     "id": "antonio_gramsci",
     "name": "Antonio Gramsci",
-    "display_name": "Antonio Gramsci",
+    "display_name": "Gramsci",
     "birth_year": 1891,
     "death_year": 1937,
     "occupation": "PHILOSOPHER",
@@ -10272,7 +10262,7 @@
   {
     "id": "sergei_prokofiev",
     "name": "Sergei Prokofiev",
-    "display_name": "Sergei Prokofiev",
+    "display_name": "Prokofiev",
     "birth_year": 1891,
     "death_year": 1953,
     "occupation": "COMPOSER",
@@ -10292,7 +10282,7 @@
   {
     "id": "j._r._r._tolkien",
     "name": "J. R. R. Tolkien",
-    "display_name": "J. R. R. Tolkien",
+    "display_name": "Tolkien",
     "birth_year": 1892,
     "death_year": 1973,
     "occupation": "WRITER",
@@ -10312,7 +10302,7 @@
   {
     "id": "josip_broz_tito",
     "name": "Josip Broz Tito",
-    "display_name": "Josip Broz Tito",
+    "display_name": "Tito",
     "birth_year": 1892,
     "death_year": 1980,
     "occupation": "POLITICIAN",
@@ -10322,7 +10312,7 @@
   {
     "id": "francisco_franco",
     "name": "Francisco Franco",
-    "display_name": "Francisco Franco",
+    "display_name": "Franco",
     "birth_year": 1892,
     "death_year": 1975,
     "occupation": "POLITICIAN",
@@ -10332,7 +10322,7 @@
   {
     "id": "edward_victor_appleton",
     "name": "Edward Victor Appleton",
-    "display_name": "Edward Victor Appleton",
+    "display_name": "Edward Appleton",
     "birth_year": 1892,
     "death_year": 1965,
     "occupation": "PHYSICIST",
@@ -10342,7 +10332,7 @@
   {
     "id": "louis_de_broglie",
     "name": "Louis de Broglie",
-    "display_name": "Louis de Broglie",
+    "display_name": "De Broglie",
     "birth_year": 1892,
     "death_year": 1987,
     "occupation": "PHYSICIST",
@@ -10372,7 +10362,7 @@
   {
     "id": "mao_zedong",
     "name": "Mao Zedong",
-    "display_name": "Mao Zedong",
+    "display_name": "Mao",
     "birth_year": 1893,
     "death_year": 1976,
     "occupation": "POLITICIAN",
@@ -10382,7 +10372,7 @@
   {
     "id": "hermann_göring",
     "name": "Hermann Göring",
-    "display_name": "Hermann Göring",
+    "display_name": "Göring",
     "birth_year": 1893,
     "death_year": 1946,
     "occupation": "POLITICIAN",
@@ -10392,7 +10382,7 @@
   {
     "id": "joan_miró",
     "name": "Joan Miró",
-    "display_name": "Joan Miró",
+    "display_name": "Miró",
     "birth_year": 1893,
     "death_year": 1983,
     "occupation": "PAINTER",
@@ -10412,7 +10402,7 @@
   {
     "id": "joachim_von_ribbentrop",
     "name": "Joachim von Ribbentrop",
-    "display_name": "Joachim von Ribbentrop",
+    "display_name": "Ribbentrop",
     "birth_year": 1893,
     "death_year": 1946,
     "occupation": "POLITICIAN",
@@ -10432,7 +10422,7 @@
   {
     "id": "nikita_khrushchev",
     "name": "Nikita Khrushchev",
-    "display_name": "Nikita Khrushchev",
+    "display_name": "Khrushchev",
     "birth_year": 1894,
     "death_year": 1971,
     "occupation": "POLITICIAN",
@@ -10472,7 +10462,7 @@
   {
     "id": "zog_i_of_albania",
     "name": "Zog I of Albania",
-    "display_name": "Zog I of Albania",
+    "display_name": "Zog I",
     "birth_year": 1895,
     "death_year": 1961,
     "occupation": "POLITICIAN",
@@ -10502,7 +10492,7 @@
   {
     "id": "jean_piaget",
     "name": "Jean Piaget",
-    "display_name": "Jean Piaget",
+    "display_name": "Piaget",
     "birth_year": 1896,
     "death_year": 1980,
     "occupation": "PSYCHOLOGIST",
@@ -10512,7 +10502,7 @@
   {
     "id": "georgy_zhukov",
     "name": "Georgy Zhukov",
-    "display_name": "Georgy Zhukov",
+    "display_name": "Zhukov",
     "birth_year": 1896,
     "death_year": 1974,
     "occupation": "POLITICIAN",
@@ -10522,7 +10512,7 @@
   {
     "id": "lev_vygotsky",
     "name": "Lev Vygotsky",
-    "display_name": "Lev Vygotsky",
+    "display_name": "Vygotsky",
     "birth_year": 1896,
     "death_year": 1934,
     "occupation": "PSYCHOLOGIST",
@@ -10532,7 +10522,7 @@
   {
     "id": "joseph_goebbels",
     "name": "Joseph Goebbels",
-    "display_name": "Joseph Goebbels",
+    "display_name": "Goebbels",
     "birth_year": 1897,
     "death_year": 1945,
     "occupation": "POLITICIAN",
@@ -10542,7 +10532,7 @@
   {
     "id": "pope_paul_vi",
     "name": "Pope Paul VI",
-    "display_name": "Pope Paul VI",
+    "display_name": "Paul VI",
     "birth_year": 1897,
     "death_year": 1978,
     "occupation": "RELIGIOUS FIGURE",
@@ -10562,7 +10552,7 @@
   {
     "id": "bertolt_brecht",
     "name": "Bertolt Brecht",
-    "display_name": "Bertolt Brecht",
+    "display_name": "Brecht",
     "birth_year": 1898,
     "death_year": 1956,
     "occupation": "WRITER",
@@ -10572,7 +10562,7 @@
   {
     "id": "golda_meir",
     "name": "Golda Meir",
-    "display_name": "Golda Meir",
+    "display_name": "Meir",
     "birth_year": 1898,
     "death_year": 1978,
     "occupation": "POLITICIAN",
@@ -10582,7 +10572,7 @@
   {
     "id": "erich_maria_remarque",
     "name": "Erich Maria Remarque",
-    "display_name": "Erich Maria Remarque",
+    "display_name": "Remarque",
     "birth_year": 1898,
     "death_year": 1970,
     "occupation": "WRITER",
@@ -10602,7 +10592,7 @@
   {
     "id": "federico_garcía_lorca",
     "name": "Federico García Lorca",
-    "display_name": "Federico García Lorca",
+    "display_name": "Lorca",
     "birth_year": 1898,
     "death_year": 1936,
     "occupation": "WRITER",
@@ -10622,7 +10612,7 @@
   {
     "id": "sergei_eisenstein",
     "name": "Sergei Eisenstein",
-    "display_name": "Sergei Eisenstein",
+    "display_name": "Sergio Eisenstein",
     "birth_year": 1898,
     "death_year": 1948,
     "occupation": "FILM DIRECTOR",
@@ -10632,7 +10622,7 @@
   {
     "id": "rené_magritte",
     "name": "René Magritte",
-    "display_name": "René Magritte",
+    "display_name": "Magritte",
     "birth_year": 1898,
     "death_year": 1967,
     "occupation": "PAINTER",
@@ -10652,7 +10642,7 @@
   {
     "id": "ernest_hemingway",
     "name": "Ernest Hemingway",
-    "display_name": "Ernest Hemingway",
+    "display_name": "Hemingway",
     "birth_year": 1899,
     "death_year": 1961,
     "occupation": "WRITER",
@@ -10662,7 +10652,7 @@
   {
     "id": "jorge_luis_borges",
     "name": "Jorge Luis Borges",
-    "display_name": "Jorge Luis Borges",
+    "display_name": "Borges",
     "birth_year": 1899,
     "death_year": 1986,
     "occupation": "WRITER",
@@ -10672,7 +10662,7 @@
   {
     "id": "alfred_hitchcock",
     "name": "Alfred Hitchcock",
-    "display_name": "Alfred Hitchcock",
+    "display_name": "Hitchcock",
     "birth_year": 1899,
     "death_year": 1980,
     "occupation": "FILM DIRECTOR",
@@ -10682,7 +10672,7 @@
   {
     "id": "frederick_ix_of_denmark",
     "name": "Frederick IX of Denmark",
-    "display_name": "Frederick IX of Denmark",
+    "display_name": "Frederick IX",
     "birth_year": 1899,
     "death_year": 1972,
     "occupation": "POLITICIAN",
@@ -10702,7 +10692,7 @@
   {
     "id": "lavrentiy_beria",
     "name": "Lavrentiy Beria",
-    "display_name": "Lavrentiy Beria",
+    "display_name": "Beria",
     "birth_year": 1899,
     "death_year": 1953,
     "occupation": "POLITICIAN",
