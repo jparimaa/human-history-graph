@@ -761,5 +761,301 @@
     "strength": 0.8,
     "confidence": 0.9,
     "reason": "Alexander VI received Columbus in Rome after his first voyage and issued the Inter caetera bull in 1493, granting Spain sovereignty over the newly discovered lands and legitimizing Columbus's enterprise."
+  },
+  {
+    "source_id": "protagoras",
+    "target_id": "socrates",
+    "type": "rival",
+    "strength": 0.7,
+    "confidence": 0.8,
+    "reason": "Protagoras, the leading Sophist, was Socrates' chief intellectual opponent; Plato's dialogue 'Protagoras' depicts their famous debate on whether virtue can be taught."
+  },
+  {
+    "source_id": "gorgias",
+    "target_id": "socrates",
+    "type": "rival",
+    "strength": 0.7,
+    "confidence": 0.8,
+    "reason": "Gorgias the Sophist rhetorician was a direct intellectual adversary of Socrates; Plato's dialogue 'Gorgias' depicts Socrates attacking Sophistic rhetoric as a tool of flattery rather than truth."
+  },
+  {
+    "source_id": "aspasia",
+    "target_id": "socrates",
+    "type": "teacher",
+    "strength": 0.6,
+    "confidence": 0.7,
+    "reason": "Aspasia taught Socrates rhetoric; in Plato's 'Menexenus' Socrates attributes his knowledge of oratory to her, and Xenophon's 'Memorabilia' confirms Socrates visited and admired her."
+  },
+  {
+    "source_id": "socrates",
+    "target_id": "aristophanes",
+    "type": "enemy",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Aristophanes savagely mocked Socrates in his comedy 'The Clouds' (423 BCE), portraying him as a dangerous sophist; Socrates cited this portrayal in his own Apology as having poisoned public opinion against him."
+  },
+  {
+    "source_id": "socrates",
+    "target_id": "xenophon",
+    "type": "teacher",
+    "strength": 0.9,
+    "confidence": 0.95,
+    "reason": "Xenophon was a devoted student of Socrates whose 'Memorabilia', 'Apology', and 'Symposium' are primary sources on Socrates' life and teaching."
+  },
+  {
+    "source_id": "hendrik_lorentz",
+    "target_id": "albert_einstein",
+    "type": "mentor",
+    "strength": 0.9,
+    "confidence": 0.95,
+    "reason": "Lorentz was Einstein's foremost scientific hero and mentor; Einstein said Lorentz 'meant more to me personally than anyone else I have met on my life's journey,' and they corresponded closely on electrodynamics and relativity."
+  },
+  {
+    "source_id": "max_planck",
+    "target_id": "albert_einstein",
+    "type": "collaborator",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Planck was among the first to recognize Einstein's 1905 special relativity, championed his election to the Prussian Academy, and they worked as close colleagues in Berlin for two decades developing the foundations of modern physics."
+  },
+  {
+    "source_id": "albert_einstein",
+    "target_id": "niels_bohr",
+    "type": "rival",
+    "strength": 0.95,
+    "confidence": 0.99,
+    "reason": "The Bohr-Einstein debates (1927-1935) over the completeness of quantum mechanics are the most famous intellectual dispute in physics history; Einstein insisted 'God does not play dice' while Bohr defended the Copenhagen interpretation."
+  },
+  {
+    "source_id": "marie_curie",
+    "target_id": "albert_einstein",
+    "type": "friend",
+    "strength": 0.7,
+    "confidence": 0.85,
+    "reason": "Einstein and Curie formed a close personal friendship through the Solvay Conferences; Einstein wrote admiringly of her character and publicly defended her during the 1911 press scandal over her affair with Paul Langevin."
+  },
+  {
+    "source_id": "bertrand_russell",
+    "target_id": "albert_einstein",
+    "type": "collaborator",
+    "strength": 0.7,
+    "confidence": 0.9,
+    "reason": "Russell and Einstein co-authored the 1955 Russell-Einstein Manifesto, a landmark public statement signed by leading scientists urging world leaders to seek peaceful resolution of conflicts in the nuclear age."
+  },
+  {
+    "source_id": "david_hilbert",
+    "target_id": "albert_einstein",
+    "type": "rival",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "Hilbert and Einstein raced in November 1915 to publish the field equations of general relativity, with Einstein submitting just days before Hilbert; Hilbert later acknowledged Einstein's priority, and the episode is central to the history of general relativity."
+  },
+  {
+    "source_id": "thomas_more",
+    "target_id": "henry_viii_of_england",
+    "type": "enemy",
+    "strength": 0.9,
+    "confidence": 0.99,
+    "reason": "More served as Henry VIII's trusted Lord Chancellor but refused to accept the Act of Supremacy; Henry had him executed for treason in 1535, making their relationship the defining clash of conscience versus royal authority in the English Reformation."
+  },
+  {
+    "source_id": "catherine_of_aragon",
+    "target_id": "henry_viii_of_england",
+    "type": "spouse",
+    "strength": 0.95,
+    "confidence": 0.99,
+    "reason": "Catherine of Aragon was Henry VIII's first wife for 24 years; his attempt to annul their marriage, which Pope Clement VII refused, directly triggered the English Reformation and the break with Rome."
+  },
+  {
+    "source_id": "henry_viii_of_england",
+    "target_id": "anne_boleyn",
+    "type": "spouse",
+    "strength": 0.95,
+    "confidence": 0.99,
+    "reason": "Anne Boleyn was Henry VIII's second wife; his desire to marry her drove the break with Rome, and he had her executed on charges of adultery and treason in 1536 after she failed to produce a male heir."
+  },
+  {
+    "source_id": "pope_clement_vii",
+    "target_id": "henry_viii_of_england",
+    "type": "enemy",
+    "strength": 0.9,
+    "confidence": 0.99,
+    "reason": "Pope Clement VII's refusal to grant Henry VIII an annulment from Catherine of Aragon directly caused Henry to break from Rome, establishing the Church of England and launching the English Reformation."
+  },
+  {
+    "source_id": "martin_luther",
+    "target_id": "henry_viii_of_england",
+    "type": "enemy",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "Henry VIII wrote 'Assertio Septem Sacramentorum' (1521) attacking Luther's doctrines, earning the papal title 'Defender of the Faith'; Luther responded with a scathing counter-attack, making them public adversaries."
+  },
+  {
+    "source_id": "pope_leo_x",
+    "target_id": "henry_viii_of_england",
+    "type": "ally",
+    "strength": 0.7,
+    "confidence": 0.95,
+    "reason": "Pope Leo X granted Henry VIII the title 'Fidei Defensor' (Defender of the Faith) in 1521 in recognition of Henry's book against Luther, cementing a brief but historically notable alliance against the Protestant Reformation."
+  },
+  {
+    "source_id": "henry_viii_of_england",
+    "target_id": "francis_i_of_france",
+    "type": "rival",
+    "strength": 0.8,
+    "confidence": 0.95,
+    "reason": "Henry VIII and Francis I were the pre-eminent rival monarchs of their era, meeting famously at the Field of the Cloth of Gold (1520) and competing for European dominance, alternating between alliance and conflict throughout their reigns."
+  },
+  {
+    "source_id": "pierre_curie",
+    "target_id": "marie_curie",
+    "type": "spouse",
+    "strength": 0.99,
+    "confidence": 0.99,
+    "reason": "Pierre and Marie Curie were married in 1895 and formed one of history's greatest scientific partnerships, jointly discovering polonium and radium and sharing the 1903 Nobel Prize in Physics for their research on radioactivity."
+  },
+  {
+    "source_id": "henri_becquerel",
+    "target_id": "marie_curie",
+    "type": "collaborator",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "Becquerel discovered radioactivity in 1896 and shared the 1903 Nobel Prize in Physics with the Curies; Marie built directly on his discovery and they were close colleagues in the emerging field of radioactivity research."
+  },
+  {
+    "source_id": "marie_curie",
+    "target_id": "irene_joliot-curie",
+    "type": "family",
+    "strength": 0.9,
+    "confidence": 0.99,
+    "reason": "Marie Curie was Irene Joliot-Curie's mother and mentor; she personally supervised Irene's scientific training, and Irene went on to win the 1935 Nobel Prize in Chemistry, making them the only mother-daughter pair to both win Nobel Prizes."
+  },
+  {
+    "source_id": "john_the_baptist",
+    "target_id": "jesus",
+    "type": "mentor",
+    "strength": 0.9,
+    "confidence": 0.85,
+    "reason": "John the Baptist baptized Jesus in the Jordan River, marking the beginning of Jesus's public ministry; John publicly proclaimed Jesus as the one he had been preparing the way for."
+  },
+  {
+    "source_id": "pontius_pilate",
+    "target_id": "jesus",
+    "type": "enemy",
+    "strength": 0.95,
+    "confidence": 0.8,
+    "reason": "Pontius Pilate, the Roman prefect of Judaea, ordered the crucifixion of Jesus after a trial in which he reportedly found no fault but yielded to public pressure, making his name permanently linked to the most consequential execution in history."
+  },
+  {
+    "source_id": "james,_brother_of_jesus",
+    "target_id": "jesus",
+    "type": "family",
+    "strength": 0.9,
+    "confidence": 0.8,
+    "reason": "James was Jesus's brother and later became the leader of the Jerusalem church after the crucifixion, playing a central role in defining early Christianity and its relationship with Jewish law."
+  },
+  {
+    "source_id": "judas_iscariot",
+    "target_id": "jesus",
+    "type": "enemy",
+    "strength": 0.95,
+    "confidence": 0.8,
+    "reason": "Judas Iscariot, one of Jesus's twelve apostles, betrayed him to the Jerusalem authorities for thirty pieces of silver, leading directly to Jesus's arrest, trial, and crucifixion."
+  },
+  {
+    "source_id": "jesus",
+    "target_id": "john_the_apostle",
+    "type": "teacher",
+    "strength": 0.9,
+    "confidence": 0.8,
+    "reason": "John was the youngest and most beloved of the twelve apostles, identified in the Gospel of John as 'the disciple whom Jesus loved'; Jesus entrusted his mother Mary to John's care at the crucifixion."
+  },
+  {
+    "source_id": "pope_paul_iii",
+    "target_id": "nicolaus_copernicus",
+    "type": "patron",
+    "strength": 0.65,
+    "confidence": 0.85,
+    "reason": "Copernicus dedicated 'De revolutionibus orbium coelestium' (1543) to Pope Paul III, explicitly seeking papal protection for his heliocentric theory; Paul III's implicit endorsement shielded the work from immediate Church condemnation."
+  },
+  {
+    "source_id": "sulla",
+    "target_id": "julius_caesar",
+    "type": "enemy",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Sulla, as dictator, demanded Caesar divorce his wife Cornelia (daughter of Sulla's enemy Cinna) and stripped him of his inheritance and priesthood when he refused; Caesar went into hiding until nobles persuaded Sulla to pardon him."
+  },
+  {
+    "source_id": "marcus_licinius_crassus",
+    "target_id": "julius_caesar",
+    "type": "ally",
+    "strength": 0.85,
+    "confidence": 0.95,
+    "reason": "Crassus was Caesar's early financial patron and political backer, and together with Pompey they formed the First Triumvirate in 60 BCE, the unofficial alliance that dominated Rome for a decade."
+  },
+  {
+    "source_id": "cicero",
+    "target_id": "julius_caesar",
+    "type": "rival",
+    "strength": 0.85,
+    "confidence": 0.95,
+    "reason": "Cicero and Caesar were the two dominant intellects of late Republican Rome; Cicero opposed Caesar's seizure of power and lamented the Republic's end, while Caesar spared Cicero after the Civil War but remained his political adversary."
+  },
+  {
+    "source_id": "pompey",
+    "target_id": "julius_caesar",
+    "type": "rival",
+    "strength": 0.95,
+    "confidence": 0.99,
+    "reason": "Pompey and Caesar were First Triumvirate partners whose rivalry erupted into the Roman Civil War (49-48 BCE) when Caesar crossed the Rubicon; Pompey's defeat at Pharsalus ended the Republic and established Caesar's supremacy."
+  },
+  {
+    "source_id": "julius_caesar",
+    "target_id": "brutus_the_younger",
+    "type": "enemy",
+    "strength": 0.95,
+    "confidence": 0.99,
+    "reason": "Brutus, whom Caesar had favored and pardoned after Pharsalus, led the Ides of March conspiracy in 44 BCE, stabbing Caesar 23 times in the Senate; Caesar's dying words 'Et tu, Brute?' have defined the betrayal for millennia."
+  },
+  {
+    "source_id": "julius_caesar",
+    "target_id": "mark_antony",
+    "type": "ally",
+    "strength": 0.9,
+    "confidence": 0.99,
+    "reason": "Mark Antony was Caesar's most loyal lieutenant and Master of the Horse during the Civil War; after Caesar's assassination he delivered the famous funeral oration that turned Rome against the conspirators."
+  },
+  {
+    "source_id": "julius_caesar",
+    "target_id": "augustus",
+    "type": "family",
+    "strength": 0.95,
+    "confidence": 0.99,
+    "reason": "Caesar posthumously adopted Octavian (Augustus) as his son and heir in his will; Augustus used this relationship to claim Caesar's legions, political support, and divine lineage, ultimately founding the Roman Empire."
+  },
+  {
+    "source_id": "michelangelo",
+    "target_id": "raphael",
+    "type": "rival",
+    "strength": 0.85,
+    "confidence": 0.9,
+    "reason": "Michelangelo and Raphael were the dominant rival masters of the Roman High Renaissance, both working for Pope Julius II simultaneously; Michelangelo complained that Raphael appropriated his style, and contemporaries constantly compared their contrasting artistic visions."
+  },
+  {
+    "source_id": "michelangelo",
+    "target_id": "giorgio_vasari",
+    "type": "mentor",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "Vasari was Michelangelo's devoted admirer, close personal friend, and eventual biographer; his 'Lives of the Artists' contains a detailed authorized biography of Michelangelo and is the primary historical source for his life and career."
+  },
+  {
+    "source_id": "archimedes",
+    "target_id": "eratosthenes",
+    "type": "collaborator",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Archimedes addressed 'The Method of Mechanical Theorems' and several other mathematical works directly to Eratosthenes, sharing his proof techniques with him and treating him as a peer capable of appreciating the mathematical discoveries."
   }
 ]
