@@ -1054,5 +1054,189 @@
     "strength": 0.8,
     "confidence": 0.9,
     "reason": "Archimedes addressed 'The Method of Mechanical Theorems' and several other mathematical works directly to Eratosthenes, sharing his proof techniques with him and treating him as a peer capable of appreciating the mathematical discoveries."
+  },
+  {
+    "source_id": "thales_of_miletus",
+    "target_id": "pythagoras",
+    "type": "teacher",
+    "strength": 0.6,
+    "confidence": 0.5,
+    "reason": "Ancient tradition holds that the young Pythagoras studied under Thales at Miletus, who advised him to travel to Egypt to deepen his learning."
+  },
+  {
+    "source_id": "anaximander",
+    "target_id": "pythagoras",
+    "type": "teacher",
+    "strength": 0.5,
+    "confidence": 0.45,
+    "reason": "Tradition reports that Pythagoras attended the lectures of Anaximander in Miletus, absorbing Milesian cosmology before founding his own school."
+  },
+  {
+    "source_id": "pythagoras",
+    "target_id": "xenophanes",
+    "type": "rival",
+    "strength": 0.5,
+    "confidence": 0.65,
+    "reason": "Xenophanes mocked Pythagoras in a surviving satirical poem, ridiculing his doctrine of the transmigration of souls."
+  },
+  {
+    "source_id": "pythagoras",
+    "target_id": "heraclitus",
+    "type": "rival",
+    "strength": 0.55,
+    "confidence": 0.7,
+    "reason": "Heraclitus attacked Pythagoras by name in his writings, dismissing his much-vaunted learning as fraudulent 'artful knavery'."
+  },
+  {
+    "source_id": "paul_gauguin",
+    "target_id": "vincent_van_gogh",
+    "type": "collaborator",
+    "strength": 0.85,
+    "confidence": 0.95,
+    "reason": "Gauguin lived and painted alongside Van Gogh in the Yellow House at Arles in 1888, a turbulent collaboration that ended when Van Gogh mutilated his own ear."
+  },
+  {
+    "source_id": "vincent_van_gogh",
+    "target_id": "henri_de_toulouse-lautrec",
+    "type": "friend",
+    "strength": 0.6,
+    "confidence": 0.85,
+    "reason": "The two met at Cormon's studio in Paris and became friends; Toulouse-Lautrec drew a famous pastel portrait of Van Gogh and once challenged a man to a duel for insulting his work."
+  },
+  {
+    "source_id": "aaron",
+    "target_id": "moses",
+    "type": "family",
+    "strength": 0.9,
+    "confidence": 0.85,
+    "reason": "Aaron was the elder brother of Moses and served as his spokesman before Pharaoh and as the first High Priest of Israel during the Exodus."
+  },
+  {
+    "source_id": "moses",
+    "target_id": "ramesses_ii",
+    "type": "enemy",
+    "strength": 0.5,
+    "confidence": 0.3,
+    "reason": "Ramesses II is the pharaoh most commonly identified in popular tradition as the ruler of the Exodus whom Moses confronted to free the Israelites."
+  },
+  {
+    "source_id": "nicholas_i_of_russia",
+    "target_id": "fyodor_dostoevsky",
+    "type": "enemy",
+    "strength": 0.6,
+    "confidence": 0.8,
+    "reason": "Tsar Nicholas I condemned Dostoevsky for his role in the Petrashevsky Circle, staging a mock execution in 1849 before commuting the sentence to penal exile in Siberia."
+  },
+  {
+    "source_id": "benjamin_franklin",
+    "target_id": "thomas_jefferson",
+    "type": "collaborator",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "Franklin and Jefferson served together on the Committee of Five that drafted the Declaration of Independence and later both represented the new United States as diplomats in France."
+  },
+  {
+    "source_id": "george_washington",
+    "target_id": "thomas_jefferson",
+    "type": "ally",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "Jefferson served as the first Secretary of State under President Washington, advancing the new republic together despite their later political divergence."
+  },
+  {
+    "source_id": "thomas_jefferson",
+    "target_id": "gilbert_du_motier,_marquis_de_lafayette",
+    "type": "friend",
+    "strength": 0.7,
+    "confidence": 0.85,
+    "reason": "Jefferson and Lafayette were close friends from Jefferson's years as American minister in Paris, where Jefferson advised Lafayette on drafting the Declaration of the Rights of Man."
+  },
+  {
+    "source_id": "thomas_jefferson",
+    "target_id": "alexander_von_humboldt",
+    "type": "friend",
+    "strength": 0.55,
+    "confidence": 0.75,
+    "reason": "Humboldt visited President Jefferson at the White House in 1804 and shared his data on New Spain, beginning a long mutual correspondence and friendship."
+  },
+  {
+    "source_id": "cardinal_mazarin",
+    "target_id": "louis_xiv_of_france",
+    "type": "mentor",
+    "strength": 0.85,
+    "confidence": 0.9,
+    "reason": "Mazarin governed France as chief minister during Louis XIV's minority and personally schooled the young king in statecraft until his death in 1661."
+  },
+  {
+    "source_id": "louis_xiii_of_france",
+    "target_id": "louis_xiv_of_france",
+    "type": "predecessor",
+    "strength": 0.8,
+    "confidence": 0.95,
+    "reason": "Louis XIII was the father of Louis XIV and immediately preceded him on the throne of France, leaving the four-year-old to inherit the crown in 1643."
+  },
+  {
+    "source_id": "louis_xiv_of_france",
+    "target_id": "louis_xv_of_france",
+    "type": "predecessor",
+    "strength": 0.8,
+    "confidence": 0.95,
+    "reason": "Louis XV was the great-grandson of Louis XIV and succeeded him directly on the French throne in 1715."
+  },
+  {
+    "source_id": "louis_xiv_of_france",
+    "target_id": "william_iii_of_england",
+    "type": "enemy",
+    "strength": 0.85,
+    "confidence": 0.9,
+    "reason": "William III of Orange was Louis XIV's chief lifelong adversary, organizing the coalitions that fought France through the Nine Years' War."
+  },
+  {
+    "source_id": "louis_xiv_of_france",
+    "target_id": "prince_eugene_of_savoy",
+    "type": "enemy",
+    "strength": 0.75,
+    "confidence": 0.9,
+    "reason": "Prince Eugene of Savoy, rejected for service by Louis XIV, became one of the French king's most formidable battlefield foes during the War of the Spanish Succession."
+  },
+  {
+    "source_id": "james_ii_of_england",
+    "target_id": "louis_xiv_of_france",
+    "type": "ally",
+    "strength": 0.7,
+    "confidence": 0.85,
+    "reason": "After being deposed in the Glorious Revolution, James II was sheltered by Louis XIV at Saint-Germain and backed by French arms in his bid to regain the English throne."
+  },
+  {
+    "source_id": "david_hume",
+    "target_id": "adam_smith",
+    "type": "friend",
+    "strength": 0.85,
+    "confidence": 0.95,
+    "reason": "Hume was Adam Smith's closest friend and intellectual companion within the Scottish Enlightenment, and Smith wrote a celebrated public account of Hume's death."
+  },
+  {
+    "source_id": "frederick_the_great",
+    "target_id": "johann_sebastian_bach",
+    "type": "patron",
+    "strength": 0.5,
+    "confidence": 0.8,
+    "reason": "Frederick the Great received Bach at his Potsdam court in 1747 and posed a royal theme on which Bach improvised, later dedicating The Musical Offering to the king."
+  },
+  {
+    "source_id": "thomas_more",
+    "target_id": "martin_luther",
+    "type": "enemy",
+    "strength": 0.6,
+    "confidence": 0.8,
+    "reason": "More wrote the venomous Responsio ad Lutherum defending Henry VIII's attack on Luther, making the two leading antagonists in an early Reformation print war."
+  },
+  {
+    "source_id": "charles_v,_holy_roman_emperor",
+    "target_id": "ferdinand_magellan",
+    "type": "patron",
+    "strength": 0.8,
+    "confidence": 0.9,
+    "reason": "As King Charles I of Spain, Charles V financed and chartered Magellan's expedition of 1519, which became the first voyage to circumnavigate the globe."
   }
 ]

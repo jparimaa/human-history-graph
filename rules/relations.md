@@ -149,8 +149,9 @@ A bad edge damages trust in the entire graph.
 ## Rule 8: Only one connection between two people
 
 Don't make connection from Leonardo da Vinci to Michelangelo, and then from 
-Michelangelo to Leonardo da Vinci. Make the connection only once, from older
-person to younger person.
+Michelangelo to Leonardo da Vinci. Make the connection only once, according to relation
+type. For example, Aristotle is a teacher of Alexander the Great, so the connection
+should be made from Aristotle (source) to Alexander (target).
 
 ## Rule 9: Relation types
 
@@ -230,14 +231,6 @@ Valid examples:
 * one monarch followed by the next monarch
 * one CEO followed by the next CEO
 * one president of an institution followed by the next president
-
-Invalid examples:
-
-* Vasco da Gama → Ferdinand Magellan
-* Leonardo da Vinci → Michelangelo
-* Isaac Newton → Albert Einstein
-
-Being an earlier historical figure does not make someone a predecessor.
 
 ## Rule 10: Relationship Type Must Be Unambiguous
 
