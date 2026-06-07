@@ -121,9 +121,9 @@
   },
   {
     "david": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Biblical king of Israel, remembered for slaying Goliath and uniting the kingdom.",
+      "long_description": "David is one of the central figures of the Hebrew Bible, described as the second king of Israel. According to the biblical narrative he began as a young shepherd who killed the Philistine giant Goliath with a sling, rose in the court of King Saul, and eventually succeeded him as king.\n\nAs king, David is said to have united the tribes of Israel, captured Jerusalem and made it his capital, and established a dynasty that ruled Judah for centuries. The biblical account does not hide his flaws, including his affair with Bathsheba and the rebellion of his son Absalom.\n\nHe is also traditionally credited as a poet and musician, the author of many of the Psalms. The historical David remains debated by scholars, but he looms enormous in religious tradition.",
+      "why_they_matter": "David is a foundational figure for Judaism, Christianity, and Islam. The promise of an everlasting Davidic dynasty shaped Jewish messianic hope, and the Gospels trace the lineage of Jesus back to him.\n\nBeyond religion, his story has saturated Western art and culture, from Michelangelo's statue to countless paintings, plays, and songs, making him one of the most depicted figures in history.",
       "personality": ""
     }
   },
@@ -241,9 +241,9 @@
   },
   {
     "thales_of_miletus": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Early thinker often called the first philosopher and one of the Seven Sages of Greece.",
+      "long_description": "Thales of Miletus lived in the Greek city of Miletus on the coast of Asia Minor and is traditionally regarded as the first Western philosopher and scientist. Rather than explaining the world through myth, he sought natural explanations, famously proposing that water was the fundamental substance underlying all things.\n\nHe was also a pioneer of geometry and astronomy. Ancient sources credit him with several geometric theorems and with predicting a solar eclipse, possibly the one of 585 BC. A theorem about angles inscribed in a semicircle still bears his name.\n\nMany stories cluster around him, including one in which he cornered the olive-press market to prove that a philosopher could be rich if he chose, and another in which he fell into a well while gazing at the stars.",
+      "why_they_matter": "Thales marks the beginning of the Western tradition of seeking rational, natural explanations for the world instead of supernatural ones, the root from which both philosophy and science grew.\n\nBy asking what everything is ultimately made of, he set in motion a line of inquiry that runs straight through to modern physics, earning him a place at the head of the intellectual history of the West.",
       "personality": ""
     }
   },
@@ -401,9 +401,9 @@
   },
   {
     "heraclitus": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Pre-Socratic philosopher who taught that everything is in constant flux.",
+      "long_description": "Heraclitus lived in Ephesus on the coast of Asia Minor and is one of the most famous of the early Greek philosophers. He is best known for his doctrine of perpetual change, summed up in the idea that you cannot step into the same river twice, since fresh waters are always flowing.\n\nHe held that fire was the fundamental element of the cosmos and that the world is governed by a rational principle he called the logos. He saw reality as a unity of opposites, where strife and tension hold things together, like the balanced pull on a strung bow.\n\nHe wrote in deliberately cryptic, aphoristic statements, which earned him the nickname \"the Obscure.\" Only fragments of his work survive, quoted by later authors.",
+      "why_they_matter": "Heraclitus introduced the idea that change and process, rather than permanence, lie at the heart of reality, a theme that has echoed through philosophy ever since.\n\nHis concept of the logos influenced Stoic thought and even early Christian theology, and his vision of a world in constant flux continues to be invoked by philosophers, scientists, and writers grappling with the nature of change.",
       "personality": ""
     }
   },
@@ -985,9 +985,9 @@
   },
   {
     "john_the_baptist": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Preacher who baptized Jesus and proclaimed the coming of the Messiah.",
+      "long_description": "John the Baptist was an itinerant preacher in the Judean wilderness who called people to repentance and baptized them in the Jordan River. The Gospels portray him as the forerunner of Jesus, the voice crying out to prepare the way, and he is said to have baptized Jesus himself.\n\nJohn drew large crowds with his austere life and his fierce moral preaching. His denunciation of the marriage of the ruler Herod Antipas led to his imprisonment and, according to the Gospels, his execution by beheading at the request of Herodias's daughter, Salome.\n\nHe is a major figure not only in Christianity but also in Islam, where he is known as Yahya, and he is the central prophet of the Mandaean religion.",
+      "why_they_matter": "John bridges the world of the Hebrew prophets and the beginning of Christianity, framed in the Gospels as the one who announced and prepared the way for Jesus.\n\nHis practice of baptism became a foundational Christian rite, and his story of unflinching moral conviction in the face of power has resonated across art, literature, and three world religions for two millennia.",
       "personality": ""
     }
   },
@@ -1033,9 +1033,9 @@
   },
   {
     "andrew_the_apostle": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "One of the twelve apostles of Jesus and brother of Simon Peter.",
+      "long_description": "Andrew was one of the first followers of Jesus and, according to the Gospels, the brother of Simon Peter. A fisherman by trade, he was originally a disciple of John the Baptist before joining Jesus, and tradition credits him with bringing his brother Peter into the fold.\n\nAfter the crucifixion, Christian tradition holds that Andrew preached across the lands around the Black Sea and Greece. He is said to have been martyred at Patras in Greece, crucified on an X-shaped cross that became known as the Saint Andrew's Cross.\n\nOver the centuries Andrew became the patron saint of several nations, most famously Scotland, whose flag bears his diagonal cross, as well as Russia, Greece, and Ukraine.",
+      "why_they_matter": "As one of the original twelve apostles, Andrew is a foundational figure in the spread of early Christianity, particularly in the Greek-speaking and Eastern Christian world.\n\nHis enduring legacy lives in national identity and symbolism: the Saint Andrew's Cross on the Scottish flag, carried into the Union Jack, makes him one of the most visually recognizable saints in the world.",
       "personality": ""
     }
   },
@@ -1569,9 +1569,9 @@
   },
   {
     "constantine_the_great": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Roman emperor who embraced Christianity and founded Constantinople.",
+      "long_description": "Constantine the Great rose to power through a series of civil wars, securing control of the western Roman Empire after his victory at the Battle of the Milvian Bridge in 312, where tradition says he fought under a Christian symbol after a vision. By 324 he had defeated his rivals and reunited the entire empire under his sole rule.\n\nHe transformed the relationship between Rome and Christianity. The Edict of Milan extended religious tolerance to Christians, and Constantine actively favored and funded the church. He convened the Council of Nicaea in 325 to settle doctrinal disputes, producing the Nicene Creed.\n\nHe also founded a new eastern capital on the site of Byzantium, renaming it Constantinople. The city would serve as the heart of the Roman and later Byzantine Empire for more than a thousand years.",
+      "why_they_matter": "Constantine set Christianity on the path from a persecuted sect to the dominant religion of the Roman world and, eventually, the West, one of the most consequential shifts in human history.\n\nHis founding of Constantinople created a capital that outlasted Rome itself by a millennium, anchoring the Byzantine Empire and shaping the religious and political map of Europe and the Mediterranean for centuries.",
       "personality": ""
     }
   },
@@ -1865,9 +1865,9 @@
   },
   {
     "abu_bakr": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Close companion of Muhammad and the first caliph of the Islamic community.",
+      "long_description": "Abu Bakr was among the earliest converts to Islam and one of Muhammad's closest companions and advisers. He was the father of Aisha, one of Muhammad's wives, and accompanied the Prophet on the pivotal migration from Mecca to Medina.\n\nWhen Muhammad died in 632, Abu Bakr was chosen as the first caliph, the leader of the Muslim community. His short two-year rule was consumed by the Ridda Wars, a series of campaigns that suppressed tribal rebellions and apostasy and reunited the Arabian Peninsula under Islamic authority.\n\nHe also began the early military expansion into the Byzantine and Sasanian empires and is traditionally credited with initiating the first efforts to collect the verses of the Quran into a single text.",
+      "why_they_matter": "As the first of the Rashidun caliphs, Abu Bakr set the precedent for succession after Muhammad and held the young Muslim community together at its most fragile moment.\n\nHis campaigns preserved the unity of the Arabian Peninsula and launched the conquests that would soon carry Islam across much of the ancient world. He remains a deeply revered figure, especially in Sunni Islam.",
       "personality": ""
     }
   },
@@ -4873,9 +4873,9 @@
   },
   {
     "george_frideric_handel": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Baroque composer best known for the oratorio Messiah and his orchestral suites.",
+      "long_description": "George Frideric Handel was one of the towering composers of the Baroque era. Born in Germany the same year as Bach, he trained in Italy before settling in London, where he spent most of his career and eventually became a naturalized British subject.\n\nHe first made his name writing Italian opera for the London stage, but as public taste shifted he turned to the English oratorio, a dramatic choral form sung in concert rather than staged. His Messiah, with its famous Hallelujah chorus, became the most beloved work of its kind. He also wrote enduring orchestral music, including the Water Music and Music for the Royal Fireworks.\n\nIn his later years Handel went blind but continued to perform and conduct. He died in London a wealthy and celebrated figure and was buried in Westminster Abbey.",
+      "why_they_matter": "Handel brought the oratorio to its peak and gave the English-speaking world one of its most enduring pieces of music in Messiah, still performed every year around the globe.\n\nHis grand, accessible style influenced later composers from Haydn to Beethoven, and his fusion of German, Italian, and English traditions helped define the sound of the late Baroque.",
       "personality": ""
     }
   },
@@ -5153,9 +5153,9 @@
   },
   {
     "george_iii_of_the_united_kingdom": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Long-reigning king who lost the American colonies and later struggled with mental illness.",
+      "long_description": "George III ruled Britain for nearly six decades, from 1760 until his death in 1820, the third Hanoverian king but the first born and raised in Britain. His reign coincided with enormous upheaval: the American Revolution, the wars against Napoleon, and the early Industrial Revolution.\n\nHe is best remembered in America as the monarch the colonists rebelled against, the king named in the Declaration of Independence. Losing the colonies was a bitter blow, though Britain emerged from the later Napoleonic Wars as the dominant global power.\n\nIn his final years George suffered recurring bouts of mental illness, now often attributed to physical causes, which left him blind, deaf, and incapacitated. His son ruled as Prince Regent during this period, giving its name to the Regency era.",
+      "why_they_matter": "George III presided over the moment Britain lost its American colonies and then rose to become the world's foremost empire. His long reign anchored a period of dramatic political, military, and industrial transformation.\n\nHis later illness reshaped how monarchy and mental health were understood, and the regency it forced became a defining cultural age in British history.",
       "personality": ""
     }
   },
@@ -6257,9 +6257,9 @@
   },
   {
     "ulysses_s._grant": {
-      "short_description": "",
-      "long_description": "",
-      "why_they_matter": "",
+      "short_description": "Civil War general who led the Union to victory and later served two terms as president.",
+      "long_description": "Ulysses S. Grant rose from obscurity to become the commanding general of the Union armies during the American Civil War. After a string of early victories in the western theater, including the capture of Vicksburg in 1863, Abraham Lincoln put him in charge of all Union forces. His relentless, attritional campaigns against Robert E. Lee finally cornered the Confederacy, and he accepted Lee's surrender at Appomattox in 1865.\n\nElected president in 1868, Grant served two terms during the turbulent Reconstruction era. He pushed to protect the civil rights of newly freed African Americans and moved aggressively against the Ku Klux Klan. His administration, though, was dogged by corruption scandals among his appointees, even as Grant himself was never accused of personal dishonesty.\n\nLate in life, facing bankruptcy and dying of throat cancer, he raced to finish his memoirs to provide for his family. The book, published by Mark Twain, became a critical and commercial triumph.",
+      "why_they_matter": "Grant's generalship was decisive in preserving the United States as a single nation and bringing an end to slavery. His willingness to absorb heavy casualties in pursuit of total victory marked a shift toward modern industrial warfare.\n\nAs president he was one of the strongest federal defenders of Black civil rights until the next century, and his memoirs remain regarded as among the finest ever written by an American public figure.",
       "personality": ""
     }
   },
