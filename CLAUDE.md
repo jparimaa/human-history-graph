@@ -44,7 +44,6 @@ data/               - git submodule (github.com/jparimaa/historical-figure-data)
     descriptions.json - array of { "id": { short, long, why, personality } }
     relations.json    - array of directed edges between people
     completed_relations.json - array of person ids whose relations have been authored (progress tracker)
-  rules/              - authoring rules (display_name.md, descriptions.md, relations.md, eras.md)
   scripts/            - Python data helpers (add/check relations, find missing data, csv->json)
 settings/           - local config files (not in submodule)
   eras.json         - era bands and point events for the timeline ruler
@@ -60,7 +59,7 @@ Short version of the data schemas:
 
 **people.json** - array of objects:
 `{ id, name, display_name, birth_year, death_year, occupation, birth_country, hpi_score }`
-`display_name` is the shortened label drawn on the graph (rules in `rules/display_name.md`); `name` is the full name shown in the info panel and edge headers.
+`display_name` is the shortened label drawn on the graph (rules in `data/rules/display_name.md`); `name` is the full name shown in the info panel and edge headers.
 
 **descriptions.json** - array of single-key objects (note: NOT a flat map):
 `[ { "person_id": { short_description, long_description, why_they_matter, personality } } ]`

@@ -38,13 +38,3 @@ test/               opt-in Playwright behaviour checks (inspect.mjs)
 ```
 
 For data schemas, layout formulas, and the exact behaviour of the visibility/zoom logic, see `CLAUDE.md`.
-
-## Data and attribution
-
-People, birth and death years, and node sizes come from the [Pantheon dataset](https://pantheon.world/data/datasets) (with small modifications).
-
-> Yu, A. Z., et al. (2016). Pantheon 1.0, a manually verified dataset of globally famous biographies. *Scientific Data* 2:150075. doi: 10.1038/sdata.2015.75
-
-Pantheon by Datawheel is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
-
-**AI-generated content.** Display names, descriptions, the relationships between people, and the timeline entries are mostly AI-generated (Claude Code by Anthropic). They likely contain historical errors, many of the claims are debatable, and the data is incomplete: many descriptions and relations are still missing.
