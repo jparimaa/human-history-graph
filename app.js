@@ -505,12 +505,12 @@ async function main() {
   document.body.classList.toggle('mobile', isMobile);
 
   const [people, descriptionsRaw, relations, eras, regions, occGroups] = await Promise.all([
-    fetch('data/people.json').then(r => r.json()),
-    fetch('data/descriptions.json').then(r => r.json()).catch(() => []),
-    fetch('data/relations.json').then(r => r.json()),
-    fetch('data/eras.json').then(r => r.json()),
-    fetch('data/regions.json').then(r => r.json()),
-    fetch('data/occupation_groups.json').then(r => r.json()),
+    fetch('data/data/people.json').then(r => r.json()),
+    fetch('data/data/descriptions.json').then(r => r.json()).catch(() => []),
+    fetch('data/data/relations.json').then(r => r.json()),
+    fetch('settings/eras.json').then(r => r.json()),
+    fetch('settings/regions.json').then(r => r.json()),
+    fetch('settings/occupation_groups.json').then(r => r.json()),
   ]);
 
   const occGroupMap = occGroups.occupations;

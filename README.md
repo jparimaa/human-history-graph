@@ -32,9 +32,8 @@ Then open http://localhost:8000.
 index.html          single-page shell
 app.js              all application logic (ES module)
 style.css           dark theme
-data/               people, descriptions, relations, eras, regions, occupation groups (JSON)
-rules/              authoring rules for names, descriptions, relations, eras
-scripts/            Python helpers for editing and validating the data
+data/               git submodule (historical-figure-data): people, descriptions, relations
+settings/           local config: eras, regions, occupation groups (JSON)
 test/               opt-in Playwright behaviour checks (inspect.mjs)
 ```
 

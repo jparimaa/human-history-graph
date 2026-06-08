@@ -2,10 +2,6 @@
 
 Interactive browser-based graph of historical figures, spanning antiquity to ~1900. People are nodes positioned by birth year (x-axis) and geographic region (y-axis). Edges show relationships (rivalry, influence, patronage, etc.). Built with Cytoscape.js, no backend, no build tools.
 
-## Python scripts
-
-All data files use UTF-8. Always open them with `encoding="utf-8"`. On Windows the default cp1252 codec will crash on non-ASCII characters in names.
-
 ## Running locally
 
 ```
@@ -42,16 +38,18 @@ node test/inspect.mjs
 index.html          - single page shell
 app.js              - all application logic (ES module)
 style.css           - dark theme layout
-data/
-  people.json       - array of person objects (~1070 people, ~1800 BC to 1900)
-  descriptions.json - array of { "id": { short, long, why, personality } }
-  relations.json    - array of directed edges between people
-  completed_relations.json - array of person ids whose relations have been authored (progress tracker for scripts/skills)
+data/               - git submodule (github.com/jparimaa/historical-figure-data)
+  data/
+    people.json       - array of person objects (~1070 people, ~1800 BC to 1900)
+    descriptions.json - array of { "id": { short, long, why, personality } }
+    relations.json    - array of directed edges between people
+    completed_relations.json - array of person ids whose relations have been authored (progress tracker)
+  rules/              - authoring rules (display_name.md, descriptions.md, relations.md, eras.md)
+  scripts/            - Python data helpers (add/check relations, find missing data, csv->json)
+settings/           - local config files (not in submodule)
   eras.json         - era bands and point events for the timeline ruler
   regions.json      - ordered country list (top-to-bottom y placement) + fallback country
   occupation_groups.json - maps occupations to color groups (see Occupation colors)
-rules/                  - authoring rules (display_name.md, descriptions.md, relations.md, eras.md)
-scripts/                - Python data helpers (add/check relations, find missing data, csv->json)
 test/
   inspect.mjs           - opt-in Playwright behaviour checks (see Browser testing)
 ```
@@ -117,4 +115,4 @@ A `max-width: 700px` media check at load adds a `body.mobile` class, the single 
 
 ## Occupation colors
 
-Each occupation maps to a broad group via the `occupations` map in `data/occupation_groups.json`, and each group has a color in the `groups` map. Unknown occupations fall back to the `Other` group.
+Each occupation maps to a broad group via the `occupations` map in `settings/occupation_groups.json`, and each group has a color in the `groups` map. Unknown occupations fall back to the `Other` group.
