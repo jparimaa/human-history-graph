@@ -6,9 +6,9 @@ const LEFT_MARGIN = 80;
 const LAYOUT_WIDTH  = 26000;
 const LAYOUT_HEIGHT = 4000;
 
-// Height of the fixed bottom bar (matches its CSS height); the year grid,
-// info/filter panels, and lifespan bar all sit above it.
-const BOTTOM_BAR_H = 44;
+// Height of the fixed button bar (matches its CSS height). The bar sits at the
+// top; the year grid, info/filter panels, and graph all start below it.
+const BAR_H = 44;
 
 // Vertical layout packs each person by their *local rank* in the country order
 // (regions.json, top to bottom), not an absolute country band. For a person we
@@ -389,6 +389,8 @@ function showInfoPanel(node, descriptions) {
   document.getElementById('info-name').textContent = d.name;
   document.getElementById('info-meta').textContent =
     `${formatYear(d.birth_year)}–${formatYear(d.death_year)} · ${d.occupation} · ${d.birth_country}`;
+  document.getElementById('info-short-desc').textContent =
+    desc.short_description ?? desc.long_description ?? 'No description available.';
   document.getElementById('info-long-desc').textContent = desc.long_description ?? 'No description available.';
 
   const whyEl = document.getElementById('info-why-matters');
@@ -492,7 +494,16 @@ function wireTogglePanel(panel, toggleBtn, closeBtn) {
   });
 }
 
+// Height of the top button bar on mobile; must match #bottom-bar height in
+// the body.mobile CSS block.
+const MOBILE_BAR_H = 52;
+
 async function main() {
+  // Touch layout: button bar on top, no era timeline, no drawn edges, and the
+  // info panel becomes a peek/expand bottom sheet. Decided once at load.
+  const isMobile = window.matchMedia('(max-width: 700px)').matches;
+  document.body.classList.toggle('mobile', isMobile);
+
   const [people, descriptionsRaw, relations, eras, regions, occGroups] = await Promise.all([
     fetch('data/people.json').then(r => r.json()),
     fetch('data/descriptions.json').then(r => r.json()).catch(() => []),
@@ -539,7 +550,8 @@ async function main() {
   window.cy = cy;
 
   function resetView() {
-    const zoom = 0.50;
+    // Start a touch more zoomed-in on mobile so nodes are large enough to tap.
+    const zoom = isMobile ? 0.6 : 0.50;
     const x1500 = yearToX(1500, LAYOUT_WIDTH);
     cy.viewport({
       zoom,
@@ -624,6 +636,7 @@ async function main() {
 
   const gridCanvas = document.getElementById('year-grid');
   const lifespanCanvas = document.getElementById('lifespan-canvas');
+  const infoPanel = document.getElementById('info-panel');
   let selectedNode = null;
   let hoveredNode = null;
 
@@ -633,12 +646,45 @@ async function main() {
 
   function refreshLifespan() {
     const node = focusNode();
-    if (node) {
+    // No lifespan bar on mobile: screen space is tight and the bottom sheet
+    // owns the bottom of the screen.
+    if (node && !isMobile) {
       lifespanCanvas.hidden = false;
       drawLifespanBars(lifespanCanvas, cy, node);
     } else {
       lifespanCanvas.hidden = true;
     }
+  }
+
+  // Mobile bottom sheet: 'peek' shows the short description, 'expanded' shows
+  // the full bio and connection list.
+  function setSheetState(state) {
+    infoPanel.classList.toggle('sheet-expanded', state === 'expanded');
+    infoPanel.classList.toggle('sheet-peek', state !== 'expanded');
+  }
+
+  if (isMobile) {
+    const sheetHandle = infoPanel.querySelector('.sheet-handle');
+    document.getElementById('sheet-readmore')
+      .addEventListener('click', () => setSheetState('expanded'));
+    sheetHandle.addEventListener('click', () => {
+      setSheetState(infoPanel.classList.contains('sheet-expanded') ? 'peek' : 'expanded');
+    });
+    // Swipe the handle up to expand; down to collapse, then dismiss.
+    let swipeStartY = null;
+    sheetHandle.addEventListener('touchstart', e => {
+      swipeStartY = e.touches[0].clientY;
+    }, { passive: true });
+    sheetHandle.addEventListener('touchend', e => {
+      if (swipeStartY === null) return;
+      const dy = e.changedTouches[0].clientY - swipeStartY;
+      swipeStartY = null;
+      if (dy < -30) setSheetState('expanded');
+      else if (dy > 30) {
+        if (infoPanel.classList.contains('sheet-expanded')) setSheetState('peek');
+        else clearSelection();
+      }
+    }, { passive: true });
   }
 
   // Single teardown for "no node selected": clears highlight/dim classes, drops
@@ -667,14 +713,28 @@ async function main() {
       svgEl.innerHTML = '';
       eraBarH = 0;
     }
-    const bottomOffset = BOTTOM_BAR_H + eraBarH;
-    const h = window.innerHeight - bottomOffset;
+    // The button bar sits at the top. The graph (and the fixed year-grid
+    // overlay aligned to it) starts below the bar; on desktop the toggleable
+    // era bar sits at the bottom, where the year-axis labels are. On mobile the
+    // era bar is disabled and the info panel is a bottom sheet that owns its own
+    // bottom/lifespan positioning, so those are skipped here.
+    const barH = isMobile ? MOBILE_BAR_H : BAR_H;
+    const topOffset = barH;
+    const bottomOffset = eraBarH;
+    const h = window.innerHeight - topOffset - bottomOffset;
+    gridCanvas.style.top = topOffset + 'px';
     gridCanvas.width  = window.innerWidth;
     gridCanvas.height = h;
     gridCanvas.style.height = h + 'px';
-    document.getElementById('info-panel').style.bottom = bottomOffset + 'px';
-    document.getElementById('filter-panel').style.bottom = bottomOffset + 'px';
-    document.getElementById('lifespan-canvas').style.bottom = bottomOffset + 'px';
+    if (!isMobile) {
+      const info = document.getElementById('info-panel');
+      const filter = document.getElementById('filter-panel');
+      info.style.top = topOffset + 'px';
+      info.style.bottom = bottomOffset + 'px';
+      filter.style.top = topOffset + 'px';
+      filter.style.bottom = bottomOffset + 'px';
+      document.getElementById('lifespan-canvas').style.bottom = bottomOffset + 'px';
+    }
     drawYearGrid(gridCanvas, cy);
   }
 
@@ -714,6 +774,9 @@ async function main() {
     tooltip.hidden = true;
     updateNodeVisibility();
     showInfoPanel(node, descriptions);
+    // Mobile: open the sheet in peek (short description) state. Desktop: the
+    // info panel is already shown full by showInfoPanel above.
+    if (isMobile) setSheetState('peek');
     refreshLifespan();
   });
 
@@ -731,6 +794,7 @@ async function main() {
   }
 
   cy.on('mouseover', 'node', evt => {
+    if (isMobile) return; // no hover tier on touch; tap drives the bottom sheet
     const node = evt.target;
     if (hoverBlocked(node)) return;
     const desc = descriptions[node.data('id')] ?? {};
@@ -742,6 +806,7 @@ async function main() {
   });
 
   cy.on('mousemove', 'node', evt => {
+    if (isMobile) return;
     if (hoverBlocked(evt.target)) return;
     const { clientX, clientY } = evt.originalEvent;
     tooltip.style.left = (clientX + 16) + 'px';
@@ -749,6 +814,7 @@ async function main() {
   });
 
   cy.on('mouseout', 'node', evt => {
+    if (isMobile) return;
     if (hoverBlocked(evt.target)) return;
     tooltip.hidden = true;
     hoveredNode = null;
@@ -829,8 +895,10 @@ async function main() {
 
       // Edges stay hidden until a node is focused; then only that node's
       // connections appear (pulling in connected people hidden by zoom).
+      // Edges are never drawn on mobile; the highlighted neighbourhood and the
+      // lifespan bar carry the connection information there instead.
       cy.edges().style('display', 'none');
-      if (focus) {
+      if (focus && !isMobile) {
         // Shown with base edge style: width from strength, opacity from confidence.
         // removeClass('dimmed') so a peeked (hovered) node's edges look the same
         // as a clicked node's, even while a different node is selected.

@@ -8,12 +8,13 @@ Built with [Cytoscape.js](https://js.cytoscape.org/). No backend, no build step,
 
 - **Birth-year timeline** with an adaptive year grid that re-labels itself as you zoom (BC/AD aware).
 - **Progressive reveal**: the number of visible people grows as you zoom in. Ranking is viewport-aware, so the most prominent figures in the part of history you are looking at always show, and sparse eras never appear empty.
-- **Relationships on demand**: hover or click a person to reveal their connections, colour-coded by relationship family.
+- **Relationships on demand**: hover (or tap on touch) a person to reveal their connections, colour-coded by relationship family.
 - **Info panel** with a longer description, why the person matters, and a list of their connections.
 - **Lifespan bar**: birth-to-death bars for the selected person and their neighbours, aligned to the timeline.
 - **Occupation filter**: toggle which occupation groups (each with its own colour) are shown, or show everyone at once.
 - **Era/timeline ruler**: a toggleable bar of historical eras and point events.
-- **Smooth cursor-anchored wheel zoom** tuned to behave consistently across mice and trackpads.
+- **Smooth cursor-anchored wheel zoom** tuned to behave consistently across mice and trackpads, with pinch-to-zoom on touch.
+- **Touch layout**: on phones the toolbar sits at the top, the timeline/edges/lifespan bar are dropped, and tapping a person opens a peek-then-expand bottom sheet (short description, then full bio and connections).
 
 ## Running locally
 

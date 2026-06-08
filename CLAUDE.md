@@ -97,14 +97,23 @@ Valid relation types: `teacher, student, rival, collaborator, patron, family, in
 - **Zoom-based visibility**: the number of visible people grows as you zoom in. Ranking is viewport-aware: in-view nodes are ranked by `hpi_score` and faded in over a window, with a floor (`MIN_VISIBLE`) so a sparse era never shows up empty. The occupation-group filter and the "show all" toggle also gate visibility. Coalesced onto one animation frame since it follows pan as well as zoom. See `updateNodeVisibility()`.
 - **Wheel zoom**: Cytoscape's built-in zoom is disabled (`userZoomingEnabled: false`); a custom `wheel` handler zooms toward the cursor at a gentle rate (`ZOOM_SENSITIVITY`), with `deltaY` normalised across `deltaMode` so mice and trackpads match. Avoids the discouraged `wheelSensitivity` option (which logs a console warning).
 - **Labels**: node labels use `display_name` and are held at a fixed screen size regardless of zoom by rescaling `font-size` with `cy.zoom()` on every zoom event.
-- **Year grid**: canvas overlay (`position: fixed`, behind the UI, `pointer-events: none`) redrawn on pan/zoom. Its height accounts for the bottom bar and the optional era/timeline bar (`getBoundingClientRect` does not work for a fixed canvas).
+- **Year grid**: canvas overlay (`position: fixed`, behind the UI, `pointer-events: none`) redrawn on pan/zoom. It starts below the top button bar (`top` offset) and its height also leaves room for the optional era/timeline bar at the bottom (`getBoundingClientRect` does not work for a fixed canvas).
 - **Era/timeline bar**: a toggleable SVG ruler; when shown it stays aligned with node X positions during pan/zoom.
-- **Click node**: dims all, highlights the neighbourhood, draws that node's edges, opens the info panel (shows `long_description` and the connection list), and shows the lifespan bar. `clearSelection()` is the single teardown used by the background tap, the reset button, and the info-panel close.
-- **Hover node**: shows a tooltip with `short_description` near the cursor, peeks the node's edges, and shows the lifespan bar (hover takes precedence over the current selection via `focusNode()`).
+- **Click node** (desktop): dims all, highlights the neighbourhood, draws that node's edges, opens the info panel (shows `long_description` and the connection list), and shows the lifespan bar. `clearSelection()` is the single teardown used by the background tap, the reset button, and the info-panel close. On mobile, tap drives the bottom sheet instead (see Mobile).
+- **Hover node** (desktop only): shows a tooltip with `short_description` near the cursor, peeks the node's edges, and shows the lifespan bar (hover takes precedence over the current selection via `focusNode()`). The hover handlers early-return on mobile.
 - **Lifespan bar**: bottom canvas drawing birth-to-death bars for the focused node and its connected neighbours, aligned to the year axis (`drawLifespanBars()`).
 - **Filter panel**: per-group checkboxes (with swatches) toggle which occupation groups are shown, plus check/uncheck-all and a "show all people" override that bypasses the zoom-based reveal.
 - **About panel**: dataset attribution (Pantheon).
 - **Reset button**: `resetView()` returns to the default framing (centred on year 1500 at a fixed zoom) and clears any selection.
+
+## Mobile (touch)
+
+A `max-width: 700px` media check at load adds a `body.mobile` class, the single source of truth shared by the CSS and `app.js` (`isMobile`). The touch layout rethinks interaction from scratch rather than bolting onto the desktop one:
+
+- **Button bar on top**: the bar lives at the top on every viewport (`order: -1`; the constant is `BAR_H`). On mobile it is taller for touch (`MOBILE_BAR_H`, kept in sync with the `body.mobile` CSS) and drops the timeline button. The year grid, panels, and graph all start below it.
+- **Peek-then-expand bottom sheet** replaces hover+click. Tapping a node opens the info panel as a bottom sheet in *peek* state (name, dates, `short_description`); a "Read more" tap, a tap on the grab handle, or a swipe up *expands* it to the full bio, why-they-matter, and connection list. Swipe/handle down collapses then dismisses; a background tap dismisses. The two states are just `sheet-peek`/`sheet-expanded` classes toggled by `setSheetState()`.
+- **Disabled on mobile**: drawn edges, the era/timeline bar, the lifespan bar, and the entire hover tier are all off (tight screen, no cursor). Connections are conveyed by the highlighted neighbourhood plus the text connection list in the expanded sheet.
+- **Bigger tap targets**: `resetView()` starts at a higher zoom on mobile so visible nodes are large enough to tap. Pinch-to-zoom (two-touch midpoint) and one-finger pan are handled by the container touch handlers / Cytoscape.
 
 ## Occupation colors
 

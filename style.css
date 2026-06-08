@@ -63,6 +63,7 @@ body {
 /* ── Bottom bar ──────────────────────────────────────── */
 
 #bottom-bar {
+  order: -1;               /* flex-column reorder: button bar to the top */
   height: 44px;
   flex-shrink: 0;
   display: flex;
@@ -70,7 +71,7 @@ body {
   gap: 16px;
   padding: 0 20px;
   background: var(--surface);
-  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 #bottom-bar label {
@@ -120,6 +121,13 @@ body {
 }
 
 #info-panel[hidden] {
+  display: none;
+}
+
+/* Mobile-only sheet chrome: hidden on desktop, shown under body.mobile. */
+.sheet-handle,
+.sheet-readmore,
+#info-short-desc {
   display: none;
 }
 
@@ -351,7 +359,7 @@ body {
 
 #about-panel {
   position: fixed;
-  bottom: 44px;
+  top: 44px;
   right: 0;
   width: 380px;
   max-height: calc(100vh - 44px);
@@ -473,3 +481,118 @@ body {
 }
 
 #tooltip[hidden] { display: none; }
+
+/* ── Mobile ──────────────────────────────────────────────
+   Touch layout. The button bar moves to the top, the era
+   timeline is removed entirely, and the info panel becomes a
+   bottom sheet with two states: peek (short description) and
+   expanded (full bio + connections). Edges are never drawn on
+   touch (handled in app.js). MOBILE_BAR_H in app.js must match
+   the bar height below. */
+
+body.mobile #bottom-bar {
+  height: 52px;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+body.mobile #bottom-bar button {
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+/* No timeline on mobile. */
+body.mobile #toggle-era-btn { display: none; }
+body.mobile #era-bar { display: none !important; }
+
+/* Info panel -> bottom sheet. */
+body.mobile #info-panel {
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  border-right: none;
+  border-top: 1px solid var(--border-strong);
+  border-radius: 16px 16px 0 0;
+  padding: 0 16px 20px;
+  gap: 8px;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.5);
+}
+
+body.mobile #info-panel.sheet-peek    { max-height: 42vh; }
+body.mobile #info-panel.sheet-expanded { max-height: 88vh; }
+
+/* Grab handle and the close button sit at the top of the sheet. */
+body.mobile .sheet-handle {
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin: 10px auto 4px;
+  border-radius: 2px;
+  background: var(--border-strong);
+  flex-shrink: 0;
+  cursor: grab;
+}
+
+body.mobile #info-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  align-self: auto;
+  font-size: 24px;
+  z-index: 1;
+}
+
+/* Peek shows the short description + a "Read more"; the full
+   bio, why-matters, and connection list stay collapsed. */
+body.mobile #info-panel.sheet-peek #info-short-desc { display: block; }
+body.mobile #info-panel.sheet-peek #sheet-readmore  { display: inline-block; }
+
+body.mobile #info-panel.sheet-peek #info-long-desc,
+body.mobile #info-panel.sheet-peek #info-why-matters,
+body.mobile #info-panel.sheet-peek #info-connections {
+  display: none;
+}
+
+body.mobile #info-panel.sheet-expanded #info-short-desc,
+body.mobile #info-panel.sheet-expanded #sheet-readmore {
+  display: none;
+}
+
+#info-short-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.sheet-readmore {
+  align-self: flex-start;
+  background: var(--surface-alt);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* Filter and about panels span from under the top bar to the
+   bottom edge (the old bottom-bar offset no longer applies). */
+body.mobile #filter-panel {
+  top: 52px;
+  bottom: 0;
+  width: 80vw;
+  max-width: 340px;
+}
+
+body.mobile #about-panel {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  max-height: 80vh;
+  border-radius: 16px 16px 0 0;
+}
