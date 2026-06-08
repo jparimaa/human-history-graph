@@ -359,7 +359,7 @@ function drawLifespanBars(canvas, cy, selectedNode) {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     const age = (d.death_year && d.birth_year) ? ` (${d.death_year - d.birth_year})` : '';
-    outlineText(d.name + age, (drawX1 + drawX2) / 2, midY);
+    outlineText(d.display_name + age, (drawX1 + drawX2) / 2, midY);
 
     // Year numbers — left and right ends, only if bar is wide enough
     if (barWidth > 80) {
@@ -552,11 +552,37 @@ async function main() {
 
   resetView();
 
+  // Clamp pan so you can't scroll the data area fully off-screen. At least
+  // PAN_MARGIN px of the data region must remain visible on every side.
+  const PAN_MARGIN = 80;
+  const DATA_X_MIN = LEFT_MARGIN;                  // model x of CANVAS_MIN_YEAR
+  const DATA_X_MAX = LAYOUT_WIDTH - LEFT_MARGIN;   // model x of CANVAS_MAX_YEAR
+  let _clamping = false;
+  function clampPan() {
+    if (_clamping) return;
+    const zoom = cy.zoom();
+    const W = cy.container().offsetWidth;
+    const H = cy.container().offsetHeight;
+    const { x, y } = cy.pan();
+    const nx = Math.max(PAN_MARGIN - DATA_X_MAX * zoom,
+                 Math.min(W - PAN_MARGIN - DATA_X_MIN * zoom, x));
+    const ny = Math.max(PAN_MARGIN - LAYOUT_HEIGHT * zoom,
+                 Math.min(H - PAN_MARGIN, y));
+    if (nx !== x || ny !== y) {
+      _clamping = true;
+      cy.pan({ x: nx, y: ny });
+      _clamping = false;
+    }
+  }
+  cy.on('pan', clampPan);
+
   // Cytoscape's wheelSensitivity option is discouraged (it logs a warning and
   // zooms inconsistently across devices). Instead we disable built-in zoom and
   // handle the wheel ourselves: zoom toward the cursor at a gentle rate, with
   // deltaY normalised to pixels so mice and trackpads behave the same.
   const ZOOM_SENSITIVITY = 0.0015; // lower = slower zoom
+  const MIN_ZOOM = 0.07;  // ~full timeline visible on a 1920px screen
+  const MAX_ZOOM = 5.0;
   cy.container().addEventListener('wheel', evt => {
     evt.preventDefault();
     const rect = cy.container().getBoundingClientRect();
@@ -564,9 +590,10 @@ async function main() {
     if (evt.deltaMode === 1) dy *= 16;            // lines -> px
     else if (evt.deltaMode === 2) dy *= rect.height; // pages -> px
     cy.zoom({
-      level: cy.zoom() * Math.exp(-dy * ZOOM_SENSITIVITY),
+      level: Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, cy.zoom() * Math.exp(-dy * ZOOM_SENSITIVITY))),
       renderedPosition: { x: evt.clientX - rect.left, y: evt.clientY - rect.top },
     });
+    clampPan();
   }, { passive: false });
 
   // Pinch-to-zoom: track two touch points and zoom toward their midpoint.
@@ -586,7 +613,8 @@ async function main() {
       const rect = container.getBoundingClientRect();
       const midX = (t[0].clientX + t[1].clientX) / 2 - rect.left;
       const midY = (t[0].clientY + t[1].clientY) / 2 - rect.top;
-      cy.zoom({ level: cy.zoom() * (newDist / pinchDist), renderedPosition: { x: midX, y: midY } });
+      cy.zoom({ level: Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, cy.zoom() * (newDist / pinchDist))), renderedPosition: { x: midX, y: midY } });
+      clampPan();
       pinchDist = newDist;
     }
   }, { passive: false });
