@@ -2,7 +2,6 @@
 
 - State who they were and why they are known.
 - Written for quick tooltip reading.
-- Avoid saying the birth country (e.g. "German" or "Austrian-born").
 
 ## long_description
 
