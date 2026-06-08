@@ -4,6 +4,10 @@ An interactive, browser-based graph of historical figures spanning antiquity to 
 
 Built with [Cytoscape.js](https://js.cytoscape.org/). No backend, no build step, no framework: just static HTML, CSS, and an ES-module `app.js` reading JSON data files.
 
+**Live at: https://jparimaa.github.io/human-history-graph/**
+
+![Human History Graph](readme.png)
+
 ## Features
 
 - **Birth-year timeline** with an adaptive year grid that re-labels itself as you zoom (BC/AD aware).
