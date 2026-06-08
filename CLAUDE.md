@@ -48,7 +48,7 @@ data/
   relations.json    - array of directed edges between people
   completed_relations.json - array of person ids whose relations have been authored (progress tracker for scripts/skills)
   eras.json         - era bands and point events for the timeline ruler
-  regions.json      - maps country names to y-band regions
+  regions.json      - ordered country list (top-to-bottom y placement) + fallback country
   occupation_groups.json - maps occupations to color groups (see Occupation colors)
 rules/                  - authoring rules (display_name.md, descriptions.md, relations.md, eras.md)
 scripts/                - Python data helpers (add/check relations, find missing data, csv->json)
@@ -75,20 +75,19 @@ Valid relation types: `teacher, student, rival, collaborator, patron, family, in
 **eras.json** - array of era bands and point events, spanning ~3150 BC to 1900:
 `{ id, label, type: "era"|"event", start_year+end_year OR year, color }`
 
-**regions.json** - keyed object with regions and country map:
+**regions.json** - an ordered list of countries plus a fallback:
 ```json
-{ "regions": { "europe_north": { "label": "...", "y_band": 0.08 }, ... },
-  "countries": { "Italy": "europe_south", ... } }
+{ "fallback": "Italy", "order": ["Iceland", "Finland", ..., "Saint Lucia"] }
 ```
 
-Eight regions: `europe_north, europe_west, europe_south, middle_east, asia, africa, americas_north, americas_south`. Unknown countries fall back to `europe_west`.
+`order` defines only the top-to-bottom country *ordering*; there are no fixed bands. A person's vertical position is their local rank in that ordering among the people near them in time (see Layout). A person whose `birth_country` is missing or not in `order` is placed at the `fallback` country.
 
 ## Layout
 
 (Exact constants and formulas live in app.js; this is the shape of it.)
 
 - X axis: birth year mapped linearly to model X between `CANVAS_MIN_YEAR` and `CANVAS_MAX_YEAR`.
-- Y axis: region `y_band` scaled to the layout height, plus random Y jitter sized from the gap to neighbouring region bands. Region bands also "breathe" with local density: in sparse stretches of time they collapse toward the center line, in crowded ones they fan out to full height (`computeSpreads()`, `SPREAD_*` constants).
+- Y axis: local-rank packing, not fixed country bands (`computeVerticalPlacement()`). Each person maps to a key = their country's index in the `regions.json` order. For each person, a Gaussian time kernel (bandwidth `SPREAD_KERNEL_YEARS`) weights everyone nearby in birth year; the person is placed at their weighted rank within that neighbourhood's country ordering (a local CDF in [0, 1]). Because only people actually present nearby count, a country with nobody at that time leaves no vertical gap. The offset from the center line is scaled by a per-person `spread` in [`SPREAD_MIN`, 1] that grows with local density (normalised to the `SPREAD_DENSITY_PCT` percentile): sparse stretches of time collapse everyone toward the center, crowded ones fan out to the full country order. Net effect: a horizontal spindle that stays tight where people are few and flares open where they are many.
 - Node diameter scales with the person's `hpi_score` (min-max normalised across the dataset), not rank.
 - Cytoscape `preset` layout (no force simulation). Nodes are locked (`autoungrabify: true`).
 - After building elements, `resolveOverlaps()` pushes overlapping nodes apart in Y only.

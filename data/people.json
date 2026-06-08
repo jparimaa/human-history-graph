@@ -6592,7 +6592,7 @@
   {
     "id": "edward_jenner",
     "name": "Edward Jenner",
-    "display_name": "Jenner",
+    "display_name": "Edward Jenner",
     "birth_year": 1749,
     "death_year": 1823,
     "occupation": "PHYSICIAN",
@@ -8506,7 +8506,7 @@
     "birth_year": 1850,
     "death_year": 1900,
     "occupation": "EXTREMIST",
-    "birth_country": "",
+    "birth_country": "United Kingdom",
     "hpi_score": 87.136732
   },
   {
@@ -10686,7 +10686,7 @@
     "birth_year": 1899,
     "death_year": 1953,
     "occupation": "POLITICIAN",
-    "birth_country": "",
+    "birth_country": "Georgia",
     "hpi_score": 80.990797
   }
 ]

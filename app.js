@@ -10,16 +10,18 @@ const LAYOUT_HEIGHT = 4000;
 // info/filter panels, and lifespan bar all sit above it.
 const BOTTOM_BAR_H = 44;
 
-// Vertical layout "breathes" with how crowded a stretch of time is. Region
-// y_bands are treated as offsets from the vertical center (0.5) and scaled by a
-// per-person `spread` in [SPREAD_MIN, 1]: where few people live near a year the
-// bands collapse toward the center line (contemporaries cluster regardless of
-// region); where many do, they fan out to the full-height layout. Europe sits
-// near 0.5 so it barely moves (the spine); Asia/Americas have the largest
-// offsets so they flare out the most. Local density is a Gaussian kernel over
-// birth years (bandwidth SPREAD_KERNEL_YEARS), normalised to its
-// SPREAD_DENSITY_PCT percentile so a few ultra-dense years don't flatten the rest.
-const SPREAD_MIN          = 0.18;
+// Vertical layout packs each person by their *local rank* in the country order
+// (regions.json, top to bottom), not an absolute country band. For a person we
+// look at everyone nearby in time (a Gaussian kernel over birth years, bandwidth
+// SPREAD_KERNEL_YEARS) and find where they fall in that neighbourhood's
+// ordered-by-country list -- a local CDF position in [0, 1]. Because the rank
+// counts only people actually present nearby, a country with nobody at that time
+// leaves no gap, and the offset from centre is scaled by a per-person `spread`
+// in [SPREAD_MIN, 1]: where few people live near a year everyone collapses
+// toward the centre line; where many do, they fan out to the full country order.
+// The spread tracks local density, normalised to its SPREAD_DENSITY_PCT
+// percentile so a few ultra-dense years don't flatten the rest.
+const SPREAD_MIN          = 0.06;
 const SPREAD_KERNEL_YEARS = 60;
 const SPREAD_DENSITY_PCT  = 0.95;
 
@@ -74,12 +76,6 @@ function niceYearStep(pxPerYear, minPx) {
   return YEAR_STEPS[YEAR_STEPS.length - 1];
 }
 
-// Random offset in [-up, +down] (y grows downward), used to spread a region's
-// people across its band without a hard top/bottom edge.
-function bandOffset(span) {
-  return Math.random() * (span.up + span.down) - span.up;
-}
-
 // Push overlapping nodes apart in Y only (X encodes birth year and is fixed).
 // O(n^2) per iteration, up to 300 iterations; fine for the current dataset but
 // worth revisiting if `people` grows into the thousands.
@@ -107,23 +103,39 @@ function resolveOverlaps(nodes, padding = 8) {
   }
 }
 
-// Per-person vertical spread factor in [SPREAD_MIN, 1], aligned with `people`.
-// Density is a Gaussian kernel over birth years; normalising to a high
-// percentile (not the max) keeps the 19th-century spike from flattening
-// everything else toward the center line. Cost is O(n^2) in the number of people.
-function computeSpreads(people) {
+// Per-person vertical placement, aligned with `people`. A single O(n^2) pass
+// over birth years computes, for each person and weighted by a Gaussian time
+// kernel: the local density (-> `spread`), and where the person sits in the
+// neighbourhood's country order as a CDF split into `cdfLow` (weighted fraction
+// of neighbours ordered before them) and `cdfEq` (weighted fraction in the same
+// country, including self). A person's rank position is then somewhere in
+// [cdfLow, cdfLow + cdfEq]. `spread` normalises density to a high percentile
+// (not the max) so the 19th-century spike doesn't flatten everything else.
+function computeVerticalPlacement(people, keys) {
   const years = people.map(p => p.birth_year);
-  const densities = years.map(y0 => {
-    let sum = 0;
-    for (const y of years) {
-      const d = (y - y0) / SPREAD_KERNEL_YEARS;
-      sum += Math.exp(-0.5 * d * d);
+  const n = years.length;
+  const density = new Array(n);
+  const cdfLow = new Array(n);
+  const cdfEq = new Array(n);
+  for (let i = 0; i < n; i++) {
+    const yi = years[i];
+    const ki = keys[i];
+    let sum = 0, low = 0, eq = 0;
+    for (let j = 0; j < n; j++) {
+      const d = (years[j] - yi) / SPREAD_KERNEL_YEARS;
+      const wgt = Math.exp(-0.5 * d * d);
+      sum += wgt;
+      if (keys[j] < ki) low += wgt;
+      else if (keys[j] === ki) eq += wgt;
     }
-    return sum;
-  });
-  const sorted = [...densities].sort((a, b) => a - b);
-  const cap = sorted[Math.floor(SPREAD_DENSITY_PCT * (sorted.length - 1))] || 1;
-  return densities.map(d => SPREAD_MIN + (1 - SPREAD_MIN) * Math.min(1, d / cap));
+    density[i] = sum;
+    cdfLow[i] = low / sum;
+    cdfEq[i] = eq / sum;
+  }
+  const sorted = [...density].sort((a, b) => a - b);
+  const cap = sorted[Math.floor(SPREAD_DENSITY_PCT * (n - 1))] || 1;
+  const spread = density.map(d => SPREAD_MIN + (1 - SPREAD_MIN) * Math.min(1, d / cap));
+  return { cdfLow, cdfEq, spread };
 }
 
 function buildElements(people, relations, regions, w, h, colorForOccupation) {
@@ -131,33 +143,22 @@ function buildElements(people, relations, regions, w, h, colorForOccupation) {
   const hpiMax = Math.max(...people.map(p => p.hpi_score));
   const hpiSpan = hpiMax - hpiMin || 1; // avoid divide-by-zero if all HPIs equal
 
-  // Each region fills the space up to the midpoint with each neighbouring band
-  // (so adjacent bands tile with no empty strip between them); BAND_FILL > 1
-  // overshoots that midpoint slightly so neighbouring regions mingle a little
-  // at their boundaries instead of forming a hard seam. The spread is
-  // asymmetric: a band reaches half-way to whichever neighbour it has on each
-  // side, so a large band next to a small one still uses its full share.
-  const BAND_FILL = 1.12;
-  const sortedBands = Object.entries(regions.regions)
-    .map(([id, r]) => ({ id, y: r.y_band }))
-    .sort((a, b) => a.y - b.y);
-  const regionSpan = {};
-  sortedBands.forEach((r, i) => {
-    const prevGap = i > 0 ? r.y - sortedBands[i - 1].y : 0.08;
-    const nextGap = i < sortedBands.length - 1 ? sortedBands[i + 1].y - r.y : 0.08;
-    regionSpan[r.id] = {
-      up:   prevGap / 2 * h * BAND_FILL,
-      down: nextGap / 2 * h * BAND_FILL,
-    };
-  });
+  // Each person maps to a key = their country's position in the regions.json
+  // order (top to bottom); missing/unlisted countries fall back to the
+  // configured fallback. Keys feed the local-rank vertical layout below.
+  const order = regions.order;
+  const fallback = regions.fallback ?? order[0];
+  const countryIndex = new Map(order.map((c, i) => [c, i]));
+  const fallbackIdx = countryIndex.get(fallback);
+  const keys = people.map(p =>
+    countryIndex.has(p.birth_country) ? countryIndex.get(p.birth_country) : fallbackIdx);
 
-  const spreads = computeSpreads(people);
+  const { cdfLow, cdfEq, spread } = computeVerticalPlacement(people, keys);
 
   const nodes = people.map((p, i) => {
-    const regionId = regions.countries[p.birth_country] ?? 'europe_west';
-    const yBand = regions.regions[regionId]?.y_band ?? 0.5;
-    const span = regionSpan[regionId] ?? { up: 80, down: 80 };
-    const spread = spreads[i];
+    // Rank position within the local country-ordered CDF; the random term
+    // spreads same-country contemporaries across their share of the band.
+    const r = cdfLow[i] + Math.random() * cdfEq[i];
     const t = (p.hpi_score - hpiMin) / hpiSpan;
     const size = 20 + t * 60;
     return {
@@ -175,7 +176,7 @@ function buildElements(people, relations, regions, w, h, colorForOccupation) {
       },
       position: {
         x: yearToX(p.birth_year, w),
-        y: 0.5 * h + (yBand - 0.5) * h * spread + bandOffset(span) * spread,
+        y: 0.5 * h + (r - 0.5) * spread[i] * h,
       },
     };
   });
@@ -453,6 +454,10 @@ function createCytoscape(cyEl, elements) {
           'curve-style': 'bezier',
           'target-arrow-shape': 'none',
         },
+      },
+      {
+        selector: 'node.no-label',
+        style: { 'text-opacity': 0 },
       },
       {
         selector: '.dimmed',
@@ -824,10 +829,16 @@ async function main() {
   const toggleAllBtn = document.getElementById('filter-toggle-all');
   const toggleFilterBtn = document.getElementById('toggle-filter-btn');
   const showAllCheckbox = document.getElementById('filter-show-all');
+  const hideNamesCheckbox = document.getElementById('filter-hide-names');
 
   showAllCheckbox.addEventListener('change', () => {
     showAll = showAllCheckbox.checked;
     updateNodeVisibility();
+  });
+
+  // Hide every node's drawn name (tooltips on hover still show it).
+  hideNamesCheckbox.addEventListener('change', () => {
+    cy.nodes().toggleClass('no-label', hideNamesCheckbox.checked);
   });
 
   // One checkbox row per group, each with its swatch color from the data.

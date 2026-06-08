@@ -259,7 +259,8 @@ body {
   color: var(--text-strong);
 }
 
-#filter-show-all-row {
+#filter-show-all-row,
+#filter-hide-names-row {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -268,11 +269,13 @@ body {
   cursor: pointer;
 }
 
-#filter-show-all-row:hover {
+#filter-show-all-row:hover,
+#filter-hide-names-row:hover {
   background: var(--surface-alt);
 }
 
-#filter-show-all-row input[type="checkbox"] {
+#filter-show-all-row input[type="checkbox"],
+#filter-hide-names-row input[type="checkbox"] {
   width: 16px;
   height: 16px;
   cursor: pointer;
